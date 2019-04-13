@@ -6,10 +6,11 @@ module.exports = function() {
             rules: [
                 {
                     test: /\.(eot|svg|ttf|woff|woff2)$/,
-                    include: path.resolve(__dirname, 'src/fonts'),
+                    include: path.resolve(__dirname, '../src/fonts'),
                     loader: 'file-loader',
                     options: {
-                        name: 'fonts/[name].[ext]'
+                        name: 'fonts/[name].[ext]',
+                        publicPath: "../"
                     },
                 }
             ]
