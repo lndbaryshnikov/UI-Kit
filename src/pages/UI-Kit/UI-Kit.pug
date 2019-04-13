@@ -1,7 +1,12 @@
+include ../../components/button/button
+
 doctype html
 html
     head
         meta(charset = 'utf-8')
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title UI-Kit
-    h1 Hellooooooooo UIIIIII
+    body
+        +button('standard', 'red', 'button')
+        br
+        +button('small', 'cyan', 'button')
