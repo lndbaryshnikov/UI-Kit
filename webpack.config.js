@@ -6,6 +6,7 @@ const styleExtract = require('./webpack/style.extract');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 const devserver = require('./webpack/devserver');
+const providePlugin = require('./webpack/provide-plugin');
 
 const PATHS = {
     src: path.join(__dirname, 'src/pages'),
@@ -39,7 +40,8 @@ const common = merge([
     pug(),
     styleExtract(),
     images(),
-    fonts()
+    fonts(),
+    providePlugin()
 ]);
 
 
