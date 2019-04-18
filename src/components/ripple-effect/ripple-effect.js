@@ -1,21 +1,23 @@
-var buttons = document.getElementsByClassName('button'),
-    forEach = Array.prototype.forEach;
+(function($) {
+    var elem, ink, d, x, y;
+    $(".ripple").click(function(e){
+        elem = $(this);
 
-forEach.call(buttons, function (b) {
-    b.addEventListener('click', addElement);
-});
+        if (elem.find(".ink").length == 0)
+            elem.prepend("<span class='ink'></span>");
 
-function addElement(e) {
-    var addDiv  = document.createElement('div'),
-        mValue  = Math.max(this.clientWidth, this.clientHeight),
-        rect    = this.getBoundingClientRect();
-    sDiv    = addDiv.style,
-        px      = 'px';
+        ink = elem.find(".ink");
+        ink.removeClass("animate");
 
-    sDiv.width  = sDiv.height = mValue + px;
-    sDiv.left  = e.clientX - rect.left - (mValue / 2) + px;
-    sDiv.top   = e.clientY - rect.top - (mValue / 2) + px;
+        if(!ink.height() && !ink.width())
+        {
+            d = Math.max(elem.outerWidth(), elem.outerHeight());
+            ink.css({height: d, width: d});
+        }
 
-    addDiv.classList.add('pulse');
-    this.appendChild(addDiv);
-}
+        x = e.pageX - elem.offset().left - ink.width()/2;
+        y = e.pageY - elem.offset().top - ink.height()/2;
+
+        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+    })
+})(jQuery);
