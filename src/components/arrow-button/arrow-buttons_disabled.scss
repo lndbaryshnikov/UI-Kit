@@ -1,0 +1,26 @@
+.arrow-buttons_disabled {
+
+  .arrow-button__left-arrow, .arrow-button__right-arrow{
+    border-color: #ffffff;
+    animation: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+
+  &:hover {
+    background-color: #777777;
+    border-color: #777777;;
+  }
+
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -moz-transition: background-color 0.5s, border-color 0.5s;
+  -ms-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+}

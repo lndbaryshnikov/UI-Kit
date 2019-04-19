@@ -1,0 +1,14 @@
+mixin arrow-buttons(disabled)
+    - var classes
+    if disabled
+        - disabled = 'arrow-buttons_disabled'
+        - classes = ['arrow-buttons__arrow-container', disabled]
+    else
+        - classes = ['arrow-buttons__arrow-container', 'ripple']
+
+
+    .arrow-buttons
+        div(class=classes)
+            .arrow-button__left-arrow
+        div(class=classes)
+            .arrow-button__right-arrow
