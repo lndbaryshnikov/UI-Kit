@@ -1,5 +1,6 @@
 include ../../components/button/button
 include ../../components/arrow-button/arrow-buttons
+include ../../components/donut-chart/donut-chart
 
 doctype html
 html
@@ -15,3 +16,8 @@ html
         +arrow-buttons('disabled')
         br
         +arrow-buttons
+        br
+        +donut-chart(85)
+        +donut-chart(25)
+        +donut-chart(50)
+        +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)

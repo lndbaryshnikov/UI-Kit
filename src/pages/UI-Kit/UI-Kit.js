@@ -1,4 +1,5 @@
 import "../../fonts/Lato-Black.scss";
+import "../../fonts/Lato.scss";
 
 
 import "../../components/button/button.scss";
@@ -25,3 +26,7 @@ import "../../components/arrow-button/arrow-buttons__arrow-container.scss";
 import "../../components/arrow-button/arrow-buttons__arrows.scss";
 import "../../components/arrow-button/_slide-animation/arrow-buttons_slide-animation.scss";
 import "../../components/arrow-button/arrow-buttons_disabled.scss";
+
+import "../../components/donut-chart/donut-chart.scss";
+import "../../components/donut-chart/percentage.scss";
+import "../../components/donut-chart/donut-chart_animation.scss";
