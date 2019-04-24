@@ -8,12 +8,20 @@
   border-top: 3.5px solid #4eb7a8;
   border-right: 3.5px solid #4eb7a8;
   margin-right: 18px;
-  animation: slide-right 1s ease-in-out infinite;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .arrow-button__left-arrow {
   border-left: 3.5px solid #4eb7a8;
   border-bottom: 3.5px solid #4eb7a8;
   margin-left: 18px;
-  animation: slide-left 1s ease-in-out infinite;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
