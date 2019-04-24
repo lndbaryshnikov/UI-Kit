@@ -1,0 +1,18 @@
+.ui-slider {
+  width: 260px;
+  background-color: #e5e5e5;
+  //background-color: blue;
+}
+
+.ui-slider .ui-slider-range {
+  background-color: #e5e5e5;
+}
+
+.ui-slider .ui-slider-handle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  outline: none;
+  background-color: #e75735;
+  //position: relative;
+}

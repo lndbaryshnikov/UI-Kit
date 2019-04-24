@@ -30,3 +30,13 @@ import "../../components/arrow-button/arrow-buttons_disabled.scss";
 import "../../components/donut-chart/donut-chart.scss";
 import "../../components/donut-chart/percentage.scss";
 import "../../components/donut-chart/donut-chart_animation.scss";
+
+import "jquery-ui/ui/widgets/slider"
+import "jquery-ui/themes/base/core.css"
+import "jquery-ui/themes/base/slider.css"
+//import "jquery-ui/themes/base/theme.css"
+
+import "../../components/slider/__tooltip/slider__tooltip.scss"
+import "../../components/slider/slider"
+import "../../components/slider/slider.scss"
+
