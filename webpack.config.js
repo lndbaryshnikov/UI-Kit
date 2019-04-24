@@ -38,7 +38,7 @@ const common = merge([
             }),
         ],
     },
-    //babel(),
+    babel(),
     pug(),
     styleExtract(),
     images(),
