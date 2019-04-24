@@ -6,7 +6,7 @@ module.exports = function() {
             rules: [
                 {
                     test: /\.(jpg|png|svg)$/,
-                    include: path.resolve(__dirname, 'src/img'),
+                    exclude: path.resolve(__dirname, '../src/fonts'),
                     loader: 'file-loader',
                     options: {
                         name: 'images/[name].[ext]'
