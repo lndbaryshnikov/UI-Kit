@@ -8,8 +8,8 @@ $('.slider_with-tooltip').slider({
     value: 30,
 
     classes: {
-        "ui-slider": "slider__scale_color_orange-red",
-        "ui-slider-range": "slider__range_color_orange-red",
+        "ui-slider": "slider__scale_color_gray",
+        "ui-slider-range": "slider__range_color_gray",
         "ui-slider-handle": "slider__handle_color_orange-red"
     },
 

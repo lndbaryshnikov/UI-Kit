@@ -6,7 +6,7 @@ $('.slider_with-label')
         step: 25,
 
         classes: {
-            "ui-slider": "slider__scale_color_green",
+            "ui-slider": "slider__scale_color_gray",
             "ui-slider-range": "slider__range_color_green",
             "ui-slider-handle": "slider__handle_color_green"
         },
