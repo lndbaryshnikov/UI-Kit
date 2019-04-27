@@ -1,9 +1,11 @@
 import sliderTooltip from './__tooltip/slider_tooltip';
 
+sliderTooltip.text(30);
+
 $('.slider_with-tooltip').slider({
     animate: "slow",
     range: "min",
-    value: 100,
+    value: 30,
 
     classes: {
         "ui-slider": "slider__scale_color_orange-red",
@@ -13,6 +15,8 @@ $('.slider_with-tooltip').slider({
 
     slide: function (event, ui) {
         sliderTooltip.text(ui.value);
-        $('.slider_with-tooltip').find('.ui-slider-handle').append(sliderTooltip);
+        //$('.slider_with-tooltip').find('.ui-slider-handle').append(sliderTooltip);
     },
 });
+
+$('.slider_with-tooltip').find('.ui-slider-handle').append(sliderTooltip);
