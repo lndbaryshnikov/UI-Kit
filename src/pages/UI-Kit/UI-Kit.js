@@ -35,6 +35,8 @@ import "jquery-ui/ui/widgets/slider"
 import "jquery-ui/themes/base/core.css"
 import "jquery-ui/themes/base/slider.css"
 //import "jquery-ui/themes/base/theme.css"
+import "../../components/slider/pips-float-plugin/jquery-ui-slider-pips"
+import "../../components/slider/pips-float-plugin/jquery-ui-slider-pips.css"
 
 import "../../components/slider/__tooltip/slider__tooltip.scss"
 import "../../components/slider/slider_with-tooltip"
@@ -43,10 +45,14 @@ import "../../components/slider/__scale/_color/slider__scale _color_orange-red.s
 import "../../components/slider/__range/_color/slider__range_color_orange-red.scss"
 import "../../components/slider/__handle/_color/slider__handle_color_orange-red.scss"
 
+import "../../components/slider/__label/slider__label.scss"
+import "../../components/slider/__label/slider__line.scss"
+import "../../components/slider/__label/slider__pip.scss"
 import "../../components/slider/slider_with-label"
 import "../../components/slider/__scale/_color/slider__scale_color_green.scss"
 import "../../components/slider/__range/_color/slider__range_color_green.scss"
 import "../../components/slider/__handle/_color/slider__handle_color_green.scss"
-import "../../components/slider/__label/slider__label.scss"
+
+
 
 
