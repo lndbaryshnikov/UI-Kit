@@ -1,0 +1,7 @@
+.message-form__tooltip_color_cyan {
+  background-color: #4eb7a8;
+}
+
+.message-form__tooltip_color_cyan::after {
+  border-color: transparent #4eb7a8 transparent transparent;
+}

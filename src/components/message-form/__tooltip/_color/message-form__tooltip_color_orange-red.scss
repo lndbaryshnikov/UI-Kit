@@ -1,0 +1,7 @@
+.message-form__tooltip_color_orange-red {
+  background-color: #e75735;
+}
+
+.message-form__tooltip_color_orange-red::after {
+  border-color: transparent #e75735 transparent transparent;
+}

@@ -1,0 +1,19 @@
+.message-form__data-field {
+  background-color: #e5e5e5;
+  border: 0;
+  border-radius: 6px;
+  outline: none;
+  transition: box-shadow 0.3s;
+
+  color: #888888;
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+  font-weight: 400;
+  //line-height: 42px;
+  letter-spacing: 0.14px;
+  padding-left: 12px;
+}
+
+.message-form__data-field:focus {
+  box-shadow:0 0 5px black;
+}
