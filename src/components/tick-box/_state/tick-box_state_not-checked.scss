@@ -1,0 +1,8 @@
+.tick-box input:not(:checked) + .tick-box__checkmark {
+  background-color: #e5e5e5;
+}
+
+.tick-box input:not(:checked) + .tick-box__checkmark div {
+  border-bottom: 2px solid #c0c0c0;
+  border-left: 2px solid #c0c0c0;
+}

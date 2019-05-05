@@ -1,0 +1,27 @@
+.tick-box__checkmark {
+  width: 24px;
+  height: 23px;
+  background-color: #4eb7a8;
+  border-radius: 50%;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+
+}
+
+.tick-box__checkmark div {
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid black;  
+  border-left: 2px solid black;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}

@@ -80,3 +80,9 @@ import "../../components/toggle/__sign/toggle__sign.scss"
 import "../../components/toggle/__sign/toggle__sign_off.scss"
 import "../../components/toggle/__sign/toggle__sign_on.scss"
 
+import "../../components/tick-box/tick-box.scss"
+import "../../components/tick-box/tick-box__input.scss"
+import "../../components/tick-box/tick-box__checkmark.scss"
+import "../../components/tick-box/_state/tick-box_state_checked.scss"
+import "../../components/tick-box/_state/tick-box_state_not-checked.scss"
+
