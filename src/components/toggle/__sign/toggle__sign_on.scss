@@ -1,0 +1,11 @@
+.toggle__sign_on {
+  left: 12px;
+}
+
+.toggle input:checked + .toggle__slider + .toggle__sign_off + .toggle__sign_on{
+  display: block;
+}
+
+.toggle input:not(:checked) + .toggle__slider + .toggle__sign_off + .toggle__sign_on{
+  display: none;
+}

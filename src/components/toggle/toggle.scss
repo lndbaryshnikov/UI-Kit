@@ -1,6 +1,9 @@
-.donut-chart {
-  //border: 1px solid black;
+.toggle {
   position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

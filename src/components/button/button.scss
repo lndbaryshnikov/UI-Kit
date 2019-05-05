@@ -9,6 +9,10 @@
   cursor: pointer;
   outline: 0;
   transition: background 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   //makes ripple-effect not getting out of the button:
   overflow: hidden;

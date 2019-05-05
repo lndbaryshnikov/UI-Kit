@@ -73,3 +73,10 @@ import "../../components/message-form/__tooltip/message-form__tooltip.scss"
 import "../../components/message-form/__tooltip/_color/message-form__tooltip_color_orange-red.scss"
 import "../../components/message-form/__tooltip/_color/message-form__tooltip_color_cyan.scss"
 
+import "../../components/toggle/toggle.scss"
+import "../../components/toggle/toggle__input.scss"
+import "../../components/toggle/toggle__slider.scss"
+import "../../components/toggle/__sign/toggle__sign.scss"
+import "../../components/toggle/__sign/toggle__sign_off.scss"
+import "../../components/toggle/__sign/toggle__sign_on.scss"
+

@@ -12,6 +12,10 @@
   color: #ffffff;
   text-align: center;
   border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .message-form__tooltip::after {
