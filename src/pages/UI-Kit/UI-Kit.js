@@ -86,3 +86,7 @@ import "../../components/tick-box/tick-box__checkmark.scss"
 import "../../components/tick-box/_state/tick-box_state_checked.scss"
 import "../../components/tick-box/_state/tick-box_state_not-checked.scss"
 
+import "../../components/search-bar/search-bar.scss"
+import "../../components/search-bar/search-bar__button.scss"
+import "../../components/search-bar/search-bar__input.scss"
+
