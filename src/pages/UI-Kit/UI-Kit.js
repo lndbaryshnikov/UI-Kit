@@ -63,7 +63,7 @@ import "../../components/stages/__label/stages__text.scss"
 import "../../components/stages/__label/stages__selected.scss"
 import "../../components/slider/__range/_color/slider__range_color_orange-red.scss"
 
-import "../../components/message-form/__data-field/message-form__data-field.scss"
+import "../../components/text-field/text-field.scss"
 import "../../components/message-form/__data-field/_type/message-form__data-field_type_input.scss"
 import "../../components/message-form/__data-field/_type/message-form__data-field_type_textarea.scss"
 import "../../components/message-form/message-form.scss"
@@ -89,4 +89,12 @@ import "../../components/tick-box/_state/tick-box_state_not-checked.scss"
 import "../../components/search-bar/search-bar.scss"
 import "../../components/search-bar/search-bar__button.scss"
 import "../../components/search-bar/search-bar__input.scss"
+
+import "../../components/dropdown/dropdown.scss"
+import "../../components/dropdown/dropdown__option.scss"
+import "../../components/dropdown/dropdown__select.scss"
+import "../../components/dropdown/dropdown__button.scss"
+
+
+
 

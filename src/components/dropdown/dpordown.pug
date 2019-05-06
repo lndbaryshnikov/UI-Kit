@@ -1,0 +1,8 @@
+mixin dropdown
+    div(class="search-bar dropdown")
+        select(class="text-field")
+            option.dropdown__option Please select
+            each value in dropdownParameters
+                option(value=value class="dropdown__option")= value
+        div(class="search-bar__button dropdown__button")
+            div

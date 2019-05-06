@@ -1,0 +1,12 @@
+.dropdown {
+  position: relative;
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -ms-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+
+.dropdown:hover {
+  box-shadow:0 0 5px black;
+}

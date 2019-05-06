@@ -1,0 +1,16 @@
+.dropdown select {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: calc(16.8vw + 33px);
+  font-size: 15px;
+  z-index: 10;
+  background: transparent;
+
+  transition: box-shadow 3s;
+}
+
+.dropdown select:focus {
+  box-shadow: none;
+}
