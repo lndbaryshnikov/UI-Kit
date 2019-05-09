@@ -95,6 +95,22 @@ import "../../components/dropdown/dropdown__option.scss"
 import "../../components/dropdown/dropdown__select.scss"
 import "../../components/dropdown/dropdown__button.scss"
 
+import "../../components/user-photo/user-photo__back.scss"
+import "../../components/user-photo/user-photo__img.scss"
+
+import "../../components/user-photo/_with-tooltip/user-photo_with-tooltip.scss"
+import "../../components/user-photo/__tooltip/user-photo__tooltip.scss"
+import "../../components/user-photo/__links/user-photo__links.scss"
+import "../../components/user-photo/__links/_theme/user-photo__links_theme_cyan.scss"
+import "../../components/user-photo/__links/_theme/user-photo__links_theme_orange-red.scss"
+import "../../components/user-photo/__job/user-photo__job.scss"
+import "../../components/user-photo/__name/user-photo__name.scss"
+import "../../components/user-photo/__name/_color/user-photo__name_color_orange-red.scss"
+import "../../components/user-photo/__name/_color/user-photo__name_color_white.scss"
+import "../../components/user-photo/__job/_color/user-photo__job_color_black.scss"
+import "../../components/user-photo/__job/_color/user-photo__job_color_white.scss"
+import "../../components/user-photo/__tooltip/_color/user-photo__tooltip_color_cyan.scss"
+import "../../components/user-photo/__tooltip/_color/user-photo__tooltip_color_grey.scss"
 
 
 

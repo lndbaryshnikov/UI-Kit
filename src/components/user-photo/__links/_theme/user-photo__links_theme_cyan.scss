@@ -1,0 +1,28 @@
+.user-photo__tooltip .user-photo__links_theme_cyan:nth-of-type(1) {
+  background-image: url("../../../../img/links/cyan-theme/FB_copy.png");
+}
+
+.user-photo__tooltip .user-photo__links_theme_cyan:nth-of-type(2) {
+  background-image: url("../../../../img/links/cyan-theme/Twitter_copy.png");
+}
+
+.user-photo__tooltip .user-photo__links_theme_cyan:nth-of-type(3) {
+  background-image: url("../../../../img/links/cyan-theme/Dribbble_copy.png");
+}
+
+.user-photo__tooltip .user-photo__links_theme_cyan {
+  background-color: rgba(20,202,130,0);
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.user-photo__tooltip .user-photo__links_theme_cyan:hover {
+  background-color: rgba(20,202,130, 1);
+}
+
+.user-photo__tooltip .user-photo__links_theme_cyan:active {
+  background-color: rgba(20, 202, 130, 0);
+}

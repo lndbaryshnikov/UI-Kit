@@ -1,0 +1,22 @@
+mixin user-photo_with-tooltip(name2, job, theme)
+    .user-photo_with-tooltip.scss
+        +user-photo(name2)
+
+        if theme == 'orange-red'
+            - var nameColor = 'orange-red'
+            - var jobColor = 'black'
+            - var tooltipColor = 'grey'
+
+        if theme == 'cyan'
+            - var nameColor = 'white'
+            - var jobColor = 'white'
+            - var tooltipColor = 'cyan'
+
+        div(class= "user-photo__tooltip user-photo__tooltip_color_" + tooltipColor)
+
+            span(class= "user-photo__name user-photo__name_color_" + nameColor)= name2
+            span(class= "user-photo__job user-photo__job_color_" + jobColor)= job
+
+
+            - for (var i = 1; i<=3; i++)
+                a(href="#" class="user-photo__links user-photo__links_theme_" + theme)

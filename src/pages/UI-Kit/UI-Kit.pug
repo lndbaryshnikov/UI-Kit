@@ -6,6 +6,8 @@ include ../../components/toggle/toggle
 include ../../components/tick-box/tick-box
 include ../../components/search-bar/search-bar
 include ../../components/dropdown/dpordown
+include ../../components/user-photo/user-photo
+include ../../components/user-photo/_with-tooltip/user-photo_with-tooltip
 
 doctype html
 html
@@ -64,8 +66,13 @@ html
         br
         br
         br
-        input(type="text" class="text-field")
+        +user-photo("John Smith")
+        br
+        +user-photo("Sarah Brown")
         br
         br
         br
+        +user-photo_with-tooltip('John Smith', 'ux designer', 'orange-red')
+        br
+        +user-photo_with-tooltip('Sarah Brown', 'developer', 'cyan')
 
