@@ -112,5 +112,20 @@ import "../../components/user-photo/__job/_color/user-photo__job_color_white.scs
 import "../../components/user-photo/__tooltip/_color/user-photo__tooltip_color_cyan.scss"
 import "../../components/user-photo/__tooltip/_color/user-photo__tooltip_color_grey.scss"
 
+import "../../components/billboard/billboard.scss"
+import "../../components/billboard/_background-color/billboard_background-color_cyan.scss"
+import "../../components/billboard/_background-color/billboard_background-color_orange-red.scss"
+import "../../components/billboard/billboard__content.scss"
+import "../../components/billboard/billboard__image.scss"
+import "../../components/billboard/billboard__description.scss"
+import "../../components/billboard/__date/billboard__date.scss"
+import "../../components/billboard/__date/_type/billboard__date_type_event.scss"
+import "../../components/billboard/__date/_type/billboard__date_type_new.scss"
+import "../../components/billboard/__title/billboard__title.scss"
+import "../../components/billboard/__title/_type/billboard__title_type_event.scss"
+import "../../components/billboard/__title/_type/billboard__title_type_new.scss"
+import "../../components/billboard/billboard__button.scss"
+
+
 
 
