@@ -1,0 +1,22 @@
+mixin message-box(theme, name)
+    if theme == 'cyan'
+        - var headerTheme = 'cyan'
+        - var buttonColor = 'cyan'
+
+    if theme == 'orange-red'
+        - var headerTheme = 'orange-red'
+        - var buttonColor = 'orange-red'
+
+    div(class= "message-box" id= name)
+        div(class= "message-box__header message-box__header_theme_" + headerTheme)
+            .message-box__name
+            .message-box__photo
+                +user-photo('Sarah Brown')
+        .message-box__body
+            .message-box__chat
+                a.message-box__chat-button(href='#')
+                a.message-box__camera-button(href='#')
+                .message-box__message
+                textarea(class="text-field message-box__reply" placeholder="Your reply here...")
+                .message-box__reply-button
+                    +button('standard', buttonColor, 'reply', '100%')

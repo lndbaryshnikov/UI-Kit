@@ -126,6 +126,22 @@ import "../../components/billboard/__title/_type/billboard__title_type_event.scs
 import "../../components/billboard/__title/_type/billboard__title_type_new.scss"
 import "../../components/billboard/billboard__button.scss"
 
+import "../../components/message-box/message-box.scss"
+import "../../components/message-box/__header/message-box__header.scss"
+import "../../components/message-box/__header/_theme/message-box__header_theme_cyan.scss"
+import "../../components/message-box/__header/_theme/message-box__header_theme_orange-red.scss"
+import "../../components/message-box/message-box__body.scss"
+import "../../components/message-box/message-box__camera-button.scss"
+import "../../components/message-box/message-box__chat.scss"
+import "../../components/message-box/message-box__chat-button.scss"
+import "../../components/message-box/message-box__message.scss"
+import "../../components/message-box/message-box__name.scss"
+import "../../components/message-box/message-box__photo.scss"
+import "../../components/message-box/message-box__reply.scss"
+import "../../components/message-box/message-box__reply-button.scss"
+import "../../components/message-box/message-box__reply-button.scss"
+import "../../components/message-box/message-box"
+
 
 
 
