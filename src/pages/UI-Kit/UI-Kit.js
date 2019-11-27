@@ -142,6 +142,16 @@ import "../../components/message-box/message-box__reply-button.scss"
 import "../../components/message-box/message-box__reply-button.scss"
 import "../../components/message-box/message-box"
 
+import "../../components/map/map.scss"
+import "../../components/map/map__map-container.scss"
+import "../../components/map/map__footer.scss"
+import "../../components/map/map__footer-sign.scss"
+import "../../components/map/map__footer-address.scss"
+import "../../components/map/map__icon.scss"
+import "../../components/map/map__button.scss"
+import "../../components/map/map-marker.scss"
+import "../../components/map/map-marker__circle.scss"
+
 
 
 
