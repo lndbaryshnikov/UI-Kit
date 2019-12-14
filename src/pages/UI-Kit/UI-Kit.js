@@ -152,6 +152,17 @@ import "../../components/map/map__button.scss"
 import "../../components/map/map-marker.scss"
 import "../../components/map/map-marker__circle.scss"
 
+import "jquery-ui/ui/widgets/datepicker"
+import "../../components/datepicker/datepicker"
+import "jquery-ui/themes/base/core.css"
+// import "jquery-ui/themes/base/theme.css"
+import "jquery-ui/themes/base/datepicker.css"
+import "../../components/datepicker/datepicker-styles"
+import "../../components/datepicker/ui-datepicker-year.scss"
+
+
+
+
 
 
 
