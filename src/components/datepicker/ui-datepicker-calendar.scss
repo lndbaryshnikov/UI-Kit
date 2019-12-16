@@ -1,3 +1,29 @@
 .ui-datepicker-calendar {
+  color: #fdf4f2;
+  font-family: "Lato - Black";
+  border-collapse: collapse;
 
 }
+
+.ui-datepicker-calendar tbody td {
+  border: 2px solid #ffffff;
+}
+
+.ui-datepicker-calendar tbody td:hover {
+  background-color: #e75735;
+}
+
+.ui-datepicker-calendar tbody td:active {
+  background-color: lightgrey;
+}
+
+.ui-datepicker-calendar tbody td a {
+  text-align: center;
+  font-family: "Lato - Black";
+  font-size: 1.3em;
+}
+
+.ui-datepicker-calendar a {
+  color: #868686;
+}
+

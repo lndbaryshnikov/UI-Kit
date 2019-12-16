@@ -1,9 +1,7 @@
 .ui-datepicker-next {
-  width: 1px;
-  height: 1px;
   border-color: #ffffff #ffffff transparent transparent;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  transform: rotate(45deg);
-
+  transform: scale(0.5) rotate(45deg);
+  margin-top: 5px;
 }
