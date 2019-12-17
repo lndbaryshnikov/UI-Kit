@@ -162,7 +162,5 @@ import "../../components/datepicker/ui-datepicker-year.scss"
 
 import "../../components/video/video.scss"
 
-
-
-
-
+import "./buttons/buttons.styles"
+import "./arrow-buttons/arrow-buttons.styles"

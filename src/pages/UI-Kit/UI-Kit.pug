@@ -22,10 +22,14 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title UI-Kit
     body
-        +button('standard', 'red', 'button')
-        br
-        +button('small', 'cyan', 'button')
-        br
+        .buttons
+            .buttons__sign STANDARD BUTTONS
+            .buttons__container
+                +button('small', 'cyan', 'button')
+                +button('standard', 'cyan', 'button')
+                +button('standard', 'red', 'button')
+                +button('small', 'red', 'button')
+
         +arrow-buttons('disabled')
         br
         +arrow-buttons
