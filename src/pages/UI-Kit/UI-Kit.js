@@ -160,7 +160,7 @@ import "jquery-ui/themes/base/datepicker.css"
 import "../../components/datepicker/datepicker-styles"
 import "../../components/datepicker/ui-datepicker-year.scss"
 
-
+import "../../components/video/video.scss"
 
 
 
