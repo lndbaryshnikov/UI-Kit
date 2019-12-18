@@ -1,3 +1,3 @@
-import "./arrow-buttons.scss"
-import "./arrow-buttons__sign.scss"
-import "./arrow-buttons__container.scss"
+import "./arrows.scss"
+import "./arrows__sign.scss"
+import "./arrows__container.scss"

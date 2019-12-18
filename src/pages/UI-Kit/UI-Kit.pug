@@ -29,10 +29,14 @@ html
                 +button('standard', 'cyan', 'button')
                 +button('standard', 'red', 'button')
                 +button('small', 'red', 'button')
-
-        +arrow-buttons('disabled')
+        .arrows
+            .arrows__sign ARROW BUTTONS
+            .arrows__container
+                +arrow-buttons
+                +arrow-buttons('disabled')
+                +arrow-buttons
         br
-        +arrow-buttons
+        br
         br
         +donut-chart(85)
         +donut-chart(25)

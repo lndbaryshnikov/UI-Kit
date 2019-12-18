@@ -1,10 +1,9 @@
-.arrow-buttons {
+.arrows {
   width: 130px;
-  display: flex;
-  justify-content: space-between;
+  height: 50px;
 }
 
-.arrow-buttons:hover {
+.arrows:hover {
   .arrow-button__right-arrow {
     animation: slide-right 1s ease-in-out infinite;
   }
