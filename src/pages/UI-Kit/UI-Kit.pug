@@ -35,13 +35,15 @@ html
                 +arrow-buttons
                 +arrow-buttons('disabled')
                 +arrow-buttons
-        br
-        br
-        br
-        +donut-chart(85)
-        +donut-chart(25)
-        +donut-chart(50)
-        +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
+        .charts
+            .charts__sign PERCENTAGES / PIE CHARTS
+            .charts__container
+                +donut-chart(0)
+                +donut-chart(38)
+                +donut-chart(62)
+                +donut-chart(89)
+                +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
+
         br
         .slider_with-tooltip
         br

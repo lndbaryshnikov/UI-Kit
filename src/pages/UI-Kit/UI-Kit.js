@@ -164,3 +164,4 @@ import "../../components/video/video.scss"
 
 import "./buttons/buttons.styles"
 import "./arrow-buttons/arrow-buttons.styles"
+import "./charts/charts.styles"
