@@ -23,20 +23,20 @@ html
         title UI-Kit
     body
         .buttons
-            .buttons__sign STANDARD BUTTONS
+            .block-sign STANDARD BUTTONS
             .buttons__container
                 +button('small', 'cyan', 'button')
                 +button('standard', 'cyan', 'button')
                 +button('standard', 'red', 'button')
                 +button('small', 'red', 'button')
         .arrows
-            .arrows__sign ARROW BUTTONS
+            .block-sign ARROW BUTTONS
             .arrows__container
                 +arrow-buttons
                 +arrow-buttons('disabled')
                 +arrow-buttons
         .charts
-            .charts__sign PERCENTAGES / PIE CHARTS
+            .block-sign PERCENTAGES / PIE CHARTS
             .charts__container
                 +donut-chart(0)
                 +donut-chart(38)
@@ -44,82 +44,74 @@ html
                 +donut-chart(89)
                 +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
 
-        br
-        .slider_with-tooltip
-        br
-        br
-        br
-        .slider_with-label
-        br
-        br
-        br
-        .stages
-        br
-        br
-        br
-        +message-form
-        br
-        br
-        br
-        br
-        br
-        +toggle
-        br
-        br
-        br
-        +tick-box
-        br
-        br
-        br
-        br
-        +search-bar
-        br
-        br
-        br
-        - var dropdownParameters = ['website', 'design', 'something']
-        +dropdown
-        br
-        br
-        br
-        br
-        +user-photo("John Smith")
-        br
-        +user-photo("Sarah Brown")
-        br
-        br
-        br
-        +user-photo_with-tooltip('John Smith', 'ux designer', 'orange-red')
-        br
-        +user-photo_with-tooltip('Sarah Brown', 'developer', 'cyan')
-        br
-        br
-        br
-        +billboard('news', 'It’s all going\n' +
-        'downhill', 'new', 'Lorem ipsum dolor sit amet' +
-        ', consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
-        ' Etiam a nisi nunc, a tincidunt eros.', 'orange-red', '24', 'august', '2013')
-        br
-        br
-        br
-        +billboard('events', 'this is the title', 'event', 'Lorem ipsum dolor sit amet' +
-        ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
-        br
-        br
-        br
-        +map()
-        br
-        br
-        br
-        +message-box('cyan', 'Sarah Brown')
-        br
-        br
-        br
-        +datepicker()
-        br
-        br
-        br
-        +video("https://youtu.be/UBS52IgUDZ0?list=RDUBS52IgUDZ0")
-        br
-        br
-        br
+        .sliders
+            .block-sign SLIDERS
+            .sliders__container
+                .slider_with-tooltip
+                .slider_with-label
 
+        .stages-box
+            .block-sign STAGES
+            .stages-box__container
+                .stages
+
+        .form-elements
+            .block-sign FORM ELEMENTS
+            .form-elements__container
+                +message-form
+                .form-elements__toggles-container
+                    .toggles
+                        .block-sign TOGGLES
+                        .toggles__container
+                            +toggle
+                            +toggle
+                    .tick-boxes
+                        .block-sign TICK BOXES
+                        .tick-boxes__container
+                            +tick-box
+                            +tick-box
+
+        .search-dropdown-profiles
+            .search-dropdown
+                .block-sign SEARCH / DROP DOWN
+                .search-dropdown__container
+                    +search-bar
+                    +search-bar
+                    - var dropdownParameters = ['website', 'design', 'something']
+                    +dropdown
+            .profile
+                .block-sign USER PROFILE
+                .profile__container
+                    +user-photo_with-tooltip('John Smith', 'ux designer', 'orange-red')
+                    +user-photo_with-tooltip('Sarah Brown', 'developer', 'cyan')
+
+        .news-events
+            .block-sign NEWS & EVENTS
+            .news-events__container
+                    +billboard('news', 'It’s all going\n' +
+                    'downhill', 'new', 'Lorem ipsum dolor sit amet' +
+                    ', consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
+                    ' Etiam a nisi nunc, a tincidunt eros.', 'orange-red', '24', 'august', '2013')
+
+                    +billboard('events', 'this is the title', 'event', 'Lorem ipsum dolor sit amet' +
+                    ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
+
+        .location
+            .block-sign LOCATION
+            .location__container
+                +map()
+
+        .calendar-messaging
+            .calendar
+                .block-sign CALENDAR
+                .calendar__container
+                    +datepicker()
+            .messaging
+                .block-sign MESSAGING
+                .messaging__container
+                    +message-box('cyan', 'Sarah Brown')
+
+        .video-box
+            .block-sign VIDEO
+            .video-box__container
+                +video("https://youtu.be/UBS52IgUDZ0?list=RDUBS52IgUDZ0")

@@ -1,11 +1,11 @@
 import sliderTooltip from './__tooltip/slider_tooltip';
 
-sliderTooltip.text(30);
+sliderTooltip.text(40);
 
 $('.slider_with-tooltip').slider({
     animate: "slow",
     range: "min",
-    value: 30,
+    value: 40,
 
     classes: {
         "ui-slider": "slider__scale_color_gray",

@@ -1,4 +1,7 @@
 .charts__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-top: 12px;
+  position: relative;
+  left: -15px;
 }

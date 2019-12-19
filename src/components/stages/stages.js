@@ -1,9 +1,10 @@
 $('.stages')
     .slider({
         animate: "slow",
+        min: 1,
         max: 5,
         range: "min",
-        value: 2,
+        value: 3,
 
         classes: {
             "ui-slider": "slider__scale_color_gray stages__scale",

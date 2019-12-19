@@ -2,7 +2,7 @@ $('.slider_with-label')
     .slider({
         animate: "slow",
         range: "min",
-        value: 50,
+        value: 75,
         step: 25,
 
         classes: {
