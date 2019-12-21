@@ -1,5 +1,24 @@
 .charts {
-  width: 594px;
+  width: 600px;
   margin: 102px auto 0;
+}
 
+.charts .donut-chart:nth-child(1) {
+  margin-right: -10px;
+}
+
+.charts .donut-chart:nth-child(2) {
+  margin-right: 11px;
+}
+
+.charts .donut-chart:nth-child(3) {
+  margin-right: 10px;
+}
+
+.charts .donut-chart:nth-child(4) {
+  margin-right: 7px;
+}
+
+.charts .block-sign {
+  letter-spacing: 1.7px;
 }
