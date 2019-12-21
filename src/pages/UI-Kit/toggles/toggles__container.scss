@@ -1,5 +1,8 @@
 .toggles__container {
   display: flex;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 31px;
+  width: 102%;
+  position: relative;
+  left: -2px;
 }

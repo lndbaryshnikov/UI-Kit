@@ -1,5 +1,5 @@
-mixin tick-box
+mixin tick-box(isChecked)
     label.tick-box
-        input(type="checkbox")
+        input(type="checkbox" checked=isChecked)
         .tick-box__checkmark
             div

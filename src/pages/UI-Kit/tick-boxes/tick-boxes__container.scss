@@ -1,5 +1,8 @@
 .tick-boxes__container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 32px;
+  justify-content: space-between;
+  margin: 30px auto 0;
+  width: 63px;
+  position: relative;
+  left: -7px;
 }

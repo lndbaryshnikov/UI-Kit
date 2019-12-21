@@ -6,11 +6,27 @@
 }
 
 .ui-datepicker-calendar tbody td {
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.ui-datepicker-calendar {
+  margin-top: -5px !important;
+  width: 101% !important;
+  margin-left: -2px !important;
+}
+
+.ui-datepicker-calendar thead th span {
+  position: relative !important;
+  top: 5px !important;
+}
+
+.ui-datepicker-calendar tbody td {
+  height: 37px !important;
 }
 
 .ui-datepicker-calendar tbody td:hover {
   background-color: #e75735;
+  height: 1px !important;
 }
 
 .ui-datepicker-calendar tbody td:active {
