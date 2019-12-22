@@ -1,0 +1,5 @@
+import "./tick-box.scss"
+import "./tick-box__input.scss"
+import "./tick-box__checkmark.scss"
+import "./_state/tick-box_state_checked.scss"
+import "./_state/tick-box_state_not-checked.scss"

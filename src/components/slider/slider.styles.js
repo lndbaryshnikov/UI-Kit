@@ -1,0 +1,15 @@
+import "./__tooltip/slider__tooltip.scss"
+import "./slider_with-tooltip"
+import "./slider.scss"
+import "./__scale/_color/slider__scale _color_gray.scss"
+import "./__range/_color/slider__range_color_gray.scss"
+import "./__handle/_color/slider__handle_color_orange-red.scss"
+
+import "./__label/slider__label.scss"
+import "./__label/slider__line.scss"
+import "./__label/slider__pip.scss"
+import "./slider_with-label"
+import "./__range/_color/slider__range_color_green.scss"
+import "./__handle/_color/slider__handle_color_green.scss"
+
+import "./__range/_color/slider__range_color_orange-red.scss"
