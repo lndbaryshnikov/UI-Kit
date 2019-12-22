@@ -1,6 +1,10 @@
 .calendar-messaging {
-  margin: 74px auto 0;
+  margin: 75px auto 0;
   width: 594px;
   display: flex;
   justify-content: space-between;
+}
+
+.calendar-messaging .block-sign {
+  margin-left: -2px;
 }
