@@ -4,11 +4,11 @@
 }
 
 .arrows:hover {
-  .arrow-button__right-arrow {
+  .ripple  .arrow-button__right-arrow {
     animation: slide-right 1s ease-in-out infinite;
   }
 
-  .arrow-button__left-arrow {
+  .ripple .arrow-button__left-arrow {
     animation: slide-left 1s ease-in-out infinite;
   }
 }
