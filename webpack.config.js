@@ -17,9 +17,10 @@ const common = merge([
     {
         entry: {
             'UI-Kit': PATHS.src + '/UI-Kit/UI-Kit.js',
-            //'UI-Kit': PATHS.src + '/UI-Kit/UI-Kit.scss',
-            'second': PATHS.src + '/second/second.js',
-            //'second': PATHS.src + '/second/second.scss',
+            'info': PATHS.src + '/info/info.js',
+            'details': PATHS.src + '/details/details.js',
+            'enroll': PATHS.src + '/enroll/enroll.js',
+            'contact': PATHS.src + '/contact/contact.js',
         },
         output: {
             path: PATHS.dist,
@@ -32,9 +33,24 @@ const common = merge([
                 template: PATHS.src + '/UI-Kit/UI-Kit.pug',
             }),
             new HtmlWebpackPlugin({
-                filename: 'second.html',
-                chunks: ['second'],
-                template: PATHS.src + '/second/second.pug',
+                filename: 'info.html',
+                chunks: ['info'],
+                template: PATHS.src + '/info/info.pug',
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'details.html',
+                chunks: ['details'],
+                template: PATHS.src + '/details/details.pug',
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'enroll.html',
+                chunks: ['enroll'],
+                template: PATHS.src + '/enroll/enroll.pug',
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'contact.html',
+                chunks: ['contact'],
+                template: PATHS.src + '/contact/contact.pug',
             }),
         ],
     },
