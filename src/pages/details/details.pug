@@ -1,0 +1,19 @@
+include ../components/header/header
+include ../components/menu/menu
+include ./course-stages/course-stages
+
+doctype html
+html
+    head
+        meta(charset = 'utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Course Details
+    body
+        +header()
+        +menu()
+        .page-content
+            .details
+                .details__teachers
+                .details__percentages
+                .details__course-stages
+                    +course-stages

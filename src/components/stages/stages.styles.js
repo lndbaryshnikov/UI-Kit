@@ -1,4 +1,3 @@
-import "./stages"
 import "./stages__handle.scss"
 import "./stages__scale.scss"
 import "./__label/stages__line.scss"

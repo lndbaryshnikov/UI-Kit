@@ -11,7 +11,11 @@ import "jquery-ui/themes/base/slider.css"
 
 import "../../components/slider/pips-float-plugin/jquery-ui-slider-pips"
 import "../../components/slider/pips-float-plugin/jquery-ui-slider-pips.css"
+
+import "../../components/slider/slider_with-label"
+import "../../components/slider/slider_with-tooltip"
 import "../../components/slider/slider.styles"
+import "../../components/stages/stages"
 import "../../components/stages/stages.styles"
 import "../../components/text-field/text-field.scss"
 import "../../components/message-form/message-form.styles"
