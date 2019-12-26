@@ -1,0 +1,11 @@
+include ../menu-message/menu-message
+
+mixin menu()
+    .menu
+        .menu__pages
+            a(href="./info.html") Information
+            a(href="./details.html") Course details
+            a(href="./enroll.html") Enroll in a course
+            a(href="./contact.html") Contact us
+        .menu__message-box
+            +menu-message

@@ -1,3 +1,6 @@
+include ../user-photo/user-photo
+include ../button/button
+
 mixin message-box(theme, name)
     if theme == 'cyan'
         - var headerTheme = 'cyan'
@@ -5,7 +8,7 @@ mixin message-box(theme, name)
 
     if theme == 'orange-red'
         - var headerTheme = 'orange-red'
-        - var buttonColor = 'orange-red'
+        - var buttonColor = 'red'
 
     div(class= "message-box" id= name)
         div(class= "message-box__header message-box__header_theme_" + headerTheme)
