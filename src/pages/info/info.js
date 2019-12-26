@@ -1,13 +1,6 @@
-import "../../fonts/Lato.scss"
+import "../components/common"
 
-import "../components/header/header.styles"
-import "../components/navigation/navigation.styles"
-import "../../components/search-bar/search-bar.styles"
-import "../../components/text-field/text-field.scss"
-
-import "../components/menu/menu.styles"
-import "../components/menu-message/menu-message.styles"
-import "../../components/message-box/message-box.styles"
-import "../../components/button/button.styles"
-import "../../components/user-photo/user-photo.styles"
-import "../components/menu-message/menu-message"
+import "./info__title.scss"
+import "./info__text.scss"
+import "./info__video.scss"
+import "../../components/video/video.scss"
