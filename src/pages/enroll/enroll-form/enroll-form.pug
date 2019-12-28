@@ -1,0 +1,19 @@
+include ../../../components/tick-box/tick-box
+
+mixin enroll-form()
+    form(class="message-form enroll-form" method="post")
+        input(type="text" name="name" class="text-field message-form__data-field_type_input" placeholder="Your Name")
+        br
+        input(type="text" name="email" class="text-field message-form__data-field_type_input" placeholder="Your Email")
+        br
+        textarea(class="text-field message-form__data-field_type_textarea" name="message" placeholder="Your Message")
+        br
+        .enroll-form__tick-boxes
+            .enroll-form__tick-item
+                +tick-box
+                .enroll-form__tick-sign Subscribe
+            .enroll-form__tick-item
+                +tick-box
+                .enroll-form__tick-sign Call me back
+        .message-form__button
+            +button('standard', 'cyan', 'submit')

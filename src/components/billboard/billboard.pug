@@ -6,12 +6,12 @@ mixin billboard(type, title, imageName, content, backgroundColor, day, month, ye
 
         .billboard__content
 
-            if type == "news"
+            if type === "news"
                 div(class= "billboard__title billboard__title_type_new")= title
                 div(class= "billboard__date billboard__date_type_new")= day + ' ' + month + ' ' + year
                 .billboard__description= content
 
-            if type == "events"
+            if type === "events"
                 div(class= "billboard__date billboard__date_type_event")
                     span= day + ' '
                     span= month
