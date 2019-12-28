@@ -1,6 +1,8 @@
 include ../components/header/header
 include ../components/menu/menu
 include ./course-stages/course-stages
+include ./teachers/teachers
+include percentages/percentages
 
 doctype html
 html
@@ -13,7 +15,10 @@ html
         +menu()
         .page-content
             .details
-                .details__teachers
-                .details__percentages
+                .details__teachers-percentage
+                    .details__teachers
+                        +teachers
+                    .details__percentages
+                        +percentages
                 .details__course-stages
                     +course-stages
