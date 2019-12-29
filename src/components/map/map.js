@@ -26,3 +26,7 @@ const marker = L.marker([37.791097, -122.415073], {
 document.querySelector(".map__button").addEventListener("click", () => {
     map.setView([37.791097, -122.415073], 14);
 });
+
+export {map, marker};
+
+

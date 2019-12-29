@@ -1,0 +1,24 @@
+include ../components/header/header
+include ../components/menu/menu
+include ../../components/map/map
+include ../../components/billboard/billboard
+
+doctype html
+html
+    head
+        meta(charset = 'utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Contact
+    body
+        +header()
+        +menu()
+        .page-content
+            .contact__address-billboard
+                .contact__address You can find us at Ostrovsky street, 38, Kazan <br />
+                                |  +7 (905) 245-74-83 <br /> kazandesign@gmail.com
+                +billboard("events", "first lesson", "billboard-photo-2",
+                            "First lesson starts in February 14yh. Hurry up to sign up!",
+                            "cyan", "14", "Feb", "2020")
+            .contact__map
+                +map
+
