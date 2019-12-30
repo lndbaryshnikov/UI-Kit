@@ -1,3 +1,5 @@
+window.mapsContainer = [];
+
 const map = L.map('map__map-container').setView([37.791097, -122.415073], 14);
 const mapBoxToken = 'pk.eyJ1IjoibGVvYmFyIiwiYSI6ImNrM2EwM3pmdzA3bGgzbXF0bG11cjhqdnkifQ.BcgmIzwCilGUFZljSUMAfQ';
 
@@ -23,10 +25,16 @@ const marker = L.marker([37.791097, -122.415073], {
     icon: markerIcon
 }).addTo(map);
 
+const mapObject = {
+    map: map,
+    marker: marker
+};
+
+mapsContainer.push(mapObject);
+
 document.querySelector(".map__button").addEventListener("click", () => {
     map.setView([37.791097, -122.415073], 14);
 });
 
-export {map, marker};
 
 

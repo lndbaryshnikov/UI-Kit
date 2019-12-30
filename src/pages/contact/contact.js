@@ -5,10 +5,13 @@ import "./contact__address.scss"
 import "./contact__map.scss"
 
 import "../../components/map/map.styles"
-import "../../components/map/map"
+// import "../../components/map/map"
 import "../../components/billboard/billboard.styles"
 
-import {map, marker} from "../../components/map/map"
+const map = window.mapsContainer[0].map;
+const marker = window.mapsContainer[0].marker;
+
+console.log(map);
 
 map.setView([55.785124, 49.121856], 14);
 marker.setLatLng([55.785124, 49.121856]);
@@ -22,4 +25,5 @@ document.querySelector(".contact__map .map__button").addEventListener("click", (
 const billboardButton = document.querySelector(".contact__address-billboard .billboard__button");
 billboardButton.onclick = () => { window.location.href="./enroll.html" };
 document.querySelector(".contact__address-billboard .billboard__button button").innerHTML = "Enroll";
+
 
