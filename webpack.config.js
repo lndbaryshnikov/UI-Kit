@@ -28,7 +28,7 @@ const common = merge([
         },
         plugins: [
             new HtmlWebpackPlugin({
-                filename: 'UI-Kit.html',
+                filename: 'index.html',
                 chunks: ['UI-Kit'],
                 template: PATHS.src + '/UI-Kit/UI-Kit.pug',
             }),

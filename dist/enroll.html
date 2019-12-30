@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll</title>
+  <link href="./css/enroll.css" rel="stylesheet"></head>
+  <body>
+    <div class="header">
+      <div class="header__left header__left_color_red"><a class="header__back-to-ui-kit" href="./index.html">BACK TO UI-KIT</a>
+        <div class="header__navigation">NAVIGATION
+          <div class="navigation">
+            <div class="navigation__sign"></div>
+            <div class="navigation__search-bar">
+              <div class="search-bar">
+                <form>
+                  <input class="text-field search-bar__input" type="text" placeholder="Search" name="search">
+                  <button class="search-bar__button" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__right">
+        <div class="header__name">UI Design Courses Kazan</div>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="menu__pages"><a href="./info.html">Information</a><a href="./details.html">Course details</a><a href="./enroll.html">Enroll in a course</a><a href="./contact.html">Contact us</a></div>
+      <div class="menu__message-box">
+        <div class="menu-message">
+          <div class="menu-message__header">Message us</div>
+          <div class="menu-message__message-box">
+            <div class="message-box" id="Sarah Brown">
+              <div class="message-box__header message-box__header_theme_orange-red">
+                <div class="message-box__name"></div>
+                <div class="message-box__photo">
+                  <div class="user-photo__back"><img src="images/Sarah Brown.png"></div>
+                </div>
+              </div>
+              <div class="message-box__body">
+                <div class="message-box__chat"><a class="message-box__chat-button" href="#"></a><a class="message-box__camera-button" href="#"></a>
+                  <div class="message-box__message"></div>
+                  <form method="post">
+                    <textarea class="text-field message-box__reply" name="reply" placeholder="Your reply here..."></textarea>
+                    <div class="message-box__reply-button">
+                      <div class="button__back button__back_size_standard button__back_color_red" style="width:100%;">
+                        <button class="button button_size_standard button_color_red ripple" type="submit">reply</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="enroll__title">You can enroll in a course here (starts in February 14th):</div>
+      <div class="enroll__content">
+        <div class="enroll__form">
+          <form class="message-form enroll-form" method="post">
+            <input class="text-field message-form__data-field_type_input" type="text" name="name" placeholder="Your Name"><br>
+            <input class="text-field message-form__data-field_type_input" type="text" name="email" placeholder="Your Email"><br>
+            <textarea class="text-field message-form__data-field_type_textarea" name="message" placeholder="Your Message"></textarea><br>
+            <div class="enroll-form__tick-boxes">
+              <div class="enroll-form__tick-item">
+                <label class="tick-box">
+                  <input type="checkbox">
+                  <div class="tick-box__checkmark">
+                    <div></div>
+                  </div>
+                </label>
+                <div class="enroll-form__tick-sign">Subscribe</div>
+              </div>
+              <div class="enroll-form__tick-item">
+                <label class="tick-box">
+                  <input type="checkbox">
+                  <div class="tick-box__checkmark">
+                    <div></div>
+                  </div>
+                </label>
+                <div class="enroll-form__tick-sign">Call me back</div>
+              </div>
+            </div>
+            <div class="message-form__button">
+              <div class="button__back button__back_size_standard button__back_color_cyan" style="width:undefined;">
+                <button class="button button_size_standard button_color_cyan ripple" type="submit">submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="enroll__billboard">
+          <div class="billboard billboard_background-color_cyan">
+            <div class="billboard__image"><img src="images/javascript.png"></div>
+            <div class="billboard__content">
+              <div class="billboard__title billboard__title_type_new">JavaScript course</div>
+              <div class="billboard__date billboard__date_type_new">14 november 2020</div>
+              <div class="billboard__description">First course starts february 14th!</div>
+            </div>
+          </div>
+        </div>
+        <div class="enroll__datepicker">
+          <div class="datepicker">
+            <div class="datepicker__header">
+              <div class="datepicker__month-line"></div>
+            </div>
+            <div class="datepicker__datepicker-wrapper"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="./js/enroll.js"></script></body>
+</html>

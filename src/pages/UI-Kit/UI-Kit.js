@@ -55,3 +55,5 @@ import "./calendar-messaging.scss"
 import "./calendar/calendar.styles"
 import "./messaging/messaging.styles"
 import "./video-box/video-box.styles"
+
+import "./header/header.styles"
