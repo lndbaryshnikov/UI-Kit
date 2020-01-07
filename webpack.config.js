@@ -8,6 +8,7 @@ const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 const devserver = require('./webpack/devserver');
 const providePlugin = require('./webpack/provide-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, 'src/pages'),
@@ -24,6 +25,7 @@ const common = merge([
         },
         output: {
             path: PATHS.dist,
+            publicPath: './',
             filename: './js/[name].js'
         },
         plugins: [
@@ -52,6 +54,10 @@ const common = merge([
                 chunks: ['contact'],
                 template: PATHS.src + '/contact/contact.pug',
             }),
+            new FaviconsWebpackPlugin({
+                logo: './src/img/favicon.png',
+                prefix: 'assets/'
+            })
         ],
     },
     babel(),

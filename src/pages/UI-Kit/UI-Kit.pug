@@ -14,31 +14,31 @@ include ../../components/map/map
 include ../../components/datepicker/datepicker
 include ../../components/video/video
 
-
 doctype html
 html
     head
         meta(charset = 'utf-8')
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="UI-Kit (set of UI elements)")
         title UI-Kit
     body
-        .header
+        header.header
             .header__name UI-Kit
-            a(class="header__link" href="./info.html") Go to website
-        .buttons
+            a(class="header__link" href="./info.html" target="_blank") Go to website
+        section.buttons
             .block-sign STANDARD BUTTONS
             .buttons__container
                 +button('small', 'cyan', 'button')
                 +button('standard', 'cyan', 'button')
                 +button('standard', 'red', 'button')
                 +button('small', 'red', 'button')
-        .arrows
+        section.arrows
             .block-sign ARROW BUTTONS
             .arrows__container
                 +arrow-buttons
                 +arrow-buttons('disabled')
                 +arrow-buttons
-        .charts
+        section.charts
             .block-sign PERCENTAGES / PIE CHARTS
             .charts__container
                 +donut-chart(0)
@@ -47,18 +47,18 @@ html
                 +donut-chart(89)
                 +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
 
-        .sliders
+        section.sliders
             .block-sign SLIDERS
             .sliders__container
                 .slider_with-tooltip
                 .slider_with-label
 
-        .stages-box
+        section.stages-box
             .block-sign STAGES
             .stages-box__container
                 .stages
 
-        .form-elements
+        section.form-elements
             .block-sign FORM ELEMENTS
             .form-elements__container
                 +message-form
@@ -74,21 +74,21 @@ html
                             +tick-box(true)
                             +tick-box(false)
 
-        .search-dropdown-profiles
+        section.search-dropdown-profiles
             .search-dropdown
                 .block-sign SEARCH / DROP DOWN
                 .search-dropdown__container
                     +search-bar
                     +search-bar
                     - var dropdownParameters = ['website', 'design', 'something']
-                    +dropdown
+                    +dropdown(dropdownParameters)
             .profile
                 .block-sign USER PROFILE
                 .profile__container
                     +user-photo_with-tooltip('John Smith', 'ux designer', 'orange-red')
                     +user-photo_with-tooltip('Sarah Brown', 'developer', 'cyan')
 
-        .news-events
+        section.news-events
             .block-sign NEWS & EVENTS
             .news-events__container
                     +billboard('news', 'It’s all going\n' +
@@ -99,12 +99,12 @@ html
                     +billboard('events', 'this is the title', 'event', 'Lorem ipsum dolor sit amet' +
                     ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
 
-        .location
+        section.location
             .block-sign LOCATION
             .location__container
                 +map()
 
-        .calendar-messaging
+        section.calendar-messaging
             .calendar
                 .block-sign CALENDAR
                 .calendar__container
@@ -114,7 +114,7 @@ html
                 .messaging__container
                     +message-box('cyan', 'Sarah Brown')
 
-        .video-box
+        section.video-box
             .block-sign VIDEO
             .video-box__container
                 +video("https://www.youtube.com/embed/pzbqEG_chrs")

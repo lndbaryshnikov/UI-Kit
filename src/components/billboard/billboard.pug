@@ -4,7 +4,7 @@ mixin billboard(type, title, imageName, content, backgroundColor, day, month, ye
     div(class= "billboard billboard_background-color_" + backgroundColor)
 
         .billboard__image
-            img(src=require('../../img/billboard/' + imageName + '.png'))
+            img(src=require('../../img/billboard/' + imageName + '.png') alt=imageName)
 
         .billboard__content
 

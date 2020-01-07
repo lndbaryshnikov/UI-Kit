@@ -2,8 +2,6 @@
     const map = window.mapsContainer[0].map;
     const marker = window.mapsContainer[0].marker;
 
-    console.log(map);
-
     map.setView([55.785124, 49.121856], 14);
     marker.setLatLng([55.785124, 49.121856]);
 

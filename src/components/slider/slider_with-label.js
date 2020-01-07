@@ -18,14 +18,3 @@ $('.slider_with-label')
         rest: "label",
     });
 
-
-
-//     .each(function() {
-//     var option = $(this).data().slider.options;
-//     var values = option.max - option.min;
-//     for (var i = 0; i<=values; i++) {
-//         var item = $('<label>' + '|' + (i+1) + '</label>')
-//             .css('left', (i / values * 100) + '%');
-//         $('.slider_with__label').append(item);
-//     }
-// });

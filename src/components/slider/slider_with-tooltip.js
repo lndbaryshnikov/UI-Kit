@@ -1,23 +1,27 @@
 import "jquery-ui/ui/widgets/slider"
-import sliderTooltip from './__tooltip/slider_tooltip';
 
-sliderTooltip.text(40);
+(() => {
+    const $sliderWithTooltip = $('.slider_with-tooltip');
+    const $sliderTooltip = $('<div id="slider__tooltip" />');
 
-$('.slider_with-tooltip').slider({
-    animate: "slow",
-    range: "min",
-    value: 40,
+    $sliderTooltip.text(40);
 
-    classes: {
-        "ui-slider": "slider__scale_color_gray",
-        "ui-slider-range": "slider__range_color_gray",
-        "ui-slider-handle": "slider__handle_color_orange-red"
-    },
+    $sliderWithTooltip.slider({
+        animate: "slow",
+        range: "min",
+        value: 40,
 
-    slide: function (event, ui) {
-        sliderTooltip.text(ui.value);
-        //$('.slider_with-tooltip').find('.ui-slider-handle').append(sliderTooltip);
-    },
-});
+        classes: {
+            "ui-slider": "slider__scale_color_gray",
+            "ui-slider-range": "slider__range_color_gray",
+            "ui-slider-handle": "slider__handle_color_orange-red"
+        },
 
-$('.slider_with-tooltip').find('.ui-slider-handle').append(sliderTooltip);
+        slide: function (event, ui) {
+            $sliderTooltip.text(ui.value);
+        },
+    });
+
+    $sliderWithTooltip.find('.ui-slider-handle').append($sliderTooltip);
+})();
+
