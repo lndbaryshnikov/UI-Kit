@@ -1,3 +1,4 @@
+import "../components/common.styles"
 import "../components/common"
 
 import "./info__title.scss"

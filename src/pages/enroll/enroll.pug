@@ -1,6 +1,6 @@
 include ../components/header/header
 include ../components/menu/menu
-include ./enroll-form/enroll-form
+include ../components/enroll-form/enroll-form
 include ../../components/billboard/billboard
 include ../../components/datepicker/datepicker
 
@@ -12,17 +12,18 @@ html
         title Enroll
     body
         +header()
-        +menu()
-        .page-content
-            .enroll__title You can enroll in a course here (starts in February 14th):
-            .enroll__content
-                .enroll__form
-                    +enroll-form
-                .enroll__billboard
-                    +billboard("news", "JavaScript course",
-                                "javascript", "First course starts february 14th!",
-                                "cyan", "14", "november", "2020")
-                .enroll__datepicker
-                    +datepicker
+        .page-wrapper
+            +menu()
+            .page-content
+                .enroll__title You can enroll in a course here (starts in February 14th):
+                .enroll__content
+                    .enroll__form
+                        +enroll-form
+                    .enroll__billboard
+                        +billboard("news", "JavaScript course",
+                                    "javascript", "First course starts february 14th!",
+                                    "cyan", "14", "november", "2020")
+                    .enroll__datepicker
+                        +datepicker
 
 

@@ -1,3 +1,6 @@
+import "jquery-ui/ui/widgets/slider"
+import "../../pips-float-plugin/jquery-ui-slider-pips"
+
 $('.slider_with-label')
     .slider({
         animate: "slow",

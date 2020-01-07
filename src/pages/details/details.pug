@@ -1,8 +1,8 @@
 include ../components/header/header
 include ../components/menu/menu
-include ./course-stages/course-stages
-include ./teachers/teachers
-include percentages/percentages
+include ../components/course-stages/course-stages
+include ../components/teachers/teachers
+include ../components/percentages/percentages
 
 doctype html
 html
@@ -12,13 +12,14 @@ html
         title Course Details
     body
         +header()
-        +menu()
-        .page-content
-            .details
-                .details__teachers-percentage
-                    .details__teachers
-                        +teachers
-                    .details__percentages
-                        +percentages
-                .details__course-stages
-                    +course-stages
+        .page-wrapper
+            +menu()
+            .page-content
+                .details
+                    .details__teachers-percentage
+                        .details__teachers
+                            +teachers
+                        .details__percentages
+                            +percentages
+                    .details__course-stages
+                        +course-stages

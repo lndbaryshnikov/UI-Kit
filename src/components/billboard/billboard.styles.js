@@ -11,3 +11,5 @@ import "./__title/billboard__title.scss"
 import "./__title/_type/billboard__title_type_event.scss"
 import "./__title/_type/billboard__title_type_new.scss"
 import "./billboard__button.scss"
+
+import "../button/button.styles"

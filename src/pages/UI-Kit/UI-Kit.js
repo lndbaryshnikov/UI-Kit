@@ -1,23 +1,13 @@
 //UI-Kit components styles
 import "../../fonts/fonts.styles"
 import "../../components/button/button.styles"
-import "../../components/ripple-effect/ripple-effect.styles"
 import "../../components/arrow-button/arrow-button.styles"
 import "../../components/donut-chart/donut-chart.styles"
-
-import "jquery-ui/ui/widgets/slider"
-import "jquery-ui/themes/base/core.css"
-import "jquery-ui/themes/base/slider.css"
-
-import "../../components/slider/pips-float-plugin/jquery-ui-slider-pips"
-import "../../components/slider/pips-float-plugin/jquery-ui-slider-pips.css"
-
 import "../../components/slider/slider_with-label"
 import "../../components/slider/slider_with-tooltip"
 import "../../components/slider/slider.styles"
 import "../../components/stages/stages"
 import "../../components/stages/stages.styles"
-import "../../components/text-field/text-field.scss"
 import "../../components/message-form/message-form.styles"
 import "../../components/toggle/toggle.styles"
 import "../../components/tick-box/tick-box.styles"
@@ -27,16 +17,12 @@ import "../../components/user-photo/user-photo.styles"
 import "../../components/billboard/billboard.styles"
 import "../../components/message-box/message-box.styles"
 import "../../components/map/map.styles"
-
-import "jquery-ui/ui/widgets/datepicker"
-import "jquery-ui/themes/base/core.css"
-import "jquery-ui/themes/base/datepicker.css"
-
 import "../../components/datepicker/datepicker"
 import "../../components/datepicker/datepicker.styles"
 import "../../components/video/video.scss"
 
 //UI-Kit page's styles
+import "./header/header.styles"
 import "./block-sign.scss"
 import "./buttons/buttons.styles"
 import "./arrows/arrow-buttons.styles"
@@ -55,5 +41,3 @@ import "./calendar-messaging.scss"
 import "./calendar/calendar.styles"
 import "./messaging/messaging.styles"
 import "./video-box/video-box.styles"
-
-import "./header/header.styles"

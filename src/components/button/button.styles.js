@@ -11,3 +11,6 @@ import "./__back/_size/button__back_size_small.scss";
 import "./__back/_size/button__back_size_standard.scss";
 import "./__back/_color/button__back_color_cyan.scss";
 import "./__back/_color/button__back_color_red.scss";
+
+import "../ripple-effect/ripple-effect"
+import "../ripple-effect/ripple-effect.styles"

@@ -6,3 +6,5 @@ import "./__tooltip/message-form__tooltip.js"
 import "./__tooltip/message-form__tooltip.scss"
 import "./__tooltip/_color/message-form__tooltip_color_orange-red.scss"
 import "./__tooltip/_color/message-form__tooltip_color_cyan.scss"
+
+import "../text-field/text-field.scss"

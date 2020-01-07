@@ -1,17 +1,7 @@
-html, body {
-  height: 100%;
-}
-
 .menu {
-  width: 300px;
-  //min-height: calc(100% - 130px);
-  float: left;
-  height: 100%;
-  //z-index: -1;
+  width: 230px;
+  min-width: 230px;
+  min-height: 100%;
   background-color: #e5e5e5;
-  //position: relative
-  top: 10px;
-  //z-index: -10;
   font-family: Lato;
-  position: fixed;
 }

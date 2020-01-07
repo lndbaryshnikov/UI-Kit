@@ -10,12 +10,13 @@ html
         title Information
     body
         +header()
-        +menu()
-        .page-content
-            .info__title Welcome to our page!
-            .info__text We are a Kazan school engaged in online training in web design. We will
-                        |teach you how to use programming languages such as HTML, CSS and
-                        |JavaScript. We’ll teach you how to develop original page designs and
-                        |bring them to life.
-            .info__video
-                +video("https://www.youtube.com/embed/JgIG6d3JsZs")
+        .page-wrapper
+            +menu()
+            .page-content
+                .info__title Welcome to our page!
+                .info__text We are a Kazan school engaged in online training in web design. We will
+                            |teach you how to use programming languages such as HTML, CSS and
+                            |JavaScript. We’ll teach you how to develop original page designs and
+                            |bring them to life.
+                .info__video
+                    +video("https://www.youtube.com/embed/JgIG6d3JsZs")

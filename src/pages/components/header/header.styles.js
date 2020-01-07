@@ -5,3 +5,5 @@ import "./header__back-to-ui-kit.scss"
 import "./header__navigation.scss"
 import "./header__right.scss"
 import "./header__name.scss"
+
+import "../navigation/navigation.styles"

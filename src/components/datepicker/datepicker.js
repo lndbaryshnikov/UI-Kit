@@ -1,3 +1,5 @@
+import "jquery-ui/ui/widgets/datepicker"
+
 $(".datepicker__datepicker-wrapper").datepicker({
     classes: {
         "ui-datepicker-current": "datepicker__today-button",

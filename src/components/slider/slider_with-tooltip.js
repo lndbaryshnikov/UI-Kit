@@ -1,3 +1,4 @@
+import "jquery-ui/ui/widgets/slider"
 import sliderTooltip from './__tooltip/slider_tooltip';
 
 sliderTooltip.text(40);

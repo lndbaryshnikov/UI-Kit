@@ -1,5 +1,11 @@
-mixin search-bar
-    .search-bar
+mixin search-bar(options)
+    -
+        let wrapperClass = "search-bar"
+        const hundredPercents = " search-bar_size_100-percents"
+
+    if options && options.size === "100%"
+        - wrapperClass += hundredPercents
+    div(class=wrapperClass)
         form
             input(type="text" placeholder="Search" name="search" class="text-field search-bar__input")
             button(type="submit" class="search-bar__button")

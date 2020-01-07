@@ -1,3 +1,6 @@
+import "jquery-ui/themes/base/core.css"
+import "jquery-ui/themes/base/datepicker.css"
+
 import "./datepicker.scss"
 import "./ui-datepicker-button-pane.scss"
 import "./ui-datepicker-calendar.scss"

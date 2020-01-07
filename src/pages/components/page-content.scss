@@ -1,8 +1,8 @@
 .page-content {
-  //background-color: #f2f2f2;
-  width: calc(100% - 300px);
+  width: calc(100% - 230px);
+  min-width: 550px;
   min-height: calc(100% - 130px);
-  float: right;
   font-family: Lato;
   color: #8e8d8d;
+  padding: 10px;
 }
