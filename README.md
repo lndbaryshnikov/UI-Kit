@@ -13,7 +13,7 @@
 Развертывание 
 -------------
 ```js
-$ git clone https://github.com/lndbaryshnikov/resume.git
+$ git clone https://github.com/lndbaryshnikov/UI-Kit.git
 $ npm install
 $ npm run build
 ```
