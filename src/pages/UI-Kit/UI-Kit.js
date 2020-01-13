@@ -24,7 +24,9 @@ import "../../components/user-photo/user-photo.styles"
 import "../../components/billboard/billboard.scss"
 
 import "../../components/message-box/message-box.styles"
-import "../../components/map/map.styles"
+
+import "../../components/map/map"
+import "../../components/map/map.scss"
 
 import "../../components/datepicker/datepicker"
 import "../../components/datepicker/datepicker.scss"

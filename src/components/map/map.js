@@ -19,7 +19,7 @@
         iconAnchor: [0, 24],
         labelAnchor: [-6, 0],
         popupAnchor: [0, -36],
-        html: `<div class="map-marker"><span class="map-marker__circle" /></div>>`
+        html: `<div class="map__map-marker"><span class="map__map-marker-circle" /></div>>`
     });
 
     const marker = L.marker([37.791097, -122.415073], {
