@@ -4,11 +4,12 @@
   background-color: #fafafa;
   border-radius: 100%;
   transform: scale(0);
+
+  &.animate {
+    animation: ripple 0.65s linear;
+  }
 }
 
-.ink.animate {
-  animation: ripple 0.65s linear;
-}
 @keyframes ripple {
   100% {opacity: 0; transform: scale(2);}
 }

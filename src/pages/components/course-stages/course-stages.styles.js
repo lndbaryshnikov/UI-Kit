@@ -6,6 +6,6 @@ import "./course-stages__slider.scss"
 
 import "../../../components/stages/stages"
 import "../../../components/stages/stages.styles"
-import "../../../components/arrow-button/arrow-button.styles"
+import "../../../components/arrow-buttons/arrow-buttons"
 
 

@@ -1,7 +1,8 @@
 //UI-Kit components styles
 import "../../fonts/fonts.styles"
 import "../../components/button/button.styles"
-import "../../components/arrow-button/arrow-button.styles"
+import "../../components/arrow-buttons/arrow-buttons"
+import "../../components/arrow-buttons/arrow-buttons.scss"
 import "../../components/donut-chart/donut-chart.styles"
 import "../../components/slider/slider_with-label"
 import "../../components/slider/slider_with-tooltip"
