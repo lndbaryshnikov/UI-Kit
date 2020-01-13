@@ -1,16 +1,21 @@
 mixin donut-chart(percentage, color="#e75735", thickness="5", radius='45', background="transparent")
     if (Array.isArray(percentage))
         - var percentageOff = {display: 'none'}
+
     - percentage = Array.isArray(percentage) ? percentage : [percentage];
     - color = Array.isArray(color) ? color : [color];
     - var size = 2*(+radius + 15);
+
     div(class='donut-chart' style={width: size + 'px'})
-        div(class='percentage' style=percentageOff/*style={'top': size/3 + 'px'}*/)=  percentage
+        div(class='donut-chart__percentage' style=percentageOff/*style={'top': size/3 + 'px'}*/)=  percentage
+
         - var dashArray = 2*Math.PI*radius
+
         svg(width = size, height = size, xmlns='http://www.w3.org/2000/svg')
             - for (let i = 0; i < +percentage.length; i++)
                 - var addendum = 0;
                 - var dashOffset = dashArray - (dashArray * percentage[i]/100) + addendum;
                 - addendum = dashOffset;
-                circle.donut-chart_animation(r = radius, cx="50%", cy="50%", stroke-width = thickness, stroke-dasharray = dashArray,
+
+                circle.donut-chart__animation(r = radius, cx="50%", cy="50%", stroke-width = thickness, stroke-dasharray = dashArray,
                 | stroke-dashoffset = dashOffset, stroke = color[i], fill = background)

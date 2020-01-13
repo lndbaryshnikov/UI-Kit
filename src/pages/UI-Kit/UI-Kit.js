@@ -7,7 +7,8 @@ import "../../components/button/button.scss"
 import "../../components/arrow-buttons/arrow-buttons"
 import "../../components/arrow-buttons/arrow-buttons.scss"
 
-import "../../components/donut-chart/donut-chart.styles"
+import "../../components/donut-chart/donut-chart.scss"
+
 import "../../components/slider/slider_with-label"
 import "../../components/slider/slider_with-tooltip"
 import "../../components/slider/slider.styles"
