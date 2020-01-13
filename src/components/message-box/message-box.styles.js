@@ -14,5 +14,5 @@ import "./message-box__reply-button.scss"
 import "./message-box__reply-button.scss"
 import "./message-box"
 
-import "../button/button.styles"
+import "../button/button"
 import "../user-photo/user-photo.styles"

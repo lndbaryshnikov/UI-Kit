@@ -1,8 +1,9 @@
+@import '../ripple-effect/ripple-effect';
+
 .button {
   text-transform: uppercase;
   font-family: "Lato - Black";
   font-size: 12px;
-  //line-height: 42px;
   letter-spacing: 0.6px;
   transform: translate(0, -9%);
   border-radius: 4px;
@@ -16,8 +17,76 @@
 
   //makes ripple-effect not getting out of the button:
   overflow: hidden;
-}
 
-.button:active {
-  transform: translate(0, 0);
+  &:active {
+    transform: translate(0, 0);
+  }
+
+  &_size {
+    &_small {
+      width: 100%;
+      height: 22px;
+    }
+
+    &_standard {
+      width: 100%;
+      height: 32px;
+    }
+  }
+
+  &_color {
+    &_cyan {
+      background-color: #ffffff;
+      color: #45ac9d;
+      border: 1px solid #4eb7a8;
+
+      &:hover {
+        background-color: #4eb7a8;
+        color: #ffffff;
+      }
+    }
+
+    &_red {
+      background-color: #ffffff;
+      color: #e34a26;
+      border: 1px solid #e75735;
+
+      &:hover {
+        background-color: #e75735;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__back {
+    border-radius: 4px;
+
+    &_size {
+      &_small {
+        width: 78px;
+      }
+
+      &_standard {
+        width: 118px;
+      }
+    }
+
+    &_color {
+      &_cyan {
+        background-color: #4eb7a8;
+
+        &:hover {
+          background-color: #28a290;
+        }
+      }
+
+      &_red {
+        background-color: #e75735;
+
+        &:hover {
+          background-color: #bf3e1f;
+        }
+      }
+    }
+  }
 }

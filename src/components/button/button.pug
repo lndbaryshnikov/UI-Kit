@@ -1,18 +1,17 @@
 mixin button(size, color, content, width)
-
-    if size == 'standard'
+    if size === 'standard'
         - size = 'button_size_standard'
         - var backSize = 'button__back_size_standard';
 
-    if size == 'small'
+    if size === 'small'
         - size = 'button_size_small'
         - var backSize = 'button__back_size_small'
 
-    if color == 'red'
+    if color === 'red'
         - color = 'button_color_red'
         - var backColor = 'button__back_color_red'
 
-    if color == 'cyan'
+    if color === 'cyan'
         - color = 'button_color_cyan'
         - var backColor = 'button__back_color_cyan'
 
