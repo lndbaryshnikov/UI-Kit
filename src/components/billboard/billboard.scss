@@ -1,3 +1,5 @@
+@import '../button/button';
+
 .billboard {
   width: 288px;
   height: 212px;
@@ -5,4 +7,91 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+
+  &_background-color {
+    &_cyan {
+      background-color: #4eb7a8;
+    }
+
+    &_orange-red {
+      background-color: #e75735;
+    }
+  }
+
+  &__content {
+    margin: 22px 20px 0px 23px;
+    width: 193px;
+  }
+
+  &__image {
+    width: 95px;
+  }
+
+  &__description {
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.55px;
+  }
+
+  &__date {
+    color: #ffffff;
+
+    &_type {
+      &_event {
+        font-family: Lato;
+        line-height: 60px;
+        font-weight: 300;
+        margin: 2px 0 0 -2px;
+
+        span:nth-child(1) {
+          font-size: 73px;
+          letter-spacing: -2.92px;
+        }
+
+        span:nth-child(2) {
+          font-size: 30px;
+        }
+      }
+
+      &_new {
+        font-family: "Lato - Black";
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 42px;
+        text-transform: uppercase;
+        letter-spacing: 0.55px;
+        margin: -3px 0 0 3px;
+      }
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+
+    &_type {
+      &_event {
+        font-family: "Lato - Black";
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 20px;
+        letter-spacing: 0.63px;
+        margin: -1px 0 0 -1px;
+      }
+
+      &_new {
+        font-family: Lato;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &__button {
+    width: 90%;
+    margin: 19px auto;
+  }
 }

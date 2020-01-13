@@ -2,12 +2,9 @@ include ../button/button
 
 mixin billboard(type, title, imageName, content, backgroundColor, day, month, year)
     div(class= "billboard billboard_background-color_" + backgroundColor)
-
         .billboard__image
             img(src=require('../../img/billboard/' + imageName + '.png') alt=imageName)
-
         .billboard__content
-
             if type === "news"
                 div(class= "billboard__title billboard__title_type_new")= title
                 div(class= "billboard__date billboard__date_type_new")= day + ' ' + month + ' ' + year
