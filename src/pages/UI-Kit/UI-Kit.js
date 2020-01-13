@@ -1,9 +1,12 @@
 //UI-Kit components styles
 import "../../fonts/fonts.styles"
+
 import "../../components/button/button"
 import "../../components/button/button.scss"
+
 import "../../components/arrow-buttons/arrow-buttons"
 import "../../components/arrow-buttons/arrow-buttons.scss"
+
 import "../../components/donut-chart/donut-chart.styles"
 import "../../components/slider/slider_with-label"
 import "../../components/slider/slider_with-tooltip"
@@ -16,11 +19,15 @@ import "../../components/tick-box/tick-box.styles"
 import "../../components/search-bar/search-bar.styles"
 import "../../components/dropdown/dropdown.styles"
 import "../../components/user-photo/user-photo.styles"
+
 import "../../components/billboard/billboard.scss"
+
 import "../../components/message-box/message-box.styles"
 import "../../components/map/map.styles"
+
 import "../../components/datepicker/datepicker"
-import "../../components/datepicker/datepicker.styles"
+import "../../components/datepicker/datepicker.scss"
+
 import "../../components/video/video.scss"
 
 //UI-Kit page's styles
