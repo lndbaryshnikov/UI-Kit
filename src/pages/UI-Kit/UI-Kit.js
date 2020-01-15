@@ -14,13 +14,18 @@ import "../../components/slider/slider_with-tooltip"
 import "../../components/slider/slider.styles"
 import "../../components/stages/stages"
 import "../../components/stages/stages.styles"
-import "../../components/message-form/message-form.styles"
+
+import "../../components/text-field/text-field.scss" //fix problem!
+
+import "../../components/message-form/message-form"
+import "../../components/message-form/message-form.scss"
+
 import "../../components/toggle/toggle.styles"
 import "../../components/tick-box/tick-box.styles"
 
 import "../../components/search-bar/search-bar.scss"
 
-import "../../components/dropdown/dropdown.styles"
+import "../../components/dropdown/dropdown.scss"
 
 import "../../components/user-profile/user-profile.scss"
 

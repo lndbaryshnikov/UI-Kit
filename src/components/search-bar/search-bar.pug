@@ -1,7 +1,7 @@
 mixin search-bar(options)
     -
-        let wrapperClass = "search-bar"
-        const hundredPercents = " search-bar_size_100-percents"
+        var wrapperClass = "search-bar"
+        var hundredPercents = " search-bar_size_100-percents"
 
     if options && options.size === "100%"
         - wrapperClass += hundredPercents
