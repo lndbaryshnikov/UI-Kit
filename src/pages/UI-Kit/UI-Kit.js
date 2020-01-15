@@ -19,11 +19,13 @@ import "../../components/toggle/toggle.styles"
 import "../../components/tick-box/tick-box.styles"
 import "../../components/search-bar/search-bar.styles"
 import "../../components/dropdown/dropdown.styles"
-import "../../components/user-photo/user-photo.styles"
+
+import "../../components/user-profile/user-profile.scss"
 
 import "../../components/billboard/billboard.scss"
 
-import "../../components/message-box/message-box.styles"
+import "../../components/message-box/message-box"
+import "../../components/message-box/message-box.scss"
 
 import "../../components/map/map"
 import "../../components/map/map.scss"

@@ -1,8 +1,12 @@
-.user-photo__back {
+.user-photo {
   width: 93px;
   height: 93px;
   background-color: #e5e5e5;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+
+  img {
+    margin: 5px;
+  }
 }

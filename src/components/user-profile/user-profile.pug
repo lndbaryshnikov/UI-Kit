@@ -1,0 +1,24 @@
+include ../user-photo/user-photo
+
+mixin user-profile(name2, job, theme)
+    .user-profile
+        +user-photo(name2)
+
+        if theme == 'orange-red'
+            - var nameColor = 'orange-red'
+            - var jobColor = 'black'
+            - var tooltipColor = 'grey'
+
+        if theme == 'cyan'
+            - var nameColor = 'white'
+            - var jobColor = 'white'
+            - var tooltipColor = 'cyan'
+
+        div(class= "user-profile__tooltip user-profile__tooltip_color_" + tooltipColor)
+
+            span(class= "user-profile__name user-profile__name_color_" + nameColor)= name2
+            span(class= "user-profile__job user-profile__job_color_" + jobColor)= job
+
+
+            - for (var i = 1; i<=3; i++)
+                a(href="/mock-address/change-me" class="user-profile__links user-profile__links_theme_" + theme)

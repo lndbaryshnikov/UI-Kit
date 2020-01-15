@@ -6,8 +6,7 @@ include ../../components/toggle/toggle
 include ../../components/tick-box/tick-box
 include ../../components/search-bar/search-bar
 include ../../components/dropdown/dpordown
-include ../../components/user-photo/user-photo
-include ../../components/user-photo/_with-tooltip/user-photo_with-tooltip
+include ../../components/user-profile/user-profile
 include ../../components/billboard/billboard
 include ../../components/message-box/message-box
 include ../../components/map/map
@@ -85,8 +84,8 @@ html
             .profile
                 .block-sign USER PROFILE
                 .profile__container
-                    +user-photo_with-tooltip('John Smith', 'ux designer', 'orange-red')
-                    +user-photo_with-tooltip('Sarah Brown', 'developer', 'cyan')
+                    +user-profile('John Smith', 'ux designer', 'orange-red')
+                    +user-profile('Sarah Brown', 'developer', 'cyan')
 
         section.news-events
             .block-sign NEWS & EVENTS
