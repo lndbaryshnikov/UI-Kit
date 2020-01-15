@@ -17,7 +17,9 @@ import "../../components/stages/stages.styles"
 import "../../components/message-form/message-form.styles"
 import "../../components/toggle/toggle.styles"
 import "../../components/tick-box/tick-box.styles"
-import "../../components/search-bar/search-bar.styles"
+
+import "../../components/search-bar/search-bar.scss"
+
 import "../../components/dropdown/dropdown.styles"
 
 import "../../components/user-profile/user-profile.scss"
