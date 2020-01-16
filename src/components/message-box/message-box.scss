@@ -78,9 +78,10 @@
   }
 
   &__message {
-    width: calc(100% - 42px);
+    width: calc(100% - 40px);
+    height: 32px;
     position: absolute;
-    top: 40px;
+    top: 43px;
     padding: 20px;
     background-color: #ffffff;
     -webkit-border-radius: 5px;
@@ -93,6 +94,24 @@
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.63px;
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      bottom: calc(100% - 5.5px);
+      left: 47%;
+      background-color: inherit;
+      border-width: 6px;
+      margin-top: -6px;
+      border-radius: 2px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
   }
 
   &__name {
