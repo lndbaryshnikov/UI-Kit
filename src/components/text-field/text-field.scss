@@ -17,4 +17,36 @@
   &:focus {
     box-shadow:0 0 5px black;
   }
+
+  &_type {
+    &_for-search-bar {
+      width: calc(100% - 33px);
+      -webkit-border-radius: 4px 0 0 4px;
+      -moz-border-radius: 4px 0 0 4px;
+      border-radius: 4px 0 0 4px;
+      font-size: 15px;
+      padding: 0 0 2px 0.9vw;
+      box-sizing: border-box;
+    }
+
+    &_for-message-form {
+      @at-root {
+        input#{&} {
+          width: 196px;
+          height: 24px;
+          padding-left: 13px;
+          padding-bottom: 3.4px;
+          font-size: 15px;
+        }
+
+        textarea#{&} {
+          width: 273px;
+          height: 76px;
+          resize: none;
+          padding-top: 8.1px;
+          padding-left: 13.5px;
+        }
+      }
+    }
+  }
 }

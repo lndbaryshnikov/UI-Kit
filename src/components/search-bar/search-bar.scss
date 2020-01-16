@@ -1,4 +1,4 @@
-//@import '../text-field/text-field';
+@import '../text-field/text-field';
 
 .search-bar {
   width: 288px;
@@ -30,15 +30,8 @@
   }
 
   &__input {
-    width: calc(100% - 33px);
-    height: 28px;
+    //width: calc(100% - 33px);
     float: left;
-    -webkit-border-radius: 4px 0 0 4px;
-    -moz-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
-    font-size: 15px;
-    padding: 0 0 2px 0.9vw;
-    box-sizing: border-box;
   }
 
   &_size {
