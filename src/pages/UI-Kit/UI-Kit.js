@@ -18,7 +18,7 @@ import "../../components/stages/stages.styles"
 import "../../components/message-form/message-form"
 import "../../components/message-form/message-form.scss"
 
-import "../../components/toggle/toggle.styles"
+import "../../components/toggle/toggle.scss"
 
 import "../../components/tick-box/tick-box.scss"
 
