@@ -1,17 +1,18 @@
 include ../user-photo/user-photo
+include ../text-field/text-field
 include ../button/button
 
 mixin message-box(theme, name)
-    if theme == 'cyan'
+    if theme === 'cyan'
         - var headerTheme = 'cyan'
         - var buttonColor = 'cyan'
 
-    if theme == 'orange-red'
+    if theme === 'orange-red'
         - var headerTheme = 'orange-red'
         - var buttonColor = 'red'
 
-    div(class= "message-box" id= name)
-        div(class= "message-box__header message-box__header_theme_" + headerTheme)
+    div(class="message-box" id=name)
+        div(class="message-box__header message-box__header_theme_" + headerTheme)
             .message-box__name
             .message-box__photo
                 +user-photo('Sarah Brown')
@@ -22,6 +23,14 @@ mixin message-box(theme, name)
                 a.message-box__camera-button(href='/mock-address/change-me')
                 .message-box__message
                 form(method="post")
-                    textarea(name="reply" class="text-field message-box__reply" placeholder="Your reply here...")
+                    .message-box__reply
+                        +text-field({
+                            tagName: 'textarea',
+                            name: 'reply',
+                            placeholder: 'Your reply here...',
+                            blockName: 'message-box'
+                        })
+
+                    //textarea(name="reply" class="text-field message-box__reply" placeholder="Your reply here...")
                     .message-box__reply-button
                         +button('standard', buttonColor, 'reply', '100%')

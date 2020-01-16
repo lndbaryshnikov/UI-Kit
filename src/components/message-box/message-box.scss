@@ -1,6 +1,6 @@
 @import '../button/button';
 @import '../user-photo/user-photo';
-//@import '../text-field/text-field';
+@import '../text-field/text-field';
 
 .message-box {
   width: 288px;
@@ -113,14 +113,9 @@
   }
 
   &__reply {
-    border: 3px solid #ffffff;
-    width: calc(100% - 6px - 15px); //12px - padding-left of the text-field
-    height: 62px;
     position: absolute;
     top: 130px;
-    padding-top: 16px;
-    padding-left: 18px;
-    resize: none;
+    width: 100%;
   }
 
   &__reply-button {
