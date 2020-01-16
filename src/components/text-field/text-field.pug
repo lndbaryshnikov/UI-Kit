@@ -5,5 +5,8 @@ mixin text-field(options)
     #{tagName}(type=options.type name=name placeholder=placeholder class='text-field text-field_type_for-'+blockName)
   else if tagName === 'textarea'
     #{tagName}(name=name placeholder=placeholder class='text-field text-field_type_for-'+blockName)
+  else
+    input.text-field
+
 
 
