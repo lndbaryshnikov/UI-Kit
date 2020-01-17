@@ -1,1 +1,1 @@
-import "../ripple-effect/ripple-effect"
+import "../../styles/ripple-effect/ripple-effect"

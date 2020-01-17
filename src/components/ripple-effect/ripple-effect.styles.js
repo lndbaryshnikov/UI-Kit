@@ -1,1 +1,0 @@
-import "./ripple-effect.scss";
