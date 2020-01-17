@@ -17,6 +17,12 @@
         background-color: #e5e5e5;
       }
     }
+
+    &_type {
+      &_for-stages {
+        width: 568px !important;
+      }
+    }
   }
 
   &__range {
@@ -54,6 +60,12 @@
 
       &_orange-red {
         background-color: #e75735;
+      }
+    }
+
+    &_type {
+      &_for-stages {
+        display: none;
       }
     }
   }
@@ -103,6 +115,44 @@
         font-weight: 400;
         color: #d1d1d1;
         top: 10px;
+      }
+    }
+
+    &_stages {
+      .ui-slider-label {
+        z-index: 1000;
+        padding-top: 1px;
+      }
+
+      .ui-slider-line {
+        display: none;
+      }
+
+      .ui-slider-pip {
+        font-family: "Lato - Black";
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #888888;
+        top: -12px;
+        width: 29px;
+        height: 29px;
+        background-color: #e5e5e5;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+
+        &-selected {
+            color: #ffffff;
+            background-color: #e75735;
+        }
+      }
+
+      .ui-slider-pip-inrange {
+        color: #ffffff;
+        background-color: #e75735;
       }
     }
   }

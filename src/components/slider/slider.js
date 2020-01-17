@@ -40,6 +40,19 @@ import "../../pips-float-plugin/jquery-ui-slider-pips"
             }).slider('pips', {
                 rest: 'label',
             });
+        } else if ($this.hasClass('js-slider_with_stages')) {
+            $this.slider('option', {
+              range: 'min',
+
+              classes: {
+                "ui-slider": "slider__scale slider__scale_type_for-stages slider__scale_color_"
+                  + $this.data('slider-color'),
+                "ui-slider-handle": "slider__handle slider__handle_type_for-stages slider__handle_color_"
+                  + $this.data('handle-color')
+              }
+            }).slider('pips', {
+              rest: 'label',
+            });
         }
     });
 })();

@@ -12,8 +12,8 @@ import "../../components/donut-chart/donut-chart.scss"
 import "../../components/slider/slider"
 import "../../components/slider/slider.scss"
 
-import "../../components/stages/stages"
-import "../../components/stages/stages.styles"
+// import "../../components/stages/stages"
+// import "../../components/stages/stages.styles"
 
 import "../../components/message-form/message-form"
 import "../../components/message-form/message-form.scss"
