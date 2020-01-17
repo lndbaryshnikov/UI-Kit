@@ -50,7 +50,6 @@ html
         section.sliders
             .block-sign SLIDERS
             .sliders__container
-                //.slider_with-tooltip
                 +slider({value: 40}, {})
                 +slider({
                     value: 75,
@@ -61,7 +60,6 @@ html
                     scale: 'green',
                     handle: 'green'
                     })
-                //.slider_with-label
 
         section.stages-box
             .block-sign STAGES
@@ -121,7 +119,12 @@ html
         section.location
             .block-sign LOCATION
             .location__container
-                +map()
+                +map([37.791097, -122.415073], 14,
+                    {
+                        sign: 'Meet us!',
+                        address: '1259  CALIFORNIA ST San Francisco, CA'
+                    }
+                )
 
         section.calendar-messaging
             .calendar
