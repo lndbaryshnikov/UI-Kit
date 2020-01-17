@@ -9,9 +9,9 @@ import "../../components/arrow-buttons/arrow-buttons.scss"
 
 import "../../components/donut-chart/donut-chart.scss"
 
-import "../../components/slider/slider_with-label"
-import "../../components/slider/slider_with-tooltip"
-import "../../components/slider/slider.styles"
+import "../../components/slider/slider"
+import "../../components/slider/slider.scss"
+
 import "../../components/stages/stages"
 import "../../components/stages/stages.styles"
 

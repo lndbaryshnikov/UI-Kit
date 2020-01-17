@@ -1,6 +1,7 @@
 include ../../components/button/button
 include ../../components/arrow-buttons/arrow-buttons
 include ../../components/donut-chart/donut-chart
+include ../../components/slider/slider
 include ../../components/message-form/message-form
 include ../../components/toggle/toggle
 include ../../components/tick-box/tick-box
@@ -49,8 +50,18 @@ html
         section.sliders
             .block-sign SLIDERS
             .sliders__container
-                .slider_with-tooltip
-                .slider_with-label
+                //.slider_with-tooltip
+                +slider({value: 40}, {})
+                +slider({
+                    value: 75,
+                    step: 25,
+                    type: 'labels'
+                }, {
+                    slider: 'gray',
+                    scale: 'green',
+                    handle: 'green'
+                    })
+                //.slider_with-label
 
         section.stages-box
             .block-sign STAGES

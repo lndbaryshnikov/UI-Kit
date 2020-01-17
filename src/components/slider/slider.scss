@@ -1,19 +1,109 @@
-.ui-slider {
-  width: 260px;
-  height: 5px;
-}
+@import '~jquery-ui/themes/base/core.css';
+@import '~jquery-ui/themes/base/slider.css';
+@import '../../pips-float-plugin/jquery-ui-slider-pips';
 
-.ui-slider .ui-slider-range {
+.slider {
+  &__scale {
+    width: 260px;
+    height: 5px;
+    border-radius: 10px;
 
-}
+    &_color {
+      &_gray {
+        background-color: #e5e5e5;
+      }
 
-.ui-slider .ui-slider-handle {
-  width: 19.5px;
-  height: 19.5px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  outline: none;
-  top: -8px;
-  cursor: pointer;
+      &_green {
+        background-color: #e5e5e5;
+      }
+    }
+  }
+
+  &__range {
+    border-radius: 10px;
+
+    &_color {
+      &_gray {
+        background-color: #e5e5e5;
+      }
+
+      &_green {
+        background-color: #4eb7a8;
+      }
+
+      &_orange-red {
+        background-color: #e75735;
+      }
+    }
+  }
+
+  &__handle {
+    width: 19.5px;
+    height: 19.5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    outline: none;
+    top: -7px !important;
+    cursor: pointer;
+
+    &_color {
+      &_green {
+        background-color: #4eb7a8;
+      }
+
+      &_orange-red {
+        background-color: #e75735;
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -33px;
+    left: -8px;
+    width: 35px;
+    height: 24px;
+    background-color: #e75735;
+    font-family: "Lato - Black";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.65px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      border-width: 5px;
+      margin-left: -5.5px;
+      border-style: solid;
+      border-color: #e75735 transparent transparent transparent;
+    }
+  }
+
+  &_with {
+    &_labels {
+      .ui-slider-line {
+        display: none;
+      }
+
+      .ui-slider-pip {
+        font-family: "Lato - Black";
+        font-size: 11px;
+        letter-spacing: 0.55px;
+        font-weight: 400;
+        color: #d1d1d1;
+        top: 10px;
+      }
+    }
+  }
 }
