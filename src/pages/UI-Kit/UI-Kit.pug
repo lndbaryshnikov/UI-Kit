@@ -1,3 +1,4 @@
+include components/block-sign/block-sign
 include ../../components/button/button
 include ../../components/arrow-buttons/arrow-buttons
 include ../../components/donut-chart/donut-chart
@@ -26,20 +27,20 @@ html
             .header__name UI-Kit
             a(class="header__link" href="./info.html" target="_blank") Go to website
         section.buttons
-            .block-sign STANDARD BUTTONS
+            +block-sign('standard buttons', 'buttons')
             .buttons__container
                 +button('small', 'cyan', 'button')
                 +button('standard', 'cyan', 'button')
                 +button('standard', 'red', 'button')
                 +button('small', 'red', 'button')
         section.arrows
-            .block-sign ARROW BUTTONS
+            +block-sign('arrow buttons', 'arrows')
             .arrows__container
                 +arrow-buttons
                 +arrow-buttons('disabled')
                 +arrow-buttons
         section.charts
-            .block-sign PERCENTAGES / PIE CHARTS
+            +block-sign('percentages / pie charts', 'charts')
             .charts__container
                 +donut-chart(0)
                 +donut-chart(38)
@@ -48,7 +49,7 @@ html
                 +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
 
         section.sliders
-            .block-sign SLIDERS
+            +block-sign('sliders', 'sliders')
             .sliders__container
                 +slider({value: 40}, {})
                 +slider({
@@ -62,7 +63,7 @@ html
                     })
 
         section.stages-box
-            .block-sign STAGES
+            +block-sign('stages', 'stages-box')
             .stages-box__container
                 +slider({
                     min: 1,
@@ -76,37 +77,37 @@ html
                 })
 
         section.form-elements
-            .block-sign FORM ELEMENTS
+            +block-sign('form elements', 'form-elements')
             .form-elements__container
                 +message-form
                 .form-elements__toggles-container
-                    .toggles
-                        .block-sign TOGGLES
+                    section.toggles
+                        +block-sign('toggles', 'toggles')
                         .toggles__container
                             +toggle(false)
                             +toggle(true)
-                    .tick-boxes
-                        .block-sign TICK BOXES
+                    section.tick-boxes
+                        +block-sign('tick boxes', 'tick-boxes')
                         .tick-boxes__container
                             +tick-box(true)
                             +tick-box(false)
 
         section.search-dropdown-profiles
-            .search-dropdown
-                .block-sign SEARCH / DROP DOWN
+            section.search-dropdown
+                +block-sign('search / drop down', 'search-dropdown')
                 .search-dropdown__container
                     +search-bar
                     +search-bar
                     - var dropdownParameters = ['website', 'design', 'something']
                     +dropdown(dropdownParameters)
-            .profile
-                .block-sign USER PROFILE
+            section.profile
+                +block-sign('user profile', 'profile')
                 .profile__container
                     +user-profile('John Smith', 'ux designer', 'orange-red')
                     +user-profile('Sarah Brown', 'developer', 'cyan')
 
         section.news-events
-            .block-sign NEWS & EVENTS
+            +block-sign('news & events', 'news-events')
             .news-events__container
                     +billboard('news', 'It’s all going\n' +
                     'downhill', 'new', 'Lorem ipsum dolor sit amet' +
@@ -117,7 +118,7 @@ html
                     ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
 
         section.location
-            .block-sign LOCATION
+            +block-sign('location', 'location')
             .location__container
                 +map([37.791097, -122.415073], 14,
                     {
@@ -127,16 +128,16 @@ html
                 )
 
         section.calendar-messaging
-            .calendar
-                .block-sign CALENDAR
+            section.calendar
+                +block-sign('calendar', 'calendar')
                 .calendar__container
                     +datepicker()
-            .messaging
-                .block-sign MESSAGING
+            section.messaging
+                +block-sign('messaging', 'messaging')
                 .messaging__container
                     +message-box('cyan', 'Sarah Brown')
 
         section.video-box
-            .block-sign VIDEO
+            +block-sign('video', 'video-box')
             .video-box__container
                 +video("https://www.youtube.com/embed/pzbqEG_chrs")

@@ -1,0 +1,21 @@
+.form-elements {
+  width: 594px;
+  margin: 68px auto 0;
+
+  &__container {
+    margin-top: 49px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__toggles-container {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 102px;
+    margin-top: -1px;
+  }
+}

@@ -1,0 +1,34 @@
+.block-sign {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato - Black";
+  font-size: 1em;
+  font-weight: bolder;
+  color: #4f4f4f;
+  letter-spacing: 2.8px;
+  margin-left: 5px;
+
+  &_type {
+    &_for-charts {
+      letter-spacing: 1.7px;
+    }
+
+    &_for-profile {
+      margin-left: -10px;
+      letter-spacing: 2.5px;
+    }
+
+    &_for-sliders {
+      position: relative;
+      left: 9px;
+    }
+
+    &_for-video-box {
+      margin-left: -2px;
+    }
+
+    &_for-calendar-messaging {
+      margin-left: -2px;
+    }
+  }
+}

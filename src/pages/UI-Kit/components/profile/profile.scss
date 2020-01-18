@@ -1,0 +1,12 @@
+.profile {
+  width: 275px;
+  margin-top: 12px;
+
+  &__container {
+    margin: 28px 0 0 6px;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,12 @@
+.sliders {
+  width: 594px;
+  margin: 21px auto 0;
+  position: relative;
+  left: -9px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
+  }
+}

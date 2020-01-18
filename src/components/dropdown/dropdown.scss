@@ -80,21 +80,21 @@
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
+  }
 
-    div {
-      width: 8px;
-      height: 8px;
-      border-left: 2px solid #ffffff;
-      border-bottom: 2px solid #ffffff;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+  &__check-mark {
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 
-      margin-top: 20%;
-      margin-left: 33.5%;
-    }
+    margin-top: 20%;
+    margin-left: 33.5%;
   }
 }
 
