@@ -1,13 +1,34 @@
+include ../../../../components/text-field/text-field
 include ../../../../components/tick-box/tick-box
+include ../../../../components/button/button
 
 mixin enroll-form()
-    form(class="message-form enroll-form" method="post")
-        input(type="text" name="name" class="text-field message-form__data-field_type_input" placeholder="Your Name")
-        br
-        input(type="text" name="email" class="text-field message-form__data-field_type_input" placeholder="Your Email")
-        br
-        textarea(class="text-field message-form__data-field_type_textarea" name="message" placeholder="Your Message")
-        br
+    form(class="message-form js-message-form" method="post")
+        .message-form__data-field_type_input.js-message-form__data-field_type_input
+            +text-field({
+                tagName: 'input',
+                type: 'text',
+                name: 'name',
+                placeholder: 'Your Name',
+                blockName: 'message-form'
+            })
+
+        .message-form__data-field_type_input.js-message-form__data-field_type_input
+            +text-field({
+                tagName: 'input',
+                type: 'email',
+                name: 'email',
+                placeholder: 'Your Email',
+                blockName: 'message-form'
+            })
+
+        .message-form__data-field_type_textarea
+            +text-field({
+                tagName: 'textarea',
+                name: 'message',
+                placeholder: 'Your Message',
+                blockName: 'message-form'
+            })
         .enroll-form__tick-boxes
             .enroll-form__tick-item
                 +tick-box
