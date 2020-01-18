@@ -16,7 +16,7 @@ import "../../pips-float-plugin/jquery-ui-slider-pips"
 
             classes: {
                 "ui-slider": "slider__scale slider__scale_color_" + $this.data('slider-color'),
-                "ui-slider-range": "slider__range slider__range_color_" + $this.data('scale-color'),
+                "ui-slider-range": "slider__range slider__range_color_" + $this.data('range-color'),
                 "ui-slider-handle": "slider__handle slider__handle_color_" + $this.data('handle-color')
             }
         });
@@ -53,6 +53,9 @@ import "../../pips-float-plugin/jquery-ui-slider-pips"
             }).slider('pips', {
               rest: 'label',
             });
+
+            $this.find('.ui-slider-pip').addClass(`slider__pip_color_${$this.data('slider-color')}`);
+            $this.find('.ui-slider-pip-selected').addClass(`slider__pip-selected_color_${$this.data('range-color')}`)
         }
     });
 })();
