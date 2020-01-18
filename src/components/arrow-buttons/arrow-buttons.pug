@@ -1,4 +1,4 @@
-mixin arrow-buttons(disabled)
+mixin arrow-buttons(disabled=false, { width='standard' }={width: 'standard'})
     - var classes
 
     if disabled
@@ -7,7 +7,7 @@ mixin arrow-buttons(disabled)
     else
         - classes = ['arrow-buttons__arrow-container', 'ripple']
 
-    .arrow-buttons
+    div(class=['arrow-buttons', 'arrow-buttons_width_' + width])
         div(class=classes)
             .arrow-buttons__left-arrow
         div(class=classes)
