@@ -1,10 +1,14 @@
+import "../../../../components/arrow-buttons/arrow-buttons";
+import '../../../../components/slider/slider'
+
 (()=> {
-    const arrows = document.querySelector(".arrow-buttons");
-    const $slider = $(".stages");
+    const arrows = document.querySelector(".js-course-stages .arrow-buttons");
+    const $slider = $(".js-course-stages .js-slider.js-slider_with_stages");
+
+    console.log($slider);
 
     const leftArrow = arrows.children[0];
     const rightArrow = arrows.children[1];
-    console.log(leftArrow, arrows);
 
     const stages = document.querySelector(".course-stages__stage");
     const classesNormal = "arrow-buttons__arrow-container ripple";
@@ -66,12 +70,6 @@
             if ( index === 4 ) {
                 rightArrow.className = classesDisabled;
             } else rightArrow.className = classesNormal;
-        },
-
-        classes: {
-            "ui-slider": "slider__scale_color_gray stages__scale",
-            "ui-slider-range": "slider__range_color_green",
-            "ui-slider-handle": "slider__handle_color_green stages__handle"
         }
     })
 })();

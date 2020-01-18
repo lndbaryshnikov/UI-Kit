@@ -1,10 +1,20 @@
 include ../../../../components/arrow-buttons/arrow-buttons
+include ../../../../components/slider/slider
 
 mixin course-stages()
-    .course-stages
+    .course-stages.js-course-stages
         .course-stages__title Course stages
         .course-stages__stage JavaScript
         .course-stages__arrows
-            +arrow-buttons
-        .stages.course-stages__slider
+            +arrow-buttons(false, { width: '100-percents' })
+        .course-stages__slider
+            +slider({
+                min: 1,
+                max: 5,
+                value: 3,
+                type: 'stages'
+            }, {
+                slider: 'gray',
+                range: 'green'
+            })
 
