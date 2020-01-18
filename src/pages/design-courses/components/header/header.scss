@@ -1,6 +1,57 @@
+@import '../navigation/navigation';
+
 .header {
   min-width: 780px;
   height: 130px;
   position: relative;
   z-index: 10;
+
+  &__left {
+    width: 230px;
+    height: 100%;
+    float: left;
+  }
+
+  &_color {
+    &_red {
+      background-color: #e75735;
+    }
+  }
+
+  &__back-to-ui-kit {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: inherit;
+
+    &:active {
+      color: #4f4f4f;
+    }
+  }
+
+  &__navigation {
+    text-align: center;
+    width: 200px;
+    margin: 20px auto 0;
+  }
+
+  &__right {
+    height: 100%;
+    line-height: 130px;
+    width: calc(100% - 230px);
+    background-color: #e5e5e5;
+    min-width: 550px;
+    display: inline-block;
+    text-align: start;
+    float: right;
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+
+  &__name {
+    color: #e75735;
+    font-size: 2rem;
+    vertical-align: middle;
+    display: inline-block;
+  }
 }
