@@ -1,4 +1,4 @@
-import "../components/common.styles"
+import "../components/common.scss"
 import "../components/common"
 
 import "./contact__address-billboard.scss"

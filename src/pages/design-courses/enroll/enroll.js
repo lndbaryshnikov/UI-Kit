@@ -1,4 +1,4 @@
-import "../components/common.styles"
+import "../components/common.scss"
 import "../components/common"
 
 import "../components/enroll-form/enroll-form.styles"
