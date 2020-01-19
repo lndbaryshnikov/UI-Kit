@@ -1,11 +1,10 @@
 .block-sign {
   text-align: center;
   text-transform: uppercase;
-  font-family: "Lato - Black";
   font-size: 1em;
-  font-weight: bolder;
+  font-weight: 900;
   color: #4f4f4f;
-  letter-spacing: 2.8px;
+  letter-spacing: 2.4px;
   margin-left: 5px;
 
   &_type {
@@ -27,7 +26,7 @@
       margin-left: -2px;
     }
 
-    &_for-calendar-messaging {
+    &_for-calendar, &_for-messaging {
       margin-left: -2px;
     }
   }
