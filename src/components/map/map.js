@@ -1,7 +1,7 @@
 (() => {
   const $mapContainers = $('.js-map__map-container');
 
-  $mapContainers.each(function(index) {
+  $mapContainers.each(function (index) {
     const $this = $(this);
     const id = `js-map-${index + 1}`;
 
@@ -28,8 +28,8 @@
     L.tileLayer(
       'https://api.mapbox.com/styles/v1/leobar/ck3ae7zcr12001cqjy07attbx/' +
       'tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
-      accessToken: mapBoxToken
-    }).addTo(map);
+        accessToken: mapBoxToken
+      }).addTo(map);
 
     const markerIcon = L.divIcon({
       iconAnchor: [0, 24],
@@ -47,7 +47,7 @@
       marker: marker
     };
 
-    this.parentElement.querySelector(".js-map__button").addEventListener("click", () => {
+    this.parentElement.querySelector('.js-map__button').addEventListener('click', () => {
       map.setView([longitude, latitude], zoom);
     });
   });

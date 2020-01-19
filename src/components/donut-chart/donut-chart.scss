@@ -40,5 +40,7 @@
 }
 
 @keyframes donut-chart-animation {
-  from {stroke-dasharray: 0;}
+  from {
+    stroke-dasharray: 0;
+  }
 }

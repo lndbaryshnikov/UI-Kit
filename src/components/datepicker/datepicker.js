@@ -1,16 +1,16 @@
-import "jquery-ui/ui/widgets/datepicker"
+import 'jquery-ui/ui/widgets/datepicker'
 
 (() => {
-    $(".datepicker__datepicker-wrapper").datepicker({
-        classes: {
-            "ui-datepicker-current": "datepicker__today-button",
-        },
+  $('.datepicker__datepicker-wrapper').datepicker({
+    classes: {
+      'ui-datepicker-current': 'datepicker__today-button',
+    },
 
-        showButtonPanel: true,
-        showOtherMonths: true,
-        selectOtherMonths: true
-    });
+    showButtonPanel: true,
+    showOtherMonths: true,
+    selectOtherMonths: true
+  });
 
-    document.querySelector('.datepicker__header').innerHTML += String(new Date().getDate());
+  document.querySelector('.datepicker__header').innerHTML += String(new Date().getDate());
 })();
 

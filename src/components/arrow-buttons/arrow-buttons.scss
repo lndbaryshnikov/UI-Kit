@@ -10,13 +10,14 @@
     &_standard {
       width: 125px;
     }
+
     &_100-percents {
       width: 100%;
     }
   }
 
   &:hover {
-    .ripple  .arrow-buttons__right-arrow {
+    .ripple .arrow-buttons__right-arrow {
       animation: slide-right 1s ease-in-out infinite;
     }
 
@@ -45,14 +46,15 @@
     transition: background-color 0.5s;
 
     &:hover {
-      .arrow-buttons__left-arrow, .arrow-buttons__right-arrow{
+      .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
         border-color: #ffffff;
       }
+
       background-color: #4eb7a8;
     }
   }
 
-  &__left-arrow, &__right-arrow{
+  &__left-arrow, &__right-arrow {
     width: 13.5px;
     height: 13.5px;
     margin: 13.5px auto;
@@ -81,7 +83,7 @@
   }
 
   &_disabled {
-    .arrow-buttons__left-arrow, .arrow-buttons__right-arrow{
+    .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
       border-color: #ffffff;
       animation: none;
       -webkit-transform: rotate(45deg);

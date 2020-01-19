@@ -10,7 +10,7 @@
   };
 
   const createTooltip = (text, color) => {
-    const className = "message-form__tooltip message-form__tooltip_color_" + color;
+    const className = 'message-form__tooltip message-form__tooltip_color_' + color;
 
     const tooltip = document.createElement('div');
     tooltip.setAttribute('class', className);

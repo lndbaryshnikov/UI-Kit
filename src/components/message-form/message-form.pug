@@ -2,32 +2,32 @@ include ../text-field/text-field
 include ../button/button
 
 mixin message-form
-    form(class="message-form js-message-form" method="post")
-        .message-form__data-field_type_input.js-message-form__data-field_type_input
-            +text-field({
-                tagName: 'input',
-                type: 'text',
-                name: 'name',
-                placeholder: 'Your Name',
-                blockName: 'message-form'
-            })
+  form(class="message-form js-message-form" method="post")
+    .message-form__data-field_type_input.js-message-form__data-field_type_input
+      +text-field({
+        tagName: 'input',
+        type: 'text',
+        name: 'name',
+        placeholder: 'Your Name',
+        blockName: 'message-form'
+      })
 
-        .message-form__data-field_type_input.js-message-form__data-field_type_input
-            +text-field({
-                tagName: 'input',
-                type: 'email',
-                name: 'email',
-                placeholder: 'Your Email',
-                blockName: 'message-form'
-            })
+    .message-form__data-field_type_input.js-message-form__data-field_type_input
+      +text-field({
+        tagName: 'input',
+        type: 'email',
+        name: 'email',
+        placeholder: 'Your Email',
+        blockName: 'message-form'
+      })
 
-        .message-form__data-field_type_textarea
-            +text-field({
-                tagName: 'textarea',
-                name: 'message',
-                placeholder: 'Your Message',
-                blockName: 'message-form'
-            })
+    .message-form__data-field_type_textarea
+      +text-field({
+        tagName: 'textarea',
+        name: 'message',
+        placeholder: 'Your Message',
+        blockName: 'message-form'
+      })
 
-        .message-form__button
-            +button('standard', 'cyan', 'submit')
+    .message-form__button
+      +button('standard', 'cyan', 'submit')
