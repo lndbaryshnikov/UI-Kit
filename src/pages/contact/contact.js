@@ -1,7 +1,7 @@
-import "../components/common"
-import "../../components/map/map"
+import '../components/common'
+import '../../components/map/map'
 
-import "./contact.scss"
+import './contact.scss'
 
 // (() => {
 //   const map = window.mapsContainer[0].map;

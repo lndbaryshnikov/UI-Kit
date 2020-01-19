@@ -3,20 +3,20 @@ include ../../components/video/video
 
 doctype html
 html
-    head
-        meta(charset = 'utf-8')
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(name="description" content="Information about school and courses")
-        title Information
-    body
-        +header()
-        .page-wrapper
-            +menu()
-            .page-content
-                .info__title Welcome to our page!
-                .info__text We are a Kazan school engaged in online training in web design. We will
-                            |teach you how to use programming languages such as HTML, CSS and
-                            |JavaScript. We’ll teach you how to develop original page designs and
-                            |bring them to life.
-                .info__video
-                    +video("https://www.youtube.com/embed/JgIG6d3JsZs")
+  head
+    meta(charset = 'utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Information about school and courses")
+    title Information
+  body
+    +header()
+    .page-wrapper
+      +menu()
+      .page-content
+        .info__title Welcome to our page!
+        .info__text We are a Kazan school engaged in online training in web design. We will
+          | teach you how to use programming languages such as HTML, CSS and
+          | JavaScript. We’ll teach you how to develop original page designs and
+          | bring them to life.
+        .info__video
+          +video("https://www.youtube.com/embed/JgIG6d3JsZs")

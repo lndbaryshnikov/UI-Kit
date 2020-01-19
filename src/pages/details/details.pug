@@ -5,21 +5,21 @@ include ../components/percentages/percentages
 
 doctype html
 html
-    head
-        meta(charset = 'utf-8')
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(name="description" content="Details about school and courses")
-        title Course Details
-    body
-        +header()
-        .page-wrapper
-            +menu()
-            .page-content
-                .details
-                    .details__teachers-percentage
-                        .details__teachers
-                            +teachers
-                        .details__percentages
-                            +percentages
-                    .details__course-stages
-                        +course-stages
+  head
+    meta(charset = 'utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Details about school and courses")
+    title Course Details
+  body
+    +header()
+    .page-wrapper
+      +menu()
+      .page-content
+        .details
+          .details__teachers-percentage
+            .details__teachers
+              +teachers
+            .details__percentages
+              +percentages
+          .details__course-stages
+            +course-stages

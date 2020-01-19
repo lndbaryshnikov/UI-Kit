@@ -1,7 +1,7 @@
-import "../components/common"
-import "../components/course-stages/course-stages"
+import '../components/common'
+import '../components/course-stages/course-stages'
 
-import "./details.scss"
+import './details.scss'
 
 
 

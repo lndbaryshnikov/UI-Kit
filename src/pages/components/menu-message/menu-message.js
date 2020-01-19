@@ -1,14 +1,14 @@
-import "../../../components/message-box/message-box"
+import '../../../components/message-box/message-box'
 
 (() => {
-    const button = document.querySelector(".menu-message__header");
-    const box = document.querySelector(".menu-message__message-box");
-    box.style.display = "none";
+  const button = document.querySelector('.menu-message__header');
+  const box = document.querySelector('.menu-message__message-box');
+  box.style.display = 'none';
 
-    button.addEventListener("click", () => {
-            const display = box.style.display;
+  button.addEventListener('click', () => {
+      const display = box.style.display;
 
-            box.style.display = display === "none" ? "block" : "none";
-        }
-    )
+      box.style.display = display === 'none' ? 'block' : 'none';
+    }
+  )
 })();

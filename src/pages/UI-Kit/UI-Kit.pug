@@ -17,126 +17,126 @@ include ../../components/video/video
 
 doctype html
 html
-    head
-        meta(charset = 'utf-8')
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(name="description" content="UI-Kit (set of UI elements)")
-        title UI-Kit
-    body
-        header.header
-            .header__name UI-Kit
-            a(class="header__link" href="./info.html" target="_blank") Go to website
-        section.buttons
-            +block-sign('standard buttons', 'buttons')
-            .buttons__container
-                +button('small', 'cyan', 'button')
-                +button('standard', 'cyan', 'button')
-                +button('standard', 'red', 'button')
-                +button('small', 'red', 'button')
-        section.arrows
-            +block-sign('arrow buttons', 'arrows')
-            .arrows__container
-                +arrow-buttons
-                +arrow-buttons('disabled')
-                +arrow-buttons
-        section.charts
-            +block-sign('percentages / pie charts', 'charts')
-            .charts__container
-                +donut-chart(0)
-                +donut-chart(38)
-                +donut-chart(62)
-                +donut-chart(89)
-                +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
+  head
+    meta(charset = 'utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="UI-Kit (set of UI elements)")
+    title UI-Kit
+  body
+    header.header
+      .header__name UI-Kit
+      a(class="header__link" href="./info.html" target="_blank") Go to website
+    section.buttons
+      +block-sign('standard buttons', 'buttons')
+      .buttons__container
+        +button('small', 'cyan', 'button')
+        +button('standard', 'cyan', 'button')
+        +button('standard', 'red', 'button')
+        +button('small', 'red', 'button')
+    section.arrows
+      +block-sign('arrow buttons', 'arrows')
+      .arrows__container
+        +arrow-buttons
+        +arrow-buttons('disabled')
+        +arrow-buttons
+    section.charts
+      +block-sign('percentages / pie charts', 'charts')
+      .charts__container
+        +donut-chart(0)
+        +donut-chart(38)
+        +donut-chart(62)
+        +donut-chart(89)
+        +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
 
-        section.sliders
-            +block-sign('sliders', 'sliders')
-            .sliders__container
-                +slider({value: 40}, {})
-                +slider({
-                    value: 75,
-                    step: 25,
-                    type: 'labels'
-                }, {
-                    slider: 'gray',
-                    range: 'green',
-                    handle: 'green'
-                    })
+    section.sliders
+      +block-sign('sliders', 'sliders')
+      .sliders__container
+        +slider({value: 40}, {})
+        +slider({
+          value: 75,
+          step: 25,
+          type: 'labels'
+        }, {
+          slider: 'gray',
+          range: 'green',
+          handle: 'green'
+        })
 
-        section.stages-box
-            +block-sign('stages', 'stages-box')
-            .stages-box__container
-                +slider({
-                    min: 1,
-                    max: 5,
-                    value: 3,
-                    type: 'stages'
-                }, {
-                    slider: 'gray',
-                    range: 'orange-red'
-                })
+    section.stages-box
+      +block-sign('stages', 'stages-box')
+      .stages-box__container
+        +slider({
+          min: 1,
+          max: 5,
+          value: 3,
+          type: 'stages'
+        }, {
+          slider: 'gray',
+          range: 'orange-red'
+        })
 
-        section.form-elements
-            +block-sign('form elements', 'form-elements')
-            .form-elements__container
-                +message-form
-                .form-elements__toggles-container
-                    section.toggles
-                        +block-sign('toggles', 'toggles')
-                        .toggles__container
-                            +toggle(false)
-                            +toggle(true)
-                    section.tick-boxes
-                        +block-sign('tick boxes', 'tick-boxes')
-                        .tick-boxes__container
-                            +tick-box(true)
-                            +tick-box(false)
+    section.form-elements
+      +block-sign('form elements', 'form-elements')
+      .form-elements__container
+        +message-form
+        .form-elements__toggles-container
+          section.toggles
+            +block-sign('toggles', 'toggles')
+            .toggles__container
+              +toggle(false)
+              +toggle(true)
+          section.tick-boxes
+            +block-sign('tick boxes', 'tick-boxes')
+            .tick-boxes__container
+              +tick-box(true)
+              +tick-box(false)
 
-        section.search-dropdown-profiles
-            section.search-dropdown
-                +block-sign('search / drop down', 'search-dropdown')
-                .search-dropdown__container
-                    +search-bar
-                    +search-bar
-                    - var dropdownParameters = ['website', 'design', 'something']
-                    +dropdown(dropdownParameters)
-            section.profile
-                +block-sign('user profile', 'profile')
-                .profile__container
-                    +user-profile('John Smith', 'ux designer', 'orange-red')
-                    +user-profile('Sarah Brown', 'developer', 'cyan')
+    section.search-dropdown-profiles
+      section.search-dropdown
+        +block-sign('search / drop down', 'search-dropdown')
+        .search-dropdown__container
+          +search-bar
+          +search-bar
+          - var dropdownParameters = ['website', 'design', 'something']
+          +dropdown(dropdownParameters)
+      section.profile
+        +block-sign('user profile', 'profile')
+        .profile__container
+          +user-profile('John Smith', 'ux designer', 'orange-red')
+          +user-profile('Sarah Brown', 'developer', 'cyan')
 
-        section.news-events
-            +block-sign('news & events', 'news-events')
-            .news-events__container
-                    +billboard('news', 'It’s all going\n' +
-                    'downhill', 'new', 'Lorem ipsum dolor sit amet' +
-                    ', consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
-                    ' Etiam a nisi nunc, a tincidunt eros.', 'orange-red', '24', 'august', '2013')
+    section.news-events
+      +block-sign('news & events', 'news-events')
+      .news-events__container
+        +billboard('news', 'It’s all going\n' +
+        'downhill', 'new', 'Lorem ipsum dolor sit amet' +
+        ', consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
+        ' Etiam a nisi nunc, a tincidunt eros.', 'orange-red', '24', 'august', '2013')
 
-                    +billboard('events', 'this is the title', 'event', 'Lorem ipsum dolor sit amet' +
-                    ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
+        +billboard('events', 'this is the title', 'event', 'Lorem ipsum dolor sit amet' +
+        ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
 
-        section.location
-            +block-sign('location', 'location')
-            .location__container
-                +map([37.791097, -122.415073], 14,
-                    {
-                        sign: 'Meet us!',
-                        address: '1259  CALIFORNIA ST San Francisco, CA'
-                    }
-                )
+    section.location
+      +block-sign('location', 'location')
+      .location__container
+        +map([37.791097, -122.415073], 14,
+          {
+            sign: 'Meet us!',
+            address: '1259  CALIFORNIA ST San Francisco, CA'
+          }
+        )
 
-        section.calendar-messaging
-            section.calendar
-                +block-sign('calendar', 'calendar')
-                .calendar__container
-                    +datepicker()
-            section.messaging
-                +block-sign('messaging', 'messaging')
-                .messaging__container
-                    +message-box('cyan', 'Sarah Brown')
+    section.calendar-messaging
+      section.calendar
+        +block-sign('calendar', 'calendar')
+        .calendar__container
+          +datepicker()
+      section.messaging
+        +block-sign('messaging', 'messaging')
+        .messaging__container
+          +message-box('cyan', 'Sarah Brown')
 
-        section.video-box
-            +block-sign('video', 'video-box')
-            .video-box__container
-                +video("https://www.youtube.com/embed/pzbqEG_chrs")
+    section.video-box
+      +block-sign('video', 'video-box')
+      .video-box__container
+        +video("https://www.youtube.com/embed/pzbqEG_chrs")

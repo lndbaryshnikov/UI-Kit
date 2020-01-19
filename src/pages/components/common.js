@@ -1,3 +1,3 @@
-import "../../fonts/Lato.scss";
+import '../../fonts/Lato.scss';
 
-import "./menu/menu"
+import './menu/menu'

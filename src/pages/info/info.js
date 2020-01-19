@@ -1,3 +1,3 @@
-import "../components/common"
+import '../components/common'
 
-import "./info.scss";
+import './info.scss';
