@@ -1,0 +1,15 @@
+@import '../../../components/donut-chart/donut-chart';
+
+.percentages {
+  &__part {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__sign {
+    font-size: 1rem;
+    margin-left: 30px;
+  }
+
+}

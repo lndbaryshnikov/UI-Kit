@@ -1,0 +1,22 @@
+@import "../components/common";
+@import '../../components/video/video';
+
+.info {
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    color: inherit;
+    margin: 20px;
+  }
+
+  &__text {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+  }
+
+  &__video {
+    width: 594px;
+    margin: 20px auto;
+  }
+}

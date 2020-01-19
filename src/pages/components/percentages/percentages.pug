@@ -1,0 +1,11 @@
+include ../../../components/donut-chart/donut-chart
+
+mixin percentages()
+    .percentages
+        .percentages__part
+            +donut-chart(92)
+            .percentages__sign - successfully employed
+        .percentages__part
+            +donut-chart(89)
+            .percentages__sign - recommended this school
+

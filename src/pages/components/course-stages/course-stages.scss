@@ -1,0 +1,41 @@
+@import '../../../components/arrow-buttons/arrow-buttons';
+@import '../../../components/slider/slider';
+
+.course-stages {
+  width: 620px;
+  height: 210px;
+  text-align: center;
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__stage  {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    position: relative;
+    top: 45px;
+  }
+
+  &__arrows {
+    width: 430px;
+    margin: 10px auto 40px;
+  }
+
+  &__slider {
+    width: 568px;
+    margin: auto;
+
+    .slider.slider_with_stages {
+      .ui-slider-pip {
+        &-selected {
+          background-color: #4eb7a8;
+        }
+
+        &-inrange {
+          background-color: #4eb7a8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../components/common";
+@import "../../components/map/map";
+@import "../../components/billboard/billboard";
+
+.contact {
+  &__address-billboard {
+    .billboard {
+      width: 300px;
+    }
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+  }
+
+  &__address {
+    width: 400px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  &__map {
+    width: 600px;
+    margin: auto;
+  }
+}

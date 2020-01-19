@@ -1,0 +1,13 @@
+@import '../../../components/user-profile/user-profile';
+
+.teachers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  &__sign {
+    font-size: 1.3rem;
+  }
+}

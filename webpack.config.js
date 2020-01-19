@@ -18,10 +18,10 @@ const common = merge([
     {
         entry: {
             'UI-Kit': PATHS.src + '/UI-Kit/UI-Kit.js',
-            'info': PATHS.src + '/design-courses/info/info.js',
-            'details': PATHS.src + '/design-courses/details/details.js',
-            'enroll': PATHS.src + '/design-courses/enroll/enroll.js',
-            'contact': PATHS.src + '/design-courses/contact/contact.js',
+            'info': PATHS.src + '/info/info.js',
+            'details': PATHS.src + '/details/details.js',
+            'enroll': PATHS.src + '/enroll/enroll.js',
+            'contact': PATHS.src + '/contact/contact.js',
         },
         output: {
             path: PATHS.dist,
@@ -37,22 +37,22 @@ const common = merge([
             new HtmlWebpackPlugin({
                 filename: 'info.html',
                 chunks: ['info'],
-                template: PATHS.src + '/design-courses/info/info.pug',
+                template: PATHS.src + '/info/info.pug',
             }),
             new HtmlWebpackPlugin({
                 filename: 'details.html',
                 chunks: ['details'],
-                template: PATHS.src + '/design-courses/details/details.pug',
+                template: PATHS.src + '/details/details.pug',
             }),
             new HtmlWebpackPlugin({
                 filename: 'enroll.html',
                 chunks: ['enroll'],
-                template: PATHS.src + '/design-courses/enroll/enroll.pug',
+                template: PATHS.src + '/enroll/enroll.pug',
             }),
             new HtmlWebpackPlugin({
                 filename: 'contact.html',
                 chunks: ['contact'],
-                template: PATHS.src + '/design-courses/contact/contact.pug',
+                template: PATHS.src + '/contact/contact.pug',
             }),
             new FaviconsWebpackPlugin({
                 logo: './src/img/favicon.png',
