@@ -1,6 +1,35 @@
+@import '../menu-message/menu-message';
+
 .menu {
   width: 230px;
   min-width: 230px;
   min-height: 100%;
   background-color: #e5e5e5;
+
+  &__pages {
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+
+    a {
+      color: inherit;
+
+      &:active {
+        color: #8e8d8d;
+      }
+    }
+  }
+
+  &__message-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+  }
+
 }

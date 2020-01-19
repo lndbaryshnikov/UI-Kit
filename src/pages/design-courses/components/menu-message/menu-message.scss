@@ -1,5 +1,25 @@
+@import '../../../../components/message-box/message-box';
+
 .menu-message {
   width: 288px;
   position: fixed;
   bottom: 0;
+
+  &__header {
+    width: 230px;
+    height: 50px;
+    background-color: #8e8d8d;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 2px;
+    line-height: 50px;
+    vertical-align: center;
+  }
+
+  &__message-box {
+    display: none;
+  }
+
 }
