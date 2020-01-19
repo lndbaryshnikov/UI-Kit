@@ -1,5 +1,4 @@
-include ../components/header/header
-include ../components/menu/menu
+include ../components/common
 include ../../../components/map/map
 include ../../../components/billboard/billboard
 
@@ -22,5 +21,10 @@ html
                                 "First lesson starts in February 14yh. Hurry up to sign up!",
                                 "cyan", "14", "Feb", "2020")
                 .contact__map
-                    +map
+                    +map([55.785124, 49.121856], 14,
+                        {
+                            sign: 'Meet us!',
+                            address: 'Ostrovsky Street, 38. Kazan'
+                        }
+                    )
 
