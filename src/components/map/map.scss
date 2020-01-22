@@ -1,3 +1,5 @@
+@import '../../styles/variables/colors';
+
 .map {
   width: 593px;
   height: 212px;
@@ -10,13 +12,13 @@
   &__footer {
     width: 593px;
     height: 69px;
-    background-color: #e75735;
+    background-color: $orange-red;
   }
 
   &__footer-sign {
     width: 120px;
     height: 22px;
-    color: #ffffff;
+    color: $white;
     font-size: 30px;
     line-height: 26px;
     padding: 21px 27px 26px 30px;
@@ -27,7 +29,7 @@
     float: left;
     width: 145px;
     height: 26px;
-    color: #ffffff;
+    color: $white;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.63px;
@@ -53,7 +55,7 @@
   }
 
   &__map-marker {
-    background-color: #e75735;
+    background-color: $orange-red;
     width: 41px;
     height: 47px;
     display: block;
@@ -61,7 +63,7 @@
     top: -1.5rem;
     position: relative;
     border-radius: 50%;
-    border: 1px solid #e75735;
+    border: 1px solid $orange-red;
 
     &::after {
       position: absolute;
@@ -71,14 +73,14 @@
       bottom: -44.5px;
       left: -1.5px;
       border: 21.8px solid transparent;
-      border-top: 40px solid #e75735;
+      border-top: 40px solid $orange-red;
       border-radius: 0 0 10px 10px;
     }
   }
 
   &__map-marker-circle {
     position: absolute;
-    background-color: #ffffff;
+    background-color: $white;
     width: 17px;
     height: 17px;
     border-radius: 50%;

@@ -1,5 +1,6 @@
 @import '../text-field/text-field';
 @import '../search-bar/search-bar';
+@import '../../styles/variables/colors';
 
 .dropdown {
   width: 288px;
@@ -7,7 +8,7 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #e5e5e5;
+  background-color: $light-gray;
   position: relative;
   -webkit-transition: box-shadow 0.3s;
   -moz-transition: box-shadow 0.3s;
@@ -20,11 +21,11 @@
   }
 
   option:checked {
-    background-color: #4eb7a8;
+    background-color: $cyan;
   }
 
   &__option {
-    background-color: #e5e5e5;
+    background-color: $light-gray;
     font-size: 15px;
   }
 
@@ -40,7 +41,7 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
     outline: none;
-    color: #888888;
+    color: $gray;
     font-family: "Source Sans Pro";
     letter-spacing: 0.14px;
     padding-left: 12px;
@@ -72,7 +73,7 @@
       box-shadow: none;
     }
 
-    background-color: #4eb7a8;
+    background-color: $cyan;
     position: relative;
     top: 0;
     right: 0;
@@ -84,8 +85,8 @@
   &__check-mark {
     width: 8px;
     height: 8px;
-    border-left: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid $white;
+    border-bottom: 2px solid $white;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);

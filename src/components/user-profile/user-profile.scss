@@ -1,4 +1,5 @@
 @import '../user-photo/user-photo';
+@import '../../styles/variables/colors';
 
 .user-profile {
   position: relative;
@@ -32,18 +33,18 @@
 
     &_color {
       &_cyan {
-        background-color: #4eb7a8;
+        background-color: $cyan;
 
         &::after {
-          background-color: #4eb7a8;
+          background-color: $cyan;
         }
       }
 
       &_grey {
-        background-color: #e5e5e5;
+        background-color: $light-gray;
 
         &::after {
-          background-color: #e5e5e5;
+          background-color: $light-gray;
         }
       }
     }
@@ -58,18 +59,18 @@
 
     &_color {
       &_orange-red {
-        color: #e75735;
+        color: $orange-red;
       }
 
       &_white {
-        color: #ffffff;
+        color: $white;
       }
     }
   }
 
   &__job {
     text-transform: uppercase;
-    color: #4f4f4f;
+    color: $dark-gray;
     font-size: 11px;
     letter-spacing: 0.55px;
     display: block;
@@ -77,11 +78,11 @@
 
     &_color {
       &_black {
-        color: #4f4f4f;
+        color: $dark-gray;
       }
 
       &_white {
-        color: #ffffff;
+        color: $white;
       }
     }
   }
@@ -168,6 +169,4 @@
       }
     }
   }
-
-
 }

@@ -1,5 +1,6 @@
 @import '../../../components/arrow-buttons/arrow-buttons';
 @import '../../../components/slider/slider';
+@import '../../../styles/variables/colors';
 
 .course-stages {
   width: 620px;
@@ -29,11 +30,11 @@
     .slider.slider_with_stages {
       .ui-slider-pip {
         &-selected {
-          background-color: #4eb7a8;
+          background-color: $cyan;
         }
 
         &-inrange {
-          background-color: #4eb7a8;
+          background-color: $cyan;
         }
       }
     }

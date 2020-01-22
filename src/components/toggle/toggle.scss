@@ -1,3 +1,5 @@
+@import '../../styles/variables/colors';
+
 .toggle {
   position: relative;
   display: inline-block;
@@ -15,7 +17,7 @@
     height: 0;
 
     &:checked + .toggle__slider {
-      background-color: #4eb7a8;
+      background-color: $cyan;
 
       &:before {
         -webkit-transform: translateX(34px);
@@ -41,7 +43,7 @@
     }
 
     &:focus + .toggle__slider {
-      box-shadow: 0 0 1px #4eb7a8;
+      box-shadow: 0 0 1px $cyan;
     }
   }
 
@@ -51,7 +53,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #e5e5e5;
+    background-color: $light-gray;
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
@@ -73,7 +75,7 @@
 
   &__sign {
     position: absolute;
-    color: #ffffff;
+    color: $white;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.6px;

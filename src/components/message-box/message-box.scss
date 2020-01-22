@@ -1,6 +1,7 @@
 @import '../button/button';
 @import '../user-photo/user-photo';
 @import '../text-field/text-field';
+@import '../../styles/variables/colors';
 
 .message-box {
   width: 288px;
@@ -8,7 +9,7 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #f2f2f2;
+  background-color: $white-smoke;
 
   &__header {
     width: 100%;
@@ -29,18 +30,18 @@
 
     &_theme {
       &_cyan {
-        background-color: #4eb7a8;
+        background-color: $cyan;
 
         &:after {
-          background-color: #46ab9d;
+          background-color: $dark-cyan;
         }
       }
 
       &_orange-red {
-        background-color: #e75735;
+        background-color: $orange-red;
 
         &:after {
-          background-color: #d54c2c;
+          background-color: $dark-orange-red;
         }
       }
     }
@@ -83,13 +84,13 @@
     position: absolute;
     top: 43px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: $white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     text-align: left;
 
-    color: #868686;
+    color: $gray;
     font-size: 13px;
     letter-spacing: 0.63px;
 
@@ -113,7 +114,7 @@
   }
 
   &__name {
-    color: #ffffff;
+    color: $white;
     font-family: "Source Sans Pro";
     font-size: 34px;
     line-height: 70px;

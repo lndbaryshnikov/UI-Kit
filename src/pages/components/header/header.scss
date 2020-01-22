@@ -1,4 +1,5 @@
 @import '../navigation/navigation';
+@import '../../../styles/variables/colors';
 
 .header {
   min-width: 780px;
@@ -13,7 +14,7 @@
 
     &_color {
       &_red {
-        background-color: #e75735;
+        background-color: $orange-red;
       }
     }
   }
@@ -25,7 +26,7 @@
     color: inherit;
 
     &:active {
-      color: #4f4f4f;
+      color: $dark-gray;
     }
   }
 
@@ -39,7 +40,7 @@
     height: 100%;
     line-height: 130px;
     width: calc(100% - 230px);
-    background-color: #e5e5e5;
+    background-color: $light-gray;
     min-width: 550px;
     display: inline-block;
     text-align: start;
@@ -49,7 +50,7 @@
   }
 
   &__name {
-    color: #e75735;
+    color: $orange-red;
     font-size: 2rem;
     vertical-align: middle;
     display: inline-block;

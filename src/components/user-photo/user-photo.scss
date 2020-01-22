@@ -1,7 +1,9 @@
+@import '../../styles/variables/colors';
+
 .user-photo {
   width: 93px;
   height: 93px;
-  background-color: #e5e5e5;
+  background-color: $light-gray;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;

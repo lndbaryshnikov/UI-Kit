@@ -1,7 +1,9 @@
+@import '../../../styles/variables/colors';
+
 .page-content {
   width: calc(100% - 230px);
   min-width: 550px;
   min-height: calc(100% - 130px);
-  color: #8e8d8d;
+  color: $gray;
   padding: 10px;
 }

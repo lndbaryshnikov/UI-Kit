@@ -1,4 +1,5 @@
 @import '../../styles/ripple-effect/ripple-effect';
+@import '../../styles/variables/colors';
 
 .button {
   text-transform: uppercase;
@@ -35,24 +36,24 @@
 
   &_color {
     &_cyan {
-      background-color: #ffffff;
-      color: #45ac9d;
-      border: 1px solid #4eb7a8;
+      background-color: $white;
+      color: $cyan;
+      border: 1px solid $cyan;
 
       &:hover {
-        background-color: #4eb7a8;
-        color: #ffffff;
+        background-color: $cyan;
+        color: $white;
       }
     }
 
     &_red {
-      background-color: #ffffff;
-      color: #e34a26;
-      border: 1px solid #e75735;
+      background-color: $white;
+      color: $orange-red;
+      border: 1px solid $orange-red;
 
       &:hover {
-        background-color: #e75735;
-        color: #ffffff;
+        background-color: $orange-red;
+        color: $white;
       }
     }
   }
@@ -72,18 +73,18 @@
 
     &_color {
       &_cyan {
-        background-color: #4eb7a8;
+        background-color: $cyan;
 
         &:hover {
-          background-color: #28a290;
+          background-color: $cyan;
         }
       }
 
       &_red {
-        background-color: #e75735;
+        background-color: $orange-red;
 
         &:hover {
-          background-color: #bf3e1f;
+          background-color: $orange-red;
         }
       }
     }

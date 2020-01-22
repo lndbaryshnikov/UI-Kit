@@ -1,5 +1,6 @@
 @import '../../styles/ripple-effect/ripple-effect';
 @import '../../styles/mixins/slide-animation';
+@import '../../styles/variables/colors';
 
 .arrow-buttons {
   height: 50px;
@@ -29,7 +30,7 @@
   &__arrow-container {
     width: 45px;
     height: 45px;
-    border: 3px solid #4eb7a8;
+    border: 3px solid $cyan;
 
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -47,10 +48,10 @@
 
     &:hover {
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
-        border-color: #ffffff;
+        border-color: $white;
       }
 
-      background-color: #4eb7a8;
+      background-color: $cyan;
     }
   }
 
@@ -61,8 +62,8 @@
   }
 
   &__right-arrow {
-    border-top: 3.5px solid #4eb7a8;
-    border-right: 3.5px solid #4eb7a8;
+    border-top: 3.5px solid $cyan;
+    border-right: 3.5px solid $cyan;
     margin-right: 18px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -72,8 +73,8 @@
   }
 
   &__left-arrow {
-    border-left: 3.5px solid #4eb7a8;
-    border-bottom: 3.5px solid #4eb7a8;
+    border-left: 3.5px solid $cyan;
+    border-bottom: 3.5px solid $cyan;
     margin-left: 18px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -84,7 +85,7 @@
 
   &_disabled {
     .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
-      border-color: #ffffff;
+      border-color: $white;
       animation: none;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -93,12 +94,12 @@
       transform: rotate(45deg);
     }
 
-    background-color: #e5e5e5;
-    border-color: #e5e5e5;
+    background-color: $light-gray;
+    border-color: $light-gray;
 
     &:hover {
-      background-color: #777777;
-      border-color: #777777;;
+      background-color: $dark-gray;
+      border-color: $dark-gray;
     }
 
     -webkit-transition: background-color 0.5s, border-color 0.5s;
