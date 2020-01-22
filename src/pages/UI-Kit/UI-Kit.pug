@@ -123,8 +123,16 @@ html
       section.profile
         +block-sign('user profile', 'profile')
         .profile__container
-          +user-profile('John Smith', 'ux designer', 'orange-red')
-          +user-profile('Sarah Brown', 'developer', 'cyan')
+          +user-profile({
+            name: 'John Smith',
+            job: 'ux designer',
+            theme: 'orange-red'
+          })
+          +user-profile({
+            name: 'Sarah Brown',
+            job: 'developer',
+            theme: 'cyan'
+          })
 
     section.news-events
       +block-sign('news & events', 'news-events')

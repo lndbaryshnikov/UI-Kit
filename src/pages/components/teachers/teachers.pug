@@ -3,6 +3,14 @@ include ../../../components/user-profile/user-profile
 mixin teachers()
   .teachers
     .teachers__sign Our Teachers
-    +user-profile('John Smith', 'ux designer', 'orange-red')
-    +user-profile('Sarah Brown', 'developer', 'cyan')
+    +user-profile({
+      name: 'John Smith',
+      job: 'ux designer',
+      theme: 'orange-red'
+    })
+    +user-profile({
+      name: 'Sarah Brown',
+      job: 'developer',
+      theme: 'cyan'
+    })
 
