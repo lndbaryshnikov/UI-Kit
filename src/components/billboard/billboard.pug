@@ -1,19 +1,19 @@
 include ../button/button
 
 mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year })
-  div(class= "billboard billboard_background-color_" + backgroundColor)
+  div(class=`billboard billboard_background-color_${backgroundColor}`)
     .billboard__image
-      img(src=require('../../img/billboard/' + imageName + '.png') alt=imageName)
+      img(src=require(`../../img/billboard/${imageName}.png`) alt=imageName)
     .billboard__content
       if type === "news"
         div(class= "billboard__title billboard__title_type_new")= title
-        div(class= "billboard__date billboard__date_type_new")= day + ' ' + month + ' ' + year
+        div(class= "billboard__date billboard__date_type_new") #{day} #{month} #{year}
         .billboard__description= content
 
       if type === "events"
         div(class= "billboard__date billboard__date_type_event")
-          span= day + ' '
-          span= month
+          span= day
+          span  #{month}
         div(class= "billboard__title billboard__title_type_event")= title
         .billboard__description= content
         .billboard__button
@@ -23,12 +23,3 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
             content: 'add to calendar',
             width: 'hundred-percents'
           })
-
-
-
-
-
-
-
-
-
