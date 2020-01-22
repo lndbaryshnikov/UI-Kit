@@ -1,6 +1,7 @@
 @import '../text-field/text-field';
 @import '../search-bar/search-bar';
 @import '../../styles/variables/colors';
+@import '../../styles/functions/functions';
 
 .dropdown {
   width: 288px;
@@ -26,7 +27,7 @@
 
   &__option {
     background-color: $light-gray;
-    font-size: 15px;
+    font-size: countRem(15);
   }
 
   select:focus {
@@ -50,7 +51,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 15px;
+    font-size: countRem(15);
     background: transparent;
     transition: box-shadow 3s;
   }

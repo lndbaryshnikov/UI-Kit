@@ -1,4 +1,5 @@
 @import '../../styles/variables/colors';
+@import '../../styles/functions/functions';
 
 .text-field {
   height: 28px;
@@ -11,7 +12,7 @@
   transition: box-shadow 0.3s;
   color: $gray;
   font-family: "Source Sans Pro";
-  font-size: 14px;
+  font-size: countRem(14);
   letter-spacing: 0.14px;
   padding-left: 12px;
 
@@ -25,7 +26,7 @@
       -webkit-border-radius: 4px 0 0 4px;
       -moz-border-radius: 4px 0 0 4px;
       border-radius: 4px 0 0 4px;
-      font-size: 15px;
+      font-size: countRem(15);
       padding: 0 0 2px 0.9vw;
       box-sizing: border-box;
     }
@@ -37,7 +38,7 @@
           height: 24px;
           padding-left: 13px;
           padding-bottom: 3.4px;
-          font-size: 15px;
+          font-size: countRem(15);
         }
 
         textarea#{&} {
