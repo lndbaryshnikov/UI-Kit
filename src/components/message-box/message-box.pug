@@ -2,17 +2,9 @@ include ../user-photo/user-photo
 include ../text-field/text-field
 include ../button/button
 
-mixin message-box(theme, name)
-  if theme === 'cyan'
-    - var headerTheme = 'cyan'
-    - var buttonColor = 'cyan'
-
-  if theme === 'orange-red'
-    - var headerTheme = 'orange-red'
-    - var buttonColor = 'red'
-
+mixin message-box({ theme, name })
   div(class="message-box" id=name)
-    div(class="message-box__header message-box__header_theme_" + headerTheme)
+    div(class=`message-box__header message-box__header_theme_${theme}`)
       .message-box__name
       .message-box__photo
         +user-photo('Sarah Brown')
@@ -34,7 +26,7 @@ mixin message-box(theme, name)
           .message-box__reply-button
             +button({
               size: 'standard',
-              color: buttonColor,
+              color: theme,
               content: 'reply',
               width: 'hundred-percents'
             })
