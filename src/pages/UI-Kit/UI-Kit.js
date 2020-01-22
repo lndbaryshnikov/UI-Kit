@@ -1,6 +1,6 @@
 //UI-Kit components styles
 import '../../fonts/fonts.scss'
-import '../components/html/html.scss'
+import '../../styles/base.scss'
 
 import '../../components/button/button'
 import '../../components/button/button.scss'

@@ -1,6 +1,5 @@
-@import "html/html";
-@import "body/body";
-@import "header/header";
-@import "menu/menu";
-@import "page-content/page-content";
-@import "page-wrapper/page-wrapper";
+@import '../../styles/base';
+@import 'header/header';
+@import 'menu/menu';
+@import 'page-content/page-content';
+@import 'page-wrapper/page-wrapper';
