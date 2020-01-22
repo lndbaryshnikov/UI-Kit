@@ -30,4 +30,8 @@ mixin message-form
       })
 
     .message-form__button
-      +button('standard', 'cyan', 'submit')
+      +button({
+        size: 'standard',
+        color: 'cyan',
+        content: 'submit'
+      })

@@ -17,7 +17,12 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
         div(class= "billboard__title billboard__title_type_event")= title
         .billboard__description= content
         .billboard__button
-          +button('small', 'cyan', 'add to calendar', 'hundred-percents')
+          +button({
+            size: 'small',
+            color: 'cyan',
+            content: 'add to calendar',
+            width: 'hundred-percents'
+          })
 
 
 

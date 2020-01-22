@@ -29,10 +29,27 @@ html
     section.buttons
       +block-sign('standard buttons', 'buttons')
       .buttons__container
-        +button('small', 'cyan', 'button')
-        +button('standard', 'cyan', 'button')
-        +button('standard', 'red', 'button')
-        +button('small', 'red', 'button')
+        +button({
+          size:'small',
+          color: 'cyan',
+          content: 'button'
+        })
+        +button({
+          size: 'standard',
+          color: 'cyan',
+          content: 'button'
+        })
+        +button({
+          size: 'standard',
+          color: 'red',
+          content: 'button'
+        })
+        +button({
+          size: 'small',
+          color: 'red',
+          content: 'button'
+        })
+
     section.arrows
       +block-sign('arrow buttons', 'arrows')
       .arrows__container

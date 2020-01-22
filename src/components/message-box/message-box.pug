@@ -31,6 +31,10 @@ mixin message-box(theme, name)
               blockName: 'message-box'
             })
 
-          //textarea(name="reply" class="text-field message-box__reply" placeholder="Your reply here...")
           .message-box__reply-button
-            +button('standard', buttonColor, 'reply', 'hundred-percents')
+            +button({
+              size: 'standard',
+              color: buttonColor,
+              content: 'reply',
+              width: 'hundred-percents'
+            })
