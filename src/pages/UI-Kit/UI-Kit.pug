@@ -108,13 +108,29 @@ html
     section.news-events
       +block-sign('news & events', 'news-events')
       .news-events__container
-        +billboard('news', 'It’s all going\n' +
-        'downhill', 'new', 'Lorem ipsum dolor sit amet' +
-        ', consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
-        ' Etiam a nisi nunc, a tincidunt eros.', 'orange-red', '24', 'august', '2013')
+        +billboard({
+          type: 'news',
+          title: 'It’s all going\ndownhill',
+          imageName: 'new',
+          content: 'Lorem ipsum dolor sit amet, ' +
+            'consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
+            ' Etiam a nisi nunc, a tincidunt eros.',
+          backgroundColor: 'orange-red',
+          day: '24',
+          month: 'august',
+          year: '2013'
+        })
 
-        +billboard('events', 'this is the title', 'event', 'Lorem ipsum dolor sit amet' +
-        ', consectetur adipiscing elit.', 'cyan', '24', 'Aug')
+        +billboard({
+          type: 'events',
+          title: 'this is the title',
+          imageName: 'event',
+          content: 'Lorem ipsum dolor sit amet' +
+            ', consectetur adipiscing elit.',
+          backgroundColor: 'cyan',
+          day: '24',
+          month: 'Aug'
+        })
 
     section.location
       +block-sign('location', 'location')

@@ -20,9 +20,17 @@ html
           .enroll__form
             +enroll-form
           .enroll__billboard
-            +billboard("news", "JavaScript course",
-              "javascript", "First course starts february 14th!",
-              "cyan", "14", "november", "2020")
+            +billboard({
+              type: 'news',
+              title: 'JavaScript course',
+              imageName: 'javascript',
+              content: 'First course starts february 14th!',
+              backgroundColor: 'cyan',
+              day: '14',
+              month: 'november',
+              year: '2020'
+            })
+
           .enroll__datepicker
             +datepicker
 

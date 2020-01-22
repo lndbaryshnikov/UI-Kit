@@ -17,9 +17,17 @@ html
         .contact__address-billboard
           .contact__address You can find us at Ostrovsky street, 38, Kazan <br />
             |  +7 (905) 245-74-83 <br /> kazandesign@gmail.com
-          +billboard("events", "first lesson", "billboard-photo-2",
-            "First lesson starts in February 14yh. Hurry up to sign up!",
-            "cyan", "14", "Feb", "2020")
+
+          +billboard({
+            type: 'events',
+            title: 'first lesson',
+            imageName: 'billboard-photo-2',
+            content: 'First lesson starts in February 14yh. Hurry up to sign up!',
+            backgroundColor: 'cyan',
+            day: '14',
+            month: 'Feb'
+          })
+
         .contact__map
           +map([55.785124, 49.121856], 14,
             {

@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin billboard(type, title, imageName, content, backgroundColor, day, month, year)
+mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year })
   div(class= "billboard billboard_background-color_" + backgroundColor)
     .billboard__image
       img(src=require('../../img/billboard/' + imageName + '.png') alt=imageName)
