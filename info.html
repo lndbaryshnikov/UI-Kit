@@ -13,9 +13,11 @@
           <div class="navigation">
             <div class="navigation__sign"></div>
             <div class="navigation__search-bar">
-              <div class="search-bar search-bar_size_100-percents">
+              <div class="search-bar search-bar_size_hundred-percents">
                 <form>
-                  <input class="text-field search-bar__input" type="text" placeholder="Search" name="search">
+                  <div class="search-bar__input">
+                    <input class="text-field text-field_type_for-search-bar" type="search" name="search" placeholder="Search"></input>
+                  </div>
                   <button class="search-bar__button" type="submit"></button>
                 </form>
               </div>
@@ -32,23 +34,25 @@
         <nav class="menu__pages"><a href="./info.html">Information</a><a href="./details.html">Course details</a><a href="./enroll.html">Enroll in a course</a><a href="./contact.html">Contact us</a></nav>
         <div class="menu__message-box">
           <div class="menu-message">
-            <div class="menu-message__header">Message us</div>
-            <div class="menu-message__message-box">
-              <div class="message-box" id="Sarah Brown">
+            <div class="menu-message__header js-menu-message__header">Message us</div>
+            <div class="menu-message__message-box js-menu-message__message-box">
+              <div class="message-box js-message-box" id="Sarah Brown">
                 <div class="message-box__header message-box__header_theme_orange-red">
-                  <div class="message-box__name"></div>
+                  <div class="message-box__name js-message-box__name"></div>
                   <div class="message-box__photo">
-                    <div class="user-photo__back"><img src="./images/Sarah Brown.png" alt="Sarah Brown"></div>
+                    <div class="user-photo"><img src="./images/Sarah Brown.png" alt="Sarah Brown"></div>
                   </div>
                 </div>
                 <div class="message-box__body">
                   <div class="message-box__chat"><a class="message-box__chat-button" href="/mock-address/change-me"></a><a class="message-box__camera-button" href="/mock-address/change-me"></a>
-                    <div class="message-box__message"></div>
+                    <div class="message-box__message js-message-box__message"></div>
                     <form method="post">
-                      <textarea class="text-field message-box__reply" name="reply" placeholder="Your reply here..."></textarea>
+                      <div class="message-box__reply">
+                        <textarea class="text-field text-field_type_for-message-box" name="reply" placeholder="Your reply here..."></textarea>
+                      </div>
                       <div class="message-box__reply-button">
-                        <div class="button__back button__back_size_standard button__back_color_red" style="width:100%;">
-                          <button class="button button_size_standard button_color_red ripple" type="submit">reply</button>
+                        <div class="button button_size_standard button_width_hundred-percents button_color_orange-red">
+                          <button class="button__button button__button_size_standard button__button_color_orange-red ripple" type="submit">reply</button>
                         </div>
                       </div>
                     </form>

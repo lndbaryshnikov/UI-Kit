@@ -13,9 +13,11 @@
           <div class="navigation">
             <div class="navigation__sign"></div>
             <div class="navigation__search-bar">
-              <div class="search-bar search-bar_size_100-percents">
+              <div class="search-bar search-bar_size_hundred-percents">
                 <form>
-                  <input class="text-field search-bar__input" type="text" placeholder="Search" name="search">
+                  <div class="search-bar__input">
+                    <input class="text-field text-field_type_for-search-bar" type="search" name="search" placeholder="Search"></input>
+                  </div>
                   <button class="search-bar__button" type="submit"></button>
                 </form>
               </div>
@@ -32,23 +34,25 @@
         <nav class="menu__pages"><a href="./info.html">Information</a><a href="./details.html">Course details</a><a href="./enroll.html">Enroll in a course</a><a href="./contact.html">Contact us</a></nav>
         <div class="menu__message-box">
           <div class="menu-message">
-            <div class="menu-message__header">Message us</div>
-            <div class="menu-message__message-box">
-              <div class="message-box" id="Sarah Brown">
+            <div class="menu-message__header js-menu-message__header">Message us</div>
+            <div class="menu-message__message-box js-menu-message__message-box">
+              <div class="message-box js-message-box" id="Sarah Brown">
                 <div class="message-box__header message-box__header_theme_orange-red">
-                  <div class="message-box__name"></div>
+                  <div class="message-box__name js-message-box__name"></div>
                   <div class="message-box__photo">
-                    <div class="user-photo__back"><img src="./images/Sarah Brown.png" alt="Sarah Brown"></div>
+                    <div class="user-photo"><img src="./images/Sarah Brown.png" alt="Sarah Brown"></div>
                   </div>
                 </div>
                 <div class="message-box__body">
                   <div class="message-box__chat"><a class="message-box__chat-button" href="/mock-address/change-me"></a><a class="message-box__camera-button" href="/mock-address/change-me"></a>
-                    <div class="message-box__message"></div>
+                    <div class="message-box__message js-message-box__message"></div>
                     <form method="post">
-                      <textarea class="text-field message-box__reply" name="reply" placeholder="Your reply here..."></textarea>
+                      <div class="message-box__reply">
+                        <textarea class="text-field text-field_type_for-message-box" name="reply" placeholder="Your reply here..."></textarea>
+                      </div>
                       <div class="message-box__reply-button">
-                        <div class="button__back button__back_size_standard button__back_color_red" style="width:100%;">
-                          <button class="button button_size_standard button_color_red ripple" type="submit">reply</button>
+                        <div class="button button_size_standard button_width_hundred-percents button_color_orange-red">
+                          <button class="button__button button__button_size_standard button__button_color_orange-red ripple" type="submit">reply</button>
                         </div>
                       </div>
                     </form>
@@ -63,33 +67,39 @@
         <div class="enroll__title">You can enroll in a course here (starts in February 14th):</div>
         <div class="enroll__content">
           <div class="enroll__form">
-            <form class="message-form enroll-form" method="post">
-              <input class="text-field message-form__data-field_type_input" type="text" name="name" placeholder="Your Name"><br>
-              <input class="text-field message-form__data-field_type_input" type="text" name="email" placeholder="Your Email"><br>
-              <textarea class="text-field message-form__data-field_type_textarea" name="message" placeholder="Your Message"></textarea><br>
+            <form class="message-form js-message-form" method="post">
+              <div class="message-form__data-field_type_input js-message-form__data-field_type_input">
+                <input class="text-field text-field_type_for-message-form" type="text" name="name" placeholder="Your Name"></input>
+              </div>
+              <div class="message-form__data-field_type_input js-message-form__data-field_type_input">
+                <input class="text-field text-field_type_for-message-form" type="email" name="email" placeholder="Your Email"></input>
+              </div>
+              <div class="message-form__data-field_type_textarea">
+                <textarea class="text-field text-field_type_for-message-form" name="message" placeholder="Your Message"></textarea>
+              </div>
               <div class="enroll-form__tick-boxes">
                 <div class="enroll-form__tick-item">
                   <label class="tick-box">
-                    <input type="checkbox">
-                    <div class="tick-box__checkmark">
-                      <div></div>
+                    <input class="tick-box__input" type="checkbox">
+                    <div class="tick-box__check-mark-container">
+                      <div class="tick-box__check-mark"></div>
                     </div>
                   </label>
                   <div class="enroll-form__tick-sign">Subscribe</div>
                 </div>
                 <div class="enroll-form__tick-item">
                   <label class="tick-box">
-                    <input type="checkbox">
-                    <div class="tick-box__checkmark">
-                      <div></div>
+                    <input class="tick-box__input" type="checkbox">
+                    <div class="tick-box__check-mark-container">
+                      <div class="tick-box__check-mark"></div>
                     </div>
                   </label>
                   <div class="enroll-form__tick-sign">Call me back</div>
                 </div>
               </div>
               <div class="message-form__button">
-                <div class="button__back button__back_size_standard button__back_color_cyan" style="width:undefined;">
-                  <button class="button button_size_standard button_color_cyan ripple" type="submit">submit</button>
+                <div class="button button_size_standard button_color_cyan">
+                  <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit">submit</button>
                 </div>
               </div>
             </form>
@@ -106,10 +116,10 @@
           </div>
           <div class="enroll__datepicker">
             <div class="datepicker">
-              <div class="datepicker__header">
+              <div class="datepicker__header js-datepicker__header">
                 <div class="datepicker__month-line"></div>
               </div>
-              <div class="datepicker__datepicker-wrapper"></div>
+              <div class="datepicker__datepicker-wrapper js-datepicker__datepicker-wrapper"></div>
             </div>
           </div>
         </div>
