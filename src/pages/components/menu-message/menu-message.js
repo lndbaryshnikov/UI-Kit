@@ -1,8 +1,8 @@
 import '../../../components/message-box/message-box'
 
 (() => {
-  const button = document.querySelector('.menu-message__header');
-  const box = document.querySelector('.menu-message__message-box');
+  const button = document.querySelector('.js-menu-message__header');
+  const box = document.querySelector('.js-menu-message__message-box');
   box.style.display = 'none';
 
   button.addEventListener('click', () => {

@@ -1,7 +1,7 @@
 import 'jquery-ui/ui/widgets/datepicker'
 
 (() => {
-  $('.datepicker__datepicker-wrapper').datepicker({
+  $('.js-datepicker__datepicker-wrapper').datepicker({
     classes: {
       'ui-datepicker-current': 'datepicker__today-button',
     },
@@ -11,6 +11,6 @@ import 'jquery-ui/ui/widgets/datepicker'
     selectOtherMonths: true
   });
 
-  document.querySelector('.datepicker__header').innerHTML += String(new Date().getDate());
+  document.querySelector('.js-datepicker__header').innerHTML += String(new Date().getDate());
 })();
 
