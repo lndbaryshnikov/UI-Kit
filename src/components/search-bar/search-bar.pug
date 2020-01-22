@@ -3,10 +3,11 @@ include ../text-field/text-field
 mixin search-bar(options)
   -
     var wrapperClass = "search-bar"
-    var hundredPercents = " search-bar_size_100-percents"
+    var hundredPercents = " search-bar_size_hundred-percents"
 
   if options && options.size === "100%"
     - wrapperClass += hundredPercents
+
   div(class=wrapperClass)
     form
       .search-bar__input
