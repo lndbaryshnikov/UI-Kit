@@ -59,11 +59,15 @@ html
     section.charts
       +block-sign('percentages / pie charts', 'charts')
       .charts__container
-        +donut-chart(0)
-        +donut-chart(38)
-        +donut-chart(62)
-        +donut-chart(89)
-        +donut-chart([100, 75, 40, 10], ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'], 10)
+        +donut-chart({ percentage: 0 })
+        +donut-chart({ percentage: 38 })
+        +donut-chart({ percentage: 62 })
+        +donut-chart({ percentage: 89 })
+        +donut-chart({
+          percentage: [100, 75, 40, 10],
+          color: ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'],
+          thickness: 10
+        })
 
     section.sliders
       +block-sign('sliders', 'sliders')
