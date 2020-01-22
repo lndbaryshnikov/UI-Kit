@@ -37,4 +37,8 @@ mixin enroll-form()
         +tick-box
         .enroll-form__tick-sign Call me back
     .message-form__button
-      +button('standard', 'cyan', 'submit')
+      +button({
+        size: 'standard',
+        color: 'cyan',
+        content: 'submit'
+      })

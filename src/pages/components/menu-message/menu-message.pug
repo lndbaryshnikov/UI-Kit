@@ -4,4 +4,7 @@ mixin menu-message()
   .menu-message
     .menu-message__header.js-menu-message__header Message us
     .menu-message__message-box.js-menu-message__message-box
-      +message-box('orange-red', 'Sarah Brown')
+      +message-box({
+        theme: 'orange-red',
+        name: 'Sarah Brown'
+      })
