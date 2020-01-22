@@ -5,7 +5,7 @@ mixin search-bar(options)
     var wrapperClass = "search-bar"
     var hundredPercents = " search-bar_size_hundred-percents"
 
-  if options && options.size === "100%"
+  if options && options.size === "hundred-percents"
     - wrapperClass += hundredPercents
 
   div(class=wrapperClass)
