@@ -11,7 +11,7 @@ mixin donut-chart({ percentage, color="#e75735", thickness="5", radius='45', bac
 
       - var dashArray = 2*Math.PI*radius
 
-      svg(width = size, height = size, xmlns='http://www.w3.org/2000/svg')
+      svg(width=size, height=size, xmlns='http://www.w3.org/2000/svg')
         - for (let i = 0; i < +percentage.length; i++)
           - var addendum = 0;
           - var dashOffset = dashArray - (dashArray * percentage[i]/100) + addendum;
