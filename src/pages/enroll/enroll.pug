@@ -1,8 +1,8 @@
+include ../../components/ui-kit-components/billboard/billboard
+include ../../components/ui-kit-components/datepicker/datepicker
 include ../components/header/header
 include ../components/menu/menu
 include ../components/enroll-form/enroll-form
-include ../../components/ui-kit-components/billboard/billboard
-include ../../components/ui-kit-components/datepicker/datepicker
 
 doctype html
 html
@@ -16,23 +16,22 @@ html
     .page-wrapper
       +menu()
       .page-content
-        .enroll__title You can enroll in a course here (starts in February 14th):
-        .enroll__content
-          .enroll__form
-            +enroll-form
-          .enroll__billboard
-            +billboard({
-              type: 'news',
-              title: 'JavaScript course',
-              imageName: 'javascript',
-              content: 'First course starts february 14th!',
-              backgroundColor: 'cyan',
-              day: '14',
-              month: 'november',
-              year: '2020'
-            })
+        .enroll
+          .enroll__title You can enroll in a course here (starts in February 14th):
+          .enroll__content
+            .enroll__form
+              +enroll-form
+            .enroll__billboard
+              +billboard({
+                type: 'news',
+                title: 'JavaScript course',
+                imageName: 'javascript',
+                content: 'First course starts february 14th!',
+                backgroundColor: 'cyan',
+                day: '14',
+                month: 'november',
+                year: '2020'
+              })
 
-          .enroll__datepicker
-            +datepicker
-
-
+            .enroll__datepicker
+              +datepicker
