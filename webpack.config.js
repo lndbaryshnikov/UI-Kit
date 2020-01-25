@@ -5,9 +5,9 @@ const pug = require('./webpack/pug');
 const styles = require('./webpack/styles');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
-const devServer = require('./webpack/devServer');
+const devServer = require('./webpack/dev-server');
 const providePlugin = require('./webpack/provide-plugin');
-const faviconsPlugin = require('./webpack/faviconsPlugin');
+const faviconsPlugin = require('./webpack/favicons-plugin');
 const htmlPlugin = require('./webpack/html-plugin');
 
 const PATHS = {
