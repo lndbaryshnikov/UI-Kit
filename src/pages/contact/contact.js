@@ -16,9 +16,9 @@ import './contact.scss'
 //     map.setView([55.785124, 49.121856], 14);
 //   });
 //
-//   const billboardButton = document.querySelector(".contact__address-billboard .billboard__button");
+//   const billboardButton = document.querySelector(".contact__address-billboard-images .billboard__button");
 //   billboardButton.onclick = () => { window.location.href="./enroll.html" };
-//   document.querySelector(".contact__address-billboard .billboard__button button").innerHTML = "Enroll";
+//   document.querySelector(".contact__address-billboard-images .billboard__button button").innerHTML = "Enroll";
 // })();
 
 

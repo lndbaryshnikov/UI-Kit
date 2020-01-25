@@ -55,7 +55,7 @@ const common = merge([
                 template: PATHS.src + '/contact/contact.pug',
             }),
             new faviconsWebpackPlugin({
-                logo: './src/img/favicon.png',
+                logo: './src/img/icons/favicon.png',
                 prefix: 'assets/'
             })
         ],

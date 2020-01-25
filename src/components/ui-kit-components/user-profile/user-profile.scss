@@ -120,15 +120,15 @@
         transition: background-color 1s;
 
         &:nth-of-type(1) {
-          background-image: url("../../../img/links/cyan-theme/FB_copy.png");
+          background-image: url("../../../img/icons/fb-gray.png");
         }
 
         &:nth-of-type(2) {
-          background-image: url("../../../img/links/cyan-theme/Twitter_copy.png");
+          background-image: url("../../../img/icons/twitter-gray.png");
         }
 
         &:nth-of-type(3) {
-          background-image: url("../../../img/links/cyan-theme/Dribbble_copy.png");
+          background-image: url("../../../img/icons/dribbble-gray.png");
         }
 
         &:hover {
@@ -149,15 +149,15 @@
         transition: background-color 1s;
 
         &:nth-of-type(1) {
-          background-image: url(../../../img/links/orange-red-theme/FB.png);
+          background-image: url(../../../img/icons/fb-white.png);
         }
 
         &:nth-of-type(2) {
-          background-image: url(../../../img/links/orange-red-theme/Twitter.png);
+          background-image: url(../../../img/icons/twitter-white.png);
         }
 
         &:nth-of-type(3) {
-          background-image: url(../../../img/links/orange-red-theme/Dribbble.png);
+          background-image: url(../../../img/icons/dribbble-white.png);
         }
 
         &:hover {
