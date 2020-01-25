@@ -1,6 +1,9 @@
-@import "../components/common";
+@import "../../styles/common";
+@import '../../styles/site-styles';
 @import "../../components/ui-kit-components/map/map";
 @import "../../components/ui-kit-components/billboard/billboard";
+@import '../components/header/header';
+@import '../components/menu/menu';
 
 .contact {
   &__address-billboard {

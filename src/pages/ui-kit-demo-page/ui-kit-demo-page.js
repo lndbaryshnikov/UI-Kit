@@ -1,6 +1,5 @@
 //ui-kit-demo-page components styles
-import '../../fonts/fonts.scss'
-import '../../styles/base.scss'
+import '../../styles/common.scss'
 
 import '../../components/ui-kit-components/button/button'
 import '../../components/ui-kit-components/button/button.scss'

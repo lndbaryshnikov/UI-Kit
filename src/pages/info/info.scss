@@ -1,5 +1,8 @@
-@import "../components/common";
+@import "../../styles/common";
+@import '../../styles/site-styles';
 @import '../../components/ui-kit-components/video/video';
+@import '../components/header/header';
+@import '../components/menu/menu';
 
 .info {
   &__title {

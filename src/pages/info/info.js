@@ -1,3 +1,3 @@
-import '../components/common'
+import '../components/menu/menu'
 
 import './info.scss';

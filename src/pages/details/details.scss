@@ -1,7 +1,10 @@
-@import "../components/common";
+@import "../../styles/common";
+@import '../../styles/site-styles';
 @import "../components/percentages/percentages";
 @import "../components/teachers/teachers";
 @import "../components/course-stages/course-stages";
+@import '../components/header/header';
+@import '../components/menu/menu';
 
 .details {
   &__teachers {
