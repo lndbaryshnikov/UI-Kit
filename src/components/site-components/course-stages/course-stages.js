@@ -1,4 +1,4 @@
-import '../../../components/ui-kit-components/arrow-buttons/arrow-buttons';
+import '../../ui-kit-components/arrow-buttons/arrow-buttons';
 import '../../../components/ui-kit-components/slider/slider'
 
 (() => {

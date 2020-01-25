@@ -1,10 +1,10 @@
 @import "../../styles/common";
 @import '../../styles/site-styles';
-@import '../components/enroll-form/enroll-form';
+@import '../../components/site-components/enroll-form/enroll-form';
 @import '../../components/ui-kit-components/billboard/billboard';
 @import '../../components/ui-kit-components/datepicker/datepicker';
-@import '../components/header/header';
-@import '../components/menu/menu';
+@import '../../components/site-components/header/header';
+@import '../../components/site-components/menu/menu';
 
 .enroll {
   &__form {

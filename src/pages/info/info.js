@@ -1,3 +1,3 @@
-import '../components/menu/menu'
+import '../../components/site-components/menu/menu'
 
 import './info.scss';

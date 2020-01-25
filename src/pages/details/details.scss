@@ -1,10 +1,10 @@
 @import "../../styles/common";
 @import '../../styles/site-styles';
-@import "../components/percentages/percentages";
-@import "../components/teachers/teachers";
-@import "../components/course-stages/course-stages";
-@import '../components/header/header';
-@import '../components/menu/menu';
+@import "../../components/site-components/percentages/percentages";
+@import "../../components/site-components/teachers/teachers";
+@import "../../components/site-components/course-stages/course-stages";
+@import '../../components/site-components/header/header';
+@import '../../components/site-components/menu/menu';
 
 .details {
   &__teachers {
