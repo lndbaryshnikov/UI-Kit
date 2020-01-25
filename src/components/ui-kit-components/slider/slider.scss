@@ -1,6 +1,6 @@
-@import '../../../../node_modules/jquery-ui/themes/base/core.css';
-@import '../../../../node_modules/jquery-ui/themes/base/slider.css';
-@import '../../../pips-float-plugin/jquery-ui-slider-pips.css';
+@import '~jquery-ui/themes/base/core';
+@import '~jquery-ui/themes/base/slider';
+@import '../../../pips-float-plugin/jquery-ui-slider-pips';
 @import '../../../styles/variables/colors';
 @import '../../../styles/functions/functions';
 
