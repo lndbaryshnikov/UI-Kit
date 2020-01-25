@@ -1,5 +1,5 @@
 import '../components/common'
-import '../../components/map/map'
+import '../../components/ui-kit-components/map/map'
 
 import './contact.scss'
 

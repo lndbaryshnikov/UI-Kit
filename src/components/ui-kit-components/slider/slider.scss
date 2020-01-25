@@ -1,0 +1,155 @@
+@import '../../../../node_modules/jquery-ui/themes/base/core.css';
+@import '../../../../node_modules/jquery-ui/themes/base/slider.css';
+@import '../../../pips-float-plugin/jquery-ui-slider-pips.css';
+@import '../../../styles/variables/colors';
+@import '../../../styles/functions/functions';
+
+.slider {
+  &__scale {
+    width: 260px;
+    height: 5px;
+    border-radius: 10px;
+
+    &_color {
+      &_gray {
+        background-color: $light-gray;
+      }
+
+      &_green {
+        background-color: $cyan;
+      }
+    }
+
+    &_type {
+      &_for-stages {
+        width: 568px !important;
+      }
+    }
+  }
+
+  &__range {
+    border-radius: 10px;
+
+    &_color {
+      &_gray {
+        background-color: $light-gray;
+      }
+
+      &_green {
+        background-color: $cyan;
+      }
+
+      &_orange-red {
+        background-color: $orange-red;
+      }
+    }
+  }
+
+  &__handle {
+    width: 19.5px;
+    height: 19.5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    outline: none;
+    top: -7px !important;
+    cursor: pointer;
+
+    &_color {
+      &_green {
+        background-color: $cyan;
+      }
+
+      &_orange-red {
+        background-color: $orange-red;
+      }
+    }
+
+    &_type {
+      &_for-stages {
+        display: none;
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -33px;
+    left: -8px;
+    width: 35px;
+    height: 24px;
+    background-color: $orange-red;
+    font-size: countRem(13);
+    line-height: 28px;
+    letter-spacing: 0.65px;
+    color: $white;
+    text-align: center;
+    border-radius: 20%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      border-width: 5px;
+      margin-left: -5.5px;
+      border-style: solid;
+      border-color: $orange-red transparent transparent transparent;
+    }
+  }
+
+  &_with {
+    &_labels {
+      .ui-slider-line {
+        display: none;
+      }
+
+      .ui-slider-pip {
+        font-size: countRem(11);
+        letter-spacing: 0.55px;
+        color: #d1d1d1;
+        top: 10px;
+      }
+    }
+
+    &_stages {
+      .ui-slider-label {
+        z-index: 1000;
+        padding-top: 1px;
+      }
+
+      .ui-slider-line {
+        display: none;
+      }
+
+      .ui-slider-pip {
+        font-size: countRem(14);
+        letter-spacing: 0.7px;
+        line-height: 18px;
+        color: $gray;
+        top: -12px;
+        width: 29px;
+        height: 29px;
+        background-color: $light-gray;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+
+        &-selected {
+          color: $white;
+          background-color: $orange-red;
+        }
+      }
+
+      .ui-slider-pip-inrange {
+        color: $white;
+        background-color: $orange-red;
+      }
+    }
+  }
+}

@@ -19,6 +19,10 @@ module.exports = function() {
                                 options: { sourceMap: true, config: { path: './postcss.config.js' } },
                             },
                             {
+                                loader: 'resolve-url-loader',
+                                options: { sourceMap: true }
+                            },
+                            {
                                 loader: 'sass-loader',
                                 options: { sourceMap: true },
                             },

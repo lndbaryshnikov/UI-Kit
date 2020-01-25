@@ -1,0 +1,100 @@
+@import '../../../styles/ripple-effect/ripple-effect';
+@import '../../../styles/variables/colors';
+@import '../../../styles/functions/functions';
+
+.button {
+  border-radius: 4px;
+
+  &_size {
+    &_small {
+      width: 78px;
+    }
+
+    &_standard {
+      width: 118px;
+    }
+  }
+
+  &_width {
+    &_hundred-percents {
+      width: 100%;
+    }
+  }
+
+  &_color {
+    &_cyan {
+      background-color: $cyan;
+
+      &:hover {
+        background-color: $cyan;
+      }
+    }
+
+    &_orange-red {
+      background-color: $orange-red;
+
+      &:hover {
+        background-color: $orange-red;
+      }
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+    font-size: countRem(12);
+    letter-spacing: 0.6px;
+    transform: translate(0, -9%);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0;
+    transition: background 0.5s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    //makes ripple-effect not getting out of the button:
+    overflow: hidden;
+
+    &:active {
+      transform: translate(0, 0);
+    }
+
+    &_size {
+      &_small {
+        width: 100%;
+        height: 22px;
+      }
+
+      &_standard {
+        width: 100%;
+        height: 32px;
+      }
+    }
+
+    &_color {
+      &_cyan {
+        background-color: $white;
+        color: $cyan;
+        border: 1px solid $cyan;
+
+        &:hover {
+          background-color: $cyan;
+          color: $white;
+        }
+      }
+
+      &_orange-red {
+        background-color: $white;
+        color: $orange-red;
+        border: 1px solid $orange-red;
+
+        &:hover {
+          background-color: $orange-red;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+

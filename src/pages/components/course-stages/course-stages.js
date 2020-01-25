@@ -1,5 +1,5 @@
-import '../../../components/arrow-buttons/arrow-buttons';
-import '../../../components/slider/slider'
+import '../../../components/ui-kit-components/arrow-buttons/arrow-buttons';
+import '../../../components/ui-kit-components/slider/slider'
 
 (() => {
   const arrows = document.querySelector('.js-course-stages .arrow-buttons');
