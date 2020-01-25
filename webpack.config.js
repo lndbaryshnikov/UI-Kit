@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const babel = require('./webpack/babel');
 const pug = require('./webpack/pug');
-const styleExtract = require('./webpack/style.extract');
+const styles = require('./webpack/styles');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
-const devServer = require('./webpack/devserver');
+const devServer = require('./webpack/devServer');
 const providePlugin = require('./webpack/provide-plugin');
 const faviconsWebpackPlugin = require('favicons-webpack-plugin');
 
@@ -62,7 +62,7 @@ const common = merge([
     },
     babel(),
     pug(),
-    styleExtract(),
+    styles(),
     images(),
     fonts(),
     providePlugin()
