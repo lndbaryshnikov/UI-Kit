@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const babel = require('./webpack/babel');
@@ -14,10 +15,25 @@ const PATHS = {
     src: path.join(__dirname, 'src/pages'),
     dist: path.join(__dirname, 'dist')
 };
+
+function generateHtmlPlugins() {
+    const templateDirectories = fs.readdirSync(PATHS.src);
+
+    return templateDirectories.map((dirName) => {
+        const outputFilename = dirName === 'ui-kit-demo' ? 'index': dirName;
+
+        return new HtmlWebpackPlugin({
+            filename: `${outputFilename}.html`,
+            chunks: [dirName],
+            template: `${PATHS.src}/${dirName}/${dirName}.pug`,
+        });
+    });
+}
+
 const common = merge([
     {
         entry: {
-            'UI-Kit': PATHS.src + '/ui-kit-demo-page/ui-kit-demo-page.js',
+            'ui-kit-demo': PATHS.src + '/ui-kit-demo/ui-kit-demo.js',
             'info': PATHS.src + '/info/info.js',
             'details': PATHS.src + '/details/details.js',
             'enroll': PATHS.src + '/enroll/enroll.js',
@@ -28,37 +44,13 @@ const common = merge([
             publicPath: './',
             filename: './js/[name].js'
         },
-        plugins: [
-            new HtmlWebpackPlugin({
-                filename: 'index.html',
-                chunks: ['UI-Kit'],
-                template: PATHS.src + '/ui-kit-demo-page/ui-kit-demo-page.pug',
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'info.html',
-                chunks: ['info'],
-                template: PATHS.src + '/info/info.pug',
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'details.html',
-                chunks: ['details'],
-                template: PATHS.src + '/details/details.pug',
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'enroll.html',
-                chunks: ['enroll'],
-                template: PATHS.src + '/enroll/enroll.pug',
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'contact.html',
-                chunks: ['contact'],
-                template: PATHS.src + '/contact/contact.pug',
-            }),
+        plugins: generateHtmlPlugins()
+          .concat([
             new faviconsWebpackPlugin({
                 logo: './src/img/icons/favicon.png',
                 prefix: 'assets/'
             })
-        ],
+        ]),
     },
     babel(),
     pug(),
