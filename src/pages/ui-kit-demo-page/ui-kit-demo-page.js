@@ -1,4 +1,4 @@
-//UI-Kit components styles
+//ui-kit-demo-page components styles
 import '../../fonts/fonts.scss'
 import '../../styles/base.scss'
 
@@ -25,7 +25,7 @@ import '../../components/ui-kit-components/datepicker/datepicker'
 import '../../components/ui-kit-components/datepicker/datepicker.scss'
 import '../../components/ui-kit-components/video/video.scss'
 
-//UI-Kit page's styles
+//ui-kit-demo-page page's styles
 import '../../components/demo-page-components/header/header.scss'
 import '../../components/demo-page-components/block-sign/block-sign.scss'
 import '../../components/demo-page-components/buttons/buttons.scss'

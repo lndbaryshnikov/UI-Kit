@@ -17,7 +17,7 @@ const PATHS = {
 const common = merge([
     {
         entry: {
-            'UI-Kit': PATHS.src + '/UI-Kit/UI-Kit.js',
+            'UI-Kit': PATHS.src + '/ui-kit-demo-page/ui-kit-demo-page.js',
             'info': PATHS.src + '/info/info.js',
             'details': PATHS.src + '/details/details.js',
             'enroll': PATHS.src + '/enroll/enroll.js',
@@ -32,7 +32,7 @@ const common = merge([
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 chunks: ['UI-Kit'],
-                template: PATHS.src + '/UI-Kit/UI-Kit.pug',
+                template: PATHS.src + '/ui-kit-demo-page/ui-kit-demo-page.pug',
             }),
             new HtmlWebpackPlugin({
                 filename: 'info.html',
