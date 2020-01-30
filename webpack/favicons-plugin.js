@@ -4,7 +4,7 @@ module.exports = function() {
   return {
     plugins: [
       new faviconsWebpackPlugin({
-        logo: './src/img/icons/favicon.png',
+        logo: './src/img/favicon.png',
         prefix: 'assets/'
       }),
     ]
