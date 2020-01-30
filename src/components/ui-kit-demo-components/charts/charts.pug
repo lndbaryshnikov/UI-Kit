@@ -3,8 +3,9 @@ include ../block-sign/block-sign
 
 mixin charts(items)
   .charts
-    +block-sign('percentages / pie charts', 'charts')
+    +block-sign('percentages / pie chart', 'charts')
 
     .charts__container
       each item in items
-        +donut-chart(item)
+        .charts__chart
+          +donut-chart(item)
