@@ -22,7 +22,7 @@
   }
 
   &__content {
-    margin: 22px 20px 0px 23px;
+    margin: 11px 20px 0px 20px;
     width: 193px;
   }
 
@@ -35,32 +35,36 @@
     font-size: countRem(11);
     font-weight: 400;
     letter-spacing: 0.55px;
+    margin-left: 2px;
   }
 
   &__date {
     &_type {
       &_event {
-        line-height: 60px;
-        margin: 2px 0 0 -2px;
-
-        span:nth-child(1) {
-          font-size: countRem(73);
-          letter-spacing: -2.92px;
-        }
-
-        span:nth-child(2) {
-          font-size: countRem(30);
-        }
+        margin-bottom: 18px;
+        vertical-align: middle;
+        height: 70px;
       }
 
       &_new {
         font-size: countRem(11);
-        line-height: 42px;
         text-transform: uppercase;
         letter-spacing: 0.55px;
-        margin: -3px 0 0 3px;
+        margin: 10px 0 13px 3px;
       }
     }
+  }
+
+  &__event-day {
+    font-size: countRem(73);
+    letter-spacing: -2.92px;
+    display: inline-block;
+  }
+
+  &__event-month {
+    display: inline-block;
+    margin-left: 14px;
+    font-size: countRem(30);
   }
 
   &__title {
@@ -70,18 +74,19 @@
         text-transform: uppercase;
         line-height: 20px;
         letter-spacing: 0.63px;
-        margin: -1px 0 0 -1px;
+        margin-left: 1px;
       }
 
       &_new {
         font-size: countRem(28);
         line-height: 26px;
+        margin-top: 13px;
       }
     }
   }
 
   &__button {
-    width: 90%;
-    margin: 19px auto;
+    width: 89.5%;
+    margin: 20px auto;
   }
 }

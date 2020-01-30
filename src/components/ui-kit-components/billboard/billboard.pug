@@ -6,15 +6,15 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
       img(src=require(`../../img/billboard-images/${imageName}.png`) alt=imageName)
     .billboard__content
       if type === "news"
-        div(class= "billboard__title billboard__title_type_new")= title
-        div(class= "billboard__date billboard__date_type_new") #{day} #{month} #{year}
+        .billboard__title.billboard__title_type_new= title
+        .billboard__date.billboard__date_type_new #{day} #{month} #{year}
         .billboard__description= content
 
       if type === "events"
-        div(class= "billboard__date billboard__date_type_event")
-          span= day
-          span  #{month}
-        div(class= "billboard__title billboard__title_type_event")= title
+        .billboard__date.billboard__date_type_event
+          .billboard__event-day= day
+          .billboard__event-month  #{month}
+        .billboard__title.billboard__title_type_event= title
         .billboard__description= content
         .billboard__button
           +button({
