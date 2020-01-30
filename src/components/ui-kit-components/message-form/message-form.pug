@@ -3,7 +3,7 @@ include ../button/button
 
 mixin message-form
   form(class="message-form js-message-form" method="post")
-    .message-form__data-field_type_input.js-message-form__data-field_type_input
+    .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
         tagName: 'input',
         type: 'text',
@@ -12,7 +12,7 @@ mixin message-form
         blockName: 'message-form'
       })
 
-    .message-form__data-field_type_input.js-message-form__data-field_type_input
+    .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
         tagName: 'input',
         type: 'email',
@@ -21,7 +21,7 @@ mixin message-form
         blockName: 'message-form'
       })
 
-    .message-form__data-field_type_textarea
+    .message-form__data-field.message-form__data-field_type_textarea
       +text-field({
         tagName: 'textarea',
         name: 'message',
