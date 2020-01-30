@@ -1,7 +1,15 @@
 .search-dropdown-profiles {
-  width: 594px;
-  margin: 53px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  &__search-dropdown {
+    height: 160px;
+    margin-top: 12px;
+  }
+
+  &__profiles {
+    width: 275px;
+    margin-top: 12px;
+  }
 }

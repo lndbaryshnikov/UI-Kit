@@ -1,4 +1,5 @@
 import '../../styles/common.scss'
+import './ui-kit-demo.scss'
 
 function requireAll(r) {
   return r.keys().map(r);

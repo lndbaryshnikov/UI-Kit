@@ -1,8 +1,10 @@
 include ../block-sign/block-sign
 include ../search-dropdown/search-dropdown
-include ../profile/profile
+include ../profiles/profiles
 
 mixin search-dropdown-profiles({ searchDropdownOptions, profileOptions  } = {})
   .search-dropdown-profiles
-    +search-dropdown(searchDropdownOptions)
-    +profile(profileOptions)
+    .search-dropdown-profiles__search-dropdown
+      +search-dropdown(searchDropdownOptions)
+    .search-dropdown-profiles__profiles
+      +profiles(profileOptions)
