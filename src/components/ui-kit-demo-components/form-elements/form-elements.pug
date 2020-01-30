@@ -7,7 +7,8 @@ mixin form-elements({ togglesParameters = [false, true], tickBoxesParameters = [
   .form-elements
     +block-sign('form elements', 'form-elements')
     .form-elements__container
-      +message-form
+      .form-elements__message-form-container
+        +message-form
       .form-elements__toggles-container
         +toggles(togglesParameters)
         .form-elements__tick-boxes

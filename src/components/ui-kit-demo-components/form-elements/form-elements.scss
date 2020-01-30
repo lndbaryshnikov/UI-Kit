@@ -1,9 +1,13 @@
 .form-elements {
   &__container {
-    margin-top: 49px;
+    margin-top: 48px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  &__message-form-container {
+    margin-top: 1px;
   }
 
   &__toggles-container {
@@ -13,12 +17,11 @@
     justify-content: space-around;
     align-items: center;
     margin-left: 102px;
-    margin-top: -1px;
   }
 
   &__tick-boxes {
     width: 100%;
     margin-top: 40px;
-    margin-left: -5px;
+    margin-right: 5px;
   }
 }
