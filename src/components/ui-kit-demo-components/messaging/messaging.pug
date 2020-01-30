@@ -1,0 +1,8 @@
+include ../../ui-kit-components/message-box/message-box
+include ../block-sign/block-sign
+
+mixin messaging(messageBoxOptions = { theme: 'cyan', name: 'Sarah Brown' })
+  section.messaging
+    +block-sign('messaging', 'messaging')
+    .messaging__container
+      +message-box(messageBoxOptions)

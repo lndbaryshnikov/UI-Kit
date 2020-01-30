@@ -1,0 +1,10 @@
+include ../../ui-kit-components/arrow-buttons/arrow-buttons
+include ../block-sign/block-sign
+
+mixin arrows(items)
+  .arrows
+    +block-sign('arrow buttons', 'arrows')
+
+    .arrows__container
+      each item in items
+        +arrow-buttons(item.disabled)

@@ -1,0 +1,8 @@
+include ../../ui-kit-components/video/video
+include ../block-sign/block-sign
+
+mixin video-box(url)
+  .video-box
+    +block-sign('video', 'video-box')
+    .video-box__container
+      +video(url)

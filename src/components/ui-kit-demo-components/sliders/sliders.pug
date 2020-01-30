@@ -1,0 +1,10 @@
+include ../../ui-kit-components/slider/slider
+include ../block-sign/block-sign
+
+mixin sliders(items)
+  .sliders
+    +block-sign('sliders', 'sliders')
+
+    .sliders__container
+      each item in items
+        +slider(item.options, item.styles)

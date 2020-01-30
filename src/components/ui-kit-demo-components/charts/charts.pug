@@ -1,0 +1,10 @@
+include ../../ui-kit-components/donut-chart/donut-chart
+include ../block-sign/block-sign
+
+mixin charts(items)
+  .charts
+    +block-sign('percentages / pie charts', 'charts')
+
+    .charts__container
+      each item in items
+        +donut-chart(item)

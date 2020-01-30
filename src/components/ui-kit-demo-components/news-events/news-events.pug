@@ -1,0 +1,9 @@
+include ../block-sign/block-sign
+include ../../ui-kit-components/billboard/billboard
+
+mixin news-events(billboardOptions)
+  .news-events
+    +block-sign('news & events', 'news-events')
+    .news-events__container
+      each options in billboardOptions
+        +billboard(options)

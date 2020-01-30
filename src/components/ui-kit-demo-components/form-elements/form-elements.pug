@@ -1,0 +1,13 @@
+include ../../ui-kit-components/message-form/message-form
+include ../block-sign/block-sign
+include ../toggles/toggles
+include ../tick-boxes/tick-boxes
+
+mixin form-elements({ togglesParameters = [false, true], tickBoxesParameters = [true, false] } = {})
+  .form-elements
+    +block-sign('form elements', 'form-elements')
+    .form-elements__container
+      +message-form
+      .form-elements__toggles-container
+        +toggles(togglesParameters)
+        +tick-boxes(tickBoxesParameters)

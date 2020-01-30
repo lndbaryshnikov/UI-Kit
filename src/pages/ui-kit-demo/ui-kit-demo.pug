@@ -1,19 +1,16 @@
 include ../../components/ui-kit-demo-components/block-sign/block-sign
-include ../../components/ui-kit-components/button/button
-include ../../components/ui-kit-components/arrow-buttons/arrow-buttons
-include ../../components/ui-kit-components/donut-chart/donut-chart
-include ../../components/ui-kit-components/slider/slider
-include ../../components/ui-kit-components/message-form/message-form
-include ../../components/ui-kit-components/toggle/toggle
-include ../../components/ui-kit-components/tick-box/tick-box
-include ../../components/ui-kit-components/search-bar/search-bar
-include ../../components/ui-kit-components/dropdown/dpordown
-include ../../components/ui-kit-components/user-profile/user-profile
-include ../../components/ui-kit-components/billboard/billboard
-include ../../components/ui-kit-components/message-box/message-box
-include ../../components/ui-kit-components/map/map
-include ../../components/ui-kit-components/datepicker/datepicker
-include ../../components/ui-kit-components/video/video
+include ../../components/ui-kit-demo-components/header/header
+include ../../components/ui-kit-demo-components/buttons/buttons
+include ../../components/ui-kit-demo-components/arrows/arrows
+include ../../components/ui-kit-demo-components/charts/charts
+include ../../components/ui-kit-demo-components/sliders/sliders
+include ../../components/ui-kit-demo-components/stages-box/stages-box
+include ../../components/ui-kit-demo-components/form-elements/form-elements
+include ../../components/ui-kit-demo-components/search-dropdown-profiles/search-dropdown-profiles
+include ../../components/ui-kit-demo-components/news-events/news-events
+include ../../components/ui-kit-demo-components/location/location
+include ../../components/ui-kit-demo-components/calendar-messaging/calendar-messaging
+include ../../components/ui-kit-demo-components/video-box/video-box
 
 doctype html
 html
@@ -23,121 +20,79 @@ html
     meta(name="description" content="ui-kit-demo (set of UI elements)")
     title UI-Kit
   body
-    header.header
-      .header__name UI-Kit
-      a(class="header__link" href="./info.html" target="_blank") Go to website
-    section.buttons
-      +block-sign('standard buttons', 'buttons')
-      .buttons__container
-        +button({
-          size:'small',
+    .ui-kit-demo
+      +header
+
+      +buttons([
+        {
+          size: 'small',
           color: 'cyan',
           content: 'button'
-        })
-        +button({
+        },
+        {
           size: 'standard',
           color: 'cyan',
           content: 'button'
-        })
-        +button({
+        },
+        {
           size: 'standard',
           color: 'orange-red',
           content: 'button'
-        })
-        +button({
+        },
+        {
           size: 'small',
           color: 'orange-red',
           content: 'button'
-        })
+        }
+      ])
 
-    section.arrows
-      +block-sign('arrow buttons', 'arrows')
-      .arrows__container
-        +arrow-buttons
-        +arrow-buttons('disabled')
-        +arrow-buttons
-    section.charts
-      +block-sign('percentages / pie charts', 'charts')
-      .charts__container
-        +donut-chart({ percentage: 0 })
-        +donut-chart({ percentage: 38 })
-        +donut-chart({ percentage: 62 })
-        +donut-chart({ percentage: 89 })
-        +donut-chart({
+      +arrows([{}, {disabled: true}, {}])
+
+      +charts([
+        { percentage: 0 }, { percentage: 38 }, { percentage: 62 }, { percentage: 89 },
+        {
           percentage: [100, 75, 40, 10],
           color: ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'],
           thickness: 10
-        })
+        }
+      ])
 
-    section.sliders
-      +block-sign('sliders', 'sliders')
-      .sliders__container
-        +slider({value: 40}, {})
-        +slider({
-          value: 75,
-          step: 25,
-          type: 'labels'
-        }, {
-          slider: 'gray',
-          range: 'green',
-          handle: 'green'
-        })
+      +sliders([
+        {
+          options: { value: 40 }
+        },
+        {
+          options: { value: 75, step: 25, type: 'labels' },
+          styles: { slider: 'gray', range: 'green', handle: 'green' }
+        }
+      ])
 
-    section.stages-box
-      +block-sign('stages', 'stages-box')
-      .stages-box__container
-        +slider({
-          min: 1,
-          max: 5,
-          value: 3,
-          type: 'stages'
-        }, {
-          slider: 'gray',
-          range: 'orange-red'
-        })
+      +stages-box([
+        {
+          options: {min: 1, max: 5, value: 3, type: 'stages'},
+          styles:  {slider: 'gray', range: 'orange-red'}
+        }
+      ])
 
-    section.form-elements
-      +block-sign('form elements', 'form-elements')
-      .form-elements__container
-        +message-form
-        .form-elements__toggles-container
-          section.toggles
-            +block-sign('toggles', 'toggles')
-            .toggles__container
-              +toggle(false)
-              +toggle(true)
-          section.tick-boxes
-            +block-sign('tick boxes', 'tick-boxes')
-            .tick-boxes__container
-              +tick-box(true)
-              +tick-box(false)
+      +form-elements
 
-    section.search-dropdown-profiles
-      section.search-dropdown
-        +block-sign('search / drop down', 'search-dropdown')
-        .search-dropdown__container
-          +search-bar
-          +search-bar
-          - var dropdownParameters = ['website', 'design', 'something']
-          +dropdown(dropdownParameters)
-      section.profile
-        +block-sign('user profile', 'profile')
-        .profile__container
-          +user-profile({
+      +search-dropdown-profiles({
+        profileOptions: [
+          {
             name: 'John Smith',
             job: 'ux designer',
             theme: 'orange-red'
-          })
-          +user-profile({
+          },
+          {
             name: 'Sarah Brown',
             job: 'developer',
             theme: 'cyan'
-          })
+          }
+        ]
+      })
 
-    section.news-events
-      +block-sign('news & events', 'news-events')
-      .news-events__container
-        +billboard({
+      +news-events([
+        {
           type: 'news',
           title: 'It’s all going\ndownhill',
           imageName: 'demo-news',
@@ -148,9 +103,8 @@ html
           day: '24',
           month: 'august',
           year: '2013'
-        })
-
-        +billboard({
+        },
+        {
           type: 'events',
           title: 'this is the title',
           imageName: 'demo-event',
@@ -159,32 +113,9 @@ html
           backgroundColor: 'cyan',
           day: '24',
           month: 'Aug'
-        })
+        }
+      ])
 
-    section.location
-      +block-sign('location', 'location')
-      .location__container
-        +map([37.791097, -122.415073], 14,
-          {
-            sign: 'Meet us!',
-            address: '1259  CALIFORNIA ST San Francisco, CA'
-          }
-        )
-
-    section.calendar-messaging
-      section.calendar
-        +block-sign('calendar', 'calendar')
-        .calendar__container
-          +datepicker()
-      section.messaging
-        +block-sign('messaging', 'messaging')
-        .messaging__container
-          +message-box({
-            theme: 'cyan',
-            name: 'Sarah Brown'
-          })
-
-    section.video-box
-      +block-sign('video', 'video-box')
-      .video-box__container
-        +video("https://www.youtube.com/embed/pzbqEG_chrs")
+      +location
+      +calendar-messaging
+      +video-box("https://www.youtube.com/embed/pzbqEG_chrs")

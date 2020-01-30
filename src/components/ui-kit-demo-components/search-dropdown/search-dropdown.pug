@@ -1,0 +1,14 @@
+include ../../ui-kit-components/search-bar/search-bar
+include ../../ui-kit-components/dropdown/dropdown
+include ../block-sign/block-sign
+
+mixin search-dropdown({ searchBarsOptions = [{}, {}], dropdownsOptions = [['website', 'design', 'something']] } = {})
+  section.search-dropdown
+    +block-sign('search / drop down', 'search-dropdown')
+
+    .search-dropdown__container
+      each parameters in searchBarsOptions
+        +search-bar(parameters)
+
+      each parameters in dropdownsOptions
+        +dropdown(parameters)

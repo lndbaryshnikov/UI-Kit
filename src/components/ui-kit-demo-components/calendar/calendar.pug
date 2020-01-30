@@ -1,0 +1,8 @@
+include ../../ui-kit-components/datepicker/datepicker
+include ../block-sign/block-sign
+
+mixin calendar
+  section.calendar
+    +block-sign('calendar', 'calendar')
+    .calendar__container
+      +datepicker()

@@ -1,0 +1,10 @@
+include ../../ui-kit-components/toggle/toggle
+include ../block-sign/block-sign
+
+mixin toggles(checkedParameters)
+  section.toggles
+    +block-sign('toggles', 'toggles')
+
+    .toggles__container
+      each parameter in checkedParameters
+        +toggle(parameter)
