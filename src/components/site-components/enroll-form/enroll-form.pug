@@ -2,7 +2,7 @@ include ../../ui-kit-components/text-field/text-field
 include ../../ui-kit-components/tick-box/tick-box
 include ../../ui-kit-components/button/button
 
-mixin enroll-form()
+mixin enroll-form(extraOptions = [{ isChecked: true, name: 'subscribe', text: 'Subscribe' }, { isChecked: true, name: 'callBack', text: 'Call me back' }])
   form(class="message-form js-message-form" method="post")
     .message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
@@ -29,13 +29,16 @@ mixin enroll-form()
         placeholder: 'Your Message',
         blockName: 'message-form'
       })
+
     .enroll-form__tick-boxes
-      .enroll-form__tick-item
-        +tick-box
-        .enroll-form__tick-sign Subscribe
-      .enroll-form__tick-item
-        +tick-box
-        .enroll-form__tick-sign Call me back
+      if extraOptions
+        each options in extraOptions
+          - var { isChecked, name, text } = options;
+
+          .enroll-form__tick-item
+            +tick-box(isChecked, { name })
+            .enroll-form__tick-sign= text
+
     .message-form__button
       +button({
         size: 'standard',

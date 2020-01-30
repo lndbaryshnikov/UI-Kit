@@ -1,5 +1,9 @@
-mixin tick-box(isChecked)
+mixin tick-box(isChecked, { name, value = 'on' } = {})
   label.tick-box
-    input(class="tick-box__input" type="checkbox" checked=isChecked)
+    if name
+      input(class="tick-box__input" type="checkbox" name=name value=value checked=isChecked)
+    else
+      input(class="tick-box__input" type="checkbox" checked=isChecked)
+
     .tick-box__check-mark-container
       .tick-box__check-mark
