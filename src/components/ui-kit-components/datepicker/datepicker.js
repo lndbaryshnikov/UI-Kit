@@ -5,7 +5,8 @@ import 'jquery-ui/ui/widgets/datepicker'
     classes: {
       'ui-datepicker-current': 'datepicker__today-button',
     },
-
+    firstDay: 1,
+    dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
     showButtonPanel: true,
     showOtherMonths: true,
     selectOtherMonths: true

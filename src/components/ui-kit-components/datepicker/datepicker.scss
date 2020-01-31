@@ -39,32 +39,38 @@
       &-calendar {
         color: $rose-white;
         border-collapse: collapse;
-        margin-top: -5px !important;
+        margin-top: 5px !important;
         width: 101% !important;
         margin-left: -2px !important;
 
-        tbody td {
-          border: 1px solid $white;
-          height: 37px !important;
+        font-size: 0.7rem;
 
-          &:hover {
-            background-color: $orange-red;
-            height: 1px !important;
-          }
+        tbody {
+          td {
+            border: 1px solid $white;
+            height: 37px !important;
 
-          &:active {
-            background-color: $gray;
-          }
+            &:hover {
+              background-color: $orange-red;
+              height: 1px !important;
+            }
 
-          a {
-            text-align: center;
-            font-size: 1.1rem;
+            &:active {
+              background-color: $gray;
+            }
+
+            a {
+              text-align: center;
+              font-size: 1.1rem;
+            }
           }
         }
 
-        thead th span {
-          position: relative !important;
-          top: 5px !important;
+        thead {
+          th span {
+            position: relative !important;
+            top: 5px !important;
+          }
         }
 
         a {
