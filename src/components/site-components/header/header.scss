@@ -13,13 +13,17 @@
     float: left;
 
     &_color {
-      &_red {
+      &_orange-red {
         background-color: $orange-red;
+      }
+
+      &_cyan {
+        background-color: $cyan;
       }
     }
   }
 
-  &__back-to-ui-kit {
+  &__link {
     display: block;
     margin-top: 10px;
     text-align: center;
