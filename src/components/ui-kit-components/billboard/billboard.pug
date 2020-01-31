@@ -3,7 +3,7 @@ include ../button/button
 mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year })
   div(class=`billboard billboard_background-color_${backgroundColor}`)
     .billboard__image
-      img(src=require(`../../components/ui-kit-components/billboard/images/${imageName}.png`) alt=imageName)
+      img(src=require(`../../img/billboard-images/${imageName}.png`) alt=imageName)
     .billboard__content
       if type === "news"
         .billboard__title.billboard__title_type_new= title
