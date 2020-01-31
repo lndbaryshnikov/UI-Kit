@@ -1,5 +1,5 @@
 import '../../ui-kit-components/arrow-buttons/arrow-buttons';
-import '../../../components/ui-kit-components/slider/slider'
+import '../../ui-kit-components/slider/sliderInit'
 // TODO: add customization possibility to this block
 (() => {
   const arrows = document.querySelector('.js-course-stages .arrow-buttons');
