@@ -1,7 +1,7 @@
 include ../../ui-kit-components/search-bar/search-bar
 
-mixin navigation(size)
+mixin navigation({ size, sign })
   .navigation
-    .navigation__sign
+    .navigation__sign= sign
     .navigation__search-bar
-      +search-bar(size)
+      +search-bar({ size })

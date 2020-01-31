@@ -4,8 +4,8 @@ mixin header({ name = 'UI Design Courses Kazan', linkName = 'BACK TO UI-KIT', li
   header.header
     div(class=`header__left header__left_color_${theme}`)
       a(class="header__link" href=linkURL)= linkName
-      .header__navigation= navName
-        +navigation({size: "hundred-percents"})
+      .header__navigation
+        +navigation({ size: 'hundred-percents', sign: navName })
     .header__right
       .header__name= name
 
