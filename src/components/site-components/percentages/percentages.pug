@@ -1,11 +1,23 @@
 include ../../ui-kit-components/donut-chart/donut-chart
 
-mixin percentages()
-  .percentages
-    .percentages__part
-      +donut-chart({ percentage: 92 })
-      .percentages__sign - successfully employed
-    .percentages__part
-      +donut-chart({ percentage: 89 })
-      .percentages__sign - recommended this school
+mixin percentages(items)
+  if !items
+    -
+      items = [
+        {
+          options: { percentage: 92 },
+          sign: 'successfully employed'
+       },
+        {
+          options: { percentage: 89 },
+          sign: 'recommended this school'
+        }
+      ]
 
+  .percentages
+    each percentageItem in items
+      - var { options, sign } = percentageItem
+
+      .percentages__chart
+        +donut-chart(options)
+        .percentages__sign - #{sign}
