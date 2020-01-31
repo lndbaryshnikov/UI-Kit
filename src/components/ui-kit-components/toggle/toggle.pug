@@ -1,7 +1,11 @@
-mixin toggle(isChecked, { name, value = 'on' } = {})
+mixin toggle(isChecked, { id, name, value = 'on' } = {})
   label.toggle
-    if name
+    if name && id
+      input(class="toggle__input" type="checkbox" id=`toggle-${id}` name=name value=value checked=isChecked)
+    else if name
       input(class="toggle__input" type="checkbox" name=name value=value checked=isChecked)
+    else if id
+      input(class="toggle__input" type="checkbox" id=`toggle-${id}` checked=isChecked)
     else
       input(class="toggle__input" type="checkbox" checked=isChecked)
 

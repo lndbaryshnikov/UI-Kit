@@ -36,8 +36,8 @@ mixin enroll-form(extraOptions = [{ isChecked: true, name: 'subscribe', text: 'S
           - var { isChecked, name, text } = options;
 
           .enroll-form__tick-item
-            +tick-box(isChecked, { name })
-            .enroll-form__tick-sign= text
+            +tick-box(isChecked, { name, id: name })
+            label.enroll-form__tick-sign(for=`tick-box-${name}`)= text
 
     .message-form__button
       +button({
