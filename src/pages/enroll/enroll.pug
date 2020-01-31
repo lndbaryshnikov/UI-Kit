@@ -2,8 +2,7 @@ include ../../components/ui-kit-components/billboard/billboard
 include ../../components/ui-kit-components/datepicker/datepicker
 include ../../components/site-components/header/header
 include ../../components/site-components/menu/menu
-include ../../components/site-components/enroll-form/enroll-form
-
+include ../../components/ui-kit-components/message-form/message-form
 doctype html
 html
   head
@@ -20,7 +19,10 @@ html
           .enroll__title You can enroll in a course here (starts in February 14th):
           .enroll__content
             .enroll__form
-              +enroll-form
+              +message-form([
+                { isChecked: true, name: 'subscribe', text: 'Subscribe' },
+                { isChecked: true, name: 'callBack', text: 'Call me back' }
+              ])
             .enroll__billboard
               +billboard({
                 type: 'news',
