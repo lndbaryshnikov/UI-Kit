@@ -1,11 +1,32 @@
 include ../menu-message/menu-message
 
-mixin menu()
+mixin menu(links)
+  if !links
+    -
+      links = [
+        {
+          name: 'Information',
+          url: './info.html'
+        },
+        {
+          name: 'Course details',
+          url: './details.html'
+        },
+        {
+          name: 'Enroll in a course',
+          url: './enroll.html'
+        },
+        {
+          name: 'Contact us',
+          url: './contact.html'
+        }
+      ]
+
   .menu
     nav.menu__pages
-      a(href="./info.html") Information
-      a(href="./details.html") Course details
-      a(href="./enroll.html") Enroll in a course
-      a(href="./contact.html") Contact us
+      each linkItem in links
+        - var { name, url } = linkItem
+
+        a(href=url)= name
     .menu__message-box
       +menu-message
