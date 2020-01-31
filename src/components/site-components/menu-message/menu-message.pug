@@ -1,10 +1,10 @@
 include ../../ui-kit-components/message-box/message-box
 
-mixin menu-message()
+mixin menu-message({ title = 'Message us', theme = 'orange-red' , consultant = 'Sarah Brown'} = {})
   .menu-message
-    .menu-message__header.js-menu-message__header Message us
+    .menu-message__header.js-menu-message__header= title
     .menu-message__message-box.js-menu-message__message-box
       +message-box({
-        theme: 'orange-red',
-        name: 'Sarah Brown'
+        theme,
+        name: consultant
       })
