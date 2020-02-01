@@ -1,15 +1,37 @@
-(() => {
-  const isEmailValid = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+class MessageFormInputValidation {
+  constructor(input) {
+    this._inputObject = { input };
+  }
 
-    return re.test(email.toLowerCase());
-  };
+  init(checkFor) {
+    if (checkFor !== 'email' && checkFor !== 'name') {
+      throw new Error('It\'s only "email" and "name" check possible');
+    }
 
-  const isNameValid = (name) => {
-    return /^[a-zа-я ]*$/.test(name.toLowerCase());
-  };
+    this._mode = checkFor;
 
-  const createTooltip = (text, color) => {
+    this._addTooltips();
+    this._addHandlers();
+  }
+
+  _addHandlers() {
+    const { checkAndShowTooltipHandler, hideTooltipsHandler } = this._getHandler();
+    const input = this._inputObject.input;
+
+    input.addEventListener('focus', hideTooltipsHandler);
+    input.addEventListener('change', checkAndShowTooltipHandler);
+  }
+
+  _addTooltips() {
+    this._inputObject.thanksTooltip = this._createTooltip('Thanks!', 'cyan');
+    this._inputObject.errorTooltip = this._createTooltip('Error!', 'orange-red');
+
+    const { thanksTooltip, errorTooltip } = this._inputObject;
+
+    this._inputObject.input.parentElement.append(thanksTooltip, errorTooltip);
+  }
+
+  _createTooltip(text, color) {
     const className = 'message-form__tooltip message-form__tooltip_color_' + color;
 
     const tooltip = document.createElement('div');
@@ -18,75 +40,52 @@
     tooltip.style.display = 'none';
 
     return tooltip;
-  };
+  }
 
-  const getInputs = (typeNumber) => {
-    return document
-      .querySelectorAll(
-        `.js-message-form .js-message-form__data-field_type_input:nth-of-type(${typeNumber}) input`
-      );
-  };
+  _getHandler() {
+    const { thanksTooltip, errorTooltip } = this._inputObject;
 
-  const getInputsObjects = (inputs) => {
-    const inputsObjects = [];
+    const showTooltip = (type) => {
+      const tooltipName = type === 'thanks' ? 'thanksTooltip'
+        : type === 'error' ? 'errorTooltip' : undefined;
 
-    inputs.forEach((input) => {
-      const object = {
-        input,
-        thanksTooltip: createTooltip('Thanks!', 'cyan'),
-        errorTooltip: createTooltip('Error!', 'orange-red')
-      };
-
-      object.input.parentElement.append(object.thanksTooltip, object.errorTooltip);
-
-      inputsObjects.push(object);
-    });
-
-    return inputsObjects;
-  };
-
-  const addInputsHandlers = (inputsObjects, isValueCorrectFunction) => {
-    const getHideTooltipsHandler = (...tooltips) => {
-      return () => {
-        tooltips.forEach((tooltip) => {
-          tooltip.style.display = 'none';
-        });
-      }
+      this._inputObject[tooltipName].style.display = 'inline-block';
     };
 
-    const showTooltip = (tooltip) => {
-      tooltip.style.display = 'inline-block';
-    };
-
-    const getCheckInputHandler = (thanksTooltip, errorTooltip) => {
-      return (event) => {
+    return {
+      hideTooltipsHandler: () => {
+        thanksTooltip.style.display = 'none';
+        errorTooltip.style.display = 'none';
+      },
+      checkAndShowTooltipHandler: (event) => {
         const value = event.currentTarget.value;
 
-        if (isValueCorrectFunction(value)) {
-          showTooltip(thanksTooltip);
-          console.log('ok', thanksTooltip);
+        if (this._isValid(value)) {
+          showTooltip('thanks');
         } else {
-          console.log('not ok');
-          showTooltip(errorTooltip);
+          showTooltip('error');
         }
       }
     };
+  }
 
+  _isValid(value) {
+    const validators = {
+      email: (email) => {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    inputsObjects.forEach((object) => {
-      console.log(object);
+        return re.test(email.toLowerCase());
+      },
 
-      object.input.addEventListener('focus', getHideTooltipsHandler(object.thanksTooltip, object.errorTooltip));
-      object.input.addEventListener('change', getCheckInputHandler(object.thanksTooltip, object.errorTooltip));
-    });
-  };
+      name: (name) => {
+        return /^[a-zа-я ]*$/.test(name.toLowerCase());
+      }
+    };
 
-  const nameInputs = getInputs(1);
-  const emailInputs = getInputs(2);
+    const checkType = this._mode;
 
-  const nameObjects = getInputsObjects(nameInputs);
-  const emailObjects = getInputsObjects(emailInputs);
+    return validators[checkType](value);
+  }
+}
 
-  addInputsHandlers(nameObjects, isNameValid);
-  addInputsHandlers(emailObjects, isEmailValid);
-})();
+export default MessageFormInputValidation;
