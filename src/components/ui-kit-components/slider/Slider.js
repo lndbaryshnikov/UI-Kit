@@ -1,4 +1,5 @@
 import 'jquery-ui/ui/widgets/slider'
+
 import '../../../pips-float-plugin/jquery-ui-slider-pips'
 
 class Slider {
@@ -7,7 +8,14 @@ class Slider {
 
    this._defineOptions();
    this._init();
+ }
 
+ moveTo(value) {
+   this._$slider.slider('option', 'value', value);
+ }
+
+ onChange(handler) {
+   this._$slider.slider('option', 'change', handler);
  }
 
  _defineOptions() {
