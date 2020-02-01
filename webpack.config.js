@@ -29,6 +29,7 @@ const common = merge([
             publicPath: './',
             filename: './js/[name].js'
         },
+        devtool: 'source-map'
     },
     babel(),
     pug(),
