@@ -1,0 +1,23 @@
+include ../../ui-kit-components/arrow-buttons/arrow-buttons
+include ../../ui-kit-components/slider/slider
+
+mixin stages({ title, stages, startFrom, styles: { sliderColor, rangeColor, handleColor } })
+  - var stagesJSON = JSON.stringify(stages);
+
+  .stages.js-stages(data-stages=stagesJSON data-start-from=startFrom)
+    .stages__title= title
+    .stages__stage= stages[startFrom - 1]
+    .stages__arrows
+      +arrow-buttons(false, {width: '100-percents'})
+    .stages__slider
+      +slider({
+        min: 1,
+        max: stages.length,
+        value: startFrom,
+        type: 'stages',
+      }, {
+        slider: sliderColor,
+        range: rangeColor,
+        handle: handleColor
+      })
+
