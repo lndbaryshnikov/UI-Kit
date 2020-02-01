@@ -43,7 +43,7 @@ class Stages {
       startFrom: startFrom,
       arrowsClasses: {
         classesActive: 'arrow-buttons__arrow-container ripple',
-        classesDisabled: 'arrow-buttons__arrow-container arrow-buttons_disabled'
+        classesDisabled: 'arrow-buttons__arrow-container arrow-buttons__arrow-container_disabled'
       },
       currentStage: {
         index: startFrom - 1,

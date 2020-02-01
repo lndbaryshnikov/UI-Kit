@@ -6,7 +6,7 @@ mixin arrow-buttons(disabled = false, { width = 'standard' } = {})
   else
     - classes = ['arrow-buttons__arrow-container', 'ripple']
 
-  div(class=['arrow-buttons', `arrow-buttons_width_${width}`])
+  div(class=['arrow-buttons', 'js-arrow-buttons', `arrow-buttons_width_${width}`])
     div(class=classes)
       .arrow-buttons__left-arrow
     div(class=classes)
