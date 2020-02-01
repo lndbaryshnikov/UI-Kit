@@ -2,8 +2,7 @@ mixin arrow-buttons(disabled = false, { width = 'standard' } = {})
   - var classes
 
   if disabled
-    - disabled = 'arrow-buttons_disabled'
-    - classes = ['arrow-buttons__arrow-container', disabled]
+    - classes = ['arrow-buttons__arrow-container', 'arrow-buttons__arrow-container_disabled']
   else
     - classes = ['arrow-buttons__arrow-container', 'ripple']
 

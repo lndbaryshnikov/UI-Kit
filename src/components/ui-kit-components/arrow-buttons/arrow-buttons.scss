@@ -53,6 +53,32 @@
 
       background-color: $cyan;
     }
+
+    &_disabled {
+      .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
+        border-color: $white;
+        animation: none;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      background-color: $light-gray;
+      border-color: $light-gray;
+
+      &:hover {
+        background-color: $dark-gray;
+        border-color: $dark-gray;
+      }
+
+      -webkit-transition: background-color 0.5s, border-color 0.5s;
+      -moz-transition: background-color 0.5s, border-color 0.5s;
+      -ms-transition: background-color 0.5s, border-color 0.5s;
+      -o-transition: background-color 0.5s, border-color 0.5s;
+      transition: background-color 0.5s, border-color 0.5s;
+    }
   }
 
   &__left-arrow, &__right-arrow {
@@ -81,32 +107,6 @@
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
-
-  &_disabled {
-    .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
-      border-color: $white;
-      animation: none;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-
-    background-color: $light-gray;
-    border-color: $light-gray;
-
-    &:hover {
-      background-color: $dark-gray;
-      border-color: $dark-gray;
-    }
-
-    -webkit-transition: background-color 0.5s, border-color 0.5s;
-    -moz-transition: background-color 0.5s, border-color 0.5s;
-    -ms-transition: background-color 0.5s, border-color 0.5s;
-    -o-transition: background-color 0.5s, border-color 0.5s;
-    transition: background-color 0.5s, border-color 0.5s;
   }
 }
 
