@@ -3,7 +3,7 @@ include ../block-sign/block-sign
 
 mixin tick-boxes(checkedParameters)
   section.tick-boxes
-    +block-sign('tick boxes', 'tick-boxes')
+    +block-sign("tick boxes", "tick-boxes")
     .tick-boxes__container
       each parameter in checkedParameters
         +tick-box(parameter)

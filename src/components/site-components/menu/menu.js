@@ -1,1 +1,1 @@
-import '../menu-message/menu-message'
+import '../menu-message/menu-message';

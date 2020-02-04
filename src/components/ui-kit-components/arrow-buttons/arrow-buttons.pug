@@ -1,12 +1,12 @@
-mixin arrow-buttons(disabled = false, { width = 'standard' } = {})
+mixin arrow-buttons(disabled = false, { width = "standard" } = {})
   - var classes
 
   if disabled
-    - classes = ['arrow-buttons__arrow-container', 'arrow-buttons__arrow-container_disabled']
+    - classes = ["arrow-buttons__arrow-container", "arrow-buttons__arrow-container_disabled"]
   else
-    - classes = ['arrow-buttons__arrow-container', 'ripple']
+    - classes = ["arrow-buttons__arrow-container", "ripple"]
 
-  div(class=['arrow-buttons', 'js-arrow-buttons', `arrow-buttons_width_${width}`])
+  div(class=["arrow-buttons", "js-arrow-buttons", `arrow-buttons_width_${width}`])
     div(class=classes)
       .arrow-buttons__left-arrow
     div(class=classes)

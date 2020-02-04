@@ -6,28 +6,28 @@ mixin message-form(extraOptions)
   form(class="message-form js-message-form" method="post")
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
-        tagName: 'input',
-        type: 'text',
-        name: 'name',
-        placeholder: 'Your Name',
-        blockName: 'message-form'
+        tagName: "input",
+        type: "text",
+        name: "name",
+        placeholder: "Your Name",
+        blockName: "message-form"
       })
 
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
-        tagName: 'input',
-        type: 'email',
-        name: 'email',
-        placeholder: 'Your Email',
-        blockName: 'message-form'
+        tagName: "input",
+        type: "email",
+        name: "email",
+        placeholder: "Your Email",
+        blockName: "message-form"
       })
 
     .message-form__data-field.message-form__data-field_type_textarea
       +text-field({
-        tagName: 'textarea',
-        name: 'message',
-        placeholder: 'Your Message',
-        blockName: 'message-form'
+        tagName: "textarea",
+        name: "message",
+        placeholder: "Your Message",
+        blockName: "message-form"
       })
 
     if extraOptions
@@ -41,7 +41,7 @@ mixin message-form(extraOptions)
 
     .message-form__button
       +button({
-        size: 'standard',
-        color: 'cyan',
-        content: 'submit'
+        size: "standard",
+        color: "cyan",
+        content: "submit"
       })

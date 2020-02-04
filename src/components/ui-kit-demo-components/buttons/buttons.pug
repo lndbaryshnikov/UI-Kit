@@ -3,7 +3,7 @@ include ../block-sign/block-sign
 
 mixin buttons(items)
   .buttons
-    +block-sign('standard buttons', 'buttons')
+    +block-sign("standard buttons", "buttons")
     .buttons__container
       each item in items
         +button(item)

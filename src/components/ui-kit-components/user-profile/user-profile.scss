@@ -16,7 +16,7 @@
     text-align: center;
 
     &::after {
-      content: "";
+      content: '';
       width: 10px;
       height: 10px;
       position: absolute;
@@ -101,7 +101,7 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       width: 30px;
       height: 30px;
       position: absolute;
@@ -120,15 +120,15 @@
         transition: background-color 1s;
 
         &:nth-of-type(1) {
-          background-image: url("icons/fb-gray.png");
+          background-image: url('icons/fb-gray.png');
         }
 
         &:nth-of-type(2) {
-          background-image: url("icons/twitter-gray.png");
+          background-image: url('icons/twitter-gray.png');
         }
 
         &:nth-of-type(3) {
-          background-image: url("icons/dribbble-gray.png");
+          background-image: url('icons/dribbble-gray.png');
         }
 
         &:hover {
