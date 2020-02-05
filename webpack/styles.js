@@ -23,6 +23,9 @@ module.exports = function () {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../',
+              },
             },
             {
               loader: 'css-loader',
@@ -47,6 +50,9 @@ module.exports = function () {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../',
+              },
             },
             {
               loader: 'css-loader',
