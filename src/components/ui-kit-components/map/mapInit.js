@@ -12,8 +12,3 @@ import Map from './Map';
     new Map($item, id);
   });
 })();
-
-
-
-
-

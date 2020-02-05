@@ -1,10 +1,10 @@
-import 'jquery-ui/ui/widgets/datepicker'
+import 'jquery-ui/ui/widgets/datepicker';
 
 class Datepicker {
   constructor($element) {
     this._$datepickerContainer = $element;
 
-    this.init()
+    this.init();
   }
 
   init() {
@@ -19,7 +19,7 @@ class Datepicker {
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
       showButtonPanel: true,
       showOtherMonths: true,
-      selectOtherMonths: true
+      selectOtherMonths: true,
     });
 
     this._$datepickerHeader.append(String(new Date().getDate()));

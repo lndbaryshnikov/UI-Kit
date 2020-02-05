@@ -11,9 +11,9 @@ module.exports = function () {
         cssProcessorOptions: {
           map: {
             inline: false,
-            annotation: true
-          }
-        }
+            annotation: true,
+          },
+        },
       }),
     ],
     module: {
@@ -26,19 +26,19 @@ module.exports = function () {
             },
             {
               loader: 'css-loader',
-              options: {sourceMap: true},
+              options: { sourceMap: true },
             },
             {
               loader: 'postcss-loader',
-              options: {sourceMap: true, config: {path: './postcss.config.js'}},
+              options: { sourceMap: true, config: { path: './postcss.config.js' } },
             },
             {
               loader: 'resolve-url-loader',
-              options: {sourceMap: true}
+              options: { sourceMap: true },
             },
             {
               loader: 'sass-loader',
-              options: {sourceMap: true},
+              options: { sourceMap: true },
             },
           ],
         },
@@ -50,15 +50,15 @@ module.exports = function () {
             },
             {
               loader: 'css-loader',
-              options: {sourceMap: true},
+              options: { sourceMap: true },
             },
             {
               loader: 'postcss-loader',
-              options: {sourceMap: true, config: {path: './postcss.config.js'}},
+              options: { sourceMap: true, config: { path: './postcss.config.js' } },
             },
           ],
-        }
-      ]
+        },
+      ],
     },
   };
 };

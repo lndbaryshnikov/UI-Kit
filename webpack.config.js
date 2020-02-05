@@ -13,24 +13,24 @@ const html = require('./webpack/html');
 
 const PATHS = {
   src: path.join(__dirname, 'src/pages'),
-  dist: path.join(__dirname, 'dist')
+  dist: path.join(__dirname, 'dist'),
 };
 
 const common = merge([
   {
     entry: {
-      'ui-kit-demo': PATHS.src + '/ui-kit-demo/ui-kit-demo.js',
-      'info': PATHS.src + '/info/info.js',
-      'details': PATHS.src + '/details/details.js',
-      'enroll': PATHS.src + '/enroll/enroll.js',
-      'contact': PATHS.src + '/contact/contact.js',
+      'ui-kit-demo': `${PATHS.src}/ui-kit-demo/ui-kit-demo.js`,
+      info: `${PATHS.src}/info/info.js`,
+      details: `${PATHS.src}/details/details.js`,
+      enroll: `${PATHS.src}/enroll/enroll.js`,
+      contact: `${PATHS.src}/contact/contact.js`,
     },
     output: {
       path: PATHS.dist,
       publicPath: './',
-      filename: './js/[name].js'
+      filename: './js/[name].js',
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
   },
   babel(),
   pug(),
@@ -38,8 +38,8 @@ const common = merge([
   images(),
   fonts(),
   jquery(),
-  html({source: PATHS.src, index: 'ui-kit-demo'}),
-  favicons('./src/img/favicon.png')
+  html({ source: PATHS.src, index: 'ui-kit-demo' }),
+  favicons('./src/img/favicon.png'),
 ]);
 
 
@@ -47,11 +47,14 @@ module.exports = function (env) {
   if (env === 'production') {
     return common;
   }
+
   if (env === 'development') {
     return merge([
       {},
       common,
-      devServer()
+      devServer(),
     ]);
   }
+
+  return undefined;
 };

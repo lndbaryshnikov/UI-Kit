@@ -1,4 +1,4 @@
-import '../../ui-kit-components/message-box/message-box'
+import '../../ui-kit-components/message-box/message-box';
 
 (() => {
   const button = document.querySelector('.js-menu-message__header');
@@ -6,9 +6,8 @@ import '../../ui-kit-components/message-box/message-box'
   box.style.display = 'none';
 
   button.addEventListener('click', () => {
-      const display = box.style.display;
+    const { display } = box.style;
 
-      box.style.display = display === 'none' ? 'block' : 'none';
-    }
-  )
+    box.style.display = display === 'none' ? 'block' : 'none';
+  });
 })();

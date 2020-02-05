@@ -16,7 +16,7 @@ class MessageFormInputValidation {
 
   _addHandlers() {
     const { checkAndShowTooltipHandler, hideTooltipsHandler } = this._getHandler();
-    const input = this._inputObject.input;
+    const { input } = this._inputObject;
 
     input.addEventListener('focus', hideTooltipsHandler);
     input.addEventListener('change', checkAndShowTooltipHandler);
@@ -32,7 +32,7 @@ class MessageFormInputValidation {
   }
 
   _createTooltip(text, color) {
-    const className = 'message-form__tooltip message-form__tooltip_color_' + color;
+    const className = `message-form__tooltip message-form__tooltip_color_${color}`;
 
     const tooltip = document.createElement('div');
     tooltip.setAttribute('class', className);
@@ -46,8 +46,9 @@ class MessageFormInputValidation {
     const { thanksTooltip, errorTooltip } = this._inputObject;
 
     const showTooltip = (type) => {
+      const maybeErrorTooltip = type === 'error' ? 'errorTooltip' : undefined;
       const tooltipName = type === 'thanks' ? 'thanksTooltip'
-        : type === 'error' ? 'errorTooltip' : undefined;
+        : maybeErrorTooltip;
 
       this._inputObject[tooltipName].style.display = 'inline-block';
     };
@@ -58,28 +59,27 @@ class MessageFormInputValidation {
         errorTooltip.style.display = 'none';
       },
       checkAndShowTooltipHandler: (event) => {
-        const value = event.currentTarget.value;
+        const { value } = event.currentTarget;
 
         if (this._isValid(value)) {
           showTooltip('thanks');
         } else {
           showTooltip('error');
         }
-      }
+      },
     };
   }
 
   _isValid(value) {
     const validators = {
       email: (email) => {
+        // eslint-disable-next-line no-useless-escape
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         return re.test(email.toLowerCase());
       },
 
-      name: (name) => {
-        return /^[a-zа-я ]*$/.test(name.toLowerCase());
-      }
+      name: (name) => /^[a-zа-я ]*$/.test(name.toLowerCase()),
     };
 
     const checkType = this._mode;

@@ -9,4 +9,3 @@ import Slider from './Slider';
     $slider.data('slider', slider);
   });
 })();
-

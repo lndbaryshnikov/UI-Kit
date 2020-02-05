@@ -1,12 +1,12 @@
-const faviconsPlugin = require('favicons-webpack-plugin');
+const FaviconsPlugin = require('favicons-webpack-plugin');
 
-module.exports = function(pathToIcon) {
+module.exports = function (pathToIcon) {
   return {
     plugins: [
-      new faviconsPlugin({
+      new FaviconsPlugin({
         logo: pathToIcon,
-        prefix: 'assets/'
+        prefix: 'assets/',
       }),
-    ]
+    ],
   };
 };

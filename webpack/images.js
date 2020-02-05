@@ -9,10 +9,10 @@ module.exports = function () {
           exclude: path.resolve(__dirname, '../src/fonts'),
           loader: 'file-loader',
           options: {
-            name: 'images/[name].[ext]'
+            name: 'images/[name].[ext]',
           },
-        }
-      ]
-    }
+        },
+      ],
+    },
   };
 };

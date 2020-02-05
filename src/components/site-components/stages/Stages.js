@@ -1,6 +1,6 @@
 class Stages {
   constructor(stages) {
-    this._elements = { stages: stages };
+    this._elements = { stages };
 
     this._defineElements();
     this._defineOptions();
@@ -13,43 +13,39 @@ class Stages {
   }
 
   _defineElements() {
-    const getDaughter = (daughterClassName) => {
-      return this._elements.stages.querySelector(`.${daughterClassName}`);
-    };
+    const getDaughter = (daughterClassName) => this._elements.stages.querySelector(`.${daughterClassName}`);
 
     const arrows = getDaughter('arrow-buttons');
     const slider = getDaughter('js-slider');
 
     this._elements.arrows = {
-        left: arrows.children[0],
-        right: arrows.children[1]
+      left: arrows.children[0],
+      right: arrows.children[1],
     };
     this._elements.stageTitle = getDaughter('stages__stage');
     this._elements.slider = {
-      classInstance: $(slider).data('slider')
-    }
+      classInstance: $(slider).data('slider'),
+    };
   }
 
   _defineOptions() {
-    const getData = (data) => {
-      return $(this._elements.stages).data(data);
-    };
+    const getData = (data) => $(this._elements.stages).data(data);
 
     const stages = getData('stages');
     const startFrom = Number(getData('start-from'));
 
     this._options = {
-      stages: stages,
-      startFrom: startFrom,
+      stages,
+      startFrom,
       arrowsClasses: {
         classesActive: 'arrow-buttons__arrow-container ripple',
-        classesDisabled: 'arrow-buttons__arrow-container arrow-buttons__arrow-container_disabled'
+        classesDisabled: 'arrow-buttons__arrow-container arrow-buttons__arrow-container_disabled',
       },
       currentStage: {
         index: startFrom - 1,
-        name: stages[startFrom - 1]
-      }
-    }
+        name: stages[startFrom - 1],
+      },
+    };
   }
 
   _setHandlers() {
@@ -86,12 +82,12 @@ class Stages {
 
   _getSliderChangeHandler() {
     return (event, ui) => {
-      let index = this._options.currentStage.index;
+      const { index } = this._options.currentStage;
 
       if (ui.value === index + 1) return;
 
       this._refreshStage(ui.value - 1);
-    }
+    };
   }
 
   _refreshStage(index) {
@@ -114,7 +110,7 @@ class Stages {
   }
 
   _switchArrowsClasses(side, mode) {
-    if ( mode !== 'on' && mode !== 'off' ) {
+    if (mode !== 'on' && mode !== 'off') {
       throw new Error('Only "on" and "off" mode is allowed');
     }
 

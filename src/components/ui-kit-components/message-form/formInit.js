@@ -8,7 +8,7 @@ import MessageFormInputValidation from './message-form';
 
     return form
       .querySelector(
-        `.js-message-form__data-field_type_input:nth-of-type(${number}) input`
+        `.js-message-form__data-field_type_input:nth-of-type(${number}) input`,
       );
   };
 
@@ -19,7 +19,7 @@ import MessageFormInputValidation from './message-form';
   };
 
   const messageForms = document.querySelectorAll(
-      '.js-message-form'
+    '.js-message-form',
   );
 
   messageForms.forEach((form) => {

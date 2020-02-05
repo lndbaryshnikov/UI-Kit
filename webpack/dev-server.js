@@ -5,7 +5,7 @@ module.exports = function () {
     devServer: {
       stats: 'errors-only',
       contentBase: path.join(__dirname, '../dist'),
-      compress: true
-    }
+      compress: true,
+    },
   };
 };

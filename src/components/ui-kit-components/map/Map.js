@@ -7,18 +7,16 @@ class Map {
   }
 
   _defineOptions() {
-    const getData = (property) => {
-      return window.Number(this._$mapContainer.data(property))
-    };
+    const getData = (property) => window.Number(this._$mapContainer.data(property));
 
     this._options = {
       longitude: getData('longitude'),
       latitude: getData('latitude'),
-      zoom: getData('zoom')
+      zoom: getData('zoom'),
     };
 
-    this._mapBoxToken = 'pk.eyJ1IjoibGVvYmFyIiwiYSI6ImNrM2EwM3pmdz' +
-      'A3bGgzbXF0bG11cjhqdnkifQ.BcgmIzwCilGUFZljSUMAfQ';
+    this._mapBoxToken = 'pk.eyJ1IjoibGVvYmFyIiwiYSI6ImNrM2EwM3pmdz'
+      + 'A3bGgzbXF0bG11cjhqdnkifQ.BcgmIzwCilGUFZljSUMAfQ';
   }
 
   _init(id) {
@@ -33,19 +31,20 @@ class Map {
 
   _setLayers() {
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, '
+        + '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
+        + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox.streets',
-      accessToken: this._mapBoxToken
+      accessToken: this._mapBoxToken,
     }).addTo(this._map);
 
     L.tileLayer(
-      'https://api.mapbox.com/styles/v1/leobar/ck3ae7zcr12001cqjy07attbx/' +
-      'tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
-        accessToken: this._mapBoxToken
-      }).addTo(this._map);
+      'https://api.mapbox.com/styles/v1/leobar/ck3ae7zcr12001cqjy07attbx/'
+      + 'tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
+        accessToken: this._mapBoxToken,
+      },
+    ).addTo(this._map);
   }
 
   _addMarker() {
@@ -53,13 +52,13 @@ class Map {
       iconAnchor: [0, 24],
       labelAnchor: [-6, 0],
       popupAnchor: [0, -36],
-      html: `<div class="map__map-marker"><span class="map__map-marker-circle"></span></div>`
+      html: '<div class="map__map-marker"><span class="map__map-marker-circle"></span></div>',
     });
 
     const { longitude, latitude } = this._options;
 
     this._marker = L.marker([longitude, latitude], {
-      icon: markerIcon
+      icon: markerIcon,
     }).addTo(this._map);
   }
 

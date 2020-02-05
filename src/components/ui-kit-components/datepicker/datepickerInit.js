@@ -7,4 +7,3 @@ import Datepicker from './datepicker';
     new Datepicker($(item));
   });
 })();
-
