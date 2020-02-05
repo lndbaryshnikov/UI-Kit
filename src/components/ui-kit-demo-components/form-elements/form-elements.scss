@@ -1,27 +1,27 @@
 .form-elements {
   &__container {
-    margin-top: 48px;
+    margin-top: 3rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
   &__message-form-container {
-    margin-top: 1px;
+    margin-top: 0.0625rem;
   }
 
   &__toggles-container {
-    width: 130px;
+    width: 8.125rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-left: 102px;
+    margin-left: 6.375rem;
   }
 
   &__tick-boxes {
     width: 100%;
-    margin-top: 40px;
-    margin-right: 5px;
+    margin-top: 2.5rem;
+    margin-right: 0.3125rem;
   }
 }

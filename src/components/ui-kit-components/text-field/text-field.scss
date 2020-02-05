@@ -1,62 +1,61 @@
 @import '../../../styles/variables/colors';
-@import '../../../styles/functions/functions';
 
 .text-field {
-  height: 28px;
+  height: 1.75rem;
   background-color: $light-gray;
   border: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   outline: none;
   transition: box-shadow 0.3s;
   color: $gray;
   font-family: 'Source Sans Pro';
-  font-size: countRem(14);
-  letter-spacing: 0.14px;
-  padding-left: 12px;
+  font-size: 0.875rem;
+  letter-spacing: 0.00875rem;
+  padding-left: 0.75rem;
 
   &:focus {
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 0.3125rem black;
   }
 
   &_type {
     &_for-search-bar {
       width: 100%;
-      -webkit-border-radius: 4px 0 0 4px;
-      -moz-border-radius: 4px 0 0 4px;
-      border-radius: 4px 0 0 4px;
-      font-size: countRem(15);
-      padding: 0 0 2px 0.9vw;
+      -webkit-border-radius: 0.25rem 0 0 0.25rem;
+      -moz-border-radius: 0.25rem 0 0 0.25rem;
+      border-radius: 0.25rem 0 0 0.25rem;
+      font-size: 0.9375rem;
+      padding: 0 0 0.125rem 0.9vw;
       box-sizing: border-box;
     }
 
     &_for-message-form {
       @at-root {
         input#{&} {
-          width: 196px;
-          height: 24px;
-          padding-left: 13px;
-          padding-bottom: 3.4px;
-          font-size: countRem(15);
+          width: 12.25rem;
+          height: 1.5rem;
+          padding-left: 0.8125rem;
+          padding-bottom: 0.2125rem;
+          font-size: 0.9375rem;
         }
 
         textarea#{&} {
-          width: 273px;
-          height: 76px;
+          width: 17.0625rem;
+          height: 4.75rem;
           resize: none;
-          padding-top: 8.1px;
-          padding-left: 13.5px;
+          padding-top: 0.50625rem;
+          padding-left: 0.84375rem;
         }
       }
     }
 
     &_for-message-box {
-      border: 3px solid $white;
-      width: calc(100% - 25px);
-      height: 62px;
-      padding-top: 16px;
-      padding-left: 18px;
+      border: 0.1875rem solid $white;
+      width: calc(100% - 1.5625rem);
+      height: 3.875rem;
+      padding-top: 1rem;
+      padding-left: 1.125rem;
       resize: none;
     }
   }

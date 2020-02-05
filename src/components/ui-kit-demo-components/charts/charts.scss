@@ -2,26 +2,26 @@
   &__container {
     display: flex;
     justify-content: flex-start;
-    margin-top: 12px;
+    margin-top: 0.75rem;
     position: relative;
-    left: -15px;
+    right: 0.9375rem;
   }
 
   &__chart {
     &:nth-child(1) {
-      margin-right: -10px;
+      margin-right: -0.625rem;
     }
 
     &:nth-child(2) {
-      margin-right: 11px;
+      margin-right: 0.6875rem;
     }
 
     &:nth-child(3) {
-      margin-right: 10px;
+      margin-right: 0.625rem;
     }
 
     &:nth-child(4) {
-      margin-right: 7px;
+      margin-right: 0.4375rem;
     }
   }
 }

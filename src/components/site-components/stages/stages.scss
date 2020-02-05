@@ -3,8 +3,8 @@
 @import '../../../styles/variables/colors';
 
 .stages {
-  width: 620px;
-  height: 210px;
+  width: 38.75rem;
+  height: 13.125rem;
   text-align: center;
 
   &__title {
@@ -15,16 +15,16 @@
     font-size: 1.5rem;
     text-decoration: underline;
     position: relative;
-    top: 45px;
+    top: 2.8125rem;
   }
 
   &__arrows {
-    width: 430px;
-    margin: 10px auto 40px;
+    width: 26.875rem;
+    margin: 0.625rem auto 2.5rem;
   }
 
   &__slider {
-    width: 568px;
+    width: 35.5rem;
     margin: auto;
 
     .slider.slider_with_stages {

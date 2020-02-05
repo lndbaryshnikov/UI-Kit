@@ -3,13 +3,13 @@
 @import '../../../styles/variables/colors';
 
 .arrow-buttons {
-  height: 50px;
+  height: 3.125rem;
   display: flex;
   justify-content: space-between;
 
   &_width {
     &_standard {
-      width: 125px;
+      width: 7.8125rem;
     }
 
     &_100-percents {
@@ -28,9 +28,9 @@
   }
 
   &__arrow-container {
-    width: 45px;
-    height: 45px;
-    border: 3px solid $cyan;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border: 0.1875rem solid $cyan;
 
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -82,15 +82,15 @@
   }
 
   &__left-arrow, &__right-arrow {
-    width: 13.5px;
-    height: 13.5px;
-    margin: 13.5px auto;
+    width: 0.84375rem;
+    height: 0.84375rem;
+    margin: 0.84375rem auto;
   }
 
   &__right-arrow {
-    border-top: 3.5px solid $cyan;
-    border-right: 3.5px solid $cyan;
-    margin-right: 18px;
+    border-top: 0.21875rem solid $cyan;
+    border-right: 0.21875rem solid $cyan;
+    margin-right: 1.125rem;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -99,9 +99,9 @@
   }
 
   &__left-arrow {
-    border-left: 3.5px solid $cyan;
-    border-bottom: 3.5px solid $cyan;
-    margin-left: 18px;
+    border-left: 0.21875rem solid $cyan;
+    border-bottom: 0.21875rem solid $cyan;
+    margin-left: 1.125rem;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

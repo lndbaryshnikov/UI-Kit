@@ -2,13 +2,12 @@
 @import '~jquery-ui/themes/base/slider';
 @import '../../../pips-float-plugin/jquery-ui-slider-pips';
 @import '../../../styles/variables/colors';
-@import '../../../styles/functions/functions';
 
 .slider {
   &__scale {
-    width: 260px;
-    height: 5px;
-    border-radius: 10px;
+    width: 16.25rem;
+    height: 0.3125rem;
+    border-radius: 0.625rem;
 
     &_color {
       &_gray {
@@ -22,13 +21,13 @@
 
     &_type {
       &_for-stages {
-        width: 568px !important;
+        width: 35.5rem !important;
       }
     }
   }
 
   &__range {
-    border-radius: 10px;
+    border-radius: 0.625rem;
 
     &_color {
       &_gray {
@@ -46,13 +45,13 @@
   }
 
   &__handle {
-    width: 19.5px;
-    height: 19.5px;
+    width: 1.21875rem;
+    height: 1.21875rem;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
     outline: none;
-    top: -7px !important;
+    top: -0.4375rem !important;
     cursor: pointer;
 
     &_color {
@@ -74,14 +73,14 @@
 
   &__tooltip {
     position: absolute;
-    top: -33px;
-    left: -8px;
-    width: 35px;
-    height: 24px;
+    top: -2.0625rem;
+    left: -0.5rem;
+    width: 2.1875rem;
+    height: 1.5rem;
     background-color: $orange-red;
-    font-size: countRem(13);
-    line-height: 28px;
-    letter-spacing: 0.65px;
+    font-size: 0.8125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.040625rem;
     color: $white;
     text-align: center;
     border-radius: 20%;
@@ -95,8 +94,8 @@
       position: absolute;
       top: 100%;
       left: 50%;
-      border-width: 5px;
-      margin-left: -5.5px;
+      border-width: 0.3125rem;
+      margin-left: -0.34375rem;
       border-style: solid;
       border-color: $orange-red transparent transparent transparent;
     }
@@ -109,17 +108,17 @@
       }
 
       .ui-slider-pip {
-        font-size: countRem(11);
-        letter-spacing: 0.55px;
+        font-size: 0.6875rem;
+        letter-spacing: 0.034375rem;
         color: #d1d1d1;
-        top: 10px;
+        top: 0.625rem;
       }
     }
 
     &_stages {
       .ui-slider-label {
         z-index: 1000;
-        padding-top: 1px;
+        padding-top: 0.0625rem;
       }
 
       .ui-slider-line {
@@ -127,13 +126,13 @@
       }
 
       .ui-slider-pip {
-        font-size: countRem(14);
-        letter-spacing: 0.7px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        letter-spacing: 0.04375rem;
+        line-height: 1.125rem;
         color: $gray;
-        top: -12px;
-        width: 29px;
-        height: 29px;
+        top: -0.75rem;
+        width: 1.8125rem;
+        height: 1.8125rem;
         background-color: $light-gray;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;

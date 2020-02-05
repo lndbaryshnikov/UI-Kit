@@ -8,18 +8,18 @@
 
 .details {
   &__teachers {
-    width: 300px;
-    height: 250px;
+    width: 18.75rem;
+    height: 15.625rem;
   }
 
   &__percentages {
-    width: 400px;
-    height: 250px;
+    width: 25rem;
+    height: 15.625rem;
   }
 
   &__course-stages {
-    width: 630px;
-    margin: 20px auto;
+    width: 39.375rem;
+    margin: 1.25rem auto;
   }
 
   &__teachers-percentage {
@@ -27,6 +27,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 }

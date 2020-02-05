@@ -2,13 +2,13 @@
 @import '../../../styles/variables/colors';
 
 .header {
-  min-width: 780px;
-  height: 130px;
+  min-width: 48.75rem;
+  height: 8.125rem;
   position: relative;
   z-index: 10;
 
   &__left {
-    width: 230px;
+    width: 14.375rem;
     height: 100%;
     float: left;
 
@@ -25,7 +25,7 @@
 
   &__link {
     display: block;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     text-align: center;
     color: inherit;
 
@@ -35,20 +35,20 @@
   }
 
   &__navigation {
-    width: 200px;
-    margin: 20px auto 0;
+    width: 12.5rem;
+    margin: 1.25rem auto 0;
   }
 
   &__right {
     height: 100%;
-    line-height: 130px;
-    width: calc(100% - 230px);
+    line-height: 8.125rem;
+    width: calc(100% - 14.375rem);
     background-color: $light-gray;
-    min-width: 550px;
+    min-width: 34.375rem;
     display: inline-block;
     text-align: start;
     float: right;
-    padding-left: 30px;
+    padding-left: 1.875rem;
     box-sizing: border-box;
   }
 

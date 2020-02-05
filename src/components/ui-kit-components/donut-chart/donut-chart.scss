@@ -1,5 +1,4 @@
 @import '../../../styles/variables/colors';
-@import '../../../styles/functions/functions';
 
 .donut-chart {
   position: relative;
@@ -13,10 +12,10 @@
     width: 100%;
     text-align: center;
     color: #9d9d9d;
-    font-size: countRem(40);
-    line-height: 42px;
-    letter-spacing: -2px;
-    top: 40px;
+    font-size: 2.5rem;
+    line-height: 2.625rem;
+    letter-spacing: -0.125rem;
+    top: 2.5rem;
   }
 
   &__animation {

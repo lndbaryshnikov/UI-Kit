@@ -8,11 +8,11 @@
 
 .enroll {
   &__form {
-    width: 294px;
+    width: 18.375rem;
   }
 
   &__title {
-    margin: 20px;
+    margin: 1.25rem;
   }
 
   &__content {
@@ -20,15 +20,15 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 20px;
-    height: 500px;
+    margin-left: 1.25rem;
+    height: 31.25rem;
   }
 
   &__billboard {
-    width: 294px;
+    width: 18.375rem;
   }
 
   &__datepicker {
-    width: 290px;
+    width: 18.125rem;
   }
 }

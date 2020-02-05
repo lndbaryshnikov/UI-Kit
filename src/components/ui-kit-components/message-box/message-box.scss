@@ -2,19 +2,18 @@
 @import '../user-photo/user-photo';
 @import '../text-field/text-field';
 @import '../../../styles/variables/colors';
-@import '../../../styles/functions/functions';
 
 .message-box {
-  width: 288px;
-  height: 428px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  width: 18rem;
+  height: 26.75rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   background-color: $white-smoke;
 
   &__header {
     width: 100%;
-    height: 115px;
+    height: 7.1875rem;
     position: relative;
     -webkit-border-radius: inherit;
     -moz-border-radius: inherit;
@@ -24,7 +23,7 @@
       content: '';
       position: absolute;
       width: 100%;
-      height: 34px;
+      height: 2.125rem;
       bottom: 0;
       left: 0;
     }
@@ -50,62 +49,62 @@
 
   &__body {
     width: 100%;
-    height: calc(100% - 115px);
+    height: calc(100% - 7.1875rem);
   }
 
   &__camera-button {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     background: url('icons/camera-icon.svg') center no-repeat;
     display: inline-block;
     position: absolute;
-    right: 5px;
+    right: 0.3125rem;
   }
 
   &__chat {
-    height: calc(100% - 18px - 29px);
-    width: 244px;
-    margin: 18px auto 29px;
+    height: calc(100% - 1.125rem - 1.8125rem);
+    width: 15.25rem;
+    margin: 1.125rem auto 1.8125rem;
     position: relative;
   }
 
   &__chat-button {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     background: url('icons/chat-icon.svg') center no-repeat;
     display: inline-block;
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 0.125rem;
   }
 
   &__message {
-    width: calc(100% - 40px);
-    height: 32px;
+    width: calc(100% - 2.5rem);
+    height: 2rem;
     position: absolute;
-    top: 43px;
-    padding: 20px;
+    top: 2.6875rem;
+    padding: 1.25rem;
     background-color: $white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    border-radius: 0.3125rem;
     text-align: left;
 
     color: $gray;
-    font-size: countRem(13);
-    letter-spacing: 0.63px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.039375rem;
 
     &::after {
       content: '';
-      width: 10px;
-      height: 10px;
+      width: 0.625rem;
+      height: 0.625rem;
       position: absolute;
-      bottom: calc(100% - 5.5px);
+      bottom: calc(100% - 0.34375rem);
       left: 47%;
       background-color: inherit;
-      border-width: 6px;
-      margin-top: -6px;
-      border-radius: 2px;
+      border-width: 0.375rem;
+      margin-top: -0.375rem;
+      border-radius: 0.125rem;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -117,32 +116,32 @@
   &__name {
     color: $white;
     font-family: 'Source Sans Pro';
-    font-size: countRem(34);
-    line-height: 70px;
-    letter-spacing: -1.02px;
+    font-size: 2.125rem;
+    line-height: 4.375rem;
+    letter-spacing: -0.06375rem;
     text-align: center;
   }
 
   &__photo {
     position: absolute;
-    left: calc(50% - 101px / 2);
-    bottom: calc(-94px / 2);
+    left: calc(50% - 6.3125rem / 2);
+    bottom: calc(-5.875rem / 2);
     z-index: 1;
   }
 
   &__reply {
     position: absolute;
-    top: 130px;
+    top: 8.125rem;
     width: 100%;
   }
 
   &__reply-button {
     position: absolute;
     width: 100%;
-    bottom: -2px;
+    bottom: -0.125rem;
 
     button {
-      padding: 5px 12px 0 0;
+      padding: 0.3125rem 0.75rem 0 0;
     }
   }
 }

@@ -2,15 +2,14 @@
 @import '../tick-box/tick-box';
 @import '../button/button';
 @import '../../../styles/variables/colors';
-@import '../../../styles/functions/functions';
 
 .message-form {
-  width: 288px;
+  width: 18rem;
 
   &__data-field {
     &_type {
       &_input {
-        margin-bottom: 12px;
+        margin-bottom: 0.75rem;
       }
 
       &_textarea {
@@ -25,44 +24,44 @@
   &__tick-item {
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
   }
 
   &__tick-sign {
-    margin-left: 10px;
+    margin-left: 0.625rem;
   }
 
   &__button {
     float: right;
-    margin-top: 11px;
-    letter-spacing: 0.5px;
+    margin-top: 0.6875rem;
+    letter-spacing: 0.03125rem;
   }
 
   &__tooltip {
     position: absolute;
     display: inline-block;
-    margin-left: 7px;
-    width: 70px;
+    margin-left: 0.4375rem;
+    width: 4.375rem;
     text-transform: uppercase;
-    font-size: countRem(10);
-    line-height: 26px;
-    letter-spacing: 0.5px;
+    font-size: 0.625rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.03125rem;
     color: #ffffff;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding-top: 1.5px;
+    padding-top: 0.09375rem;
 
     &::after {
       content: '';
       position: absolute;
       right: 100%;
       top: 50%;
-      border-width: 4px;
-      margin-top: -4px;
+      border-width: 0.25rem;
+      margin-top: -0.25rem;
       border-style: solid;
     }
 

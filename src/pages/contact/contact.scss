@@ -8,24 +8,24 @@
 .contact {
   &__address-billboard {
     .billboard {
-      width: 300px;
+      width: 18.75rem;
     }
 
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 30px;
+    margin: 1.875rem;
   }
 
   &__address {
-    width: 400px;
+    width: 25rem;
     font-size: 1.2rem;
     line-height: 2rem;
   }
 
   &__map {
-    width: 600px;
+    width: 37.5rem;
     margin: auto;
   }
 }

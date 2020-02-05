@@ -6,33 +6,33 @@
   font-size: 1rem;
   font-weight: 900;
   color: $dark-gray;
-  letter-spacing: 2.4px;
+  letter-spacing: 0.15rem;
 
   &_type {
     &_for-charts {
-      letter-spacing: 1.7px;
+      letter-spacing: 0.10625rem;
     }
 
     &_for-profile {
-      margin-right: 10px;
-      letter-spacing: 2.5px;
+      margin-right: 0.625rem;
+      letter-spacing: 0.15625rem;
     }
 
     &_for-sliders {
       position: relative;
-      left: 9px;
+      left: 0.5625rem;
     }
 
     &_for-video-box {
-      margin-right: 2px;
+      margin-right: 0.125rem;
     }
 
     &_for-calendar {
-      margin-right: 2px;
+      margin-right: 0.125rem;
     }
 
     &_for-messaging {
-      margin-right: 4px;
+      margin-right: 0.25rem;
     }
   }
 }

@@ -1,14 +1,13 @@
 @import '../button/button';
 @import '../../../styles/variables/colors';
-@import '../../../styles/functions/functions';
 
 .billboard {
-  width: 288px;
-  height: 212px;
+  width: 18rem;
+  height: 13.25rem;
   display: flex;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 0.1875rem;
+  -moz-border-radius: 0.1875rem;
+  border-radius: 0.1875rem;
   color: $white;
 
   &_background-color {
@@ -22,71 +21,71 @@
   }
 
   &__content {
-    margin: 11px 20px 0px 20px;
-    width: 193px;
+    margin: 0.6875rem 1.25rem 0rem 1.25rem;
+    width: 12.0625rem;
   }
 
   &__image {
-    width: 95px;
+    width: 5.9375rem;
   }
 
   &__description {
     font-family: Lato;
-    font-size: countRem(11);
+    font-size: 0.6875rem;
     font-weight: 400;
-    letter-spacing: 0.55px;
-    margin-left: 2px;
+    letter-spacing: 0.034375rem;
+    margin-left: 0.125rem;
   }
 
   &__date {
     &_type {
       &_event {
-        margin-bottom: 18px;
+        margin-bottom: 1.125rem;
         vertical-align: middle;
-        height: 70px;
+        height: 4.375rem;
       }
 
       &_new {
-        font-size: countRem(11);
+        font-size: 0.6875rem;
         text-transform: uppercase;
-        letter-spacing: 0.55px;
-        margin: 10px 0 13px 3px;
+        letter-spacing: 0.034375rem;
+        margin: 0.625rem 0 0.8125rem 0.1875rem;
       }
     }
   }
 
   &__event-day {
-    font-size: countRem(73);
-    letter-spacing: -2.92px;
+    font-size: 4.5625rem;
+    letter-spacing: -0.1825rem;
     display: inline-block;
   }
 
   &__event-month {
     display: inline-block;
-    margin-left: 14px;
-    font-size: countRem(30);
+    margin-left: 0.875rem;
+    font-size: 1.875rem;
   }
 
   &__title {
     &_type {
       &_event {
-        font-size: countRem(13);
+        font-size: 0.8125rem;
         text-transform: uppercase;
-        line-height: 20px;
-        letter-spacing: 0.63px;
-        margin-left: 1px;
+        line-height: 1.25rem;
+        letter-spacing: 0.039375rem;
+        margin-left: 0.0625rem;
       }
 
       &_new {
-        font-size: countRem(28);
-        line-height: 26px;
-        margin-top: 13px;
+        font-size: 1.75rem;
+        line-height: 1.625rem;
+        margin-top: 0.8125rem;
       }
     }
   }
 
   &__button {
     width: 89.5%;
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
 }
