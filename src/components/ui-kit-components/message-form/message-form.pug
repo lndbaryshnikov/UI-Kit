@@ -3,7 +3,7 @@ include ../tick-box/tick-box
 include ../button/button
 
 mixin message-form(extraOptions)
-  form(class="message-form js-message-form" method="post")
+  form.message-form.js-message-form(method="post")
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
         tagName: "input",
@@ -39,7 +39,7 @@ mixin message-form(extraOptions)
             +tick-box(isChecked, {name, id: name})
             label.message-form__tick-sign(for=`tick-box-${name}`)= text
 
-    .message-form__button
+    .message-form__button.js-message-form__button
       +button({
         size: "standard",
         color: "cyan",
