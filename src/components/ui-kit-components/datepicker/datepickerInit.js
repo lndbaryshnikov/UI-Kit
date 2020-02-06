@@ -1,4 +1,4 @@
-import Datepicker from './datepicker';
+import Datepicker from './Datepicker';
 
 (() => {
   const $elements = $('.js-datepicker');
