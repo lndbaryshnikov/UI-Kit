@@ -1,24 +1,24 @@
-include ../../components/site-components/header/header
-include ../../components/site-components/menu/menu
-include ../../components/ui-kit-components/video/video
+extends ../../templates/site-page-template
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name="description" content="Information about school and courses")
-    title Information
-  body
-    +header()
-    .page-wrapper
-      +menu()
-      .page-content
-        .info
-          .info__title Welcome to our page!
-          .info__text We are a Kazan school engaged in online training in web design. We will
-            | teach you how to use programming languages such as HTML, CSS and
-            | JavaScript. We’ll teach you how to develop original page designs and
-            | bring them to life.
-          .info__video
-            +video("https://www.youtube.com/embed/JgIG6d3JsZs")
+block include
+  include ../../components/site-components/header/header
+  include ../../components/site-components/menu/menu
+  include ../../components/ui-kit-components/video/video
+
+append head
+  meta(name="description" content="Information about school and courses")
+  title Information
+
+block content
+  +header()
+  .page-wrapper
+    +menu()
+    .page-content
+      .info
+        .info__title Welcome to our page!
+        .info__text We are a Kazan school engaged in online training in web design. We will
+          | teach you how to use programming languages such as HTML, CSS and
+          | JavaScript. We’ll teach you how to develop original page designs and
+          | bring them to life.
+        .info__video
+          +video("https://www.youtube.com/embed/JgIG6d3JsZs")

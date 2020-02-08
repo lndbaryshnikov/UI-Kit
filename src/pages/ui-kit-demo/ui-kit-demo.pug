@@ -1,134 +1,119 @@
-include ../../components/ui-kit-demo-components/block-sign/block-sign
-include ../../components/ui-kit-demo-components/header/header
-include ../../components/ui-kit-demo-components/buttons/buttons
-include ../../components/ui-kit-demo-components/arrows/arrows
-include ../../components/ui-kit-demo-components/charts/charts
-include ../../components/ui-kit-demo-components/sliders/sliders
-include ../../components/ui-kit-demo-components/stages-box/stages-box
-include ../../components/ui-kit-demo-components/form-elements/form-elements
-include ../../components/ui-kit-demo-components/search-dropdown-profiles/search-dropdown-profiles
-include ../../components/ui-kit-demo-components/news-events/news-events
-include ../../components/ui-kit-demo-components/location/location
-include ../../components/ui-kit-demo-components/calendar-messaging/calendar-messaging
-include ../../components/ui-kit-demo-components/video-box/video-box
+extends ../../templates/site-page-template
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name="description" content="ui-kit-demo (set of UI elements)")
-    title UI-Kit
-  body
-    .ui-kit-demo
-      +header
+append head
+  meta(name="description" content="ui-kit-demo (set of UI elements)")
+  title UI-Kit
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-buttons
-        +buttons([
+block content
+  .ui-kit-demo
+    +header
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-buttons
+      +buttons([
+        {
+          size: "small",
+          color: "cyan",
+          content: "button"
+        },
+        {
+          size: "standard",
+          color: "cyan",
+          content: "button"
+        },
+        {
+          size: "standard",
+          color: "orange-red",
+          content: "button"
+        },
+        {
+          size: "small",
+          color: "orange-red",
+          content: "button"
+        }
+      ])
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-arrows
+      +arrows([{}, {disabled: true}, {}])
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-charts
+      +charts([
+        { percentage: 0 }, { percentage: 38 }, { percentage: 62 }, { percentage: 89 },
+        {
+          percentage: [100, 75, 40, 10],
+          color: ["#e5e5e5", "#4eb7a8", "#e75735", "#747474"],
+          thickness: 10
+        }
+      ])
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-sliders
+      +sliders([
+        {
+          options: { value: 40 }
+        },
+        {
+          options: { value: 75, step: 25, type: "labels" },
+          styles: { slider: "gray", range: "green", handle: "green" }
+        }
+      ])
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-stages-box
+      +stages-box([
+        {
+          options: {min: 1, max: 5, value: 3, type: "stages"},
+          styles:  {slider: "gray", range: "orange-red"}
+        }
+      ])
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-form-elements
+      +form-elements
+
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-search-dropdown-profiles
+      +search-dropdown-profiles({
+        profileOptions: [
           {
-            size: "small",
-            color: "cyan",
-            content: "button"
+            name: "John Smith",
+            job: "ux designer",
+            theme: "orange-red"
           },
           {
-            size: "standard",
-            color: "cyan",
-            content: "button"
-          },
-          {
-            size: "standard",
-            color: "orange-red",
-            content: "button"
-          },
-          {
-            size: "small",
-            color: "orange-red",
-            content: "button"
+            name: "Sarah Brown",
+            job: "developer",
+            theme: "cyan"
           }
-        ])
+        ]
+      })
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-arrows
-        +arrows([{}, {disabled: true}, {}])
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-news-events
+      +news-events([
+        {
+          type: "news",
+          title: "It’s all going\ndownhill",
+          imageName: "demo-news",
+          content: "Lorem ipsum dolor sit amet, " +
+            "consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n" +
+            " Etiam a nisi nunc, a tincidunt eros.",
+          backgroundColor: "orange-red",
+          day: "24",
+          month: "august",
+          year: "2013"
+        },
+        {
+          type: "events",
+          title: "this is the title",
+          imageName: "demo-event",
+          content: "Lorem ipsum dolor sit amet" +
+            ", consectetur adipiscing elit.",
+          backgroundColor: "cyan",
+          day: "24",
+          month: "Aug"
+        }
+      ])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-charts
-        +charts([
-          { percentage: 0 }, { percentage: 38 }, { percentage: 62 }, { percentage: 89 },
-          {
-            percentage: [100, 75, 40, 10],
-            color: ["#e5e5e5", "#4eb7a8", "#e75735", "#747474"],
-            thickness: 10
-          }
-        ])
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-location
+      +location
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-sliders
-        +sliders([
-          {
-            options: { value: 40 }
-          },
-          {
-            options: { value: 75, step: 25, type: "labels" },
-            styles: { slider: "gray", range: "green", handle: "green" }
-          }
-        ])
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-calendar-messaging
+      +calendar-messaging
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-stages-box
-        +stages-box([
-          {
-            options: {min: 1, max: 5, value: 3, type: "stages"},
-            styles:  {slider: "gray", range: "orange-red"}
-          }
-        ])
-
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-form-elements
-        +form-elements
-
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-search-dropdown-profiles
-        +search-dropdown-profiles({
-          profileOptions: [
-            {
-              name: "John Smith",
-              job: "ux designer",
-              theme: "orange-red"
-            },
-            {
-              name: "Sarah Brown",
-              job: "developer",
-              theme: "cyan"
-            }
-          ]
-        })
-
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-news-events
-        +news-events([
-          {
-            type: "news",
-            title: "It’s all going\ndownhill",
-            imageName: "demo-news",
-            content: "Lorem ipsum dolor sit amet, " +
-              "consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n" +
-              " Etiam a nisi nunc, a tincidunt eros.",
-            backgroundColor: "orange-red",
-            day: "24",
-            month: "august",
-            year: "2013"
-          },
-          {
-            type: "events",
-            title: "this is the title",
-            imageName: "demo-event",
-            content: "Lorem ipsum dolor sit amet" +
-              ", consectetur adipiscing elit.",
-            backgroundColor: "cyan",
-            day: "24",
-            month: "Aug"
-          }
-        ])
-
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-location
-        +location
-
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-calendar-messaging
-        +calendar-messaging
-
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-video-box
-        +video-box("https://www.youtube.com/embed/pzbqEG_chrs")
+    section.ui-kit-demo__section.ui-kit-demo__section_type_for-video-box
+      +video-box("https://www.youtube.com/embed/pzbqEG_chrs")

@@ -1,35 +1,36 @@
-include ../../components/site-components/header/header
-include ../../components/site-components/menu/menu
-include ../../components/site-components/stages/stages
-include ../../components/site-components/teachers/teachers
-include ../../components/site-components/percentages/percentages
+extends ../../templates/site-page-template
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name="description" content="Details about school and courses")
-    title Course Details
-  body
-    +header()
-    .page-wrapper
-      +menu()
-      .page-content
-        .details
-          .details__teachers-percentage
-            .details__teachers
-              +teachers
-            .details__percentages
-              +percentages
-          .details__course-stages
-            +stages(
-              {
-                title: "Course stages",
-                stages: ["HTML", "CSS", "JavaScript", "Project", "Internship"],
-                startFrom: 3,
-                styles: {
-                  sliderColor: "gray",
-                  rangeColor: "green"
-                }
-              })
+block include
+  include ../../components/site-components/header/header
+  include ../../components/site-components/menu/menu
+  include ../../components/site-components/stages/stages
+  include ../../components/site-components/teachers/teachers
+  include ../../components/site-components/percentages/percentages
+
+
+append head
+  meta(name="description" content="Details about school and courses")
+  title Course Details
+
+block content
+  +header()
+  .page-wrapper
+    +menu()
+    .page-content
+      .details
+        .details__teachers-percentage
+          .details__teachers
+            +teachers
+          .details__percentages
+            +percentages
+        .details__course-stages
+          +stages(
+            {
+              title: "Course stages",
+              stages: ["HTML", "CSS", "JavaScript", "Project", "Internship"],
+              startFrom: 3,
+              styles: {
+                sliderColor: "gray",
+                rangeColor: "green"
+              }
+            })

@@ -1,39 +1,40 @@
-include ../../components/ui-kit-components/billboard/billboard
-include ../../components/ui-kit-components/datepicker/datepicker
-include ../../components/site-components/header/header
-include ../../components/site-components/menu/menu
-include ../../components/ui-kit-components/message-form/message-form
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name="description" content="Enroll in a course")
-    title Enroll
-  body
-    +header()
-    .page-wrapper
-      +menu()
-      .page-content
-        .enroll
-          .enroll__title You can enroll in a course here (starts in February 14th):
-          .enroll__content
-            .enroll__form
-              +message-form([
-                { isChecked: true, name: "subscribe", text: "Subscribe" },
-                { isChecked: true, name: "callBack", text: "Call me back" }
-              ])
-            .enroll__billboard
-              +billboard({
-                type: "news",
-                title: "JavaScript course",
-                imageName: "course-news",
-                content: "First course starts february 14th!",
-                backgroundColor: "cyan",
-                day: "14",
-                month: "november",
-                year: "2020"
-              })
+extends ../../templates/site-page-template
 
-            .enroll__datepicker
-              +datepicker
+block include
+  include ../../components/ui-kit-components/billboard/billboard
+  include ../../components/ui-kit-components/datepicker/datepicker
+  include ../../components/site-components/header/header
+  include ../../components/site-components/menu/menu
+  include ../../components/ui-kit-components/message-form/message-form
+
+append head
+  meta(name="description" content="Enroll in a course")
+  title Enroll
+
+block content
+  +header()
+  .page-wrapper
+    +menu()
+    .page-content
+      .enroll
+        .enroll__title You can enroll in a course here (starts in February 14th):
+        .enroll__content
+          .enroll__form
+            +message-form([
+              { isChecked: true, name: "subscribe", text: "Subscribe" },
+              { isChecked: true, name: "callBack", text: "Call me back" }
+            ])
+          .enroll__billboard
+            +billboard({
+              type: "news",
+              title: "JavaScript course",
+              imageName: "course-news",
+              content: "First course starts february 14th!",
+              backgroundColor: "cyan",
+              day: "14",
+              month: "november",
+              year: "2020"
+            })
+
+          .enroll__datepicker
+            +datepicker
