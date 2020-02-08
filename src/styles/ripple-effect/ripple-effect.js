@@ -1,23 +1,22 @@
-(function($) {
-    let $elem, $ink, d, x, y;
-    $(".ripple").click(function(e){
-        $elem = $(this);
+(($) => {
+  $('.ripple').click((event) => {
+    const $element = $(event.currentTarget);
 
-        if ($elem.find(".ink").length === 0)
-            $elem.prepend("<span class='ink'></span>");
+    if ($element.find('.ink').length === 0) {
+      $element.prepend('<span class=\'ink\'></span>');
+    }
+    const $ink = $element.find('.ink');
 
-        $ink = $elem.find(".ink");
-        $ink.removeClass("animate");
+    $ink.removeClass('animate');
 
-        if(!$ink.height() && !$ink.width())
-        {
-            d = Math.max($elem.outerWidth(), $elem.outerHeight());
-            $ink.css({height: d, width: d});
-        }
+    if (!$ink.height() && !$ink.width()) {
+      const diameter = Math.max($element.outerWidth(), $element.outerHeight());
+      $ink.css({ height: diameter, width: diameter });
+    }
 
-        x = e.pageX - $elem.offset().left - $ink.width()/2;
-        y = e.pageY - $elem.offset().top - $ink.height()/2;
+    const x = event.pageX - $element.offset().left - $ink.width() / 2;
+    const y = event.pageY - $element.offset().top - $ink.height() / 2;
 
-        $ink.css({top: y+'px', left: x+'px'}).addClass("animate");
-    })
+    $ink.css({ top: `${y}px`, left: `${x}px` }).addClass('animate');
+  });
 })(jQuery);

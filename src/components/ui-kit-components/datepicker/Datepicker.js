@@ -29,13 +29,10 @@ class Datepicker {
     this._$datepicker = container.find('.js-datepicker__datepicker-wrapper');
     this._$currentDay = container.find('.js-datepicker__current-day');
     this._$todayButton = container.find('.js-datepicker__today-button');
-
-    console.log(container, this._$todayButton);
   }
 
   _todayButtonClickHandler() {
     const todayDate = new Date();
-    console.log('im here');
 
     this._$datepicker.datepicker('setDate', todayDate);
     this._displayCurrentDay();
