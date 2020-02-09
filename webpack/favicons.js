@@ -5,7 +5,7 @@ module.exports = function (pathToIcon) {
     plugins: [
       new FaviconsPlugin({
         logo: pathToIcon,
-        prefix: 'assets/',
+        publicPath: '',
       }),
     ],
   };

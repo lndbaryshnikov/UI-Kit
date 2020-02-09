@@ -27,7 +27,6 @@ const common = merge([
     },
     output: {
       path: PATHS.dist,
-      publicPath: './',
       filename: './js/[name].js',
     },
     devtool: 'source-map',
@@ -41,7 +40,6 @@ const common = merge([
   html({ source: PATHS.src, index: 'ui-kit-demo' }),
   favicons('./src/img/favicon.png'),
 ]);
-
 
 module.exports = function (env) {
   if (env === 'production') {
