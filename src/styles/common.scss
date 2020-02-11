@@ -1,29 +1,10 @@
-@font-face {
-  font-family: 'Lato';
-  src:  url('../fonts/lato-regular/lato-regular.woff') format('woff'),
-        url('../fonts/lato-regular/lato-regular.ttf') format('truetype'),
-        url('../fonts/lato-regular/lato-regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@import './mixins/font-face';
+
+@each $type in 'regular', 'black' {
+  @include font-face('Lato', 'lato', $type);
 }
 
-@font-face {
-  font-family: 'Lato';
-  src:  url('../fonts/lato-black/lato-black.woff') format('woff'),
-        url('../fonts/lato-black/lato-black.ttf') format('truetype'),
-        url('../fonts/lato-black/lato-black.svg') format('svg');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src:  url('../fonts/source-sans-pro-regular/source-sans-pro-regular.woff') format('woff'),
-        url('../fonts/source-sans-pro-regular/source-sans-pro-regular.ttf') format('truetype'),
-        url('../fonts/source-sans-pro-regular/source-sans-pro-regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@include font-face('Source Sans Pro', 'source-sans-pro', 'regular');
 
 html {
   font-size: 16px;
