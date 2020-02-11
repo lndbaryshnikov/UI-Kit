@@ -38,7 +38,7 @@ const common = merge([
   fonts(),
   jquery(),
   html({ source: PATHS.src, index: 'ui-kit-demo' }),
-  favicons('./src/img/favicon.png'),
+  favicons(),
 ]);
 
 module.exports = function (env) {

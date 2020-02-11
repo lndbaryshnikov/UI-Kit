@@ -6,7 +6,11 @@ module.exports = function () {
       rules: [
         {
           test: /\.(jpg|png|svg)$/,
-          exclude: path.resolve(__dirname, '../src/fonts'),
+          include: path.resolve(__dirname, '../src'),
+          exclude: [
+            path.resolve(__dirname, '../src/fonts'),
+            path.resolve(__dirname, '../src/favicons'),
+          ],
           loader: 'file-loader',
           options: {
             name: 'images/[name].[ext]',
