@@ -1,19 +1,11 @@
-const FaviconsPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
 module.exports = function () {
   return {
-    plugins: [
-      new FaviconsPlugin({
-        logo: path.resolve(__dirname, '../src/favicons/favicon.png'),
-        prefix: 'favicons/',
-        publicPath: '',
-      }),
-    ],
     module: {
       rules: [
         {
-          test: /\.(png|svg)$/,
+          test: /\.(svg|png|ico|xml|json|webmanifest)$/,
           include: path.resolve(__dirname, '../src/favicons'),
           loader: 'file-loader',
           options: {

@@ -1,7 +1,6 @@
+import '../../favicons/favicons';
 import '../../styles/common.scss';
 import './ui-kit-demo.scss';
-
-import '../../favicons/safari-pinned-tab.svg';
 
 function requireAll(r) {
   return r.keys().map(r);

@@ -1,4 +1,4 @@
-import '../../favicons/safari-pinned-tab.svg';
+import '../../favicons/favicons';
 import '../../components/site-components/menu/menu';
 import '../../components/ui-kit-components/map/mapInit';
 
