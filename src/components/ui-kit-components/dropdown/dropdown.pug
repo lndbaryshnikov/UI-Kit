@@ -1,10 +1,10 @@
 include ../text-field/text-field
 
 mixin dropdown(options)
-  div(class="dropdown")
+  .dropdown
     select.dropdown__select
       option.dropdown__option Choose An Option
       each value in options
-        option(value=value class="dropdown__option")= value
-    div(class="dropdown__button")
-      div.dropdown__check-mark
+        option.dropdown__option(value=value)= value
+    .dropdown__button
+      .dropdown__check-mark

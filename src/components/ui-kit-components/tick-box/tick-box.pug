@@ -1,13 +1,13 @@
 mixin tick-box(isChecked, { id, name, value = "on" } = {})
   label.tick-box
     if name && id
-      input(class="tick-box__input" type="checkbox" id=`tick-box-${id}` name=name value=value checked=isChecked)
+      input.tick-box__input(type="checkbox" id=`tick-box-${id}` name=name value=value checked=isChecked)
     else if name
-      input(class="tick-box__input" type="checkbox" name=name value=value checked=isChecked)
+      input.tick-box__input(type="checkbox" name=name value=value checked=isChecked)
     else if id
-      input(class="tick-box__input" type="checkbox" id=`tick-box-${id}` checked=isChecked)
+      input.tick-box__input(type="checkbox" id=`tick-box-${id}` checked=isChecked)
     else
-      input(class="tick-box__input" type="checkbox" checked=isChecked)
+      input.tick-box__input(type="checkbox" checked=isChecked)
 
     .tick-box__check-mark-container
       .tick-box__check-mark

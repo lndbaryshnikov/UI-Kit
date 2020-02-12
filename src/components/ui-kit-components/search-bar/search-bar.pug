@@ -9,7 +9,7 @@ mixin search-bar(options)
     - wrapperClass += hundredPercents
 
   div(class=wrapperClass)
-    form
+    form.search-bar__form
       .search-bar__input
         +text-field({
           tagName: "input",
@@ -18,4 +18,4 @@ mixin search-bar(options)
           placeholder: "Search",
           blockName: "search-bar"
         })
-      button(type="submit" class="search-bar__button")
+      button.search-bar__button(type="submit")

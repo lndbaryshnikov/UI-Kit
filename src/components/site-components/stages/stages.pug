@@ -8,7 +8,7 @@ mixin stages({ title, stages, startFrom, styles: { sliderColor, rangeColor, hand
     .stages__title= title
     .stages__stage= stages[startFrom - 1]
     .stages__arrows
-      +arrow-buttons(false, {width: "100-percents"})
+      +arrow-buttons(false, { width: "100-percents" })
     .stages__slider
       +slider({
         min: 1,
@@ -20,4 +20,3 @@ mixin stages({ title, stages, startFrom, styles: { sliderColor, rangeColor, hand
         range: rangeColor,
         handle: handleColor
       })
-

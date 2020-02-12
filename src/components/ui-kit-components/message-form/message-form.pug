@@ -36,7 +36,7 @@ mixin message-form(extraOptions)
           - var { isChecked, name, text } = options;
 
           .message-form__tick-item
-            +tick-box(isChecked, {name, id: name})
+            +tick-box(isChecked, { name, id: name })
             label.message-form__tick-sign(for=`tick-box-${name}`)= text
 
     .message-form__button.js-message-form__button
