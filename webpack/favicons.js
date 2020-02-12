@@ -6,10 +6,10 @@ module.exports = function () {
       rules: [
         {
           test: /\.(svg|png|ico|xml|json|webmanifest)$/,
-          include: path.resolve(__dirname, '../src/favicons'),
+          include: path.resolve(__dirname, '../src/assets/favicons'),
           loader: 'file-loader',
           options: {
-            name: 'favicons/[name].[ext]',
+            name: 'assets/favicons/[name].[ext]',
           },
         },
       ],

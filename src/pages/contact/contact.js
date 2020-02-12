@@ -1,4 +1,4 @@
-import '../../favicons/favicons';
+import '../../assets/favicons/favicons';
 import '../../components/site-components/menu/menu';
 import '../../components/ui-kit-components/map/mapInit';
 

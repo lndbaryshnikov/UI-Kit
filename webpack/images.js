@@ -8,14 +8,14 @@ module.exports = function () {
           test: /\.(jpe?g|png|svg)$/,
           include: path.resolve(__dirname, '../src'),
           exclude: [
-            path.resolve(__dirname, '../src/fonts'),
-            path.resolve(__dirname, '../src/favicons'),
+            path.resolve(__dirname, '../src/assets/fonts'),
+            path.resolve(__dirname, '../src/assets/favicons'),
           ],
           use: [
             {
               loader: 'file-loader',
               options: {
-                name: 'images/[name].[ext]',
+                name: 'assets/images/[name].[ext]',
               },
             },
             {
