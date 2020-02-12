@@ -1,4 +1,5 @@
 @import './mixins/font-face';
+@import './variables/colors';
 
 @each $type in 'regular', 'black' {
   @include font-face('Lato', 'lato', $type);
@@ -12,6 +13,7 @@ html {
   font-style: normal;
   font-weight: normal;
   color: black;
+  background-color: $white;
 }
 
 html, body {
