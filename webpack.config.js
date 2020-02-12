@@ -10,6 +10,7 @@ const devServer = require('./webpack/dev-server');
 const jquery = require('./webpack/jquery');
 const favicons = require('./webpack/favicons');
 const html = require('./webpack/html');
+const minimizer = require('./webpack/minimizer');
 
 const PATHS = {
   src: path.join(__dirname, 'src/pages'),
@@ -31,6 +32,7 @@ const common = merge([
     },
     devtool: 'source-map',
   },
+  minimizer(),
   babel(),
   pug(),
   styles(),
