@@ -4,8 +4,13 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    margin-top: 2.1875rem;
+    flex-wrap: wrap;
+    margin-top: 0.6875rem;
     position: relative;
     left: 0.25rem;
+  }
+
+  &__button-set {
+    margin-top: 1.5rem;
   }
 }

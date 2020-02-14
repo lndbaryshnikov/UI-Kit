@@ -9,4 +9,5 @@ mixin sliders(items)
       each item in items
         - var { options, styles } = item
 
-        +slider(options, styles)
+        .sliders__slider
+          +slider(options, styles)

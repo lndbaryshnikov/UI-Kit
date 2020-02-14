@@ -1,6 +1,6 @@
 mixin user-photo(name)
   .user-photo
-    img(
+    img.user-photo__image(
       src=require(
         `../../components/ui-kit-components/user-photo/photos/${name.toLowerCase().replace(" ", "-")}.png`
       )

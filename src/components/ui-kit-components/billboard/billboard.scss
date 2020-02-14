@@ -2,13 +2,17 @@
 @import '../../../styles/variables/colors';
 
 .billboard {
-  width: 18rem;
   height: 13.25rem;
   display: flex;
   -webkit-border-radius: 0.1875rem;
   -moz-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
   color: $white;
+  min-width: 18rem;
+
+  @media screen and (max-width: 400px) {
+    min-width: 16.5rem;
+  }
 
   &_background-color {
     &_cyan {
@@ -21,12 +25,17 @@
   }
 
   &__content {
-    margin: 0.6875rem 1.25rem 0rem 1.25rem;
-    width: 12.0625rem;
+    margin: 0.6875rem 1.25rem 0 1.25rem;
+    width: 67%;
+
+    @media screen and (max-width: 400px) {
+      margin: 0.4rem 0.6rem 0 0.6rem;
+    }
   }
 
   &__image {
     width: 5.9375rem;
+    height: 13.25rem;
   }
 
   &__description {
@@ -85,7 +94,7 @@
   }
 
   &__button {
-    width: 89.5%;
+    width: 87%;
     margin: 1.25rem auto;
   }
 }

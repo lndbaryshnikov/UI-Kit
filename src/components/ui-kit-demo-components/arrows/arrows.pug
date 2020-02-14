@@ -7,4 +7,5 @@ mixin arrows(items)
 
     .arrows__container
       each item in items
-        +arrow-buttons(item.disabled)
+        .arrows__button-set
+          +arrow-buttons(item.disabled)

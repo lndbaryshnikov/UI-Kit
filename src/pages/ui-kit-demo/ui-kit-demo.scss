@@ -1,57 +1,92 @@
 .ui-kit-demo {
+  &__header {
+    margin-top: 1rem;
+  }
+
+  &__components {
+    width: 50%;
+    margin: 8.8rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 1094px) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: 722px) {
+      width: 90%;
+    }
+  }
+
   &__section {
-    width: 37.125rem;
-    margin: auto;
+    width: 100%;
 
     &_type {
       &_for-buttons {
-        width: 29.125rem;
-        margin: 8.625rem auto 0;
+        width: 72%;
       }
 
       &_for-arrows {
-        width: 28.1875rem;
-        margin: 10.125rem auto 0;
+        margin-top: 8.5rem;
+        width: 67%;
+
+        @media screen and (max-width: 1094px) {
+          margin-top: 2.3rem;
+        }
       }
 
       &_for-charts {
-        width: 37.5rem;
-        margin: 3rem auto 0;
+        margin-top: 2.8rem;
       }
 
       &_for-sliders {
-        margin: 1.25rem auto 0;
-        position: relative;
-        left: -0.5625rem;
+        margin-top: 1.15rem;
+        margin-right: 15px;
+        width: 91%;
       }
 
       &_for-stages-box {
-        margin: 2.4375rem auto 0;
-        width: 36.875rem;
+        margin-top: 2.3rem;
+        width: 84%;
       }
 
       &_for-form-elements {
-        margin: 4.25rem auto 0;
+        margin-top: 2.8rem;
+        width: 88%;
       }
 
       &_for-search-dropdown-profiles {
-        margin: 3.3125rem auto 0;
+        margin-top: 1.3125rem;
+        width: 97%;
       }
 
       &_for-news-events {
-        margin: 6.03125rem auto 0;
+        margin-top: 5.9rem;
+        width: 91%;
+
+        @media screen and (max-width: 1094px) {
+          width: 105%;
+        }
+
+        @media screen and (max-width: 400px) {
+          width: 95%;
+        }
       }
 
       &_for-location {
-        margin: 3.125rem auto 0;
+        margin-top: 3rem;
+        width: 88%;
       }
 
       &_for-calendar-messaging {
-        margin: 4.6875rem auto 0;
+        margin-top: 0.5rem;
+        width: 92%;
       }
 
       &_for-video-box {
-        margin: 3.4375rem auto 0;
+        margin-top: 3.4375rem;
+        width: 88%;
       }
     }
   }

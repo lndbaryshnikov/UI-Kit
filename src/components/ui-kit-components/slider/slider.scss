@@ -5,7 +5,7 @@
 
 .slider {
   &__scale {
-    width: 16.25rem;
+    width: 100%;
     height: 0.3125rem;
     border-radius: 0.625rem;
 
@@ -21,7 +21,7 @@
 
     &_type {
       &_for-stages {
-        width: 35.5rem !important;
+        width: 100%;
       }
     }
   }

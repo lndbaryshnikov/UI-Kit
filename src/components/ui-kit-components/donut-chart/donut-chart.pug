@@ -6,8 +6,8 @@ mixin donut-chart({ percentage, color = "#e75735", thickness = "5", radius = "45
   - color = Array.isArray(color) ? color : [color];
   - var size = 2 * (+radius + 15);
 
-    div(class="donut-chart" style={width: size + "px"})
-      div(class="donut-chart__percentage" style=percentageOff)=  percentage
+    .donut-chart(style={width: size + "px"})
+      .donut-chart__percentage(style=percentageOff)=  percentage
 
       - var dashArray = 2 * Math.PI * radius
 

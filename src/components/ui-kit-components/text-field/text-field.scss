@@ -33,7 +33,7 @@
     &_for-message-form {
       @at-root {
         input#{&} {
-          width: 12.25rem;
+          width: 68%;
           height: 1.5rem;
           padding-left: 0.8125rem;
           padding-bottom: 0.2125rem;
@@ -41,7 +41,7 @@
         }
 
         textarea#{&} {
-          width: 17.0625rem;
+          width: 94.5%;
           height: 4.75rem;
           resize: none;
           padding-top: 0.50625rem;

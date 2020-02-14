@@ -19,6 +19,6 @@ mixin user-profile({ name, job, theme })
       span(class=`user-profile__name user-profile__name_color_${nameColor}`)= name
       span(class=`user-profile__job user-profile__job_color_${jobColor}`)= job
 
-
-      - for (var i = 1; i<=3; i++)
-        a(href="/mock-address/change-me" class=`user-profile__links user-profile__links_theme_${theme}`)
+      .user-profile__links-container
+        - for (var i = 1; i<=3; i++)
+          a(href="/mock-address/change-me" class=`user-profile__link user-profile__link_theme_${theme}`)

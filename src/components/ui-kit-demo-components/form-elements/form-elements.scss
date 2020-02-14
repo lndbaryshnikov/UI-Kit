@@ -1,13 +1,28 @@
 .form-elements {
   &__container {
-    margin-top: 3rem;
+    margin-top: 2.8rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @media screen and (max-width: 722px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__message-form-container {
-    margin-top: 0.0625rem;
+    margin-top: 0.1rem;
+    width: 18rem;
+
+    @media screen and (max-width: 722px) {
+      width: 70%;
+      margin-bottom: 1.5rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
   }
 
   &__toggles-container {
@@ -17,11 +32,32 @@
     justify-content: space-around;
     align-items: center;
     margin-left: 6.375rem;
+
+    @media screen and (max-width: 722px) {
+      flex-flow: row wrap;
+      width: 90%;
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__tick-boxes {
     width: 100%;
     margin-top: 2.5rem;
     margin-right: 0.3125rem;
+
+    @media screen and (max-width: 722px) {
+      width: 8rem;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+      margin-top: 2rem;
+    }
   }
 }

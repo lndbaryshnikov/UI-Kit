@@ -8,7 +8,9 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
 
-  img {
+  &__image {
+    width: 5.2rem;
+    height: 5.2rem;
     margin: 0.3125rem;
   }
 }

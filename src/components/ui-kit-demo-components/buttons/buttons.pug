@@ -6,4 +6,5 @@ mixin buttons(items)
     +block-sign("standard buttons", "buttons")
     .buttons__container
       each item in items
-        +button(item)
+        .buttons__button
+          +button(item)

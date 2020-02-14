@@ -2,6 +2,17 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    margin-top: 2.9375rem;
+    flex-wrap: wrap;
+    margin-top: 0.9375rem;
+
+    @media screen and (max-width: 1094px) {
+      justify-content: space-around;
+    }
+  }
+
+  &__slider {
+    width: 45%;
+    min-width: 15rem;
+    margin-top: 2rem;
   }
 }

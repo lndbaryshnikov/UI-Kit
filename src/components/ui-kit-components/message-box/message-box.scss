@@ -11,6 +11,11 @@
   border-radius: 0.25rem;
   background-color: $white-smoke;
 
+  @media screen and (max-width: 400px) {
+    width: 15.5rem;
+    height: 25.5rem;
+  }
+
   &__header {
     width: 100%;
     height: 7.1875rem;
@@ -18,6 +23,10 @@
     -webkit-border-radius: inherit;
     -moz-border-radius: inherit;
     border-radius: inherit;
+
+    @media screen and (max-width: 400px) {
+      height: 6rem;
+    }
 
     &:after {
       content: '';
@@ -63,9 +72,14 @@
 
   &__chat {
     height: calc(100% - 1.125rem - 1.8125rem);
-    width: 15.25rem;
+    width: 84.7%;
     margin: 1.125rem auto 1.8125rem;
     position: relative;
+
+    @media screen and (max-width: 400px) {
+      margin-bottom: 1rem;
+      height: calc(100% - 1.125rem - 1rem);
+    }
   }
 
   &__chat-button {
@@ -120,6 +134,10 @@
     line-height: 4.375rem;
     letter-spacing: -0.06375rem;
     text-align: center;
+
+    @media screen and (max-width: 400px) {
+      line-height: 3.7rem;
+    }
   }
 
   &__photo {
@@ -139,9 +157,5 @@
     position: absolute;
     width: 100%;
     bottom: -0.125rem;
-
-    button {
-      padding: 0.3125rem 0.75rem 0 0;
-    }
   }
 }

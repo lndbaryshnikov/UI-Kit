@@ -3,10 +3,11 @@
 
 .user-profile {
   position: relative;
-  width: 18.75rem;
+  max-width: 23rem;
+  min-width: 15rem;
 
   &__tooltip {
-    width: 10.125rem;
+    width: calc(100% - 5.8125rem);
     height: 5.8125rem;
     border-radius: 0.5rem;
     position: absolute;
@@ -87,9 +88,15 @@
     }
   }
 
-  &__links {
+  &__links-container {
+    margin: 0.3125rem auto 0;
+    display: flex;
+    justify-content: space-around;
+    width: 73%;
+  }
+
+  &__link {
     display: inline-block;
-    margin: 0.3125rem 0.16875rem;
     width: 2.1875rem;
     height: 2.1875rem;
     -webkit-border-radius: 50%;

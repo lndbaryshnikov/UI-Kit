@@ -2,7 +2,6 @@
 
 .page-content {
   width: calc(100% - 14.375rem);
-  min-width: 34.375rem;
   min-height: calc(100% - 8.125rem);
   color: $gray;
   padding: 0.625rem;
@@ -10,7 +9,6 @@
 
 .page-wrapper {
   width: 100%;
-  min-width: 48.75rem;
   display: flex;
   flex-direction: row;
 }

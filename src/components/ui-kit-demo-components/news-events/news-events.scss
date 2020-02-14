@@ -1,7 +1,18 @@
 .news-events {
   &__container {
-    margin-top: 2.0625rem;
+    margin-top: 1.0625rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__billboard {
+    margin-top: 1rem;
+    width: 46%;
+    min-width: 18rem;
+
+    @media screen and (max-width: 400px) {
+      min-width: 16.5rem;
+    }
   }
 }

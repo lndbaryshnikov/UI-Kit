@@ -1,5 +1,16 @@
 .calendar-messaging {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__calendar, &__messaging {
+    margin-top: 2.2rem;
+  }
+
+  &__messaging {
+    @media screen and (max-width: 400px) {
+      margin-top: 0;
+    }
+  }
 }
 

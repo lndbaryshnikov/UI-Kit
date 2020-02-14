@@ -3,5 +3,7 @@ include ../messaging/messaging
 
 mixin calendar-messaging(messagingOptions)
   .calendar-messaging
-    +calendar
-    +messaging(messagingOptions)
+    .calendar-messaging__calendar
+      +calendar
+    .calendar-messaging__messaging
+      +messaging(messagingOptions)

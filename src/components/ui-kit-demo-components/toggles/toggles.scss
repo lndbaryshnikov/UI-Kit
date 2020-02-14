@@ -1,6 +1,10 @@
 .toggles {
   width: 100%;
 
+  @media screen and (max-width: 722px) {
+    width: 8rem;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -8,5 +12,9 @@
     width: 103%;
     position: relative;
     right: 0.3125rem;
+
+    @media screen and (max-width: 722px) {
+      width: 100%;
+    }
   }
 }

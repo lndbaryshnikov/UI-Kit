@@ -4,15 +4,12 @@
 @import '../../../styles/variables/colors';
 
 .message-form {
-  width: 18rem;
+  position: relative;
 
   &__data-field {
     &_type {
       &_input {
         margin-bottom: 0.75rem;
-      }
-
-      &_textarea {
       }
     }
   }
@@ -41,7 +38,7 @@
     position: absolute;
     display: inline-block;
     margin-left: 0.4375rem;
-    width: 4.375rem;
+    width: 25%;
     text-transform: uppercase;
     font-size: 0.625rem;
     line-height: 1.625rem;

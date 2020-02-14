@@ -6,4 +6,5 @@ mixin news-events(billboardOptions)
     +block-sign("news & events", "news-events")
     .news-events__container
       each options in billboardOptions
-        +billboard(options)
+        .news-events__billboard
+          +billboard(options)

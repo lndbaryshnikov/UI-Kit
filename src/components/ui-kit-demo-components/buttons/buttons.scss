@@ -1,15 +1,18 @@
 .buttons {
   &__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
+    flex-wrap: wrap;
     margin-top: 4.625rem;
     flex-direction: row;
+    }
 
-    .button__back {
-      &:nth-child(1), &:nth-child(4) {
-        margin-left: 0.0625rem;
-      }
+  &__button {
+    margin-bottom: 1.5rem;
+
+    &:nth-child(1), &:nth-child(4) {
+      margin-left: 0.0625rem;
     }
   }
 }
