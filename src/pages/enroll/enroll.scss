@@ -24,8 +24,14 @@
   }
 
   &__title {
-    margin: 1.25rem;
+    margin: 1rem 1.35rem 1.35rem;
+    font-size: 1.5rem;
+    text-align: center;
     color: $dark-gray;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
 
   &__content {

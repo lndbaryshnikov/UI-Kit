@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year })
+mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year, goTo })
   div(class=`billboard billboard_background-color_${backgroundColor}`)
     img.billboard__image(
       src=require(`../../assets/images/billboard-images/${imageName}.png`)
@@ -19,10 +19,21 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
           .billboard__event-month  #{month}
         .billboard__title.billboard__title_type_event= title
         .billboard__description= content
-        .billboard__button
-          +button({
-            size: "small",
-            color: "cyan",
-            content: "add to calendar",
-            width: "hundred-percents"
-          })
+
+        if goTo
+          form.billboard__button(action=goTo)
+            +button({
+              size: "small",
+              color: "cyan",
+              content: "add to calendar",
+              width: "hundred-percents",
+            })
+
+        else
+          billboard__button
+            +button({
+              size: "small",
+              color: "cyan",
+              content: "add to calendar",
+              width: "hundred-percents",
+            })

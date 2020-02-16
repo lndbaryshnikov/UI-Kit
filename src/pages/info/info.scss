@@ -1,3 +1,4 @@
+@import '../../styles/variables/colors';
 @import '../../styles/common';
 @import '../../styles/site-common';
 @import '../../components/ui-kit-components/video/video';
@@ -8,8 +9,8 @@
   &__title {
     text-align: center;
     font-size: 2rem;
-    color: inherit;
     margin: 1.25rem;
+    color: $dark-gray;
   }
 
   &__description {
