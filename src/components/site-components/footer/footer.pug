@@ -1,13 +1,17 @@
 include ../../ui-kit-components/search-bar/search-bar
 include ../contact-info/contact-info
 
-mixin footer({ name = "UI Masters" , theme = "dark-gray" } = {})
+mixin footer({ name = "UI Masters" , theme = "dark-gray", contacts = { linkColor: "white" }, link = { name: "back to ui-kit", href: "./index.html" } } = {})
   .footer(class=`footer_theme_${theme}`)
     .footer__info
       .footer__name= name
       .footer__contacts
-        +contact-info({linkColor: "white"})
-    .footer__search
+        +contact-info(contacts)
+    .footer__navigation
       .footer__search-sign search
       .footer__search-bar
         +search-bar
+
+      - var { name, href } = link;
+
+      a.footer__link(href=href)= name

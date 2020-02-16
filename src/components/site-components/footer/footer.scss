@@ -8,7 +8,7 @@
   height: 8rem;
 
   @media screen and (max-width: 500px) {
-    height: 13rem;
+    height: 16rem;
   }
 
   &_theme {
@@ -27,7 +27,7 @@
 
     @media screen and (max-width: 500px) {
       float: none;
-      height: 60%;
+      height: 55%;
       width: 100%;
       border-right: none;
       border-bottom: 0.2rem solid black;
@@ -44,10 +44,11 @@
     }
   }
 
-  &__search {
+  &__navigation {
     width: calc(100% - 20rem);
     float: left;
     padding-top: 1.3rem;
+    text-align: center;
 
     @media screen and (max-width: 500px) {
       float: none;
@@ -58,7 +59,6 @@
 
   &__search-sign {
     font-size: 1.3rem;
-    text-align: center;
     text-transform: uppercase;
     margin-bottom: 0.3rem;
   }
@@ -69,6 +69,18 @@
 
     @media screen and (max-width: 722px) {
       width: 80%;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 0.7rem;
+    color: $rose-white;
+    text-decoration: none;
+
+    &:hover {
+      color: $dark-orange-red;
     }
   }
 }
