@@ -1,62 +1,58 @@
 @import '../../../styles/variables/colors';
 
 .text-field {
-  height: 1.75rem;
   background-color: $light-gray;
-  border: none;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
+  border: 0;
   border-radius: 0.25rem;
-  outline: none;
-  transition: box-shadow 0.3s;
   color: $gray;
   font-family: 'Source Sans Pro';
   font-size: 0.875rem;
+  height: 1.75rem;
   letter-spacing: 0.00875rem;
+  outline: none;
   padding-left: 0.75rem;
+  transition: box-shadow 0.3s;
 
   &:focus {
-    box-shadow: 0 0 0.3125rem black;
+    box-shadow: 0 0 0.3125rem #000;
   }
 
   &_type {
     &_for-search-bar {
-      width: 100%;
-      -webkit-border-radius: 0.25rem 0 0 0.25rem;
-      -moz-border-radius: 0.25rem 0 0 0.25rem;
       border-radius: 0.25rem 0 0 0.25rem;
+      box-sizing: border-box;
       font-size: 0.9375rem;
       padding: 0 0 0.125rem 0.9vw;
-      box-sizing: border-box;
+      width: 100%;
     }
 
     &_for-message-form {
       @at-root {
         input#{&} {
-          width: 68%;
-          height: 1.5rem;
-          padding-left: 0.8125rem;
-          padding-bottom: 0.2125rem;
           font-size: 0.9375rem;
+          height: 1.5rem;
+          padding-bottom: 0.2125rem;
+          padding-left: 0.8125rem;
+          width: 68%;
         }
 
         textarea#{&} {
-          width: 94.5%;
           height: 4.75rem;
-          resize: none;
-          padding-top: 0.50625rem;
           padding-left: 0.84375rem;
+          padding-top: 0.50625rem;
+          resize: none;
+          width: 94.5%;
         }
       }
     }
 
     &_for-message-box {
       border: 0.1875rem solid $white;
-      width: calc(100% - 1.5625rem);
       height: 3.875rem;
-      padding-top: 1rem;
       padding-left: 1.125rem;
+      padding-top: 1rem;
       resize: none;
+      width: calc(100% - 1.5625rem);
     }
   }
 }

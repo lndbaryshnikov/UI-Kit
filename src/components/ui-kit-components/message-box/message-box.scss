@@ -4,44 +4,40 @@
 @import '../../../styles/variables/colors';
 
 .message-box {
-  width: 18rem;
-  height: 26.75rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem;
   background-color: $white-smoke;
+  border-radius: 0.25rem;
+  height: 26.75rem;
+  width: 18rem;
 
   @media screen and (max-width: 400px) {
-    width: 15.5rem;
     height: 25.5rem;
+    width: 15.5rem;
   }
 
   &__header {
-    width: 100%;
+    border-radius: inherit;
     height: 7.1875rem;
     position: relative;
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    border-radius: inherit;
+    width: 100%;
 
     @media screen and (max-width: 400px) {
       height: 6rem;
     }
 
-    &:after {
+    &::after {
+      bottom: 0;
       content: '';
+      height: 2.125rem;
+      left: 0;
       position: absolute;
       width: 100%;
-      height: 2.125rem;
-      bottom: 0;
-      left: 0;
     }
 
     &_theme {
       &_cyan {
         background-color: $cyan;
 
-        &:after {
+        &::after {
           background-color: $dark-cyan;
         }
       }
@@ -49,7 +45,7 @@
       &_orange-red {
         background-color: $orange-red;
 
-        &:after {
+        &::after {
           background-color: $dark-orange-red;
         }
       }
@@ -57,73 +53,66 @@
   }
 
   &__body {
-    width: 100%;
     height: calc(100% - 7.1875rem);
+    width: 100%;
   }
 
   &__camera-button {
-    width: 1.5625rem;
-    height: 1.5625rem;
     background: url('icons/camera-icon.svg') center no-repeat;
     display: inline-block;
+    height: 1.5625rem;
     position: absolute;
     right: 0.3125rem;
+    width: 1.5625rem;
   }
 
   &__chat {
     height: calc(100% - 1.125rem - 1.8125rem);
-    width: 84.7%;
     margin: 1.125rem auto 1.8125rem;
     position: relative;
+    width: 84.7%;
 
     @media screen and (max-width: 400px) {
-      margin-bottom: 1rem;
       height: calc(100% - 1.125rem - 1rem);
+      margin-bottom: 1rem;
     }
   }
 
   &__chat-button {
-    width: 1.5625rem;
-    height: 1.5625rem;
     background: url('icons/chat-icon.svg') center no-repeat;
     display: inline-block;
-    position: absolute;
+    height: 1.5625rem;
     left: 0;
+    position: absolute;
     top: 0.125rem;
+    width: 1.5625rem;
   }
 
   &__message {
-    width: calc(100% - 2.5rem);
-    height: 2rem;
-    position: absolute;
-    top: 2.6875rem;
-    padding: 1.25rem;
     background-color: $white;
-    -webkit-border-radius: 0.3125rem;
-    -moz-border-radius: 0.3125rem;
     border-radius: 0.3125rem;
-    text-align: left;
-
     color: $gray;
     font-size: 0.8125rem;
+    height: 2rem;
     letter-spacing: 0.039375rem;
+    padding: 1.25rem;
+    position: absolute;
+    text-align: left;
+    top: 2.6875rem;
+    width: calc(100% - 2.5rem);
 
     &::after {
-      content: '';
-      width: 0.625rem;
-      height: 0.625rem;
-      position: absolute;
-      bottom: calc(100% - 0.34375rem);
-      left: 47%;
       background-color: inherit;
-      border-width: 0.375rem;
-      margin-top: -0.375rem;
       border-radius: 0.125rem;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
+      border-width: 0.375rem;
+      bottom: calc(100% - 0.34375rem);
+      content: '';
+      height: 0.625rem;
+      left: 47%;
+      margin-top: -0.375rem;
+      position: absolute;
       transform: rotate(45deg);
+      width: 0.625rem;
     }
   }
 
@@ -131,8 +120,8 @@
     color: $white;
     font-family: 'Source Sans Pro';
     font-size: 2.125rem;
-    line-height: 4.375rem;
     letter-spacing: -0.06375rem;
+    line-height: 4.375rem;
     text-align: center;
 
     @media screen and (max-width: 400px) {
@@ -141,9 +130,9 @@
   }
 
   &__photo {
-    position: absolute;
-    left: calc(50% - 6.3125rem / 2);
     bottom: calc(-5.875rem / 2);
+    left: calc(50% - 6.3125rem / 2);
+    position: absolute;
     z-index: 1;
   }
 
@@ -154,8 +143,8 @@
   }
 
   &__reply-button {
+    bottom: -0.125rem;
     position: absolute;
     width: 100%;
-    bottom: -0.125rem;
   }
 }

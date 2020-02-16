@@ -2,34 +2,30 @@
 @import '../../../styles/variables/colors';
 
 .user-profile {
-  position: relative;
   max-width: 23rem;
   min-width: 15rem;
+  position: relative;
 
   &__tooltip {
-    width: calc(100% - 5.8125rem);
-    height: 5.8125rem;
     border-radius: 0.5rem;
-    position: absolute;
-    top: 0.03125rem;
+    height: 5.8125rem;
     left: 6.5625rem;
+    position: absolute;
     text-align: center;
+    top: 0.03125rem;
+    width: calc(100% - 5.8125rem);
 
     &::after {
+      border-radius: 0.125rem;
+      border-width: 0.375rem;
       content: '';
-      width: 0.625rem;
       height: 0.625rem;
+      margin-top: -0.375rem;
       position: absolute;
       right: calc(100% - 0.34375rem);
       top: calc(50% + 0.1875rem);
-      border-width: 0.375rem;
-      margin-top: -0.375rem;
-      border-radius: 0.125rem;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
       transform: rotate(45deg);
+      width: 0.625rem;
     }
 
     &_color {
@@ -52,11 +48,11 @@
   }
 
   &__name {
-    font-size: 1.125rem;
-    margin-top: 0.75rem;
-    margin-bottom: 0.25rem;
     display: block;
+    font-size: 1.125rem;
     line-height: 1.125rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.75rem;
 
     &_color {
       &_orange-red {
@@ -70,12 +66,12 @@
   }
 
   &__job {
-    text-transform: uppercase;
     color: $dark-gray;
+    display: block;
     font-size: 0.6875rem;
     letter-spacing: 0.034375rem;
-    display: block;
     line-height: 0.6875rem;
+    text-transform: uppercase;
 
     &_color {
       &_black {
@@ -89,40 +85,34 @@
   }
 
   &__links-container {
-    margin: 0.3125rem auto 0;
     display: flex;
     justify-content: space-around;
+    margin: 0.3125rem auto 0;
     width: 73%;
   }
 
   &__link {
-    display: inline-block;
-    width: 2.1875rem;
-    height: 2.1875rem;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2.1875rem;
     position: relative;
+    width: 2.1875rem;
 
     &::after {
       content: '';
-      width: 1.875rem;
       height: 1.875rem;
-      position: absolute;
-      top: 0;
       left: 0;
       opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 1.875rem;
     }
 
     &_theme {
       &_cyan {
         background-color: rgba(20, 202, 130, 0);
-        -webkit-transition: background-color 1s;
-        -moz-transition: background-color 1s;
-        -ms-transition: background-color 1s;
-        -o-transition: background-color 1s;
         transition: background-color 1s;
 
         &:nth-of-type(1) {
@@ -148,22 +138,18 @@
 
       &_orange-red {
         background-color: rgba(216, 187, 71, 0);
-        -webkit-transition: background-color 1s;
-        -moz-transition: background-color 1s;
-        -ms-transition: background-color 1s;
-        -o-transition: background-color 1s;
         transition: background-color 1s;
 
         &:nth-of-type(1) {
-          background-image: url(icons/fb-white.png);
+          background-image: url('icons/fb-white.png');
         }
 
         &:nth-of-type(2) {
-          background-image: url(icons/twitter-white.png);
+          background-image: url('icons/twitter-white.png');
         }
 
         &:nth-of-type(3) {
-          background-image: url(icons/dribbble-white.png);
+          background-image: url('icons/dribbble-white.png');
         }
 
         &:hover {

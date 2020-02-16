@@ -10,7 +10,10 @@
     "watch": "webpack --mode development --watch --env development",
     "server": "webpack-dev-server --mode development --open --env development",
     "deploy": "gh-pages -d dist",
-    "eslint": "eslint src"
+    "eslint": "eslint src",
+    "pug-lint": "pug-lint --config .pug-lintrc src",
+    "stylelint": "stylelint --config .stylelintrc \"src/**/*.scss\"",
+    "stylelint-fix": "stylelint --config .stylelintrc \"src/**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "gh-pages": "^2.0.1",
+    "pug-lint": "^2.6.0",
+    "stylelint": "^13.1.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {

@@ -3,6 +3,6 @@ mixin user-photo(name)
     img.user-photo__image(
       src=require(
         `../../components/ui-kit-components/user-photo/photos/${name.toLowerCase().replace(" ", "-")}.png`
-      )
+      ),
       alt=name
     )

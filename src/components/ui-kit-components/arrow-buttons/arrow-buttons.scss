@@ -3,8 +3,8 @@
 @import '../../../styles/variables/colors';
 
 .arrow-buttons {
-  height: 3.125rem;
   display: flex;
+  height: 3.125rem;
   justify-content: space-between;
 
   &_width {
@@ -28,85 +28,59 @@
   }
 
   &__arrow-container {
-    width: 2.8125rem;
-    height: 2.8125rem;
     border: 0.1875rem solid $cyan;
-
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
+    height: 2.8125rem;
 
     //for ripple-effect:
     overflow: hidden;
     position: relative;
-
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -ms-transition: background-color 0.5s;
-    -o-transition: background-color 0.5s;
     transition: background-color 0.5s;
+    width: 2.8125rem;
 
     &:hover {
+      background-color: $cyan;
+
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
         border-color: $white;
       }
-
-      background-color: $cyan;
     }
 
     &_disabled {
-      .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
-        border-color: $white;
-        animation: none;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-
       background-color: $light-gray;
       border-color: $light-gray;
+      transition: background-color 0.5s, border-color 0.5s;
+
+      .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
+        animation: none;
+        border-color: $white;
+        transform: rotate(45deg);
+      }
 
       &:hover {
         background-color: $dark-gray;
         border-color: $dark-gray;
       }
-
-      -webkit-transition: background-color 0.5s, border-color 0.5s;
-      -moz-transition: background-color 0.5s, border-color 0.5s;
-      -ms-transition: background-color 0.5s, border-color 0.5s;
-      -o-transition: background-color 0.5s, border-color 0.5s;
-      transition: background-color 0.5s, border-color 0.5s;
     }
   }
 
   &__left-arrow, &__right-arrow {
-    width: 0.84375rem;
     height: 0.84375rem;
     margin: 0.84375rem auto;
+    width: 0.84375rem;
   }
 
   &__right-arrow {
-    border-top: 0.21875rem solid $cyan;
     border-right: 0.21875rem solid $cyan;
+    border-top: 0.21875rem solid $cyan;
     margin-right: 1.125rem;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
   &__left-arrow {
-    border-left: 0.21875rem solid $cyan;
     border-bottom: 0.21875rem solid $cyan;
+    border-left: 0.21875rem solid $cyan;
     margin-left: 1.125rem;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 }
-

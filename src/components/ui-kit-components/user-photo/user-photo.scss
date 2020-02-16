@@ -1,16 +1,14 @@
 @import '../../../styles/variables/colors';
 
 .user-photo {
-  width: 5.8125rem;
-  height: 5.8125rem;
   background-color: $light-gray;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
+  height: 5.8125rem;
+  width: 5.8125rem;
 
   &__image {
-    width: 5.2rem;
     height: 5.2rem;
     margin: 0.3125rem;
+    width: 5.2rem;
   }
 }

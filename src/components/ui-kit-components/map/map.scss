@@ -8,8 +8,8 @@
   }
 
   &__footer {
-    height: 4.3125rem;
     background-color: $orange-red;
+    height: 4.3125rem;
 
     @media screen and (max-width: 400px) {
       height: 6rem;
@@ -17,17 +17,17 @@
   }
 
   &__footer-sign {
-    float: left;
-    width: 7.5rem;
     color: $white;
+    float: left;
     font-size: 1.875rem;
-    padding-right: 1.125rem;
-    padding-left: 1.6875rem;
     line-height: 4.3125rem;
+    padding-left: 1.6875rem;
+    padding-right: 1.125rem;
+    width: 7.5rem;
 
     @media screen and (max-width: 600px) {
-      padding-right: 0.6rem;
       padding-left: 0.8rem;
+      padding-right: 0.6rem;
     }
 
     @media screen and (max-width: 400px) {
@@ -37,14 +37,14 @@
   }
 
   &__footer-address {
-    float: left;
-    width: 9.0625rem;
-    height: 1.625rem;
     color: $white;
+    float: left;
     font-size: 0.8125rem;
-    text-transform: uppercase;
+    height: 1.625rem;
     letter-spacing: 0.039375rem;
     padding-top: 1.2rem;
+    text-transform: uppercase;
+    width: 9.0625rem;
 
     @media screen and (max-width: 400px) {
       float: none;
@@ -55,9 +55,9 @@
   &__icon {
     background: no-repeat url('icons/map-marker.svg');
     float: right;
-    width: 1.5rem;
     height: 2rem;
     margin: 1.375rem 1.2rem 1.4375rem 0;
+    width: 1.5rem;
 
     @media screen and (max-width: 500px) {
       display: none;
@@ -69,54 +69,54 @@
   }
 
   &__button {
-    width: 2rem;
-    height: 2rem;
     background: no-repeat url('icons/map-target.svg');
-    float: right;
-    margin: 1.3125rem 1rem 1.375rem 0;
     cursor: pointer;
+    float: right;
+    height: 2rem;
+    margin: 1.3125rem 1rem 1.375rem 0;
+    width: 2rem;
   }
 
   &__icon, &__button {
     @media screen and (max-width: 400px) {
+      bottom: 2.5rem;
       margin: 1rem;
       position: relative;
-      bottom: 2.5rem;
     }
   }
 
   &__map-marker {
     background-color: $orange-red;
-    width: 2.5625rem;
-    height: 2.9375rem;
-    display: block;
-    left: -1.5rem;
-    top: -1.5rem;
-    position: relative;
-    border-radius: 50%;
     border: 0.0625rem solid $orange-red;
+    border-radius: 50%;
+    display: block;
+    height: 2.9375rem;
+    left: -1.5rem;
+    position: relative;
+    top: -1.5rem;
+    width: 2.5625rem;
 
     &::after {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 0;
-      bottom: -2.78125rem;
-      left: -0.09375rem;
       border: 1.3625rem solid transparent;
-      border-top: 2.5rem solid $orange-red;
       border-radius: 0 0 0.625rem 0.625rem;
+      border-top: 2.5rem solid $orange-red;
+      bottom: -2.78125rem;
+      content: '';
+      height: 0;
+      left: -0.09375rem;
+      position: absolute;
+      width: 0;
     }
   }
 
   &__map-marker-circle {
-    position: absolute;
     background-color: $white;
-    width: 1.0625rem;
-    height: 1.0625rem;
     border-radius: 50%;
+    height: 1.0625rem;
     left: 0.75rem;
+    position: absolute;
     top: 30%;
+    width: 1.0625rem;
     z-index: 1;
   }
 }

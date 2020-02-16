@@ -6,15 +6,15 @@
 
   &__title {
     color: $dark-gray;
-    text-align: center;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   &__chart {
+    align-items: center;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
   }
 
   &__sign {

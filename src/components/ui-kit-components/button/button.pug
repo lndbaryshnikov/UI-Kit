@@ -8,12 +8,6 @@ mixin button({ size, color, content, width })
 
   div(class=["button", backSize, `button_color_${color}`])
     button(
-      type="submit"
+      type="submit",
       class=["button__button", `button__button_size_${size}`, `button__button_color_${color}`, "ripple"]
     )= content
-
-
-
-
-
-

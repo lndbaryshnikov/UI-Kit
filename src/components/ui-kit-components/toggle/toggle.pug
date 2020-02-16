@@ -1,13 +1,13 @@
 mixin toggle(isChecked, { id, name, value = "on" } = {})
   label.toggle
     if name && id
-      input.toggle__input(type="checkbox" id=`toggle-${id}` name=name value=value checked=isChecked)
+      input.toggle__input(type="checkbox", id=`toggle-${id}`, name=name, value=value, checked=isChecked)
     else if name
-      input.toggle__input(type="checkbox" name=name value=value checked=isChecked)
+      input.toggle__input(type="checkbox", name=name, value=value, checked=isChecked)
     else if id
-      input.toggle__input(type="checkbox" id=`toggle-${id}` checked=isChecked)
+      input.toggle__input(type="checkbox", id=`toggle-${id}`, checked=isChecked)
     else
-      input.toggle__input(type="checkbox" checked=isChecked)
+      input.toggle__input(type="checkbox", checked=isChecked)
 
     span.toggle__slider
     .toggle__sign.toggle__sign_off off

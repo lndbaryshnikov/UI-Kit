@@ -1,13 +1,13 @@
 .form-elements {
   &__container {
-    margin-top: 2.8rem;
+    align-items: flex-start;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    margin-top: 2.8rem;
 
     @media screen and (max-width: 722px) {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
   }
 
@@ -16,8 +16,8 @@
     width: 18rem;
 
     @media screen and (max-width: 722px) {
-      width: 70%;
       margin-bottom: 1.5rem;
+      width: 70%;
     }
 
     @media screen and (max-width: 400px) {
@@ -26,18 +26,18 @@
   }
 
   &__toggles-container {
-    width: 8.125rem;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
     margin-left: 6.375rem;
+    width: 8.125rem;
 
     @media screen and (max-width: 722px) {
       flex-flow: row wrap;
-      width: 90%;
-      margin-top: 1rem;
       margin-left: 0;
+      margin-top: 1rem;
+      width: 90%;
     }
 
     @media screen and (max-width: 400px) {
@@ -47,13 +47,13 @@
   }
 
   &__tick-boxes {
-    width: 100%;
-    margin-top: 2.5rem;
     margin-right: 0.3125rem;
+    margin-top: 2.5rem;
+    width: 100%;
 
     @media screen and (max-width: 722px) {
-      width: 8rem;
       margin: 0;
+      width: 8rem;
     }
 
     @media screen and (max-width: 400px) {

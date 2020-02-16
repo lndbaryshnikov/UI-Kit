@@ -1,15 +1,15 @@
 @import '../../../styles/variables/colors';
 
 .tick-box {
-  position: relative;
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
 
   &__input {
-    position: absolute;
-    opacity: 0;
     cursor: pointer;
     height: 0;
+    opacity: 0;
+    position: absolute;
     width: 0;
 
     &:checked {
@@ -36,29 +36,21 @@
   }
 
   &__check-mark-container {
-    width: 1.5rem;
-    height: 1.4375rem;
     background-color: $cyan;
     border-radius: 50%;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
+    height: 1.4375rem;
+    transition: 0.3s;
+    width: 1.5rem;
   }
 
   &__check-mark {
-    width: 0.625rem;
+    border-bottom: 0.125rem solid #000;
+    border-left: 0.125rem solid #000;
     height: 0.3125rem;
-    border-bottom: 0.125rem solid black;
-    border-left: 0.125rem solid black;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    position: absolute;
     left: 25%;
+    position: absolute;
     top: 25%;
+    transform: rotate(-45deg);
+    width: 0.625rem;
   }
 }

@@ -2,14 +2,14 @@
 @import '../../ui-kit-components/user-profile/user-profile';
 
 .teachers {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
+  justify-content: space-between;
 
   &__sign {
-    font-size: 1.3rem;
     color: $dark-gray;
+    font-size: 1.3rem;
   }
 }

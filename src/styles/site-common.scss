@@ -14,11 +14,11 @@ html {
 }
 
 .page-content {
-  width: 70%;
-  margin: auto;
   color: $gray;
-  padding-top: 2rem;
+  margin: auto;
   padding-bottom: 2rem;
+  padding-top: 2rem;
+  width: 70%;
 
   @media screen and (max-width: 1094px) {
     width: 85%;

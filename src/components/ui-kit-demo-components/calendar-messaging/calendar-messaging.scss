@@ -1,7 +1,7 @@
 .calendar-messaging {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   &__calendar, &__messaging {
     margin-top: 2.2rem;

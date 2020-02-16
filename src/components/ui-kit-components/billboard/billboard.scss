@@ -2,12 +2,10 @@
 @import '../../../styles/variables/colors';
 
 .billboard {
-  height: 13.25rem;
-  display: flex;
-  -webkit-border-radius: 0.1875rem;
-  -moz-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
   color: $white;
+  display: flex;
+  height: 13.25rem;
   min-width: 18rem;
 
   @media screen and (max-width: 400px) {
@@ -25,17 +23,17 @@
   }
 
   &__content {
-    margin: 0.6875rem 1.25rem 0 1.25rem;
+    margin: 0.6875rem 1.25rem 0;
     width: 67%;
 
     @media screen and (max-width: 400px) {
-      margin: 0.4rem 0.6rem 0 0.6rem;
+      margin: 0.4rem 0.6rem 0;
     }
   }
 
   &__image {
-    width: 5.9375rem;
     height: 13.25rem;
+    width: 5.9375rem;
   }
 
   &__description {
@@ -49,40 +47,40 @@
   &__date {
     &_type {
       &_event {
+        height: 4.375rem;
         margin-bottom: 1.125rem;
         vertical-align: middle;
-        height: 4.375rem;
       }
 
       &_new {
         font-size: 0.6875rem;
-        text-transform: uppercase;
         letter-spacing: 0.034375rem;
         margin: 0.625rem 0 0.8125rem 0.1875rem;
+        text-transform: uppercase;
       }
     }
   }
 
   &__event-day {
+    display: inline-block;
     font-size: 4.5625rem;
     letter-spacing: -0.1825rem;
-    display: inline-block;
   }
 
   &__event-month {
     display: inline-block;
-    margin-left: 0.875rem;
     font-size: 1.875rem;
+    margin-left: 0.875rem;
   }
 
   &__title {
     &_type {
       &_event {
         font-size: 0.8125rem;
-        text-transform: uppercase;
-        line-height: 1.25rem;
         letter-spacing: 0.039375rem;
+        line-height: 1.25rem;
         margin-left: 0.0625rem;
+        text-transform: uppercase;
       }
 
       &_new {
@@ -94,7 +92,7 @@
   }
 
   &__button {
-    width: 87%;
     margin: 1.25rem auto;
+    width: 87%;
   }
 }

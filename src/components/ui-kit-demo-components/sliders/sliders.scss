@@ -1,8 +1,8 @@
 .sliders {
   &__container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 0.9375rem;
 
     @media screen and (max-width: 1094px) {
@@ -11,8 +11,8 @@
   }
 
   &__slider {
-    width: 45%;
-    min-width: 15rem;
     margin-top: 2rem;
+    min-width: 15rem;
+    width: 45%;
   }
 }

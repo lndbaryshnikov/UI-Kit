@@ -5,9 +5,9 @@
 
 .slider {
   &__scale {
-    width: 100%;
-    height: 0.3125rem;
     border-radius: 0.625rem;
+    height: 0.3125rem;
+    width: 100%;
 
     &_color {
       &_gray {
@@ -45,14 +45,12 @@
   }
 
   &__handle {
-    width: 1.21875rem;
-    height: 1.21875rem;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
+    cursor: pointer !important;
+    height: 1.21875rem;
     outline: none;
     top: -0.4375rem !important;
-    cursor: pointer !important;
+    width: 1.21875rem;
 
     &_color {
       &_green {
@@ -72,32 +70,29 @@
   }
 
   &__tooltip {
-    position: absolute;
-    top: -2.0625rem;
-    left: -0.5rem;
-    width: 2.1875rem;
-    height: 1.5rem;
     background-color: $orange-red;
-    font-size: 0.8125rem;
-    line-height: 1.75rem;
-    letter-spacing: 0.040625rem;
-    color: $white;
-    text-align: center;
     border-radius: 20%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    color: $white;
+    font-size: 0.8125rem;
+    height: 1.5rem;
+    left: -0.5rem;
+    letter-spacing: 0.040625rem;
+    line-height: 1.75rem;
+    position: absolute;
+    text-align: center;
+    top: -2.0625rem;
     user-select: none;
+    width: 2.1875rem;
 
     &::after {
+      border-color: $orange-red transparent transparent transparent;
+      border-style: solid;
+      border-width: 0.3125rem;
       content: '';
+      left: 50%;
+      margin-left: -0.34375rem;
       position: absolute;
       top: 100%;
-      left: 50%;
-      border-width: 0.3125rem;
-      margin-left: -0.34375rem;
-      border-style: solid;
-      border-color: $orange-red transparent transparent transparent;
     }
   }
 
@@ -108,17 +103,17 @@
       }
 
       .ui-slider-pip {
+        color: #d1d1d1;
         font-size: 0.6875rem;
         letter-spacing: 0.034375rem;
-        color: #d1d1d1;
         top: 0.625rem;
       }
     }
 
     &_stages {
       .ui-slider-label {
-        z-index: 1000;
         padding-top: 0.0625rem;
+        z-index: 1000;
       }
 
       .ui-slider-line {
@@ -126,28 +121,26 @@
       }
 
       .ui-slider-pip {
+        background-color: $light-gray;
+        border-radius: 50%;
+        color: $gray;
         font-size: 0.875rem;
+        height: 1.8125rem;
         letter-spacing: 0.04375rem;
         line-height: 1.125rem;
-        color: $gray;
+        text-align: center;
         top: -0.75rem;
         width: 1.8125rem;
-        height: 1.8125rem;
-        background-color: $light-gray;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        text-align: center;
 
         &-selected {
-          color: $white;
           background-color: $orange-red;
+          color: $white;
         }
       }
 
       .ui-slider-pip-inrange {
-        color: $white;
         background-color: $orange-red;
+        color: $white;
       }
     }
   }

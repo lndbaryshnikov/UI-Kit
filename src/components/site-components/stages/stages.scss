@@ -7,25 +7,25 @@
   text-align: center;
 
   &__title {
-    font-size: 1.5rem;
     color: $dark-gray;
+    font-size: 1.5rem;
   }
 
   &__stage {
     font-size: 1.5rem;
-    text-decoration: underline;
     position: relative;
+    text-decoration: underline;
     top: 2.8125rem;
 
     @media screen and (max-width: 400px) {
-      top: 0;
       margin: 1rem 0;
+      top: 0;
     }
   }
 
   &__arrows {
-    width: 80%;
     margin: 0.625rem auto 2.5rem;
+    width: 80%;
 
     @media screen and (max-width: 600px) {
       width: 95%;
@@ -33,8 +33,8 @@
   }
 
   &__slider {
-    width: 100%;
     margin: auto;
+    width: 100%;
 
     .slider.slider_with_stages {
       .ui-slider-pip {

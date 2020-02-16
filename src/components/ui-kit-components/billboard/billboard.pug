@@ -3,7 +3,7 @@ include ../button/button
 mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year, goTo })
   div(class=`billboard billboard_background-color_${backgroundColor}`)
     img.billboard__image(
-      src=require(`../../assets/images/billboard-images/${imageName}.png`)
+      src=require(`../../assets/images/billboard-images/${imageName}.png`),
       alt=imageName
     )
 

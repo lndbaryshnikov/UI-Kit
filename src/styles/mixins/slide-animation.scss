@@ -1,8 +1,4 @@
 @mixin animation($translateX, $scale) {
-  -webkit-transform: translateX($translateX) scale($scale) rotate(45deg);
-  -moz-transform: translateX($translateX) scale($scale) rotate(45deg);
-  -ms-transform: translateX($translateX) scale($scale) rotate(45deg);
-  -o-transform: translateX($translateX) scale($scale) rotate(45deg);
   transform: translateX($translateX) scale($scale) rotate(45deg);
 }
 
@@ -27,6 +23,6 @@
   }
 
   100% {
-    @include animation(0px, 1);
+    @include animation(0, 1);
   }
 }

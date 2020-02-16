@@ -1,12 +1,12 @@
 @import '../../../styles/variables/colors';
 
 .block-sign {
-  text-align: center;
-  text-transform: uppercase;
+  color: $dark-gray;
   font-size: 1.1rem;
   font-weight: 900;
-  color: $dark-gray;
   letter-spacing: 0.15rem;
+  text-align: center;
+  text-transform: uppercase;
 
   &_type {
     &_for-charts {
@@ -14,13 +14,13 @@
     }
 
     &_for-profile {
-      margin-right: 0.625rem;
       letter-spacing: 0.15625rem;
+      margin-right: 0.625rem;
     }
 
     &_for-sliders {
-      position: relative;
       left: 0.5625rem;
+      position: relative;
     }
 
     &_for-video-box {
