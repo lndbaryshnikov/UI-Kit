@@ -3,112 +3,92 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#1a911d">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/site-favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/site-favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/site-favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site-favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/site-favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicons/site-favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="msapplication-config" content="assets/favicons/site-favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="ui-kit-demo (set of UI elements)">
-    <title>UI-Kit</title>
     <meta name="description" content="School contact">
     <title>Contact</title>
   <link href="./css/contact.css" rel="stylesheet"></head>
   <body>
-    <header class="header">
-      <div class="header__left header__left_color_orange-red"><a class="header__link" href="./index.html">BACK TO UI-KIT</a>
-        <div class="header__navigation">
-          <div class="navigation">
-            <div class="navigation__sign">NAVIGATION</div>
-            <div class="navigation__search-bar">
-              <div class="search-bar search-bar_size_hundred-percents">
-                <form>
-                  <div class="search-bar__input">
-                    <input class="text-field text-field_type_for-search-bar" type="search" name="search" placeholder="Search"></input>
-                  </div>
-                  <button class="search-bar__button" type="submit"></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__right">
-        <div class="header__name">UI Design Courses Kazan</div>
-      </div>
+    <header class="header header_color_orange-red">
+      <header class="header__name">UI Masters</header>
+      <nav class="header__navigation"><a class="header__link" href="./info.html">Info</a><a class="header__link" href="./details.html">Details</a><a class="header__link" href="./enroll.html">Enroll</a><a class="header__link" href="./contact.html">Contact</a>
+      </nav>
     </header>
-    <div class="page-wrapper">
-      <aside class="menu">
-        <nav class="menu__pages"><a href="./info.html">Information</a><a href="./details.html">Course details</a><a href="./enroll.html">Enroll in a course</a><a href="./contact.html">Contact us</a>
-        </nav>
-        <div class="menu__message-box">
-          <div class="menu-message">
-            <div class="menu-message__header js-menu-message__header">Message us</div>
-            <div class="menu-message__message-box js-menu-message__message-box">
-              <div class="message-box js-message-box" id="Sarah Brown">
-                <div class="message-box__header message-box__header_theme_orange-red">
-                  <div class="message-box__name js-message-box__name"></div>
-                  <div class="message-box__photo">
-                    <div class="user-photo"><img src="assets/images/sarah-brown.png" alt="Sarah Brown"></div>
-                  </div>
-                </div>
-                <div class="message-box__body">
-                  <div class="message-box__chat"><a class="message-box__chat-button" href="/mock-address/change-me"></a><a class="message-box__camera-button" href="/mock-address/change-me"></a>
-                    <div class="message-box__message js-message-box__message"></div>
-                    <form method="post">
-                      <div class="message-box__reply">
-                        <textarea class="text-field text-field_type_for-message-box" name="reply" placeholder="Your reply here..."></textarea>
-                      </div>
-                      <div class="message-box__reply-button">
-                        <div class="button button_size_standard button_width_hundred-percents button_color_orange-red">
-                          <button class="button__button button__button_size_standard button__button_color_orange-red ripple" type="submit">reply</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+    <main class="page-content">
+      <div class="contact">
+        <div class="contact__address-billboard">
+          <div class="contact__address">You can find us at Ostrovsky street, 38, Kazan<br>
+            <div class="contact-info">
+              tel:
+              
+              <div class="contact-link"><a class="contact-link__link contact-link__link_color_dark-gray" href="tel: +7 (905) 245-74-83" target="_blank" rel="noopener noreferrer">+7 (905) 245-74-83</a></div><br>mail:
+              
+              <div class="contact-link"><a class="contact-link__link contact-link__link_color_dark-gray" href="mailto: kazandesign@gmail.com" target="_blank" rel="noopener noreferrer">kazandesign@gmail.com</a></div>
             </div>
           </div>
-        </div>
-      </aside>
-      <div class="page-content">
-        <div class="contact">
-          <div class="contact__address-billboard">
-            <div class="contact__address">
-              You can find us at Ostrovsky street, 38, Kazan <br /> +7 (905) 245-74-83 <br /> kazandesign@gmail.com</div>
-            <div class="billboard billboard_background-color_cyan">
-              <div class="billboard__image"><img src="assets/images/course-event.png" alt="course-event"></div>
+          <div class="contact__billboard">
+            <div class="billboard billboard_background-color_cyan"><img class="billboard__image" src="assets/images/course-event.png" alt="course-event">
               <div class="billboard__content">
                 <div class="billboard__date billboard__date_type_event">
                   <div class="billboard__event-day">14</div>
                   <div class="billboard__event-month"> Feb</div>
                 </div>
                 <div class="billboard__title billboard__title_type_event">first lesson</div>
-                <div class="billboard__description">First lesson starts in February 14yh. Hurry up to sign up!</div>
-                <div class="billboard__button">
+                <div class="billboard__description">First lesson starts in February 14th. Hurry up to sign up!</div>
+                <form class="billboard__button" action="./enroll.html">
                   <div class="button button_size_small button_width_hundred-percents button_color_cyan">
                     <button class="button__button button__button_size_small button__button_color_cyan ripple" type="submit">add to calendar</button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="contact__map">
-            <div class="map js-map" style="height: 250px">
-              <div class="map__map-container js-map__map-container" data-longitude="55.785124" data-latitude="49.121856" data-zoom="14"></div>
-              <div class="map__footer">
-                <div class="map__footer-sign">Meet us!</div>
-                <div class="map__footer-address">Ostrovsky Street, 38. Kazan</div>
-                <div class="map__icon"></div>
-                <div class="map__button js-map__button"></div>
-              </div>
+        </div>
+        <div class="contact__map">
+          <div class="map js-map">
+            <div class="map__map-container js-map__map-container" data-longitude="55.785124" data-latitude="49.121856" data-zoom="14"></div>
+            <div class="map__footer">
+              <div class="map__footer-sign">Meet us!</div>
+              <div class="map__footer-address">Ostrovsky Street, 38. Kazan</div>
+              <div class="map__icon"></div>
+              <div class="map__button js-map__button"></div>
             </div>
-            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
-            <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+          </div>
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
+          <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+        </div>
+      </div>
+    </main>
+    <div class="footer footer_theme_dark-gray">
+      <div class="footer__info">
+        <div class="footer__name">UI Masters</div>
+        <div class="footer__contacts">
+          <div class="contact-info">
+            tel:
+            
+            <div class="contact-link"><a class="contact-link__link contact-link__link_color_white" href="tel: +7 (905) 245-74-83" target="_blank" rel="noopener noreferrer">+7 (905) 245-74-83</a></div><br>mail:
+            
+            <div class="contact-link"><a class="contact-link__link contact-link__link_color_white" href="mailto: kazandesign@gmail.com" target="_blank" rel="noopener noreferrer">kazandesign@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__search">
+        <div class="footer__search-sign">search</div>
+        <div class="footer__search-bar">
+          <div class="search-bar">
+            <form class="search-bar__form">
+              <div class="search-bar__input">
+                <input class="text-field text-field_type_for-search-bar" type="search" name="search" placeholder="Search"></input>
+              </div>
+              <button class="search-bar__button" type="submit"></button>
+            </form>
           </div>
         </div>
       </div>
