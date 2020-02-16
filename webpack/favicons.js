@@ -6,10 +6,18 @@ module.exports = function () {
       rules: [
         {
           test: /\.(svg|png|ico|xml|json|webmanifest)$/,
-          include: path.resolve(__dirname, '../src/assets/favicons'),
+          include: path.resolve(__dirname, '../src/assets/favicons/site-favicons'),
           loader: 'file-loader',
           options: {
-            name: 'assets/favicons/[name].[ext]',
+            name: 'assets/favicons/site-favicons/[name].[ext]',
+          },
+        },
+        {
+          test: /\.(svg|png|ico|xml|json|webmanifest)$/,
+          include: path.resolve(__dirname, '../src/assets/favicons/ui-kit-demo-favicons'),
+          loader: 'file-loader',
+          options: {
+            name: 'assets/favicons/ui-kit-demo-favicons/[name].[ext]',
           },
         },
       ],

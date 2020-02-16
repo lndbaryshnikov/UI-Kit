@@ -1,4 +1,4 @@
-import '../../assets/favicons/favicons';
+import '../../assets/favicons/site-favicons/site-favicons';
 import '../../styles/common.scss';
 import './ui-kit-demo.scss';
 
