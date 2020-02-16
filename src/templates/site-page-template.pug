@@ -1,36 +1,15 @@
+extends ./page-template
+
 block include
-  include ../components/ui-kit-demo-components/block-sign/block-sign
-  include ../components/ui-kit-demo-components/header/header
-  include ../components/ui-kit-demo-components/buttons/buttons
-  include ../components/ui-kit-demo-components/arrows/arrows
-  include ../components/ui-kit-demo-components/charts/charts
-  include ../components/ui-kit-demo-components/sliders/sliders
-  include ../components/ui-kit-demo-components/stages-box/stages-box
-  include ../components/ui-kit-demo-components/form-elements/form-elements
-  include ../components/ui-kit-demo-components/search-dropdown-profiles/search-dropdown-profiles
-  include ../components/ui-kit-demo-components/news-events/news-events
-  include ../components/ui-kit-demo-components/location/location
-  include ../components/ui-kit-demo-components/calendar-messaging/calendar-messaging
-  include ../components/ui-kit-demo-components/video-box/video-box
+  include ../components/site-components/header/header
+  include ../components/site-components/footer/footer
+  block page-components
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png")
-    link(rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png")
-    link(rel="manifest" href="assets/favicons/site.webmanifest")
-    link(rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#1a911d")
-    link(rel="shortcut icon" href="assets/favicons/favicon.ico")
-    meta(name="msapplication-TileColor" content="#da532c")
-    meta(name="msapplication-config" content="assets/favicons/browserconfig.xml")
-    meta(name="theme-color" content="#ffffff")
+block favicons
 
-    block information
-      meta(name="description" content="ui-kit-demo (set of UI elements)")
-      title UI-Kit
+block content
+  +header()
+  main.page-content
+    block page-content
 
-  body
-    block content
+  +footer

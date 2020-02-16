@@ -4,22 +4,22 @@
 @import '../../components/site-components/teachers/teachers';
 @import '../../components/site-components/stages/stages';
 @import '../../components/site-components/header/header';
-@import '../../components/site-components/menu/menu';
+@import '../../components/site-components/footer/footer';
 
 .details {
   &__teachers {
     width: 18.75rem;
     height: 15.625rem;
+    margin-bottom: 2rem;
   }
 
   &__percentages {
     width: 25rem;
-    height: 15.625rem;
   }
 
   &__course-stages {
-    width: 39.375rem;
-    margin: 1.25rem auto;
+    width: 90%;
+    margin: 2.5rem auto 0;
   }
 
   &__teachers-percentage {
@@ -27,6 +27,5 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1.875rem;
   }
 }

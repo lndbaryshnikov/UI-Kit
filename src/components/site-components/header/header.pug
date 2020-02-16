@@ -1,12 +1,30 @@
 include ../navigation/navigation
 
-mixin header({ name = "UI Design Courses Kazan", linkName = "BACK TO UI-KIT", linkURL = "./index.html", navName = "NAVIGATION", theme = "orange-red" } = {})
-  header.header
-    div(class=`header__left header__left_color_${theme}`)
-      a.header__link(href=linkURL)= linkName
-      .header__navigation
-        +navigation({ size: "hundred-percents", sign: navName })
-    .header__right
-      .header__name= name
+mixin header({ name = "UI Masters", theme = "orange-red", links } = {})
+  if !links
+    -
+      links = [
+        {
+          name: "Info",
+          url: "./info.html"
+        },
+        {
+          name: "Details",
+          url: "./details.html"
+        },
+        {
+          name: "Enroll",
+          url: "./enroll.html"
+        },
+        {
+          name: "Contact",
+          url: "./contact.html"
+        }
+      ];
 
-
+  header(class=`header header_color_${theme}`)
+    header.header__name= name
+    nav.header__navigation
+      each item in links
+        - var { name, url } = item;
+        a.header__link(href=url)= name

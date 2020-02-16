@@ -1,0 +1,74 @@
+@import '../contact-info/contact-info';
+@import '../../../styles/variables/colors';
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0.2rem solid black;
+  height: 8rem;
+
+  @media screen and (max-width: 500px) {
+    height: 13rem;
+  }
+
+  &_theme {
+    &_dark-gray {
+      background-color: $dark-gray;
+    }
+  }
+
+  &__info {
+    width: 20rem;
+    box-sizing: border-box;
+    border-right: 0.2rem solid black;
+    float: left;
+    height: 100%;
+    padding: 0.5rem 1rem;
+
+    @media screen and (max-width: 500px) {
+      float: none;
+      height: 60%;
+      width: 100%;
+      border-right: none;
+      border-bottom: 0.2rem solid black;
+      text-align: center;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__search {
+    width: calc(100% - 20rem);
+    float: left;
+    padding-top: 1.3rem;
+
+    @media screen and (max-width: 500px) {
+      float: none;
+      width: 100%;
+      padding-top: 0.7rem;
+    }
+  }
+
+  &__search-sign {
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  &__search-bar {
+    width: 50%;
+    margin: auto;
+
+    @media screen and (max-width: 722px) {
+      width: 80%;
+    }
+  }
+}

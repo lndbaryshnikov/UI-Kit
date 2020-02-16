@@ -1,18 +1,31 @@
+@import '../../styles/variables/colors';
 @import '../../styles/common';
 @import '../../styles/site-common';
 @import '../../components/ui-kit-components/message-form/message-form';
 @import '../../components/ui-kit-components/billboard/billboard';
 @import '../../components/ui-kit-components/datepicker/datepicker';
 @import '../../components/site-components/header/header';
-@import '../../components/site-components/menu/menu';
+@import '../../components/site-components/footer/footer';
 
 .enroll {
+
   &__form {
-    width: 18.375rem;
+    width: 40%;
+
+    @media screen and (max-width: 800px) {
+      width: 85%;
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__title {
     margin: 1.25rem;
+    color: $dark-gray;
   }
 
   &__content {
@@ -20,15 +33,15 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 1.25rem;
+    align-items: center;
     height: 31.25rem;
-  }
 
-  &__billboard {
-    width: 18.375rem;
+    @media screen and (max-width: 800px) {
+      height: auto;
+    }
   }
 
   &__datepicker {
-    width: 18.125rem;
+    margin-top: 2.5rem;
   }
 }

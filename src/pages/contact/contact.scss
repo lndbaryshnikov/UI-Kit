@@ -3,29 +3,50 @@
 @import '../../components/ui-kit-components/map/map';
 @import '../../components/ui-kit-components/billboard/billboard';
 @import '../../components/site-components/header/header';
-@import '../../components/site-components/menu/menu';
+@import '../../components/site-components/contact-info/contact-info';
+@import '../../styles/variables/colors';
+@import '../../components/site-components/footer/footer';
 
 .contact {
   &__address-billboard {
-    .billboard {
-      width: 18.75rem;
-    }
-
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 1.875rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 722px) {
+      flex-direction: column;
+    }
   }
 
   &__address {
-    width: 25rem;
+    width: 50%;
     font-size: 1.2rem;
     line-height: 2rem;
+
+    @media screen and (max-width: 722px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__billboard {
+    width: 35%;
+    min-width: 18rem;
+
+    @media screen and (max-width: 722px) {
+      width: 70%;
+    }
   }
 
   &__map {
-    width: 37.5rem;
+    width: 80%;
     margin: auto;
+
+    @media screen and (max-width: 722px) {
+      width: 105%;
+    }
   }
 }

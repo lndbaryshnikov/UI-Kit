@@ -1,14 +1,14 @@
+@import '../../../styles/variables/colors';
 @import '../../ui-kit-components/arrow-buttons/arrow-buttons';
 @import '../../ui-kit-components/slider/slider';
-@import '../../../styles/variables/colors';
 
 .stages {
-  width: 38.75rem;
   height: 13.125rem;
   text-align: center;
 
   &__title {
     font-size: 1.5rem;
+    color: $dark-gray;
   }
 
   &__stage {
@@ -16,15 +16,24 @@
     text-decoration: underline;
     position: relative;
     top: 2.8125rem;
+
+    @media screen and (max-width: 400px) {
+      top: 0;
+      margin: 1rem 0;
+    }
   }
 
   &__arrows {
-    width: 26.875rem;
+    width: 80%;
     margin: 0.625rem auto 2.5rem;
+
+    @media screen and (max-width: 600px) {
+      width: 95%;
+    }
   }
 
   &__slider {
-    width: 35.5rem;
+    width: 100%;
     margin: auto;
 
     .slider.slider_with_stages {

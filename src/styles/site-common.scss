@@ -1,14 +1,26 @@
 @import 'variables/colors';
 
-.page-content {
-  width: calc(100% - 14.375rem);
-  min-height: calc(100% - 8.125rem);
-  color: $gray;
-  padding: 0.625rem;
+html {
+  background-color: $white-smoke;
+  min-width: 260px;
+
+  @media screen and (max-width: 722px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 14px;
+  }
 }
 
-.page-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+.page-content {
+  width: 70%;
+  margin: auto;
+  color: $gray;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: 1094px) {
+    width: 85%;
+  }
 }

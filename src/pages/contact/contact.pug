@@ -1,42 +1,35 @@
 extends ../../templates/site-page-template
 
-block include
+block page-components
   include ../../components/ui-kit-components/map/map
   include ../../components/ui-kit-components/billboard/billboard
-  include ../../components/site-components/header/header
-  include ../../components/site-components/menu/menu
+  include ../../components/site-components/contact-info/contact-info
 
 block information
   meta(name="description" content="School contact")
   title Contact
 
-block content
-  +header()
-  .page-wrapper
-    +menu()
-    main.page-content
-      .contact
-        .contact__address-billboard
-          .contact__address You can find us at Ostrovsky street, 38, Kazan
-            br
-            | +7 (905) 245-74-83
-            br
-            | kazandesign@gmail.com
+block page-content
+  .contact
+    .contact__address-billboard
+      .contact__address You can find us at Ostrovsky street, 38, Kazan
+        br
+        +contact-info
+      .contact__billboard
+        +billboard({
+          type: "events",
+          title: "first lesson",
+          imageName: "course-event",
+          content: "First lesson starts in February 14th. Hurry up to sign up!",
+          backgroundColor: "cyan",
+          day: "14",
+          month: "Feb"
+        })
 
-          +billboard({
-            type: "events",
-            title: "first lesson",
-            imageName: "course-event",
-            content: "First lesson starts in February 14yh. Hurry up to sign up!",
-            backgroundColor: "cyan",
-            day: "14",
-            month: "Feb"
-          })
-
-        .contact__map
-          +map([55.785124, 49.121856], 14,
-            {
-              sign: "Meet us!",
-              address: "Ostrovsky Street, 38. Kazan"
-            }
-          )
+    .contact__map
+      +map([55.785124, 49.121856], 14,
+        {
+          sign: "Meet us!",
+          address: "Ostrovsky Street, 38. Kazan"
+        }
+      )

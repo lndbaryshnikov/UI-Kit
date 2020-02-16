@@ -1,6 +1,8 @@
 include ../../ui-kit-components/donut-chart/donut-chart
 
-mixin percentages(items)
+mixin percentages(title, items)
+  - title = title || "Just take a look at these wonderful statistics!";
+
   if !items
     -
       items = [
@@ -12,11 +14,13 @@ mixin percentages(items)
           options: { percentage: 89 },
           sign: "recommended this school"
         }
-      ]
+      ];
 
   .percentages
+    .percentages__title= title
+
     each percentageItem in items
-      - var { options, sign } = percentageItem
+      - var { options, sign } = percentageItem;
 
       .percentages__chart
         +donut-chart(options)

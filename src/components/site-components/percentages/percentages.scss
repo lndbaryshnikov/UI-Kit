@@ -1,6 +1,16 @@
 @import '../../ui-kit-components/donut-chart/donut-chart';
+@import '../../../styles/variables/colors';
 
 .percentages {
+  font-size: 1.1rem;
+
+  &__title {
+    color: $dark-gray;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
   &__chart {
     display: flex;
     justify-content: flex-start;
@@ -8,7 +18,10 @@
   }
 
   &__sign {
-    font-size: 1rem;
     margin-left: 1.875rem;
+
+    @media screen and (max-width: 400px) {
+      margin-left: 0;
+    }
   }
 }

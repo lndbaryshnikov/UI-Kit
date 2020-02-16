@@ -2,7 +2,7 @@
 @import '../../styles/site-common';
 @import '../../components/ui-kit-components/video/video';
 @import '../../components/site-components/header/header';
-@import '../../components/site-components/menu/menu';
+@import '../../components/site-components/footer/footer';
 
 .info {
   &__title {
@@ -12,13 +12,18 @@
     margin: 1.25rem;
   }
 
-  &__text {
+  &__description {
     margin: auto;
     width: 70%;
     text-align: center;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 722px) {
+      width: 85%;
+    }
   }
 
   &__video {
-    margin: 1.25rem auto;
+    margin: 2rem auto 0;
   }
 }

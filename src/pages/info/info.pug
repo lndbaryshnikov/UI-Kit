@@ -1,24 +1,19 @@
 extends ../../templates/site-page-template
 
-block include
+block page-components
   include ../../components/site-components/header/header
-  include ../../components/site-components/menu/menu
   include ../../components/ui-kit-components/video/video
 
 block information
   meta(name="description" content="Information about school and courses")
   title Information
 
-block content
-  +header()
-  .page-wrapper
-    +menu()
-    main.page-content
-      .info
-        .info__title Welcome to our page!
-        .info__text We are a Kazan school engaged in online training in web design. We will
-          | teach you how to use programming languages such as HTML, CSS and
-          | JavaScript. We’ll teach you how to develop original page designs and
-          | bring them to life.
-        .info__video
-          +video("https://www.youtube.com/embed/JgIG6d3JsZs")
+block page-content
+  .info
+    .info__title Welcome to our page!
+    .info__description We are a Kazan school engaged in online training in web design. We will
+      | teach you how to use programming languages such as HTML, CSS and
+      | JavaScript. We’ll teach you how to develop original page designs and
+      | bring them to life.
+    .info__video
+      +video("https://www.youtube.com/embed/JgIG6d3JsZs")

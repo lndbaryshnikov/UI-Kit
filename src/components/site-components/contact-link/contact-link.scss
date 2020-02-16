@@ -1,0 +1,24 @@
+@import '../../../styles/variables/colors';
+
+.contact-link {
+  display: inline;
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      color: $dark-orange-red;
+    }
+
+    &_color {
+      &_dark-gray {
+        color: $dark-gray;
+      }
+
+      &_white {
+        color: $rose-white;
+      }
+    }
+  }
+
+}

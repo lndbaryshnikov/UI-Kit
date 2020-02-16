@@ -1,3 +1,4 @@
+@import '../../../styles/variables/colors';
 @import '../../ui-kit-components/user-profile/user-profile';
 
 .teachers {
@@ -9,5 +10,6 @@
 
   &__sign {
     font-size: 1.3rem;
+    color: $dark-gray;
   }
 }

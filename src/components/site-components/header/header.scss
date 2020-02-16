@@ -2,60 +2,76 @@
 @import '../../../styles/variables/colors';
 
 .header {
-  min-width: 48.75rem;
-  height: 8.125rem;
-  position: relative;
-  z-index: 10;
+  height: 4rem;
+  border: 0.2rem solid $dark-gray;
+  box-sizing: border-box;
 
-  &__left {
-    width: 14.375rem;
-    height: 100%;
-    float: left;
+  @media screen and (max-width: 600px) {
+    height: 6rem;
+  }
 
-    &_color {
-      &_orange-red {
-        background-color: $orange-red;
-      }
+  &_color {
+    &_orange-red {
+      background-color: $orange-red;
+    }
 
-      &_cyan {
-        background-color: $cyan;
-      }
+    &_cyan {
+      background-color: $cyan;
     }
   }
 
-  &__link {
-    display: block;
-    margin-top: 0.625rem;
+  &__name {
+    width: 12rem;
+    font-size: 2rem;
+    color: $white;
+    border-right: 0.2rem solid $dark-gray;
+    box-sizing: border-box;
+    border-bottom: 0;
+    float: left;
+    height: 100%;
+    line-height: 4rem;
     text-align: center;
-    color: inherit;
 
-    &:active {
-      color: $dark-gray;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      float: none;
+      height: 60%;
+      border: none;
     }
   }
 
   &__navigation {
-    width: 12.5rem;
-    margin: 1.25rem auto 0;
-  }
-
-  &__right {
+    float: left;
+    width: calc(100% - 12rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
-    line-height: 8.125rem;
-    width: calc(100% - 14.375rem);
-    background-color: $light-gray;
-    min-width: 34.375rem;
-    display: inline-block;
-    text-align: start;
-    float: right;
-    padding-left: 1.875rem;
-    box-sizing: border-box;
+
+    @media screen and (max-width: 600px) {
+      float: none;
+      height: 40%;
+      width: 100%;
+      border-top: 0.2rem solid $dark-gray;
+    }
   }
 
-  &__name {
-    color: $orange-red;
-    font-size: 2rem;
-    vertical-align: middle;
-    display: inline-block;
+  &__link {
+    font-size: 1.5rem;
+    color: $white;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+
+    @media screen and (max-width: 500px) {
+      letter-spacing: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      color: $gray;
+    }
   }
 }
