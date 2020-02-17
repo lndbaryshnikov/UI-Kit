@@ -3,7 +3,7 @@ include ../text-field/text-field
 include ../button/button
 
 mixin message-box({ theme = "cyan", name = "Sarah Brown" })
-  .message-box.js-message-box
+  .message-box.js-message-box(data-consultant=name)
     div(class=`message-box__header message-box__header_theme_${theme}`)
       .message-box__name.js-message-box__name
       .message-box__photo
