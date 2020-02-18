@@ -1,4 +1,4 @@
-import '../../ui-kit-components/message-box/message-box';
+import '../../ui-kit-components/message-box/messageBoxInit';
 
 (() => {
   const button = document.querySelector('.js-menu-message__header');
