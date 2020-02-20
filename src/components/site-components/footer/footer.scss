@@ -5,6 +5,7 @@
   border: 0.2rem solid #000;
   box-sizing: border-box;
   height: 8rem;
+  position: relative;
   width: 100%;
 
   @media screen and (max-width: 500px) {
@@ -82,5 +83,11 @@
     &:hover {
       color: $dark-orange-red;
     }
+  }
+
+  &__message-us {
+    bottom: calc(100% + 0.2rem);
+    position: absolute;
+    right: 0;
   }
 }

@@ -1,5 +1,6 @@
 include ../../ui-kit-components/search-bar/search-bar
 include ../contact-info/contact-info
+include ../help-form/help-form
 
 mixin footer({ name = "UI Masters" , theme = "dark-gray", contacts = { linkColor: "white" }, link = { name: "back to ui-kit", href: "./index.html" } } = {})
   .footer(class=`footer_theme_${theme}`)
@@ -15,3 +16,6 @@ mixin footer({ name = "UI Masters" , theme = "dark-gray", contacts = { linkColor
       - var { name, href } = link;
 
       a.footer__link(href=href)= name
+    
+    .footer__message-us
+      +help-form

@@ -4,6 +4,8 @@
     "max-nesting-depth": null,
     "selector-list-comma-newline-after": null,
     "selector-class-pattern": null,
-    "selector-max-compound-selectors": null
+    "selector-max-compound-selectors": null,
+
+    "order/properties-alphabetical-order": null
   }
 }
