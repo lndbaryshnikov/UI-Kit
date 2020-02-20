@@ -1,6 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
-
-import '../../../pips-float-plugin/jquery-ui-slider-pips';
+import SliderPips from './SliderPips';
 
 class Slider {
   constructor($slider) {
@@ -19,7 +18,7 @@ class Slider {
   }
 
   onChange(handler) {
-    this._$slider.slider('option', 'change', handler);
+    this._$slider.on('slidechange', handler);
   }
 
   _defineOptions() {
@@ -96,11 +95,9 @@ class Slider {
   _addLabels() {
     this._$slider.slider('option', {
       range: 'min',
-    }).slider('pips', {
-      rest: 'label',
     });
 
-    this._extendLabelPluginClasses();
+    this._setPips();
   }
 
   _addStages() {
@@ -113,99 +110,15 @@ class Slider {
         'ui-slider': `slider__scale slider__scale_type_for-stages slider__scale_color_${sliderColor}`,
         'ui-slider-handle': `slider__handle slider__handle_type_for-stages slider__handle_color_${handleColor}`,
       },
-    }).slider('pips', {
-      rest: 'label',
     });
 
-    this._extendLabelPluginClasses();
+    this._setPips();
   }
 
-  _extendLabelPluginClasses() {
-    this._pipsOriginalClasses = {
-      pip: 'ui-slider-pip',
-      selected: 'ui-slider-pip-selected',
-      inrange: 'ui-slider-pip-inrange',
-      label: 'ui-slider-label',
-      line: 'ui-slider-line',
-    };
+  _setPips() {
+    const pips = new SliderPips(this._$slider);
 
-    Object.entries(this._pipsOriginalClasses).forEach(([type, originalClass]) => {
-      const name = type === 'label' || type === 'line' ? type : 'pip';
-
-      this._$slider.find(`.${originalClass}`).addClass(`slider__labels-${name}`);
-    });
-
-    if (this._mode === 'with-labels') {
-      this._toggleLabelsModifier('pip', 'type', 'for-labels');
-      this._toggleLabelsModifier('pip', 'color', this._options.sliderColor);
-    }
-
-    if (this._mode === 'with-stages') {
-      this._toggleLabelsModifier('label', 'type', 'for-stages');
-      this._toggleLabelsModifier('pip', 'type', 'for-stages');
-
-      const value = this._$slider.slider('option', 'value');
-
-      this._appendCustomPipsClasses(value);
-
-      this._$slider.on('slidechange', this._getLabelsValueChangedHandlerForStages());
-    }
-  }
-
-  _getLabelsValueChangedHandlerForStages() {
-    const { sliderColor, rangeColor } = this._options;
-
-    return (event, { value }) => {
-      this._toggleLabelsModifier('pip', 'background-color', sliderColor, { mode: 'remove' });
-      this._toggleLabelsModifier('pip', 'color', 'dark-gray', { mode: 'remove' });
-      this._toggleLabelsModifier('pip', 'background-color', rangeColor, { mode: 'remove' });
-      this._toggleLabelsModifier('pip', 'color', 'white', { mode: 'remove' });
-
-      this._appendCustomPipsClasses(value);
-    };
-  }
-
-  _appendCustomPipsClasses(value) {
-    const { pip } = this._pipsOriginalClasses;
-    const { sliderColor, rangeColor } = this._options;
-
-    const $pips = this._$slider.find(`.${pip}`);
-
-    const appendModifiers = (dom, backgroundColor, color) => {
-      const properties = ['background-color', 'color'];
-      const values = [backgroundColor, color];
-
-      properties.forEach((currentProperty, index) => {
-        this._toggleLabelsModifier('pip', currentProperty, values[index], { dom });
-      });
-    };
-
-    $pips.each((index, currentPip) => {
-      const $currentPip = $(currentPip);
-
-      if (index < value) {
-        appendModifiers($currentPip, rangeColor, 'white');
-        // this._toggleLabelsModifier('pip', 'background-color', rangeColor, { dom: $currentPip });
-        // this._toggleLabelsModifier('pip', 'color', 'white', { dom: $currentPip });
-      } else {
-        appendModifiers($currentPip, sliderColor, 'dark-gray');
-        // this._toggleLabelsModifier('pip', 'background-color', sliderColor, { dom: $currentPip });
-        // this._toggleLabelsModifier('pip', 'color', 'dark-gray', { dom: $currentPip });
-      }
-    });
-  }
-
-  _toggleLabelsModifier(labelsElement, modifier, value, { dom, originalClass, mode = 'add' } = {}) {
-    if (mode !== 'add' && mode !== 'remove') {
-      throw new Error('Mode should be \'add\', \'remove\'');
-    }
-
-    const customClass = `slider__labels-${labelsElement}`;
-    const initialClass = originalClass || customClass;
-
-    const domElement = dom || this._$slider.find(`.${initialClass}`);
-
-    domElement[`${mode}Class`](`${customClass}_${modifier}_${value}`);
+    pips.init(this._options, this._mode);
   }
 
   _setTooltipThemeModifier(theme) {
