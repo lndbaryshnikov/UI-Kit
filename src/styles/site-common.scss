@@ -1,17 +1,17 @@
 @import 'variables/colors';
 
-html {
-  background-color: $white-smoke;
-  min-width: 260px;
+// html {
+//   background-color: $white-smoke;
+//   min-width: 260px;
 
-  @media screen and (max-width: 722px) {
-    font-size: 15px;
-  }
+//   @media screen and (max-width: 722px) {
+//     font-size: 15px;
+//   }
 
-  @media screen and (max-width: 400px) {
-    font-size: 14px;
-  }
-}
+//   @media screen and (max-width: 400px) {
+//     font-size: 14px;
+//   }
+// }
 
 .page-content {
   color: $gray;

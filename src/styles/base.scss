@@ -15,7 +15,15 @@ html {
   font-style: normal;
   font-weight: normal;
 
+  // @media screen and (max-width: 722px) {
+  //   font-size: 14px;
+  // }
+
   @media screen and (max-width: 722px) {
+    font-size: 15px;
+  }
+    
+  @media screen and (max-width: 400px) {
     font-size: 14px;
   }
 }

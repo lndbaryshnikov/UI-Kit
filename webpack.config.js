@@ -19,13 +19,7 @@ const PATHS = {
 
 const common = merge([
   {
-    entry: {
-      'ui-kit-demo': `${PATHS.src}/ui-kit-demo/ui-kit-demo.js`,
-      info: `${PATHS.src}/info/info.js`,
-      details: `${PATHS.src}/details/details.js`,
-      enroll: `${PATHS.src}/enroll/enroll.js`,
-      contact: `${PATHS.src}/contact/contact.js`,
-    },
+    entry: path.join(__dirname, 'src/main.js'),
     output: {
       path: PATHS.dist,
       filename: './js/[name].js',

@@ -1,0 +1,4 @@
+mixin demo-page-header({ name =  "UI-Kit", linkName = "Go to website", linkURL = "./info.html" } = {})
+  header.demo-page-header
+    .demo-page-header__name= name
+    a.demo-page-header__link(href=linkURL, target="_blank")= linkName

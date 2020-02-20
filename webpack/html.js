@@ -9,7 +9,6 @@ function generateHtmlPlugins({ source, index }) {
 
     return new HtmlPlugin({
       filename: `${outputFilename}.html`,
-      chunks: [dirName],
       template: `${source}/${dirName}/${dirName}.pug`,
     });
   });
