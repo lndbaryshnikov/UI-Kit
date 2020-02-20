@@ -35,17 +35,5 @@
   &__slider {
     margin: auto;
     width: 100%;
-
-    .slider.slider_with_stages {
-      .ui-slider-pip {
-        &-selected {
-          background-color: $cyan;
-        }
-
-        &-inrange {
-          background-color: $cyan;
-        }
-      }
-    }
   }
 }

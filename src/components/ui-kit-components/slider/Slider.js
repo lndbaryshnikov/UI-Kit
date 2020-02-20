@@ -10,6 +10,10 @@ class Slider {
     this._init();
   }
 
+  getOptions() {
+    return this._options;
+  }
+
   moveTo(value) {
     this._$slider.slider('option', 'value', value);
   }
@@ -59,10 +63,10 @@ class Slider {
       },
     });
 
-    if (this._mode !== 'simple') this._addModificator();
+    if (this._mode !== 'simple') this._addModifier();
   }
 
-  _addModificator() {
+  _addModifier() {
     if (this._mode === 'with-tooltip') {
       this._addTooltip();
     } else if (this._mode === 'with-labels') {
@@ -85,6 +89,8 @@ class Slider {
     });
 
     this._$slider.find('.ui-slider-handle').append($sliderTooltip);
+
+    this._setTooltipThemeModifier(this._options.handleColor);
   }
 
   _addLabels() {
@@ -93,10 +99,12 @@ class Slider {
     }).slider('pips', {
       rest: 'label',
     });
+
+    this._extendLabelPluginClasses();
   }
 
   _addStages() {
-    const { sliderColor, rangeColor, handleColor } = this._options;
+    const { sliderColor, handleColor } = this._options;
 
     this._$slider.slider('option', {
       range: 'min',
@@ -109,8 +117,101 @@ class Slider {
       rest: 'label',
     });
 
-    this._$slider.find('.ui-slider-pip').addClass(`slider__pip_color_${sliderColor}`);
-    this._$slider.find('.ui-slider-pip-selected').addClass(`slider__pip-selected_color_${rangeColor}`);
+    this._extendLabelPluginClasses();
+  }
+
+  _extendLabelPluginClasses() {
+    this._pipsOriginalClasses = {
+      pip: 'ui-slider-pip',
+      selected: 'ui-slider-pip-selected',
+      inrange: 'ui-slider-pip-inrange',
+      label: 'ui-slider-label',
+      line: 'ui-slider-line',
+    };
+
+    Object.entries(this._pipsOriginalClasses).forEach(([type, originalClass]) => {
+      const name = type === 'label' || type === 'line' ? type : 'pip';
+
+      this._$slider.find(`.${originalClass}`).addClass(`slider__labels-${name}`);
+    });
+
+    if (this._mode === 'with-labels') {
+      this._toggleLabelsModifier('pip', 'type', 'for-labels');
+      this._toggleLabelsModifier('pip', 'color', this._options.sliderColor);
+    }
+
+    if (this._mode === 'with-stages') {
+      this._toggleLabelsModifier('label', 'type', 'for-stages');
+      this._toggleLabelsModifier('pip', 'type', 'for-stages');
+
+      const value = this._$slider.slider('option', 'value');
+
+      this._appendCustomPipsClasses(value);
+
+      this._$slider.on('slidechange', this._getLabelsValueChangedHandlerForStages());
+    }
+  }
+
+  _getLabelsValueChangedHandlerForStages() {
+    const { sliderColor, rangeColor } = this._options;
+
+    return (event, { value }) => {
+      this._toggleLabelsModifier('pip', 'background-color', sliderColor, { mode: 'remove' });
+      this._toggleLabelsModifier('pip', 'color', 'dark-gray', { mode: 'remove' });
+      this._toggleLabelsModifier('pip', 'background-color', rangeColor, { mode: 'remove' });
+      this._toggleLabelsModifier('pip', 'color', 'white', { mode: 'remove' });
+
+      this._appendCustomPipsClasses(value);
+    };
+  }
+
+  _appendCustomPipsClasses(value) {
+    const { pip } = this._pipsOriginalClasses;
+    const { sliderColor, rangeColor } = this._options;
+
+    const $pips = this._$slider.find(`.${pip}`);
+
+    const appendModifiers = (dom, backgroundColor, color) => {
+      const properties = ['background-color', 'color'];
+      const values = [backgroundColor, color];
+
+      properties.forEach((currentProperty, index) => {
+        this._toggleLabelsModifier('pip', currentProperty, values[index], { dom });
+      });
+    };
+
+    $pips.each((index, currentPip) => {
+      const $currentPip = $(currentPip);
+
+      if (index < value) {
+        appendModifiers($currentPip, rangeColor, 'white');
+        // this._toggleLabelsModifier('pip', 'background-color', rangeColor, { dom: $currentPip });
+        // this._toggleLabelsModifier('pip', 'color', 'white', { dom: $currentPip });
+      } else {
+        appendModifiers($currentPip, sliderColor, 'dark-gray');
+        // this._toggleLabelsModifier('pip', 'background-color', sliderColor, { dom: $currentPip });
+        // this._toggleLabelsModifier('pip', 'color', 'dark-gray', { dom: $currentPip });
+      }
+    });
+  }
+
+  _toggleLabelsModifier(labelsElement, modifier, value, { dom, originalClass, mode = 'add' } = {}) {
+    if (mode !== 'add' && mode !== 'remove') {
+      throw new Error('Mode should be \'add\', \'remove\'');
+    }
+
+    const customClass = `slider__labels-${labelsElement}`;
+    const initialClass = originalClass || customClass;
+
+    const domElement = dom || this._$slider.find(`.${initialClass}`);
+
+    domElement[`${mode}Class`](`${customClass}_${modifier}_${value}`);
+  }
+
+  _setTooltipThemeModifier(theme) {
+    const tooltipClass = 'slider__tooltip';
+
+    this._$slider.find(`.${tooltipClass}`).addClass(`${tooltipClass}_theme_${theme}`);
   }
 }
 
