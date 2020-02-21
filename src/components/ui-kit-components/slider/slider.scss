@@ -44,12 +44,12 @@
     }
   }
 
-  &__handle {
+  .ui-slider-handle#{&}__handle {
     border-radius: 50%;
-    cursor: pointer !important;
+    cursor: pointer;
     height: 1.21875rem;
     outline: none;
-    top: -0.4375rem !important;
+    top: -0.4375rem;
     width: 1.21875rem;
 
     &_color {
@@ -105,54 +105,54 @@
   }
 
   &__labels-line {
-    display: none !important;
+    display: none;
   }
 
-  &__labels-pip {
+  .ui-slider-pip#{&}__labels-pip {
     &_type {
       &_for-labels {
-        font-size: 0.6875rem !important;
-        letter-spacing: 0.034375rem !important;
-        top: 0.625rem !important;
+        font-size: 0.6875rem;
+        letter-spacing: 0.034375rem;
+        top: 0.625rem;
       }
 
       &_for-stages {
-        border-radius: 50% !important;
-        font-size: 0.875rem !important;
-        height: 1.8125rem !important;
-        letter-spacing: 0.04375rem !important;
-        line-height: 1.125rem !important;
-        text-align: center !important;
-        top: -0.75rem !important;
-        width: 1.8125rem !important;
+        border-radius: 50%;
+        font-size: 0.875rem;
+        height: 1.8125rem;
+        letter-spacing: 0.04375rem;
+        line-height: 1.125rem;
+        text-align: center;
+        top: -0.75rem;
+        width: 1.8125rem;
       }
     }
 
     &_background-color {
       &_gray {
-        background-color: $light-gray !important;
+        background-color: $light-gray;
       }
 
       &_orange-red {
-        background-color: $orange-red !important;
+        background-color: $orange-red;
       }
 
       &_green {
-        background-color: $cyan !important;
+        background-color: $cyan;
       }
     }
 
     &_color {
       &_white {
-        color: $white !important;
+        color: $white;
       }
 
       &_gray {
-        color: #d1d1d1 !important;
+        color: #d1d1d1;
       }
 
       &_dark-gray {
-        color: $gray !important;
+        color: $gray;
       }
     }
   }
@@ -160,9 +160,10 @@
   &__labels-label {
     &_type {
       &_for-stages {
-        padding-top: 0.0625rem !important;
-        z-index: 1000 !important;
+        padding-top: 0.0625rem;
+        z-index: 1000;
       }
     }
   }
 }
+

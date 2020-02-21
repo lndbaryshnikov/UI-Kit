@@ -5,6 +5,7 @@
     "selector-list-comma-newline-after": null,
     "selector-class-pattern": null,
     "selector-max-compound-selectors": null,
+    "declaration-no-important": true,
 
     "order/properties-alphabetical-order": null
   }
