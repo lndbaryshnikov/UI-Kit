@@ -1,4 +1,4 @@
-import '../../../pips-float-plugin/jquery-ui-slider-pips';
+import '../../../vendor/pips-float-plugin/jquery-ui-slider-pips';
 
 class SliderPips {
   constructor($sliderDom) {
