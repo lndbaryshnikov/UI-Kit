@@ -1,4 +1,4 @@
-import MessageFormValidation from './MessageFormValidation';
+import MessageForm from './MessageForm';
 
 (() => {
   const messageForms = document.querySelectorAll(
@@ -6,6 +6,6 @@ import MessageFormValidation from './MessageFormValidation';
   );
 
   messageForms.forEach((form) => {
-    new MessageFormValidation(form).init();
+    new MessageForm(form).init();
   });
 })();

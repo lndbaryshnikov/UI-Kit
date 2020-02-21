@@ -1,4 +1,4 @@
-class MessageFormValidation {
+class MessageForm {
   constructor(form) {
     this._elements = { form };
 
@@ -154,4 +154,4 @@ class MessageFormValidation {
   }
 }
 
-export default MessageFormValidation;
+export default MessageForm;
