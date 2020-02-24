@@ -1,5 +1,3 @@
-import './assets/favicons/site-favicons/site-favicons';
-
 function requireAll(r) {
   return r.keys().map(r);
 }
