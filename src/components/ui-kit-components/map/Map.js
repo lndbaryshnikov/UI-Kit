@@ -1,28 +1,28 @@
 class Map {
   constructor($mapContainer, id) {
-    this._$mapContainer = $mapContainer;
+    this.$mapContainer = $mapContainer;
 
     this._defineOptions();
     this._init(id);
   }
 
   _defineOptions() {
-    const getData = (property) => window.Number(this._$mapContainer.data(property));
+    const getData = (property) => window.Number(this.$mapContainer.data(property));
 
-    this._options = {
+    this.options = {
       longitude: getData('longitude'),
       latitude: getData('latitude'),
       zoom: getData('zoom'),
     };
 
-    this._mapBoxToken = 'pk.eyJ1IjoibGVvYmFyIiwiYSI6ImNrM2EwM3pmdz'
+    this.mapBoxToken = 'pk.eyJ1IjoibGVvYmFyIiwiYSI6ImNrM2EwM3pmdz'
       + 'A3bGgzbXF0bG11cjhqdnkifQ.BcgmIzwCilGUFZljSUMAfQ';
   }
 
   _init(id) {
-    const { longitude, latitude, zoom } = this._options;
+    const { longitude, latitude, zoom } = this.options;
 
-    this._map = L.map(id).setView([longitude, latitude], zoom);
+    this.map = L.map(id).setView([longitude, latitude], zoom);
 
     this._setLayers();
     this._addMarker();
@@ -36,15 +36,15 @@ class Map {
         + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox.streets',
-      accessToken: this._mapBoxToken,
-    }).addTo(this._map);
+      accessToken: this.mapBoxToken,
+    }).addTo(this.map);
 
     L.tileLayer(
       'https://api.mapbox.com/styles/v1/leobar/ck3ae7zcr12001cqjy07attbx/'
       + 'tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
-        accessToken: this._mapBoxToken,
+        accessToken: this.mapBoxToken,
       },
-    ).addTo(this._map);
+    ).addTo(this.map);
   }
 
   _addMarker() {
@@ -55,18 +55,18 @@ class Map {
       html: '<div class="map__map-marker"><span class="map__map-marker-circle"></span></div>',
     });
 
-    const { longitude, latitude } = this._options;
+    const { longitude, latitude } = this.options;
 
-    this._marker = L.marker([longitude, latitude], {
+    this.marker = L.marker([longitude, latitude], {
       icon: markerIcon,
-    }).addTo(this._map);
+    }).addTo(this.map);
   }
 
   _addButtonHandler() {
-    const { longitude, latitude, zoom } = this._options;
+    const { longitude, latitude, zoom } = this.options;
 
-    this._$mapContainer.parent().find('.js-map__button').on('click', () => {
-      this._map.setView([longitude, latitude], zoom);
+    this.$mapContainer.parent().find('.js-map__button').on('click', () => {
+      this.map.setView([longitude, latitude], zoom);
     });
   }
 }

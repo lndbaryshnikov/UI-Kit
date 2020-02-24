@@ -1,8 +1,8 @@
 class MessageForm {
   constructor(form) {
-    this._elements = { form };
+    this.elements = { form };
 
-    this._state = {
+    this.state = {
       name: false,
       email: false,
     };
@@ -16,10 +16,10 @@ class MessageForm {
   }
 
   _defineElements() {
-    const { form } = this._elements;
+    const { form } = this.elements;
     const inputs = form.querySelectorAll('.js-message-form__data-field_type_input input');
 
-    this._elements.inputs = {
+    this.elements.inputs = {
       nameInput: {
         input: inputs[0],
         inputType: 'name',
@@ -30,11 +30,11 @@ class MessageForm {
       },
     };
 
-    this._elements.button = form.querySelector('.js-message-form__button button');
+    this.elements.button = form.querySelector('.js-message-form__button button');
   }
 
   _addHandlers() {
-    Object.values(this._elements.inputs).forEach((inputObject) => {
+    Object.values(this.elements.inputs).forEach((inputObject) => {
       const {
         checkAndShowTooltipHandler,
         hideTooltipsHandler,
@@ -46,15 +46,15 @@ class MessageForm {
       input.addEventListener('blur', checkAndShowTooltipHandler);
     });
 
-    this._elements.form.addEventListener('submit', this._formSubmitHandler.bind(this));
+    this.elements.form.addEventListener('submit', this._formSubmitHandler.bind(this));
   }
 
   _addTooltips() {
-    Object.keys(this._elements.inputs).forEach((inputObject) => {
-      this._elements.inputs[inputObject].thanksTooltip = this._createTooltip('thanks');
-      this._elements.inputs[inputObject].errorTooltip = this._createTooltip('error');
+    Object.keys(this.elements.inputs).forEach((inputObject) => {
+      this.elements.inputs[inputObject].thanksTooltip = this._createTooltip('thanks');
+      this.elements.inputs[inputObject].errorTooltip = this._createTooltip('error');
 
-      const { input, thanksTooltip, errorTooltip } = this._elements.inputs[inputObject];
+      const { input, thanksTooltip, errorTooltip } = this.elements.inputs[inputObject];
 
       input.parentElement.append(thanksTooltip, errorTooltip);
     });
@@ -88,7 +88,7 @@ class MessageForm {
 
     return {
       hideTooltipsHandler: () => {
-        const { thanksTooltip, errorTooltip } = this._elements.inputs[inputName];
+        const { thanksTooltip, errorTooltip } = this.elements.inputs[inputName];
 
         thanksTooltip.style.display = 'none';
         errorTooltip.style.display = 'none';
@@ -97,11 +97,11 @@ class MessageForm {
         const { value } = event.currentTarget;
 
         if (this._isValid(value, inputType)) {
-          this._state[inputType] = true;
+          this.state[inputType] = true;
 
           this._showTooltip(inputType, 'thanks');
         } else {
-          this._state[inputType] = false;
+          this.state[inputType] = false;
 
           this._showTooltip(inputType, 'error');
         }
@@ -110,8 +110,8 @@ class MessageForm {
   }
 
   _formSubmitHandler(event) {
-    const isEmailValid = this._state.email;
-    const isNameValid = this._state.name;
+    const isEmailValid = this.state.email;
+    const isNameValid = this.state.name;
 
     if (!isEmailValid || !isNameValid) {
       if (!isEmailValid) this._showTooltip('email', 'error');
@@ -150,7 +150,7 @@ class MessageForm {
     const tooltipName = tooltipType === 'thanks' ? 'thanksTooltip'
       : maybeErrorTooltip;
 
-    this._elements.inputs[inputName][tooltipName].style.display = 'inline-block';
+    this.elements.inputs[inputName][tooltipName].style.display = 'inline-block';
   }
 }
 

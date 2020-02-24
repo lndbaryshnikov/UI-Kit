@@ -3,52 +3,52 @@ import SliderPips from './SliderPips';
 
 class Slider {
   constructor($slider) {
-    this._$slider = $slider;
+    this.$slider = $slider;
 
     this._defineOptions();
     this._init();
   }
 
   getOptions() {
-    return this._options;
+    return this.options;
   }
 
   moveTo(value) {
-    this._$slider.slider('option', 'value', value);
+    this.$slider.slider('option', 'value', value);
   }
 
   onChange(handler) {
-    this._$slider.on('slidechange', handler);
+    this.$slider.on('slidechange', handler);
   }
 
   _defineOptions() {
-    this._options = {
-      min: this._$slider.data('min'),
-      max: this._$slider.data('max'),
-      step: this._$slider.data('step'),
-      value: this._$slider.data('value'),
+    this.options = {
+      min: this.$slider.data('min'),
+      max: this.$slider.data('max'),
+      step: this.$slider.data('step'),
+      value: this.$slider.data('value'),
       animate: 'slow',
-      sliderColor: this._$slider.data('slider-color'),
-      rangeColor: this._$slider.data('range-color'),
-      handleColor: this._$slider.data('handle-color'),
+      sliderColor: this.$slider.data('slider-color'),
+      rangeColor: this.$slider.data('range-color'),
+      handleColor: this.$slider.data('handle-color'),
     };
 
-    const isSimpleOrWithStages = this._$slider.hasClass('js-slider_with_stages')
+    const isSimpleOrWithStages = this.$slider.hasClass('js-slider_with_stages')
       ? 'with-stages' : 'simple';
 
-    const isSimpleOrWithStagesOrWithLabels = this._$slider.hasClass('js-slider_with_labels')
+    const isSimpleOrWithStagesOrWithLabels = this.$slider.hasClass('js-slider_with_labels')
       ? 'with-labels' : isSimpleOrWithStages;
 
-    this._mode = this._$slider.hasClass('js-slider_with_tooltip')
+    this.mode = this.$slider.hasClass('js-slider_with_tooltip')
       ? 'with-tooltip' : isSimpleOrWithStagesOrWithLabels;
   }
 
   _init() {
     const {
       min, max, step, value, animate, sliderColor, rangeColor, handleColor,
-    } = this._options;
+    } = this.options;
 
-    this._$slider.slider({
+    this.$slider.slider({
       min,
       max,
       step,
@@ -62,15 +62,15 @@ class Slider {
       },
     });
 
-    if (this._mode !== 'simple') this._addModifier();
+    if (this.mode !== 'simple') this._addModifier();
   }
 
   _addModifier() {
-    if (this._mode === 'with-tooltip') {
+    if (this.mode === 'with-tooltip') {
       this._addTooltip();
-    } else if (this._mode === 'with-labels') {
+    } else if (this.mode === 'with-labels') {
       this._addLabels();
-    } else if (this._mode === 'with-stages') {
+    } else if (this.mode === 'with-stages') {
       this._addStages();
     }
   }
@@ -78,22 +78,22 @@ class Slider {
   _addTooltip() {
     const $sliderTooltip = $('<div class="slider__tooltip"></div>');
 
-    $sliderTooltip.text(String(this._options.value));
+    $sliderTooltip.text(String(this.options.value));
 
-    this._$slider.slider('option', {
+    this.$slider.slider('option', {
       range: false,
       slide(event, ui) {
         $sliderTooltip.text(ui.value);
       },
     });
 
-    this._$slider.find('.ui-slider-handle').append($sliderTooltip);
+    this.$slider.find('.ui-slider-handle').append($sliderTooltip);
 
-    this._setTooltipThemeModifier(this._options.handleColor);
+    this._setTooltipThemeModifier(this.options.handleColor);
   }
 
   _addLabels() {
-    this._$slider.slider('option', {
+    this.$slider.slider('option', {
       range: 'min',
     });
 
@@ -101,9 +101,9 @@ class Slider {
   }
 
   _addStages() {
-    const { sliderColor, handleColor } = this._options;
+    const { sliderColor, handleColor } = this.options;
 
-    this._$slider.slider('option', {
+    this.$slider.slider('option', {
       range: 'min',
 
       classes: {
@@ -116,15 +116,15 @@ class Slider {
   }
 
   _setPips() {
-    const pips = new SliderPips(this._$slider);
+    const pips = new SliderPips(this.$slider);
 
-    pips.init(this._options, this._mode);
+    pips.init(this.options, this.mode);
   }
 
   _setTooltipThemeModifier(theme) {
     const tooltipClass = 'slider__tooltip';
 
-    this._$slider.find(`.${tooltipClass}`).addClass(`${tooltipClass}_theme_${theme}`);
+    this.$slider.find(`.${tooltipClass}`).addClass(`${tooltipClass}_theme_${theme}`);
   }
 }
 

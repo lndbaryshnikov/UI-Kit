@@ -2,14 +2,14 @@ import 'jquery-ui/ui/widgets/datepicker';
 
 class Datepicker {
   constructor($element) {
-    this._$datepickerContainer = $element;
+    this.$datepickerContainer = $element;
 
     this._defineElements();
     this.init();
   }
 
   init() {
-    this._$datepicker.datepicker({
+    this.$datepicker.datepicker({
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
       showButtonPanel: true,
@@ -18,30 +18,30 @@ class Datepicker {
       onSelect: this._displayCurrentDay.bind(this),
     });
 
-    this._$todayButton.on('click', this._todayButtonClickHandler.bind(this));
+    this.$todayButton.on('click', this._todayButtonClickHandler.bind(this));
 
     this._displayCurrentDay();
   }
 
   _defineElements() {
-    const container = this._$datepickerContainer;
+    const container = this.$datepickerContainer;
 
-    this._$datepicker = container.find('.js-datepicker__datepicker-wrapper');
-    this._$currentDay = container.find('.js-datepicker__current-day');
-    this._$todayButton = container.find('.js-datepicker__today-button');
+    this.$datepicker = container.find('.js-datepicker__datepicker-wrapper');
+    this.$currentDay = container.find('.js-datepicker__current-day');
+    this.$todayButton = container.find('.js-datepicker__today-button');
   }
 
   _todayButtonClickHandler() {
     const todayDate = new Date();
 
-    this._$datepicker.datepicker('setDate', todayDate);
+    this.$datepicker.datepicker('setDate', todayDate);
     this._displayCurrentDay();
   }
 
   _displayCurrentDay() {
-    const currentDay = this._$datepicker.datepicker('getDate').getDate();
+    const currentDay = this.$datepicker.datepicker('getDate').getDate();
 
-    this._$currentDay.text(currentDay);
+    this.$currentDay.text(currentDay);
   }
 }
 

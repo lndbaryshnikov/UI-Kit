@@ -1,6 +1,6 @@
 class Stages {
   constructor(stages) {
-    this._elements = { stages };
+    this.elements = { stages };
 
     this._defineElements();
     this._defineOptions();
@@ -13,28 +13,28 @@ class Stages {
   }
 
   _defineElements() {
-    const getDaughter = (daughterClassName) => this._elements.stages.querySelector(`.${daughterClassName}`);
+    const getDaughter = (daughterClassName) => this.elements.stages.querySelector(`.${daughterClassName}`);
 
     const arrows = getDaughter('arrow-buttons');
     const slider = getDaughter('js-slider');
 
-    this._elements.arrows = {
+    this.elements.arrows = {
       left: arrows.children[0],
       right: arrows.children[1],
     };
-    this._elements.stageTitle = getDaughter('stages__stage');
-    this._elements.slider = {
+    this.elements.stageTitle = getDaughter('stages__stage');
+    this.elements.slider = {
       classInstance: $(slider).data('slider'),
     };
   }
 
   _defineOptions() {
-    const getData = (data) => $(this._elements.stages).data(data);
+    const getData = (data) => $(this.elements.stages).data(data);
 
     const stages = getData('stages');
     const startFrom = Number(getData('start-from'));
 
-    this._options = {
+    this.options = {
       stages,
       startFrom,
       arrowsClasses: {
@@ -50,14 +50,14 @@ class Stages {
 
   _setHandlers() {
     const setArrowHandlers = (side) => {
-      this._elements.arrows[side]
+      this.elements.arrows[side]
         .addEventListener('click', this._getArrowClickHandler(side));
     };
 
     setArrowHandlers('left');
     setArrowHandlers('right');
 
-    this._elements.slider.classInstance.onChange(this._getSliderChangeHandler());
+    this.elements.slider.classInstance.onChange(this._getSliderChangeHandler());
   }
 
   _getArrowClickHandler(side) {
@@ -65,12 +65,12 @@ class Stages {
       throw new Error('Only "right" and "left" side is allowed');
     }
 
-    const { stages } = this._options;
+    const { stages } = this.options;
 
     const limitIndex = side === 'left' ? 0 : stages.length - 1;
 
     return () => {
-      let currentStageIndex = this._options.currentStage.index;
+      let currentStageIndex = this.options.currentStage.index;
 
       if (currentStageIndex !== limitIndex) {
         currentStageIndex += side === 'left' ? -1 : +1;
@@ -82,7 +82,7 @@ class Stages {
 
   _getSliderChangeHandler() {
     return (event, ui) => {
-      const { index } = this._options.currentStage;
+      const { index } = this.options.currentStage;
 
       if (ui.value === index + 1) return;
 
@@ -91,10 +91,10 @@ class Stages {
   }
 
   _refreshStage(index) {
-    if (index === this._options.currentStage.index) return;
+    if (index === this.options.currentStage.index) return;
 
-    this._options.currentStage.index = index;
-    this._options.currentStage.name = this._options.stages[index];
+    this.options.currentStage.index = index;
+    this.options.currentStage.name = this.options.stages[index];
 
     this._refreshStageTitle();
     this._refreshSliderValue();
@@ -102,11 +102,11 @@ class Stages {
   }
 
   _refreshStageTitle() {
-    this._elements.stageTitle.innerHTML = this._options.currentStage.name;
+    this.elements.stageTitle.innerHTML = this.options.currentStage.name;
   }
 
   _refreshSliderValue() {
-    this._elements.slider.classInstance.moveTo(this._options.currentStage.index + 1);
+    this.elements.slider.classInstance.moveTo(this.options.currentStage.index + 1);
   }
 
   _switchArrowsClasses(side, mode) {
@@ -114,15 +114,15 @@ class Stages {
       throw new Error('Only "on" and "off" mode is allowed');
     }
 
-    const { classesActive, classesDisabled } = this._options.arrowsClasses;
-    const arrow = this._elements.arrows[side];
+    const { classesActive, classesDisabled } = this.options.arrowsClasses;
+    const arrow = this.elements.arrows[side];
 
     arrow.className = mode === 'on' ? classesActive : classesDisabled;
   }
 
   _refreshArrowsClasses() {
-    const currentIndex = this._options.currentStage.index;
-    const lastIndex = this._options.stages.length - 1;
+    const currentIndex = this.options.currentStage.index;
+    const lastIndex = this.options.stages.length - 1;
 
     if (currentIndex === 0) {
       this._switchArrowsClasses('left', 'off');

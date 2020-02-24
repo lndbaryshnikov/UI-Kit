@@ -2,14 +2,14 @@ import '../../../vendor/pips-float-plugin/jquery-ui-slider-pips';
 
 class SliderPips {
   constructor($sliderDom) {
-    this._$slider = $sliderDom;
+    this.$slider = $sliderDom;
   }
 
   init(options, mode) {
-    this._options = options;
-    this._mode = mode;
+    this.options = options;
+    this.mode = mode;
 
-    this._$slider.slider('pips', {
+    this.$slider.slider('pips', {
       rest: 'label',
     });
 
@@ -17,7 +17,7 @@ class SliderPips {
   }
 
   _extendPluginClasses() {
-    this._pipsOriginalClasses = {
+    this.pipsOriginalClasses = {
       pip: 'ui-slider-pip',
       selected: 'ui-slider-pip-selected',
       inrange: 'ui-slider-pip-inrange',
@@ -25,31 +25,31 @@ class SliderPips {
       line: 'ui-slider-line',
     };
 
-    Object.entries(this._pipsOriginalClasses).forEach(([type, originalClass]) => {
+    Object.entries(this.pipsOriginalClasses).forEach(([type, originalClass]) => {
       const name = type === 'label' || type === 'line' ? type : 'pip';
 
-      this._$slider.find(`.${originalClass}`).addClass(`slider__labels-${name}`);
+      this.$slider.find(`.${originalClass}`).addClass(`slider__labels-${name}`);
     });
 
-    if (this._mode === 'with-labels') {
+    if (this.mode === 'with-labels') {
       this._toggleModifier('pip', 'type', 'for-labels');
-      this._toggleModifier('pip', 'color', this._options.sliderColor);
+      this._toggleModifier('pip', 'color', this.options.sliderColor);
     }
 
-    if (this._mode === 'with-stages') {
+    if (this.mode === 'with-stages') {
       this._toggleModifier('label', 'type', 'for-stages');
       this._toggleModifier('pip', 'type', 'for-stages');
 
-      const value = this._$slider.slider('option', 'value');
+      const value = this.$slider.slider('option', 'value');
 
       this._appendCustomClasses(value);
 
-      this._$slider.on('slidechange', this._getValueChangedHandlerForStages());
+      this.$slider.on('slidechange', this._getValueChangedHandlerForStages());
     }
   }
 
   _getValueChangedHandlerForStages() {
-    const { sliderColor, rangeColor } = this._options;
+    const { sliderColor, rangeColor } = this.options;
 
     return (event, { value }) => {
       this._toggleModifier('pip', 'background-color', sliderColor, { mode: 'remove' });
@@ -62,10 +62,10 @@ class SliderPips {
   }
 
   _appendCustomClasses(value) {
-    const { pip } = this._pipsOriginalClasses;
-    const { sliderColor, rangeColor } = this._options;
+    const { pip } = this.pipsOriginalClasses;
+    const { sliderColor, rangeColor } = this.options;
 
-    const $pips = this._$slider.find(`.${pip}`);
+    const $pips = this.$slider.find(`.${pip}`);
 
     const appendModifiers = (dom, backgroundColor, color) => {
       const properties = ['background-color', 'color'];
@@ -95,7 +95,7 @@ class SliderPips {
     const customClass = `slider__labels-${labelsElement}`;
     const initialClass = originalClass || customClass;
 
-    const domElement = dom || this._$slider.find(`.${initialClass}`);
+    const domElement = dom || this.$slider.find(`.${initialClass}`);
 
     domElement[`${mode}Class`](`${customClass}_${modifier}_${value}`);
   }

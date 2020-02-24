@@ -1,17 +1,17 @@
 class HelpForm {
   constructor(form) {
-    this._form = form;
+    this.form = form;
     this._init();
   }
 
   _init() {
-    this._button = this._getElement('header');
-    this._messageBox = this._getElement('message-box');
-    this._arrow = this._getElement('arrow');
+    this.button = this._getElement('header');
+    this.messageBox = this._getElement('message-box');
+    this.arrow = this._getElement('arrow');
 
     this._toggleElementModifier('message-box', 'invisible');
 
-    this._button.addEventListener('click', this._buttonClickHandler.bind(this));
+    this.button.addEventListener('click', this._buttonClickHandler.bind(this));
   }
 
   _buttonClickHandler() {
@@ -20,7 +20,7 @@ class HelpForm {
   }
 
   _getElement(elementName) {
-    return this._form.querySelector(`.js-help-form__${elementName}`);
+    return this.form.querySelector(`.js-help-form__${elementName}`);
   }
 
   _toggleElementModifier(elementName, modifier, value) {
@@ -28,7 +28,7 @@ class HelpForm {
     const modifierName = value ? `${elementClassName}_${modifier}_${value}`
       : `${elementClassName}_${modifier}`;
 
-    this._form.querySelector(`.js-${elementClassName}`).classList.toggle(modifierName);
+    this.form.querySelector(`.js-${elementClassName}`).classList.toggle(modifierName);
   }
 }
 
