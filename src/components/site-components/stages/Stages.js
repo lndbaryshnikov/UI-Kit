@@ -1,3 +1,5 @@
+import ArrowButtons from "../../ui-kit-components/arrow-buttons/ArrowButtons";
+
 class Stages {
   constructor(stages) {
     this.elements = { stages };
@@ -15,13 +17,10 @@ class Stages {
   _defineElements() {
     const getDaughter = (daughterClassName) => this.elements.stages.querySelector(`.${daughterClassName}`);
 
-    const arrows = getDaughter('arrow-buttons');
+    const arrows = new ArrowButtons(getDaughter('js-arrow-buttons'));
     const slider = getDaughter('js-slider');
 
-    this.elements.arrows = {
-      left: arrows.children[0],
-      right: arrows.children[1],
-    };
+    this.elements.arrows = arrows;
     this.elements.stageTitle = getDaughter('stages__stage');
     this.elements.slider = {
       classInstance: $(slider).data('slider'),
@@ -37,10 +36,6 @@ class Stages {
     this.options = {
       stages,
       startFrom,
-      arrowsClasses: {
-        classesActive: 'arrow-buttons__arrow-container ripple',
-        classesDisabled: 'arrow-buttons__arrow-container arrow-buttons__arrow-container_disabled',
-      },
       currentStage: {
         index: startFrom - 1,
         name: stages[startFrom - 1],
@@ -50,8 +45,8 @@ class Stages {
 
   _setHandlers() {
     const setArrowHandlers = (side) => {
-      this.elements.arrows[side]
-        .addEventListener('click', this._getArrowClickHandler(side));
+      this.elements.arrows
+        .setListener(side, 'click', this._getArrowClickHandler(side));
     };
 
     setArrowHandlers('left');
@@ -109,31 +104,20 @@ class Stages {
     this.elements.slider.classInstance.moveTo(this.options.currentStage.index + 1);
   }
 
-  _switchArrowsClasses(side, mode) {
-    if (mode !== 'on' && mode !== 'off') {
-      throw new Error('Only "on" and "off" mode is allowed');
-    }
-
-    const { classesActive, classesDisabled } = this.options.arrowsClasses;
-    const arrow = this.elements.arrows[side];
-
-    arrow.className = mode === 'on' ? classesActive : classesDisabled;
-  }
-
   _refreshArrowsClasses() {
     const currentIndex = this.options.currentStage.index;
     const lastIndex = this.options.stages.length - 1;
 
     if (currentIndex === 0) {
-      this._switchArrowsClasses('left', 'off');
+      this.elements.arrows.switchArrows('left', 'off');
     } else {
-      this._switchArrowsClasses('left', 'on');
+      this.elements.arrows.switchArrows('left', 'on');
     }
 
     if (currentIndex === lastIndex) {
-      this._switchArrowsClasses('right', 'off');
+      this.elements.arrows.switchArrows('right', 'off');
     } else {
-      this._switchArrowsClasses('right', 'on');
+      this.elements.arrows.switchArrows('right', 'on');
     }
   }
 }
