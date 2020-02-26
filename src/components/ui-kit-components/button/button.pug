@@ -1,13 +1,13 @@
 mixin button({ size, color, content, width })
-  - var backSize
+  - var backSize;
 
   if width
-    - backSize = `button_size_${size} button_width_${width}`
+    - backSize = `button_size_${size} button_width_${width}`;
   else
-    - backSize = `button_size_${size}`
+    - backSize = `button_size_${size}`;
 
-  div(class=["button", backSize, `button_color_${color}`])
-    button(
+  .button(class=[backSize, `button_color_${color}`])
+    button.button__button(
       type="submit",
-      class=["button__button", `button__button_size_${size}`, `button__button_color_${color}`, "ripple"]
+      class=[`button__button_size_${size}`, `button__button_color_${color}`, "ripple"]
     )= content

@@ -7,7 +7,7 @@ mixin sliders(items)
 
     .sliders__container
       each item in items
-        - var { options, styles } = item
+        - var { options, styles } = item;
 
         .sliders__slider
           +slider(options, styles)

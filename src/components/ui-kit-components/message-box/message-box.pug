@@ -2,19 +2,19 @@ include ../user-photo/user-photo
 include ../text-field/text-field
 include ../button/button
 
-mixin message-box({ theme = "cyan", name = "Sarah Brown" })
+mixin message-box({ theme = "cyan", name = "Sarah Brown", chatLink = "/mock-address/change-me", cameraLink = "/mock-address/change-me"})
   .message-box.js-message-box(data-consultant=name)
-    div(class=`message-box__header message-box__header_theme_${theme}`)
+    .message-box__header(class=`message-box__header_theme_${theme}`)
       .message-box__name.js-message-box__name
       .message-box__photo
         +user-photo(name)
 
     .message-box__body
       .message-box__chat
-        a.message-box__chat-button(href="/mock-address/change-me")
-        a.message-box__camera-button(href="/mock-address/change-me")
+        a.message-box__chat-button(href=chatLink)
+        a.message-box__camera-button(href=cameraLink)
         .message-box__message.js-message-box__message
-        form(method="post")
+        form.message-box__form(method="post")
           .message-box__reply
             +text-field({
               tagName: "textarea",

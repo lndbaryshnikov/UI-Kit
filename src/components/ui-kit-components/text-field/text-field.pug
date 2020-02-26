@@ -1,5 +1,5 @@
 mixin text-field(options)
-  - var { tagName, name, placeholder, blockName } = options
+  - var { tagName, name, placeholder, blockName } = options;
 
   if tagName !== "textarea"
     #{tagName}(type=options.type, name=name, placeholder=placeholder, class=`text-field text-field_type_for-${blockName}`)
