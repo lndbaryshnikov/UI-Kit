@@ -3,11 +3,14 @@ extends ./page-template
 block include
   include ../components/site-components/header/header
   include ../components/site-components/footer/footer
+
   block page-components
 
 block content
-  +header()
-  main.page-content
-    block page-content
+  .page-wrapper
+    +header()
 
-  +footer
+    main.page-content
+      block page-content
+
+    +footer
