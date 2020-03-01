@@ -27,5 +27,5 @@ mixin header({ name = "UI Masters", theme = "orange-red", links } = {})
     nav.header__navigation
       each item in links
         - var { name, url } = item;
-        
+
         a.header__link(href=url)= name
