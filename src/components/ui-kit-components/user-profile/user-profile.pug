@@ -22,4 +22,8 @@ mixin user-profile({ name, job, theme })
 
       .user-profile__links-container
         - for (var i = 1; i<=3; i++)
-          a(href="/mock-address/change-me", class=`user-profile__link user-profile__link_theme_${theme}`)
+          a(
+            href="/mock-address/change-me",
+            class=`user-profile__link user-profile__link_theme_${theme}`,
+            target="_blank", rel="noopener noreferrer"
+          )
