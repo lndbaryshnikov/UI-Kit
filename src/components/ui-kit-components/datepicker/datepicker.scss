@@ -1,8 +1,6 @@
 @import '~jquery-ui/themes/base/core.css';
 @import '~jquery-ui/themes/base/datepicker.css';
 
-@import '../../../styles/variables/colors';
-
 .datepicker {
   background-color: $white-smoke;
   height: 26.8rem;
@@ -93,7 +91,6 @@
         thead {
           th span {
             position: relative;
-            // top: 0.3125rem;
             top: 0.1rem;
             right: 0.1rem;
           }

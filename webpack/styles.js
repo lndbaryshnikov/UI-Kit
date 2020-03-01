@@ -34,6 +34,12 @@ module.exports = function () {
               loader: 'sass-loader',
               options: { sourceMap: true },
             },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: ['./src/styles/variables/*.scss', './src/styles/mixins/*.scss'],
+              },
+            },
           ],
         },
         {
