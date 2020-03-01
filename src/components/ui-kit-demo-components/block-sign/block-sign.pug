@@ -1,2 +1,3 @@
 mixin block-sign(title, blockName)
-  header.block-sign(class=`block-sign_type_for-${blockName}`)= title
+  header.block-sign
+    span.block-sign__name(class=`block-sign__name_type_for-${blockName}`)= title

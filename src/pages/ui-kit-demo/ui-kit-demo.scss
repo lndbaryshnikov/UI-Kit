@@ -28,7 +28,7 @@
       }
 
       &_for-arrows {
-        margin-top: 8.5rem;
+        margin-top: 8.625rem;
         width: 67%;
 
         @media screen and (max-width: 1094px) {
@@ -43,7 +43,7 @@
       &_for-sliders {
         margin-right: 15px;
         margin-top: 1.15rem;
-        width: 91%;
+        width: 88%;
       }
 
       &_for-stages-box {
@@ -85,7 +85,8 @@
       }
 
       &_for-video-box {
-        margin-top: 3.4375rem;
+        margin-top: 3.3rem;
+        margin-right: 0.2rem;
         width: 88%;
       }
     }
