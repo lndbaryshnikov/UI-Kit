@@ -38,7 +38,7 @@ class MessageForm {
       const {
         checkAndShowTooltipHandler,
         hideTooltipsHandler,
-      } = this._getInputHandlers(inputObject.inputType);
+      } = this._makeInputHandlers(inputObject.inputType);
 
       const { input } = inputObject;
 
@@ -82,7 +82,7 @@ class MessageForm {
     return tooltip;
   }
 
-  _getInputHandlers(inputType) {
+  _makeInputHandlers(inputType) {
     const maybeNameInput = inputType === 'name' ? 'nameInput' : undefined;
     const inputName = inputType === 'email' ? 'emailInput' : maybeNameInput;
 

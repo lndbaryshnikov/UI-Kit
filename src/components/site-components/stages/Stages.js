@@ -46,16 +46,16 @@ class Stages {
   _setHandlers() {
     const setArrowHandlers = (side) => {
       this.elements.arrows
-        .setListener(side, 'click', this._getArrowClickHandler(side));
+        .setListener(side, 'click', this._makeArrowClickHandler(side));
     };
 
     setArrowHandlers('left');
     setArrowHandlers('right');
 
-    this.elements.slider.classInstance.onChange(this._getSliderChangeHandler());
+    this.elements.slider.classInstance.onChange(this._makeSliderChangeHandler());
   }
 
-  _getArrowClickHandler(side) {
+  _makeArrowClickHandler(side) {
     if (side !== 'left' && side !== 'right') {
       throw new Error('Only "right" and "left" side is allowed');
     }
@@ -75,7 +75,7 @@ class Stages {
     };
   }
 
-  _getSliderChangeHandler() {
+  _makeSliderChangeHandler() {
     return (event, ui) => {
       const { index } = this.options.currentStage;
 
