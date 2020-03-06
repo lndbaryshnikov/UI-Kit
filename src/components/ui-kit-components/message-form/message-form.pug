@@ -13,6 +13,13 @@ mixin message-form(extraOptions)
         blockName: "message-form"
       })
 
+      .message-form__tooltip.js-message-form__tooltip(
+        class=["message-form__tooltip_color_cyan", "message-form__tooltip_invisible"]
+      ) Thanks!
+      .message-form__tooltip.js-message-form__tooltip(
+        class=["message-form__tooltip_color_orange-red", "message-form__tooltip_invisible"]
+      ) Error!
+
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
         tagName: "input",
@@ -21,6 +28,13 @@ mixin message-form(extraOptions)
         placeholder: "Your Email",
         blockName: "message-form"
       })
+
+      .message-form__tooltip.js-message-form__tooltip(
+        class=["message-form__tooltip_color_cyan", "message-form__tooltip_invisible"]
+      ) Thanks!
+      .message-form__tooltip.js-message-form__tooltip(
+        class=["message-form__tooltip_color_orange-red", "message-form__tooltip_invisible"]
+      ) Error!
 
     .message-form__data-field.message-form__data-field_type_textarea
       +text-field({

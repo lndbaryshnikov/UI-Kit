@@ -11,22 +11,30 @@ class MessageForm {
   }
 
   init() {
-    this._addTooltips();
     this._addHandlers();
   }
 
   _defineElements() {
+    const getTooltips = (parent) => parent.querySelectorAll('.js-message-form__tooltip');
+
     const { form } = this.elements;
-    const inputs = form.querySelectorAll('.js-message-form__data-field_type_input input');
+    const [nameDataField, emailDataField] = form.querySelectorAll('.js-message-form__data-field_type_input');
+    const [nameInput, emailInput] = form.querySelectorAll('.js-message-form__data-field_type_input input');
+    const [nameThanksTooltip, nameErrorTooltip] = getTooltips(nameDataField);
+    const [emailThanksTooltip, emailErrorTooltip] = getTooltips(emailDataField);
 
     this.elements.inputs = {
       nameInput: {
-        input: inputs[0],
+        input: nameInput,
         inputType: 'name',
+        thanksTooltip: nameThanksTooltip,
+        errorTooltip: nameErrorTooltip,
       },
       emailInput: {
-        input: inputs[1],
+        input: emailInput,
         inputType: 'email',
+        thanksTooltip: emailThanksTooltip,
+        errorTooltip: emailErrorTooltip,
       },
     };
 
@@ -49,39 +57,6 @@ class MessageForm {
     this.elements.form.addEventListener('submit', this._formSubmitHandler.bind(this));
   }
 
-  _addTooltips() {
-    Object.keys(this.elements.inputs).forEach((inputObject) => {
-      this.elements.inputs[inputObject].thanksTooltip = this._createTooltip('thanks');
-      this.elements.inputs[inputObject].errorTooltip = this._createTooltip('error');
-
-      const { input, thanksTooltip, errorTooltip } = this.elements.inputs[inputObject];
-
-      input.parentElement.append(thanksTooltip, errorTooltip);
-    });
-  }
-
-  _createTooltip(type) {
-    let text;
-    let color;
-
-    if (type === 'thanks') {
-      text = 'Thanks!';
-      color = 'cyan';
-    } else if (type === 'error') {
-      text = 'Error!';
-      color = 'orange-red';
-    }
-
-    const className = `message-form__tooltip message-form__tooltip_color_${color}`;
-
-    const tooltip = document.createElement('div');
-    tooltip.setAttribute('class', className);
-    tooltip.innerHTML = text;
-    tooltip.style.display = 'none';
-
-    return tooltip;
-  }
-
   _makeInputHandlers(inputType) {
     const maybeNameInput = inputType === 'name' ? 'nameInput' : undefined;
     const inputName = inputType === 'email' ? 'emailInput' : maybeNameInput;
@@ -90,8 +65,9 @@ class MessageForm {
       hideTooltipsHandler: () => {
         const { thanksTooltip, errorTooltip } = this.elements.inputs[inputName];
 
-        thanksTooltip.style.display = 'none';
-        errorTooltip.style.display = 'none';
+        this._toggleTooltipModifier(thanksTooltip, 'invisible', 'on');
+        this._toggleTooltipModifier(errorTooltip, 'invisible', 'on');
+
       },
       checkAndShowTooltipHandler: (event) => {
         const { value } = event.currentTarget;
@@ -150,7 +126,35 @@ class MessageForm {
     const tooltipName = tooltipType === 'thanks' ? 'thanksTooltip'
       : maybeErrorTooltip;
 
-    this.elements.inputs[inputName][tooltipName].style.display = 'inline-block';
+    const tooltip = this.elements.inputs[inputName][tooltipName];
+
+    this._toggleTooltipModifier(tooltip, 'invisible', 'off');
+  }
+
+  _toggleTooltipModifier(tooltip, modifier, mode) {
+    if (mode !== 'on' && mode !== 'off') {
+      throw new Error('Mode can be only \'on\' or \'off\'');
+    }
+
+    const modifierClass = `message-form__tooltip_${modifier}`;
+
+    const processModifierClass = (method) => {
+      if (method === 'contains') {
+        return tooltip.classList.contains(modifierClass);
+      }
+
+      tooltip.classList[method](modifierClass);
+
+      return undefined;
+    };
+
+    if (processModifierClass('contains')) {
+      if (mode === 'off') {
+        processModifierClass('remove');
+      }
+    } else if (mode === 'on') {
+      processModifierClass('add');
+    }
   }
 }
 
