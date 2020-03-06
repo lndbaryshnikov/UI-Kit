@@ -2,6 +2,11 @@
   min-height: 100%;
   position: relative;
   padding-bottom: 8rem;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 500px) {
+    padding-bottom: 16rem;
+  }
 }
 
 .page-content {
@@ -14,4 +19,11 @@
   @media screen and (max-width: 1094px) {
     width: 85%;
   }
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
