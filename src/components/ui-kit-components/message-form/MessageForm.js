@@ -1,3 +1,5 @@
+import TextField from '../text-field/TextField';
+
 class MessageForm {
   constructor(form) {
     this.elements = { form };
@@ -25,13 +27,13 @@ class MessageForm {
 
     this.elements.inputs = {
       nameInput: {
-        input: nameInput,
+        inputInstance: new TextField(nameInput),
         inputType: 'name',
         thanksTooltip: nameThanksTooltip,
         errorTooltip: nameErrorTooltip,
       },
       emailInput: {
-        input: emailInput,
+        inputInstance: new TextField(emailInput),
         inputType: 'email',
         thanksTooltip: emailThanksTooltip,
         errorTooltip: emailErrorTooltip,
@@ -48,10 +50,10 @@ class MessageForm {
         hideTooltipsHandler,
       } = this._makeInputHandlers(inputObject.inputType);
 
-      const { input } = inputObject;
+      const { inputInstance } = inputObject;
 
-      input.addEventListener('focus', hideTooltipsHandler);
-      input.addEventListener('blur', checkAndShowTooltipHandler);
+      inputInstance.onFocus(hideTooltipsHandler);
+      inputInstance.onBlur(checkAndShowTooltipHandler);
     });
 
     this.elements.form.addEventListener('submit', this._formSubmitHandler.bind(this));
