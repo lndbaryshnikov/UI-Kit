@@ -2,10 +2,17 @@ include ../user-photo/user-photo
 include ../text-field/text-field
 include ../button/button
 
-mixin message-box({ theme = "cyan", name = "Sarah Brown", chatLink = "/mock-address/change-me", cameraLink = "/mock-address/change-me"})
-  .message-box.js-message-box(data-consultant=name)
+mixin message-box({ theme = "cyan", name = "Sarah Brown", defaultMessage, chatLink, cameraLink})
+  -
+    var mockLinkAddress = "/mock-address/change-me";
+
+    chatLink = chatLink || mockLinkAddress;
+    cameraLink = cameraLink || mockLinkAddress;
+    defaultMessage = defaultMessage || "Hey! So are we cool to meet at the art gallery? Say 8pm";
+  
+  .message-box
     .message-box__header(class=`message-box__header_theme_${theme}`)
-      .message-box__name.js-message-box__name
+      .message-box__name= name
       .message-box__photo
         +user-photo(name)
 
@@ -13,7 +20,7 @@ mixin message-box({ theme = "cyan", name = "Sarah Brown", chatLink = "/mock-addr
       .message-box__chat
         a.message-box__chat-button(href=chatLink)
         a.message-box__camera-button(href=cameraLink)
-        .message-box__message.js-message-box__message
+        .message-box__message= defaultMessage
         form.message-box__form(method="post")
           .message-box__reply
             +text-field({

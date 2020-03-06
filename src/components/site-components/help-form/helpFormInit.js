@@ -1,4 +1,3 @@
-import '../../ui-kit-components/message-box/messageBoxInit';
 import HelpForm from './HelpForm';
 
 (() => {

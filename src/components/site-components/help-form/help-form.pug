@@ -1,6 +1,6 @@
 include ../../ui-kit-components/message-box/message-box
 
-mixin help-form({ title = "Message us", theme = "orange-red" , consultant = "Sarah Brown"} = {})
+mixin help-form({ title = "Message us", theme = "orange-red" , consultant, defaultMessage } = {})
   .help-form.js-help-form
     .help-form__header.js-help-form__header
       .help-form__arrow.js-help-form__arrow
@@ -8,5 +8,6 @@ mixin help-form({ title = "Message us", theme = "orange-red" , consultant = "Sar
     .help-form__message-box.js-help-form__message-box
       +message-box({
         theme,
-        name: consultant
+        name: consultant || "Sarah Brown",
+        defaultMessage: defaultMessage || "Hey! Can I help you?",
       })
