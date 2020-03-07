@@ -1,4 +1,4 @@
-import ArrowButtons from "../../ui-kit-components/arrow-buttons/ArrowButtons";
+import ArrowButtons from '../../ui-kit-components/arrow-buttons/ArrowButtons';
 
 class Stages {
   constructor(stages) {

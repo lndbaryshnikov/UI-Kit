@@ -69,7 +69,6 @@ class MessageForm {
 
         this._toggleTooltipModifier(thanksTooltip, 'invisible', 'on');
         this._toggleTooltipModifier(errorTooltip, 'invisible', 'on');
-
       },
       checkAndShowTooltipHandler: (event) => {
         const { value } = event.currentTarget;
