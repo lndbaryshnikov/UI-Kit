@@ -26,25 +26,71 @@
         <section class="ui-kit-demo__section ui-kit-demo__section_type_for-buttons">
           <div class="buttons">
             <header class="block-sign"><span class="block-sign__name block-sign__name_type_for-buttons">standard buttons</span></header>
-            <div class="buttons__container">
-              <div class="buttons__button">
-                <div class="button button_size_small button_color_cyan">
-                  <button class="button__button button__button_size_small button__button_color_cyan ripple" type="submit">button</button>
+            <div class="buttons__container-rows">
+              <div class="buttons__container">
+                <div class="buttons__button">
+                  <div class="button button_size_small button_color_cyan">
+                    <button class="button__button button__button_size_small button__button_color_cyan ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_standard button_color_cyan">
+                    <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_standard button_color_orange-red">
+                    <button class="button__button button__button_size_standard button__button_color_orange-red ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_small button_color_orange-red">
+                    <button class="button__button button__button_size_small button__button_color_orange-red ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
                 </div>
               </div>
-              <div class="buttons__button">
-                <div class="button button_size_standard button_color_cyan">
-                  <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit">button</button>
+              <div class="buttons__container">
+                <div class="buttons__button">
+                  <div class="button button_size_small button_color_cyan">
+                    <button class="button__button button__button_size_small button__button_color_cyan-inverse ripple" type="submit" data-ripple-color="cyan">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_standard button_color_cyan">
+                    <button class="button__button button__button_size_standard button__button_color_cyan-inverse ripple" type="submit" data-ripple-color="cyan">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_standard button_color_orange-red">
+                    <button class="button__button button__button_size_standard button__button_color_orange-red-inverse ripple" type="submit" data-ripple-color="orange-red">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_small button_color_orange-red">
+                    <button class="button__button button__button_size_small button__button_color_orange-red-inverse ripple" type="submit" data-ripple-color="orange-red">button</button>
+                  </div>
                 </div>
               </div>
-              <div class="buttons__button">
-                <div class="button button_size_standard button_color_orange-red">
-                  <button class="button__button button__button_size_standard button__button_color_orange-red ripple" type="submit">button</button>
+              <div class="buttons__container">
+                <div class="buttons__button">
+                  <div class="button button_size_small button_color_cyan">
+                    <button class="button__button button__button_size_small button__button_color_cyan ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
                 </div>
-              </div>
-              <div class="buttons__button">
-                <div class="button button_size_small button_color_orange-red">
-                  <button class="button__button button__button_size_small button__button_color_orange-red ripple" type="submit">button</button>
+                <div class="buttons__button">
+                  <div class="button button_size_standard button_color_cyan">
+                    <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_standard button_color_orange-red">
+                    <button class="button__button button__button_size_standard button__button_color_orange-red ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
+                </div>
+                <div class="buttons__button">
+                  <div class="button button_size_small button_color_orange-red">
+                    <button class="button__button button__button_size_small button__button_color_orange-red ripple" type="submit" data-ripple-color="white">button</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -166,16 +212,20 @@
                 <form class="message-form js-message-form" method="post">
                   <div class="message-form__data-field message-form__data-field_type_input js-message-form__data-field_type_input">
                     <input class="text-field text-field_type_for-message-form" type="text" name="name" placeholder="Your Name"></input>
+                    <div class="message-form__tooltip js-message-form__tooltip message-form__tooltip_color_cyan message-form__tooltip_invisible">Thanks!</div>
+                    <div class="message-form__tooltip js-message-form__tooltip message-form__tooltip_color_orange-red message-form__tooltip_invisible">Error!</div>
                   </div>
                   <div class="message-form__data-field message-form__data-field_type_input js-message-form__data-field_type_input">
                     <input class="text-field text-field_type_for-message-form" type="email" name="email" placeholder="Your Email"></input>
+                    <div class="message-form__tooltip js-message-form__tooltip message-form__tooltip_color_cyan message-form__tooltip_invisible">Thanks!</div>
+                    <div class="message-form__tooltip js-message-form__tooltip message-form__tooltip_color_orange-red message-form__tooltip_invisible">Error!</div>
                   </div>
                   <div class="message-form__data-field message-form__data-field_type_textarea">
                     <textarea class="text-field text-field_type_for-message-form" name="message" placeholder="Your Message"></textarea>
                   </div>
                   <div class="message-form__button js-message-form__button">
                     <div class="button button_size_standard button_color_cyan">
-                      <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit">submit</button>
+                      <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit" data-ripple-color="white">submit</button>
                     </div>
                   </div>
                 </form>
@@ -304,7 +354,7 @@ downhill</div>
                     <div class="billboard__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                     <div class="billboard__button">
                       <div class="button button_size_small button_width_hundred-percents button_color_cyan">
-                        <button class="button__button button__button_size_small button__button_color_cyan ripple" type="submit">add to calendar</button>
+                        <button class="button__button button__button_size_small button__button_color_cyan ripple" type="submit" data-ripple-color="white">add to calendar</button>
                       </div>
                     </div>
                   </div>
@@ -351,23 +401,23 @@ downhill</div>
               <div class="messaging">
                 <header class="block-sign"><span class="block-sign__name block-sign__name_type_for-messaging">messaging</span></header>
                 <div class="messaging__container">
-                  <div class="message-box js-message-box" data-consultant="Sarah Brown">
+                  <div class="message-box">
                     <div class="message-box__header message-box__header_theme_cyan">
-                      <div class="message-box__name js-message-box__name"></div>
+                      <div class="message-box__name">Sarah Brown</div>
                       <div class="message-box__photo">
                         <div class="user-photo"><img class="user-photo__image" src="assets/images/sarah-brown.png" alt="Sarah Brown"></div>
                       </div>
                     </div>
                     <div class="message-box__body">
                       <div class="message-box__chat"><a class="message-box__chat-button" href="/mock-address/change-me"></a><a class="message-box__camera-button" href="/mock-address/change-me"></a>
-                        <div class="message-box__message js-message-box__message"></div>
+                        <div class="message-box__message">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
                         <form class="message-box__form" method="post">
                           <div class="message-box__reply">
                             <textarea class="text-field text-field_type_for-message-box" name="reply" placeholder="Your reply here..."></textarea>
                           </div>
                           <div class="message-box__reply-button">
                             <div class="button button_size_standard button_width_hundred-percents button_color_cyan">
-                              <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit">reply</button>
+                              <button class="button__button button__button_size_standard button__button_color_cyan ripple" type="submit" data-ripple-color="white">reply</button>
                             </div>
                           </div>
                         </form>
