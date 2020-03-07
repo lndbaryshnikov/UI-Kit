@@ -3,7 +3,10 @@
     const $element = $(event.currentTarget);
 
     if ($element.find('.ink').length === 0) {
-      $element.prepend('<span class=\'ink\'></span>');
+      const inkColor = $element.data('ripple-color') || 'white';
+      const className = `ink ink-${inkColor}`;
+
+      $element.prepend(`<span class='${className}'></span>`);
     }
     const $ink = $element.find('.ink');
 

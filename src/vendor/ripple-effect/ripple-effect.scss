@@ -1,5 +1,4 @@
 .ink {
-  background-color: #fafafa;
   border-radius: 100%;
   display: block;
   position: absolute;
@@ -7,6 +6,18 @@
 
   &.animate {
     animation: ripple 0.65s linear;
+  }
+
+  &-white {
+    background-color: #fafafa; 
+  }
+
+  &-cyan {
+    background-color: $cyan; 
+  }
+
+  &-orange-red {
+    background-color: $orange-red;     
   }
 }
 

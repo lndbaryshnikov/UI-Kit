@@ -1,5 +1,8 @@
-mixin button({ size, color, content, width })
-  - var backSize;
+mixin button({ size, color, content, width, inverse = false })
+  - 
+    var backSize;
+    var buttonColor = inverse ? `${color}-inverse` : color;
+    var rippleColor = inverse ? color : 'white';
 
   if width
     - backSize = `button_size_${size} button_width_${width}`;
@@ -9,5 +12,6 @@ mixin button({ size, color, content, width })
   .button(class=[backSize, `button_color_${color}`])
     button.button__button(
       type="submit",
-      class=[`button__button_size_${size}`, `button__button_color_${color}`, "ripple"]
+      class=[`button__button_size_${size}`, `button__button_color_${buttonColor}`, "ripple"],
+      data-ripple-color=rippleColor
     )= content

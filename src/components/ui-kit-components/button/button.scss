@@ -19,18 +19,18 @@
 
   &_color {
     &_cyan {
-      background-color: $cyan;
+      background-color: $dark-cyan;
 
       &:hover {
-        background-color: $cyan;
+        background-color: $dark-cyan;
       }
     }
 
     &_orange-red {
-      background-color: $orange-red;
+      background-color: $dark-orange-red;
 
       &:hover {
-        background-color: $orange-red;
+        background-color: $dark-orange-red;
       }
     }
   }
@@ -76,6 +76,17 @@
         }
       }
 
+      &_cyan-inverse {
+        background-color: $cyan;
+        border: 0.0625rem solid $cyan;
+        color: $white;
+
+        &:hover {
+          background-color: $white;
+          color: $cyan;
+        }
+      }
+
       &_orange-red {
         background-color: $white;
         border: 0.0625rem solid $orange-red;
@@ -84,6 +95,17 @@
         &:hover {
           background-color: $orange-red;
           color: $white;
+        }
+      }
+
+      &_orange-red-inverse {
+        background-color: $orange-red;
+        border: 0.0625rem solid $orange-red;
+        color: $white;
+
+        &:hover {
+          background-color: $white;
+          color: $orange-red;
         }
       }
     }
