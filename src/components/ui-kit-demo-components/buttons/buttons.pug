@@ -1,10 +1,12 @@
 include ../../ui-kit-components/button/button
 include ../block-sign/block-sign
 
-mixin buttons(items)
+mixin buttons(itemRows)
   .buttons
     +block-sign("standard buttons", "buttons")
-    .buttons__container
-      each item in items
-        .buttons__button
-          +button(item)
+    .buttons__container-rows
+      each row in itemRows
+        .buttons__container
+          each item in row
+            .buttons__button
+              +button(item)
