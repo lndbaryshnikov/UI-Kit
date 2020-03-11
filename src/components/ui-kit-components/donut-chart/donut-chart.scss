@@ -11,6 +11,11 @@
     text-align: center;
     top: 42px;
     width: 100%;
+
+    &_invisible {
+      display: none;
+    }
+    
   }
 
   &__animation {

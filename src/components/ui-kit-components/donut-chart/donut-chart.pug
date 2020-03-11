@@ -1,18 +1,18 @@
 mixin donut-chart({ percentage, color = "#e75735", thickness = "5", radius = "45", background = "transparent" })
-  if (Array.isArray(percentage))
-    - var percentageOff = { display: "none" };
-
   - percentage = Array.isArray(percentage) ? percentage : [percentage];
   - color = Array.isArray(color) ? color : [color];
   - var size = 2 * (Number(radius) + 15);
 
     .donut-chart(style={width: `${size}px`})
-      .donut-chart__percentage(style=percentageOff)=  percentage
+      if (percentage.length !== 1)
+        .donut-chart__percentage.donut-chart__percentage_invisible=  percentage
+      else
+        .donut-chart__percentage=  percentage
 
       - var dashArray = 2 * Math.PI * radius;
 
       svg(width=size, height=size, xmlns="http://www.w3.org/2000/svg")
-        - for (let i = 0; i < +percentage.length; i += 1)
+        - for (let i = 0; i < percentage.length; i += 1)
           - var addendum = 0;
           - var dashOffset = dashArray - (dashArray * percentage[i] / 100) + addendum;
           - addendum = dashOffset;
