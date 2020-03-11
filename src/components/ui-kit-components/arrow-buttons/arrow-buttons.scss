@@ -27,6 +27,7 @@
     border: 0.1875rem solid $cyan;
     border-radius: 50%;
     height: 2.8125rem;
+    cursor: pointer;
 
     //for ripple-effect:
     overflow: hidden;
@@ -45,7 +46,7 @@
     &_disabled {
       background-color: $light-gray;
       border-color: $light-gray;
-      transition: background-color 0.5s, border-color 0.5s;
+      cursor: default;
 
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
         animation: none;
@@ -54,8 +55,8 @@
       }
 
       &:hover {
-        background-color: $dark-gray;
-        border-color: $dark-gray;
+        background-color: $light-gray;
+        border-color: $light-gray;
       }
     }
   }
