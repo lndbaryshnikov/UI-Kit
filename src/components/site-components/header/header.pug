@@ -1,26 +1,25 @@
 include ../navigation/navigation
 
 mixin header({ name = "UI Masters", theme = "orange-red", links } = {})
-  if !links
-    -
-      links = [
-        {
-          name: "Info",
-          url: "./info.html"
-        },
-        {
-          name: "Details",
-          url: "./details.html"
-        },
-        {
-          name: "Enroll",
-          url: "./enroll.html"
-        },
-        {
-          name: "Contact",
-          url: "./contact.html"
-        }
-      ];
+  -
+    links = links || [
+      {
+        name: "Info",
+        url: "./info.html"
+      },
+      {
+        name: "Details",
+        url: "./details.html"
+      },
+      {
+        name: "Enroll",
+        url: "./enroll.html"
+      },
+      {
+        name: "Contact",
+        url: "./contact.html"
+      }
+    ];
 
   header(class=`header header_color_${theme}`)
     header.header__name= name

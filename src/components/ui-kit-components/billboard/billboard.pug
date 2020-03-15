@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year, goTo })
-  div(class=`billboard billboard_background-color_${backgroundColor}`)
+  .billboard(class=`billboard_background-color_${backgroundColor}`)
     img.billboard__image(
       src=require(`../../assets/images/billboard-images/${imageName}.png`),
       alt=imageName
@@ -28,7 +28,6 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
               content: "add to calendar",
               width: "hundred-percents",
             })
-
         else
           .billboard__button
             +button({

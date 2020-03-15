@@ -1,13 +1,8 @@
 mixin button({ size, color, content, width, inverse = false })
   -
-    var backSize;
+    var backSize = width ? `button_size_${size} button_width_${width}` : `button_size_${size}`;
     var buttonColor = inverse ? `${color}-inverse` : color;
     var rippleColor = inverse ? color : 'white';
-
-  if width
-    - backSize = `button_size_${size} button_width_${width}`;
-  else
-    - backSize = `button_size_${size}`;
 
   .button(class=[backSize, `button_color_${color}`])
     button.button__button-element(
