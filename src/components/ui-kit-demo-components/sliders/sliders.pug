@@ -6,8 +6,6 @@ mixin sliders(items)
     +block-sign("sliders", "sliders")
 
     .sliders__container
-      each item in items
-        - var { options, styles } = item;
-
+      each optionItem in items
         .sliders__slider
-          +slider(options, styles)
+          +slider(optionItem)

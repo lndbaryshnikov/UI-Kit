@@ -1,8 +1,8 @@
-mixin slider({ min=0, max=100, step=1, value=50, type="tooltip"} = {}, { slider="gray", range="gray", handle="orange-red" } = {})
+mixin slider({ min=0, max=100, step=1, value=50, type="tooltip", sliderColor="gray", rangeColor="gray", handleColor="orange-red" } = {})
   .slider.js-slider(
     class=[`slider_with_${type}`, `js-slider_with_${type}`],
     data-min=min, data-max=max, data-step=step, data-value=value,
-    data-slider-color=slider,
-    data-range-color=range,
-    data-handle-color=handle
+    data-slider-color=sliderColor,
+    data-range-color=rangeColor,
+    data-handle-color=handleColor
   )
