@@ -21,7 +21,7 @@ mixin user-profile({ name, job, theme })
       span.user-profile__job(class=`user-profile__job_color_${jobColor}`)= job
 
       .user-profile__links-container
-        - for (var i = 1; i<=3; i++)
+        - for (var i = 1; i<=3; i += 1)
           a(
             href="/mock-address/change-me",
             class=`user-profile__link user-profile__link_theme_${theme}`,
