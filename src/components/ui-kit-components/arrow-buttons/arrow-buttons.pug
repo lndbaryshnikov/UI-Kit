@@ -1,13 +1,8 @@
 mixin arrow-buttons(disabled = false, { width = "standard" } = {})
-  - var disabledOrNot;
-
-  if disabled
-    - disabledOrNot = "arrow-buttons__arrow-container_disabled";
-  else
-    - disabledOrNot = "ripple";
+  - var containerClassName = disabled ? "arrow-buttons__arrow-container_disabled" : "ripple";
 
   .arrow-buttons.js-arrow-buttons(class=`arrow-buttons_width_${width}`)
-    .arrow-buttons__arrow-container(class=disabledOrNot)
+    .arrow-buttons__arrow-container(class=containerClassName)
       .arrow-buttons__left-arrow
-    .arrow-buttons__arrow-container(class=disabledOrNot)
+    .arrow-buttons__arrow-container(class=containerClassName)
       .arrow-buttons__right-arrow
