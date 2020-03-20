@@ -16,24 +16,24 @@ mixin message-box({ theme = "cyan", name = "Sarah Brown", defaultMessage, chatLi
       .message-box__photo
         +user-photo(name)
 
-    .message-box__body
-      .message-box__chat
+    .message-box__chat
+      .message-box__buttons
         a.message-box__chat-button(href=chatLink)
         a.message-box__camera-button(href=cameraLink)
-        .message-box__message= defaultMessage
-        form.message-box__form(method="post")
-          .message-box__reply
-            +text-field({
-              tagName: "textarea",
-              name: "reply",
-              placeholder: "Your reply here...",
-              blockName: "message-box"
-            })
+      .message-box__message= defaultMessage
+      form.message-box__form(method="post")
+        .message-box__reply
+          +text-field({
+            tagName: "textarea",
+            name: "reply",
+            placeholder: "Your reply here...",
+            blockName: "message-box"
+          })
 
-          .message-box__reply-button
-            +button({
-              size: "standard",
-              color: theme,
-              content: "reply",
-              width: "hundred-percents"
-            })
+        .message-box__reply-button
+          +button({
+            size: "standard",
+            color: theme,
+            content: "reply",
+            width: "hundred-percents"
+          })
