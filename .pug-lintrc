@@ -23,5 +23,6 @@
   "validateDivTags": true,
   "validateLineBreaks": "CRLF",
   "validateSelfClosingTags": true,
-  "validateTemplateString": true
+  "validateTemplateString": true,
+  "disallowSpecificTags": "br"
 }

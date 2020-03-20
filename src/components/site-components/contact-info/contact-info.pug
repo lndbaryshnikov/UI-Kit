@@ -2,18 +2,20 @@ include ../contact-link/contact-link
 
 mixin contact-info({ phone = "+7 (905) 245-74-83", mail = "kazandesign@gmail.com", linkColor = "dark-gray" } = {})
   .contact-info
-    | tel:
-    |
-    +contact-link({
-      color: linkColor,
-      attribute: "tel",
-      data: phone
-    })
-    br
-    | mail:
-    |
-    +contact-link({
-      color: linkColor,
-      attribute: "mailto",
-      data: mail
-    })
+    .contact-info__item
+      | tel:
+      |
+      +contact-link({
+        color: linkColor,
+        attribute: "tel",
+        data: phone
+      })
+      
+    .contact-info__item
+      | mail:
+      |
+      +contact-link({
+        color: linkColor,
+        attribute: "mailto",
+        data: mail
+      })
