@@ -29,7 +29,7 @@
     border: 0;
     border-radius: 0.25rem;
     color: $gray;
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 0.9375rem;
     height: 1.75rem;
     letter-spacing: 0.00875rem;
@@ -46,7 +46,6 @@
     border: 0;
     border-radius: 0 0.25rem 0.25rem 0;
     cursor: pointer;
-    display: inline-block;
     float: right;
     height: 1.75rem;
     outline: none;
