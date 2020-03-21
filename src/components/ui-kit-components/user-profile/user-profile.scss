@@ -1,16 +1,16 @@
 .user-profile {
   max-width: 23rem;
   min-width: 15rem;
-  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
 
   &__tooltip {
     border-radius: 0.5rem;
-    height: 5.8125rem;
-    left: 6.5625rem;
-    position: absolute;
     text-align: center;
-    top: 0.03125rem;
-    width: calc(100% - 5.8125rem);
+    margin-left: 0.7rem;
+    padding: 0 0.35rem;
+    position: relative;
 
     &::after {
       border-radius: 0.125rem;
@@ -84,8 +84,12 @@
   &__links-container {
     display: flex;
     justify-content: space-around;
-    margin: 0.3125rem auto 0;
-    width: 73%;
+    margin: auto;
+    width: 76%;
+
+    @media screen and (max-width: 400px) {
+      width: 85%;
+    }
   }
 
   &__link {
@@ -96,6 +100,7 @@
     height: 2.1875rem;
     position: relative;
     width: 2.1875rem;
+    margin: 0.5rem;
 
     &::after {
       content: '';

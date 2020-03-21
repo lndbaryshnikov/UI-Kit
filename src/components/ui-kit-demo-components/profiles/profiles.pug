@@ -5,6 +5,6 @@ mixin profiles(profileOptions)
   .profiles
     +block-sign("user profile", "profile")
 
-    .profiles__container
-      each options in profileOptions
+    each options in profileOptions
+      .profiles__container
         +user-profile(options)
