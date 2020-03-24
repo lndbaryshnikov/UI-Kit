@@ -2,7 +2,7 @@
   border-radius: 0.1875rem;
   color: $white;
   display: flex;
-  height: 13.25rem;
+  min-height: 13.25rem;
   min-width: 18rem;
 
   @media screen and (max-width: 400px) {
@@ -20,7 +20,7 @@
   }
 
   &__content {
-    margin: 0.6875rem 1.25rem 0;
+    margin: 0.6875rem 1.25rem 0.3rem;
     width: 67%;
 
     @media screen and (max-width: 400px) {
