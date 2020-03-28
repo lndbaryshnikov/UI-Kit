@@ -1,11 +1,9 @@
 .message-box {
   background-color: $white-smoke;
   border-radius: 0.25rem;
-  // height: 26.75rem;
   width: 18rem;
 
   @media screen and (max-width: 400px) {
-    // height: 25.5rem;
     width: 15.5rem;
   }
 
