@@ -44,11 +44,11 @@ class SliderPips {
 
       this._appendCustomClasses(value);
 
-      this.$slider.on('slidechange', this._getValueChangedHandlerForStages());
+      this.$slider.on('slidechange', this._makeValueChangedHandlerForStages());
     }
   }
 
-  _getValueChangedHandlerForStages() {
+  _makeValueChangedHandlerForStages() {
     const { sliderColor, rangeColor } = this.options;
 
     return (event, { value }) => {

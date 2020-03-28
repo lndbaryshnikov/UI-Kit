@@ -28,15 +28,16 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-fsd": "^1.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "gh-pages": "^2.0.1",
+    "minimist": ">=1.2.2",
     "pug-lint": "^2.6.0",
     "stylelint": "^13.1.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
-    "webpack-dev-server": "^3.2.1",
-    "minimist": ">=1.2.2"
+    "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",

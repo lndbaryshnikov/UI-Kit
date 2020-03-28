@@ -65,9 +65,11 @@ class Map {
   _addButtonHandler() {
     const { longitude, latitude, zoom } = this.options;
 
-    this.$mapContainer.parent().find('.js-map__button').on('click', () => {
+    const buttonClickHandler = () => {
       this.map.setView([longitude, latitude], zoom);
-    });
+    };
+
+    this.$mapContainer.parent().find('.js-map__button').on('click', buttonClickHandler);
   }
 }
 

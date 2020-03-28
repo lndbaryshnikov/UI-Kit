@@ -5,7 +5,8 @@
     "jquery": true
   },
   "extends": [
-    "airbnb"
+    "airbnb",
+    "plugin:fsd/all"
   ],
   "globals": {
     "$": "readonly",
@@ -16,6 +17,7 @@
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
+  "plugins": ["fsd"],
   "rules": {
     "linebreak-style": "off",
     "no-underscore-dangle": "off",

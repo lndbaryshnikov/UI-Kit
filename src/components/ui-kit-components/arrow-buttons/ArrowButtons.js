@@ -50,7 +50,9 @@ class ArrowButtons {
   }
 
   _checkSide(side) {
-    if (side !== 'all' && side !== 'left' && side !== 'right') {
+    const isSideValueCorrect = side === 'all' || side === 'left' || side === 'right';
+
+    if (!isSideValueCorrect) {
       throw new Error('Side can only be \'left\', \'right\' or \'all\'');
     }
   }
