@@ -32,13 +32,13 @@ class SliderPips {
     });
 
     if (this.mode === 'with-labels') {
-      this._toggleModifier('pip', 'type', 'for-labels');
-      this._toggleModifier('pip', 'color', this.options.sliderColor);
+      this._toggleModifier({ modifier: 'type', value: 'for-labels' });
+      this._toggleModifier({ modifier: 'color', value: this.options.sliderColor });
     }
 
     if (this.mode === 'with-stages') {
-      this._toggleModifier('label', 'type', 'for-stages');
-      this._toggleModifier('pip', 'type', 'for-stages');
+      this._toggleModifier({ labelsElement: 'label', modifier: 'type', value: 'for-stages' });
+      this._toggleModifier({ modifier: 'type', value: 'for-stages' });
 
       const value = this.$slider.slider('option', 'value');
 
@@ -52,10 +52,10 @@ class SliderPips {
     const { sliderColor, rangeColor } = this.options;
 
     return (event, { value }) => {
-      this._toggleModifier('pip', 'background-color', sliderColor, { mode: 'remove' });
-      this._toggleModifier('pip', 'color', 'dark-gray', { mode: 'remove' });
-      this._toggleModifier('pip', 'background-color', rangeColor, { mode: 'remove' });
-      this._toggleModifier('pip', 'color', 'white', { mode: 'remove' });
+      this._toggleModifier({ modifier: 'background-color', value: sliderColor, mode: 'remove' });
+      this._toggleModifier({ modifier: 'color', value: 'dark-gray', mode: 'remove' });
+      this._toggleModifier({ modifier: 'background-color', value: rangeColor, mode: 'remove' });
+      this._toggleModifier({ modifier: 'color', value: 'white', mode: 'remove' });
 
       this._appendCustomClasses(value);
     };
@@ -72,7 +72,7 @@ class SliderPips {
       const values = [backgroundColor, color];
 
       properties.forEach((currentProperty, index) => {
-        this._toggleModifier('pip', currentProperty, values[index], { dom });
+        this._toggleModifier({ modifier: currentProperty, value: values[index], dom });
       });
     };
 
@@ -87,7 +87,9 @@ class SliderPips {
     });
   }
 
-  _toggleModifier(labelsElement, modifier, value, { dom, originalClass, mode = 'add' } = {}) {
+  _toggleModifier({
+    labelsElement = 'pip', modifier, value, dom, originalClass, mode = 'add',
+  } = {}) {
     if (mode !== 'add' && mode !== 'remove') {
       throw new Error('Mode should be \'add\', \'remove\'');
     }
