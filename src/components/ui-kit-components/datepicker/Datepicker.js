@@ -5,10 +5,10 @@ class Datepicker {
     this.$datepickerContainer = $element;
 
     this._defineElements();
-    this.init();
+    this._init();
   }
 
-  init() {
+  _init() {
     this.$datepicker.datepicker({
       firstDay: 1,
       dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
