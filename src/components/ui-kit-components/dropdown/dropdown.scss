@@ -1,77 +1,86 @@
+@import '~jquery-ui/themes/base/selectmenu';
+
 .dropdown {
-  background-color: $light-gray;
-  border-radius: 0.25rem;
-  height: 1.75rem;
-  position: relative;
-  transition: box-shadow 0.3s;
-  width: 100%;
-
-  &:hover {
-    box-shadow: 0 0 0.3125rem #000;
-  }
-
-  option:checked {
-    background-color: $cyan;
-  }
-
-  &__option {
+  + .ui-selectmenu-button.ui-button {
     background-color: $light-gray;
-    font-size: 0.9375rem;
-  }
-
-  select:focus {
-    box-shadow: none;
-  }
-
-  &__select {
-    appearance: none;
-    background: transparent;
-    border: 0;
     border-radius: 0.25rem;
-    color: $gray;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    font-size: 0.9375rem;
     height: 1.75rem;
-    letter-spacing: 0.00875rem;
-    outline: none;
-    padding-left: 0.75rem;
-    position: absolute;
-    transition: box-shadow 3s;
-    width: 100%;
-    z-index: 10;
-  }
-
-  &__button {
-    background-color: $cyan;
-    border: 0;
-    border-radius: 0 0.25rem 0.25rem 0;
-    cursor: pointer;
-    float: right;
-    height: 1.75rem;
-    outline: none;
-    overflow: hidden;
     position: relative;
-    right: 0;
-    top: 0;
-    width: 2.0625rem;
+    transition: box-shadow 0.3s;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0 0 0.3125rem #000;
     }
 
-    &:active {
-      box-shadow: none;
+    .ui-selectmenu-text {
+      color: $gray;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+      font-size: 0.9375rem;
+      letter-spacing: 0.00875rem;
+      padding-left: 0.75rem;
+      padding-top: 0.25rem;
     }
-  }
 
-  &__check-mark {
-    border-bottom: 0.125rem solid $white;
-    border-left: 0.125rem solid $white;
-    height: 0.5rem;
-    margin-left: 33.5%;
-    margin-top: 20%;
-    transform: rotate(-45deg);
-    width: 0.5rem;
+    .ui-selectmenu-icon {
+      background-color: $cyan;
+      border: 0;
+      border-radius: 0 0.25rem 0.25rem 0;
+      float: right;
+      height: 1.75rem;
+      outline: none;
+      position: relative;
+      width: 2.0625rem;
+
+      &:hover {
+        box-shadow: 0 0 0.3125rem #000;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+
+      &::after {
+        content: '';
+        border-bottom: 0.125rem solid $white;
+        border-left: 0.125rem solid $white;
+        height: 0.5rem;
+        margin-top: 20%;
+        transform: rotate(-45deg);
+        width: 0.5rem;
+        position: absolute;
+        left: 35%;
+      }
+    }
   }
 }
 
+.ui-selectmenu-menu.ui-selectmenu-open {
+  background-color: $cyan;
+  color: #fff;
+  border-radius: 0.2rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  .ui-menu {
+    list-style: none inside;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+
+    .ui-menu-item-wrapper {
+      padding: 0.4rem 0 0.18rem 1rem;
+
+      &:hover {
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+.ui-state-disabled {
+  display: none;
+}
