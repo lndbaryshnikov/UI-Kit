@@ -1,6 +1,6 @@
 include ../text-field/text-field
 
-mixin search-bar()
+mixin search-bar({ theme, placeholder = "Search" } = {})
   .search-bar
     form.search-bar__form
       .search-bar__input
@@ -8,7 +8,8 @@ mixin search-bar()
           tagName: "input",
           type: "search",
           name: "search",
-          placeholder: "Search",
-          blockName: "search-bar"
+          blockName: "search-bar",
+          placeholder,
+          theme,
         })
       button.search-bar__button(type="submit")

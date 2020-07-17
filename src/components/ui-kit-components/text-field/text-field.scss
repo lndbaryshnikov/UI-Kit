@@ -56,4 +56,15 @@
       box-sizing: border-box;
     }
   }
+
+  &_theme {
+    &_red {
+      background-color: $orange-red;
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
 }

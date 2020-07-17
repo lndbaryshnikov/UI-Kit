@@ -1,9 +1,13 @@
 mixin text-field(options)
-  - var { tagName, name, placeholder, blockName } = options;
+  - 
+    var { tagName, name, placeholder, blockName, theme } = options;
+    var mainClass = `text-field text-field_type_for-${blockName}`;
+    var themeClass = `text-field_theme_${theme}`;
+    var className = theme ? `${mainClass} ${themeClass}` : mainClass;
 
   if tagName !== "textarea"
-    #{tagName}(type=options.type, name=name, placeholder=placeholder, class=`text-field text-field_type_for-${blockName}`)
+    #{tagName}(type=options.type, name=name, placeholder=placeholder, class=className)
   else if tagName === "textarea"
-    #{tagName}(name=name, placeholder=placeholder, class=`text-field text-field_type_for-${blockName}`)
+    #{tagName}(name=name, placeholder=placeholder, class=className)
   else
     input.text-field

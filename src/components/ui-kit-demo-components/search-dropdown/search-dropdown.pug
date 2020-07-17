@@ -2,7 +2,7 @@ include ../../ui-kit-components/search-bar/search-bar
 include ../../ui-kit-components/dropdown/dropdown
 include ../block-sign/block-sign
 
-mixin search-dropdown({ searchBarQuantity = 2, dropdownsOptions } = {})
+mixin search-dropdown({ searchBarOptions, dropdownsOptions } = {})
   - 
     dropdownsOptions = dropdownsOptions || [[
       "This is option 1", 
@@ -11,12 +11,17 @@ mixin search-dropdown({ searchBarQuantity = 2, dropdownsOptions } = {})
       "This is option 4", 
     ]];
 
+    searchBarOptions = searchBarOptions || [
+      {}, 
+      { theme: "red", placeholder: "I've not found what I'm looking for..." },
+    ];
+
   .search-dropdown
     +block-sign("search / drop down", "search-dropdown")
 
     .search-dropdown__container
-      - for (var i = 0; i < 2; i += 1)
-        +search-bar(parameters)
+      each options in searchBarOptions
+        +search-bar(options)
 
       each parameters in dropdownsOptions
         +dropdown(parameters)
