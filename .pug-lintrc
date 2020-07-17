@@ -1,7 +1,7 @@
 {
   "disallowAttributeConcatenation": true,
   "disallowAttributeInterpolation": true,
-  "disallowClassAttributeWithStaticValue": true,
+  "disallowClassAttributeWithStaticValue": null,
   "disallowDuplicateAttributes": true,
   "disallowHtmlText": true,
   "disallowIdAttributeWithStaticValue": true,
@@ -21,7 +21,7 @@
   "validateAttributeSeparator": { "separator": ", ", "multiLineSeparator": ",\n  " },
   "validateIndentation": 2,
   "validateDivTags": true,
-  "validateLineBreaks": "CRLF",
+  "validateLineBreaks": null,
   "validateSelfClosingTags": true,
   "validateTemplateString": true,
   "disallowSpecificTags": "br"
