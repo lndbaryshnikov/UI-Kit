@@ -6,6 +6,6 @@ import MessageForm from './MessageForm';
   );
 
   messageForms.forEach((form) => {
-    new MessageForm(form).init();
+    new MessageForm(form);
   });
 })();

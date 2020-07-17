@@ -9,10 +9,11 @@ class MessageForm {
       email: false,
     };
 
-    this._defineElements();
+    this._init();
   }
 
-  init() {
+  _init() {
+    this._defineElements();
     this._addHandlers();
   }
 

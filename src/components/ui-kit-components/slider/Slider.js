@@ -116,9 +116,8 @@ class Slider {
   }
 
   _setPips() {
-    const pips = new SliderPips(this.$slider);
-
-    pips.init(this.options, this.mode);
+    const { $slider, options, mode } = this;
+    new SliderPips({ $slider, options, mode });
   }
 
   _setTooltipThemeModifier(theme) {

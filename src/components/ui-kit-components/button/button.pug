@@ -7,6 +7,6 @@ mixin button({ size, color, content, width, inverse = false })
   .button(class=[backSize, `button_color_${color}`])
     button.button__button-element(
       type="submit",
-      class=[`button__button-element_size_${size}`, `button__button-element_color_${buttonColor}`, "ripple"],
+      class=[`button__button-element_size_${size}`, `button__button-element_color_${buttonColor}`, "js-ripple"],
       data-ripple-color=rippleColor
     )= content

@@ -1,14 +1,15 @@
 import '../../../vendor/pips-float-plugin/jquery-ui-slider-pips';
 
 class SliderPips {
-  constructor($sliderDom) {
-    this.$slider = $sliderDom;
-  }
-
-  init(options, mode) {
+  constructor({ $slider, options, mode }) {
+    this.$slider = $slider;
     this.options = options;
     this.mode = mode;
 
+    this._init();
+  }
+
+  _init() {
     this.$slider.slider('pips', {
       rest: 'label',
     });

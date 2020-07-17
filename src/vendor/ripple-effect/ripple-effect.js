@@ -1,5 +1,5 @@
 (($) => {
-  $('.ripple').click((event) => {
+  $('.js-ripple').click((event) => {
     const $element = $(event.currentTarget);
 
     if ($element.find('.ink').length === 0) {
@@ -14,12 +14,18 @@
 
     if (!$ink.height() && !$ink.width()) {
       const diameter = Math.max($element.outerWidth(), $element.outerHeight());
-      $ink.css({ height: diameter, width: diameter });
+      $ink.css({
+        height: diameter,
+        width: diameter,
+      });
     }
 
     const x = event.pageX - $element.offset().left - $ink.width() / 2;
     const y = event.pageY - $element.offset().top - $ink.height() / 2;
 
-    $ink.css({ top: `${y}px`, left: `${x}px` }).addClass('animate');
+    $ink.css({
+      top: `${y}px`,
+      left: `${x}px`,
+    }).addClass('animate');
   });
 })(jQuery);
