@@ -1,1 +1,6 @@
-src/vendor/pips-float-plugin/*
+# Plugins code
+src/vendor/pips-float-plugin/
+
+# Webpack config
+webpack/
+webpack.config.js
