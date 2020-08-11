@@ -1,5 +1,5 @@
 .message-box {
-  background-color: $white-smoke;
+  background-color: $secondary-white-smoke;
   border-radius: 0.25rem;
   width: 18rem;
 
@@ -28,25 +28,25 @@
 
     &_theme {
       &_cyan {
-        background-color: $cyan;
+        background-color: $primary-cyan-main;
 
         &::after {
-          background-color: $dark-cyan;
+          background-color: $primary-cyan-dark;
         }
       }
 
       &_orange-red {
-        background-color: $orange-red;
+        background-color: $primary-orange-red-main;
 
         &::after {
-          background-color: $dark-orange-red;
+          background-color: $primary-orange-red-dark;
         }
       }
     }
   }
 
   &__name {
-    color: $white;
+    color: $secondary-white-main;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 2.125rem;
     letter-spacing: -0.06375rem;
@@ -100,9 +100,9 @@
   }
 
   &__message {
-    background-color: $white;
+    background-color: $secondary-white-main;
     border-radius: 0.3125rem;
-    color: $gray;
+    color: $secondary-gray-main;
     font-size: 0.8125rem;
     min-height: 2rem;
     letter-spacing: 0.039375rem;

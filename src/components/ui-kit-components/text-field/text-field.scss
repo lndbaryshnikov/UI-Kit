@@ -1,8 +1,8 @@
 .text-field {
-  background-color: $light-gray;
+  background-color: $secondary-gray-light;
   border: 0;
   border-radius: 0.25rem;
-  color: $gray;
+  color: $secondary-gray-main;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 0.875rem;
   height: 1.75rem;
@@ -46,7 +46,7 @@
     }
 
     &_for-message-box {
-      border: 0.1875rem solid $white;
+      border: 0.1875rem solid $secondary-white-main;
       height: 5.5rem;
       padding-left: 1.125rem;
       padding-top: 1rem;
@@ -59,11 +59,11 @@
 
   &_theme {
     &_red {
-      background-color: $orange-red;
-      color: $white;
+      background-color: $primary-orange-red-main;
+      color: $secondary-white-main;
 
       &::placeholder {
-        color: $white;
+        color: $secondary-white-main;
       }
     }
   }

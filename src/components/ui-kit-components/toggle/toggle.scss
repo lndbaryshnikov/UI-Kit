@@ -12,7 +12,7 @@
     width: 0;
 
     &:checked + .toggle__slider {
-      background-color: $cyan;
+      background-color: $primary-cyan-main;
 
       &::before {
         transform: translateX(2.125rem);
@@ -36,12 +36,12 @@
     }
 
     &:focus + .toggle__slider {
-      box-shadow: 0 0 0.0625rem $cyan;
+      box-shadow: 0 0 0.0625rem $primary-cyan-main;
     }
   }
 
   &__slider {
-    background-color: $light-gray;
+    background-color: $secondary-gray-light;
     border-radius: 2.125rem;
     bottom: 0;
     left: 0;
@@ -51,11 +51,10 @@
     transition: 0.4s;
 
     &::before {
-      background-color: #fff;
-
+      content: '';
+      background-color: $secondary-white-main;
       border-radius: 50%;
       bottom: 0.1875rem;
-      content: '';
       height: 1.125rem;
       left: 0.25rem;
       position: absolute;
@@ -65,7 +64,7 @@
   }
 
   &__sign {
-    color: $white;
+    color: $secondary-white-main;
     font-size: 0.75rem;
     letter-spacing: 0.0375rem;
     line-height: 0;

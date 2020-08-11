@@ -5,16 +5,16 @@
     text-decoration: none;
 
     &:hover {
-      color: $dark-orange-red;
+      color: $primary-orange-red-dark;
     }
 
     &_color {
       &_dark-gray {
-        color: $dark-gray;
+        color: $secondary-gray-dark;
       }
 
       &_white {
-        color: $rose-white;
+        color: $secondary-white-rose;
       }
     }
   }

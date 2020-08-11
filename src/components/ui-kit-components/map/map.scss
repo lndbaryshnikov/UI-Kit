@@ -4,7 +4,7 @@
   }
 
   &__footer {
-    background-color: $orange-red;
+    background-color: $primary-orange-red-main;
     height: 4.3125rem;
 
     @media screen and (max-width: 400px) {
@@ -13,7 +13,7 @@
   }
 
   &__footer-sign {
-    color: $white;
+    color: $secondary-white-main;
     float: left;
     font-size: 1.875rem;
     line-height: 4.3125rem;
@@ -33,7 +33,7 @@
   }
 
   &__footer-address {
-    color: $white;
+    color: $secondary-white-main;
     float: left;
     font-size: 0.8125rem;
     height: 1.625rem;
@@ -82,8 +82,8 @@
   }
 
   &__map-marker {
-    background-color: $orange-red;
-    border: 0.0625rem solid $orange-red;
+    background-color: $primary-orange-red-main;
+    border: 0.0625rem solid $primary-orange-red-main;
     border-radius: 50%;
     display: block;
     height: 2.9375rem;
@@ -95,7 +95,7 @@
     &::after {
       border: 1.3625rem solid transparent;
       border-radius: 0 0 0.625rem 0.625rem;
-      border-top: 2.5rem solid $orange-red;
+      border-top: 2.5rem solid $primary-orange-red-main;
       bottom: -2.78125rem;
       content: '';
       height: 0;
@@ -106,7 +106,7 @@
   }
 
   &__map-marker-circle {
-    background-color: $white;
+    background-color: $secondary-white-main;
     border-radius: 50%;
     height: 1.0625rem;
     left: 0.75rem;

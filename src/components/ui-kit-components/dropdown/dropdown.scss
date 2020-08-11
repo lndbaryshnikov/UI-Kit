@@ -2,7 +2,7 @@
 
 .dropdown {
   + .ui-selectmenu-button.ui-button {
-    background-color: $light-gray;
+    background-color: $secondary-gray-light;
     border-radius: 0.25rem;
     height: 1.75rem;
     position: relative;
@@ -16,7 +16,7 @@
     }
 
     .ui-selectmenu-text {
-      color: $gray;
+      color: $secondary-gray-main;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-size: 0.9375rem;
       letter-spacing: 0.00875rem;
@@ -25,7 +25,7 @@
     }
 
     .ui-selectmenu-icon {
-      background-color: $cyan;
+      background-color: $primary-cyan-main;
       border: 0;
       border-radius: 0 0.25rem 0.25rem 0;
       float: right;
@@ -44,8 +44,8 @@
 
       &::after {
         content: '';
-        border-bottom: 0.125rem solid $white;
-        border-left: 0.125rem solid $white;
+        border-bottom: 0.125rem solid $secondary-white-main;
+        border-left: 0.125rem solid $secondary-white-main;
         height: 0.5rem;
         margin-top: 20%;
         transform: rotate(-45deg);
@@ -58,8 +58,8 @@
 }
 
 .ui-selectmenu-menu.ui-selectmenu-open {
-  background-color: $cyan;
-  color: #fff;
+  background-color: $primary-cyan-main;
+  color: $secondary-white-main;
   border-radius: 0.2rem;
   padding: 0;
   margin: 0;
@@ -75,7 +75,7 @@
       padding: 0.4rem 0 0.18rem 1rem;
 
       &:hover {
-        background-color: $gray;
+        background-color: $secondary-gray-main;
       }
     }
   }

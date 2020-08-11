@@ -2,7 +2,7 @@
 @import '~jquery-ui/themes/base/datepicker.css';
 
 .datepicker {
-  background-color: $white-smoke;
+  background-color: $secondary-white-smoke;
   height: 26.8rem;
   width: 17.375rem;
 
@@ -12,8 +12,8 @@
   }
 
   &__header {
-    background-color: $orange-red;
-    color: $white;
+    background-color: $primary-orange-red-main;
+    color: $secondary-white-main;
     font-size: 5rem;
     height: 10.5rem;
     line-height: 7rem;
@@ -31,7 +31,7 @@
   }
 
   &__month-line {
-    background-color: $dark-orange-red;
+    background-color: $primary-orange-red-dark;
     height: 2.75rem;
     position: absolute;
     top: 6.6875rem;
@@ -57,7 +57,7 @@
 
       &-calendar {
         border-collapse: collapse;
-        color: $rose-white;
+        color: $secondary-white-rose;
         font-size: 0.7rem;
         height: 14.4rem;
         margin-left: -0.125rem;
@@ -70,15 +70,15 @@
 
         tbody {
           td {
-            border: 0.0625rem solid $white;
+            border: 0.0625rem solid $secondary-white-main;
             height: auto;
 
             &:hover {
-              background-color: $orange-red;
+              background-color: $primary-orange-red-main;
             }
 
             &:active {
-              background-color: $gray;
+              background-color: $secondary-gray-main;
             }
 
             a {
@@ -108,21 +108,21 @@
       }
 
       &-current-day {
-        background-color: $orange-red;
+        background-color: $primary-orange-red-main;
 
         a {
-          color: $white;
+          color: $secondary-white-main;
         }
       }
 
       &-month {
-        color: $white;
+        color: $secondary-white-main;
         font-size: 1.5rem;
         line-height: 2.8rem;
       }
 
       &-next {
-        border-color: $white $white transparent transparent;
+        border-color: $secondary-white-main $secondary-white-main transparent transparent;
         border-style: solid;
         border-width: 0.25rem;
         cursor: pointer;
@@ -144,7 +144,7 @@
       }
 
       &-prev {
-        border-color: $white $white transparent transparent;
+        border-color: $secondary-white-main $secondary-white-main transparent transparent;
         border-style: solid;
         border-width: 0.25rem;
         cursor: pointer;
@@ -156,7 +156,7 @@
       }
 
       &-title {
-        background-color: $dark-orange-red;
+        background-color: $primary-orange-red-dark;
         height: 2.75rem;
         position: relative;
         top: 0.5rem;
@@ -174,7 +174,7 @@
   }
 
   &__today-button {
-    background-color: $light-gray;
+    background-color: $secondary-gray-light;
     border: 0;
     bottom: 7.5rem;
     color: #868686;

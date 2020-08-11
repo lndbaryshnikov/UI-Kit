@@ -6,13 +6,16 @@
 
 @include font-face('Source Sans Pro', 'source-sans-pro', 'regular');
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  background-color: $white;
+  background-color: $secondary-white-main;
   color: #000;
-  font-family: Lato, Arial, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: normal;
+  font: normal normal 16px Lato, Arial, sans-serif;
 
   @media screen and (max-width: 722px) {
     font-size: 15px;
@@ -22,11 +25,3 @@ html {
     font-size: 14px;
   }
 }
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-

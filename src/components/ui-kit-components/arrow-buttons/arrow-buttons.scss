@@ -24,7 +24,7 @@
   }
 
   &__arrow-container {
-    border: 0.1875rem solid $cyan;
+    border: 0.1875rem solid $primary-cyan-main;
     border-radius: 50%;
     height: 2.8125rem;
     cursor: pointer;
@@ -36,27 +36,27 @@
     width: 2.8125rem;
 
     &:hover {
-      background-color: $cyan;
+      background-color: $primary-cyan-main;
 
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
-        border-color: $white;
+        border-color: $secondary-white-main;
       }
     }
 
     &_disabled {
-      background-color: $light-gray;
-      border-color: $light-gray;
+      background-color: $secondary-gray-light;
+      border-color: $secondary-gray-light;
       cursor: default;
 
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
         animation: none;
-        border-color: $white;
+        border-color: $secondary-white-main;
         transform: rotate(45deg);
       }
 
       &:hover {
-        background-color: $light-gray;
-        border-color: $light-gray;
+        background-color: $secondary-gray-light;
+        border-color: $secondary-gray-light;
       }
     }
   }
@@ -68,15 +68,15 @@
   }
 
   &__right-arrow {
-    border-right: 0.21875rem solid $cyan;
-    border-top: 0.21875rem solid $cyan;
+    border-right: 0.21875rem solid $primary-cyan-main;
+    border-top: 0.21875rem solid $primary-cyan-main;
     margin-right: 1.125rem;
     transform: rotate(45deg);
   }
 
   &__left-arrow {
-    border-bottom: 0.21875rem solid $cyan;
-    border-left: 0.21875rem solid $cyan;
+    border-bottom: 0.21875rem solid $primary-cyan-main;
+    border-left: 0.21875rem solid $primary-cyan-main;
     margin-left: 1.125rem;
     transform: rotate(45deg);
   }

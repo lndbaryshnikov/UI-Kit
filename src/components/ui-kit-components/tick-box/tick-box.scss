@@ -12,18 +12,18 @@
 
     &:checked {
       + .tick-box__check-mark-container {
-        background-color: $cyan;
+        background-color: $primary-cyan-main;
 
         .tick-box__check-mark {
-          border-bottom: 0.125rem solid $white;
-          border-left: 0.125rem solid $white;
+          border-bottom: 0.125rem solid $secondary-white-main;
+          border-left: 0.125rem solid $secondary-white-main;
         }
       }
     }
 
     &:not(:checked) {
       + .tick-box__check-mark-container {
-        background-color: $light-gray;
+        background-color: $secondary-gray-light;
 
         .tick-box__check-mark {
           border-bottom: 0.125rem solid #c0c0c0;
@@ -34,7 +34,7 @@
   }
 
   &__check-mark-container {
-    background-color: $cyan;
+    background-color: $primary-cyan-main;
     border-radius: 50%;
     height: 1.4375rem;
     transition: 0.3s;

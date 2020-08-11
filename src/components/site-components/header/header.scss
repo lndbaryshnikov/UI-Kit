@@ -1,5 +1,5 @@
 .header {
-  border: 0.2rem solid $dark-gray;
+  border: 0.2rem solid $secondary-gray-dark;
   box-sizing: border-box;
   height: 4rem;
 
@@ -9,19 +9,19 @@
 
   &_color {
     &_orange-red {
-      background-color: $orange-red;
+      background-color: $primary-orange-red-main;
     }
 
     &_cyan {
-      background-color: $cyan;
+      background-color: $primary-cyan-main;
     }
   }
 
   &__name {
     border-bottom: 0;
-    border-right: 0.2rem solid $dark-gray;
+    border-right: 0.2rem solid $secondary-gray-dark;
     box-sizing: border-box;
-    color: $white;
+    color: $secondary-white-main;
     float: left;
     font-size: 2rem;
     height: 100%;
@@ -46,7 +46,7 @@
     width: calc(100% - 12rem);
 
     @media screen and (max-width: 600px) {
-      border-top: 0.2rem solid $dark-gray;
+      border-top: 0.2rem solid $secondary-gray-dark;
       float: none;
       height: 40%;
       width: 100%;
@@ -54,7 +54,7 @@
   }
 
   &__link {
-    color: $white;
+    color: $secondary-white-main;
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
     text-decoration: none;
@@ -68,7 +68,7 @@
     }
 
     &:hover {
-      color: $gray;
+      color: $secondary-gray-main;
     }
   }
 }
