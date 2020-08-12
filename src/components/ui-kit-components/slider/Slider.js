@@ -1,4 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
+
 import SliderPips from './SliderPips';
 
 class Slider {

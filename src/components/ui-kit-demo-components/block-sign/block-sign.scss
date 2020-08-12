@@ -6,7 +6,7 @@
     display: inline-block;
     font-size: 1.1rem;
     font-weight: 900;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.09rem;
     text-transform: uppercase;
   
     &_type {
@@ -15,14 +15,13 @@
       }
   
       &_for-search-dropdown {
-        letter-spacing: 0.05rem;
-        margin-right: 0.3rem;
+        letter-spacing: 0.06rem;
+        margin-right: 0.8rem;
       }
   
       &_for-profile {
-        letter-spacing: 0.07rem;
-        position: relative;
-        right: 0.5rem;
+        letter-spacing: 0.08rem;
+        margin-right: 1.1rem;
       }
   
       &_for-sliders {

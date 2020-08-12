@@ -4,16 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --env development",
     "build": "webpack --mode production --env production",
-    "watch": "webpack --mode development --watch --env development",
     "server": "webpack-dev-server --mode development --open --env development",
     "deploy": "gh-pages -d dist",
-    "lint": "npm run eslint && npm run pug-lint && npm run stylelint",
+    "lint": "npm run eslint && npm run pugLint && npm run stylelint",
     "eslint": "eslint src",
-    "pug-lint": "pug-lint --config .pug-lintrc src",
+    "pugLint": "pug-lint --config .pug-lintrc src",
     "stylelint": "stylelint --config .stylelintrc \"src/**/*.scss\"",
-    "stylelint-fix": "stylelint --config .stylelintrc \"src/**/*.scss\" --fix"
+    "stylelintFix": "stylelint --config .stylelintrc \"src/**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",

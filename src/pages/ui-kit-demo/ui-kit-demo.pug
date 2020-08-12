@@ -4,8 +4,8 @@ block content
   .ui-kit-demo
     .ui-kit-demo__header
       +demo-page-header
-    .ui-kit-demo__components
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-buttons
+    .ui-kit-demo__components-container
+      section.ui-kit-demo__buttons
         -
           var buttonOptions = [
             {
@@ -27,11 +27,11 @@ block content
               size: "small",
               color: "orange-red",
               content: "button"
-            }
+            },
           ];
 
           var inverseButtonOptions = buttonOptions.map((options) => {
-            const newOptions = Object.assign({}, options);
+            var newOptions = Object.assign({}, options);
             newOptions.inverse = true;
 
             return newOptions;
@@ -39,10 +39,10 @@ block content
 
         +buttons([buttonOptions, inverseButtonOptions, buttonOptions])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-arrows
+      section.ui-kit-demo__arrows
         +arrows([{}, { disabled: true }, {}])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-charts
+      section.ui-kit-demo__charts
         +charts([
           { percentage: 0 }, { percentage: 38 }, { percentage: 62 }, { percentage: 89 },
           {
@@ -52,7 +52,7 @@ block content
           }
         ])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-sliders
+      section.ui-kit-demo__sliders
         +sliders([
           { value: 40 },
           { 
@@ -65,7 +65,7 @@ block content
           }
         ])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-stages-box
+      section.ui-kit-demo__stages-box
         +stages-box([
           { 
             min: 1, 
@@ -77,10 +77,10 @@ block content
           }
         ])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-form-elements
+      section.ui-kit-demo__form-elements
         +form-elements
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-search-dropdown-profiles
+      section.ui-kit-demo__search-dropdown-profiles
         +search-dropdown-profiles({
           profileOptions: [
             {
@@ -96,7 +96,7 @@ block content
           ]
         })
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-news-events
+      section.ui-kit-demo__news-events
         +news-events([
           {
             type: "news",
@@ -122,11 +122,11 @@ block content
           }
         ])
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-location
+      section.ui-kit-demo__location
         +location
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-calendar-messaging
+      section.ui-kit-demo__calendar-messaging
         +calendar-messaging
 
-      section.ui-kit-demo__section.ui-kit-demo__section_type_for-video-box
+      section.ui-kit-demo__video-box
         +video-box("https://www.youtube.com/embed/pzbqEG_chrs")

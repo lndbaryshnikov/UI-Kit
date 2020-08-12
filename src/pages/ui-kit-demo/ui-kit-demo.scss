@@ -3,12 +3,20 @@
     margin-top: 1rem;
   }
 
-  &__components {
+  &__components-container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 8.8rem auto 0;
-    width: 50%;
+    margin: 8.8rem auto 6rem;
+    width: 35.5%;
+
+    @media screen and (max-width: 1600px) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: 1366px) {
+      width: 50%;
+    }
 
     @media screen and (max-width: 1094px) {
       width: 70%;
@@ -19,76 +27,70 @@
     }
   }
 
-  &__section {
-    width: 100%;
+  &__buttons {
+    width: 72%;
+  }
 
-    &_type {
-      &_for-buttons {
-        width: 72%;
-      }
+  &__arrows {
+    margin-top: 2.1rem;
+    width: 67%;
 
-      &_for-arrows {
-        margin-top: 2.05rem;
-        width: 67%;
-
-        @media screen and (max-width: 1094px) {
-          margin-top: 2.3rem;
-        }
-      }
-
-      &_for-charts {
-        margin-top: 2.8rem;
-      }
-
-      &_for-sliders {
-        margin-right: 15px;
-        margin-top: 1.15rem;
-        width: 88%;
-      }
-
-      &_for-stages-box {
-        margin-top: 2.3rem;
-        width: 84%;
-      }
-
-      &_for-form-elements {
-        margin-top: 2.8rem;
-        width: 88%;
-      }
-
-      &_for-search-dropdown-profiles {
-        margin-top: 1.3125rem;
-        width: 97%;
-      }
-
-      &_for-news-events {
-        margin-top: 5.5rem;
-        width: 91%;
-
-        @media screen and (max-width: 1094px) {
-          width: 105%;
-        }
-
-        @media screen and (max-width: 400px) {
-          width: 95%;
-        }
-      }
-
-      &_for-location {
-        margin-top: 3rem;
-        width: 88%;
-      }
-
-      &_for-calendar-messaging {
-        margin-top: 0.5rem;
-        width: 92%;
-      }
-
-      &_for-video-box {
-        margin-top: 3.3rem;
-        margin-right: 0.2rem;
-        width: 88%;
-      }
+    @media screen and (max-width: 1094px) {
+      margin-top: 2.3rem;
     }
+  }
+
+  &__charts {
+    margin-top: 2.9rem;
+  }
+
+  &__sliders {
+    margin-right: 0.93rem;
+    margin-top: 1.15rem;
+    width: 88%;
+  }
+
+  &__stages-box {
+    margin-top: 2.3rem;
+    width: 84%;
+  }
+
+  &__form-elements {
+    margin-top: 2.7rem;
+    width: 87%;
+  }
+
+  &__search-dropdown-profiles {
+    margin-top: 1.4rem;
+    width: 97%;
+  }
+
+  &__news-events {
+    margin-top: 5.8rem;
+    width: 90%;
+
+    @media screen and (max-width: 1094px) {
+      width: 105%;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 95%;
+    }
+  }
+
+  &__location {
+    margin-top: 3rem;
+    width: 87%;
+  }
+
+  &__calendar-messaging {
+    margin-top: 0.45rem;
+    width: 91%;
+  }
+
+  &__video-box {
+    margin-top: 1.5rem;
+    margin-right: 0.2rem;
+    width: 87%;
   }
 }
