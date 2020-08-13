@@ -1,25 +1,25 @@
-mixin donut-chart({ percentage, color = "#e75735", thickness = "5", radius = "45", background = "transparent" })
-  - percentage = Array.isArray(percentage) ? percentage : [percentage];
-  - color = Array.isArray(color) ? color : [color];
-  - var size = 2 * (Number(radius) + 15);
+mixin donut-chart({ percentage, color = '#e75735', thickness = 5, radius = 45, background = 'transparent' })
+  - 
+    percentage = Array.isArray(percentage) ? percentage : [percentage];
+    color = Array.isArray(color) ? color : [color];
 
-    .donut-chart(style={width: `${size}px`})
-      if (percentage.length !== 1)
-        .donut-chart__percentage.donut-chart__percentage_invisible=  percentage
-      else
-        .donut-chart__percentage=  percentage
+    const size = 2 * (radius + 15);
 
-      - var dashArray = 2 * Math.PI * radius;
+  .donut-chart(style={width: `${size}px`})
+    if percentage.length !== 1
+      .donut-chart__percentage.donut-chart__percentage_invisible= percentage
+    else
+      .donut-chart__percentage= percentage
 
-      svg(width=size, height=size, xmlns="http://www.w3.org/2000/svg")
-        - for (let i = 0; i < percentage.length; i += 1)
-          - var addendum = 0;
-          - var dashOffset = dashArray - (dashArray * percentage[i] / 100) + addendum;
-          - addendum = dashOffset;
+    - const dashArray = 2 * Math.PI * radius;
 
-          circle.donut-chart__animation(
-            r=radius, cx="50%", cy="50%",
-            stroke-width=thickness, stroke-dasharray=dashArray,
-            stroke-dashoffset=dashOffset,
-            stroke=color[i], fill=background
-          )
+    svg(width=size, height=size, xmlns="http://www.w3.org/2000/svg")
+      each currentPercentage, index in percentage
+        - const dashOffset = dashArray - (dashArray * currentPercentage / 100);
+
+        circle.donut-chart__animation(
+          r=radius, cx="50%", cy="50%",
+          stroke-width=thickness, stroke-dasharray=dashArray,
+          stroke-dashoffset=dashOffset,
+          stroke=color[index], fill=background
+        )

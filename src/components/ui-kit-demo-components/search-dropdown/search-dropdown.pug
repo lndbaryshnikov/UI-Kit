@@ -5,19 +5,19 @@ include ../block-sign/block-sign
 mixin search-dropdown({ searchBarOptions, dropdownsOptions } = {})
   - 
     dropdownsOptions = dropdownsOptions || [[
-      "This is option 1", 
-      "This is option 2", 
-      "This is option 3", 
-      "This is option 4", 
+      'This is option 1', 
+      'This is option 2', 
+      'This is option 3', 
+      'This is option 4', 
     ]];
 
     searchBarOptions = searchBarOptions || [
       {}, 
-      { theme: "red", placeholder: "I've not found what I'm looking for..." },
+      { theme: 'red', placeholder: 'I\'ve not found what I\'m looking for...' },
     ];
 
   .search-dropdown
-    +block-sign("search / drop down", "search-dropdown")
+    +block-sign('search / drop down', 'search-dropdown')
 
     .search-dropdown__container
       each options in searchBarOptions

@@ -2,13 +2,13 @@ include ../user-photo/user-photo
 include ../text-field/text-field
 include ../button/button
 
-mixin message-box({ theme = "cyan", name = "Sarah Brown", defaultMessage, chatLink, cameraLink })
+mixin message-box({ theme = 'cyan', name = 'Sarah Brown', defaultMessage, chatLink, cameraLink })
   -
-    var mockLinkAddress = "/mock-address/change-me";
+    const mockLinkAddress = '/mock-address/change-me';
 
     chatLink = chatLink || mockLinkAddress;
     cameraLink = cameraLink || mockLinkAddress;
-    defaultMessage = defaultMessage || "Hey! So are we cool to meet at the art gallery? Say 8pm";
+    defaultMessage = defaultMessage || 'Hey! So are we cool to meet at the art gallery? Say 8pm';
 
   .message-box
     .message-box__header(class=`message-box__header_theme_${theme}`)
@@ -24,16 +24,16 @@ mixin message-box({ theme = "cyan", name = "Sarah Brown", defaultMessage, chatLi
       form.message-box__form(method="post")
         .message-box__reply
           +text-field({
-            tagName: "textarea",
-            name: "reply",
-            placeholder: "Your reply here...",
-            blockName: "message-box"
+            tagName: 'textarea',
+            name: 'reply',
+            placeholder: 'Your reply here...',
+            blockName: 'message-box',
           })
 
         .message-box__reply-button
           +button({
-            size: "standard",
+            size: 'standard',
             color: theme,
-            content: "reply",
-            width: "hundred-percents"
+            content: 'reply',
+            width: 'hundred-percents',
           })

@@ -16,13 +16,12 @@ block page-content
       .details__percentages
         +percentages
     .details__course-stages
-      +stages(
-        {
-          title: "Course stages",
-          stages: ["HTML", "CSS", "JavaScript", "Project", "Internship"],
+      +stages({
+          title: 'Course stages',
+          stages: ['HTML', 'CSS', 'JavaScript', 'Project', 'Internship'],
           startFrom: 3,
           styles: {
-            sliderColor: "gray",
-            rangeColor: "green"
-          }
+            sliderColor: 'gray',
+            rangeColor: 'green',
+          },
         })

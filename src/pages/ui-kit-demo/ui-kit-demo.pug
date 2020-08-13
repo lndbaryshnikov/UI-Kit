@@ -7,35 +7,32 @@ block content
     .ui-kit-demo__components-container
       section.ui-kit-demo__buttons
         -
-          var buttonOptions = [
+          const buttonOptions = [
             {
-              size: "small",
-              color: "cyan",
-              content: "button"
+              size: 'small',
+              color: 'cyan',
+              content: 'button',
             },
             {
-              size: "standard",
-              color: "cyan",
-              content: "button"
+              size: 'standard',
+              color: 'cyan',
+              content: 'button',
             },
             {
-              size: "standard",
-              color: "orange-red",
-              content: "button"
+              size: 'standard',
+              color: 'orange-red',
+              content: 'button',
             },
             {
-              size: "small",
-              color: "orange-red",
-              content: "button"
+              size: 'small',
+              color: 'orange-red',
+              content: 'button',
             },
           ];
 
-          var inverseButtonOptions = buttonOptions.map((options) => {
-            var newOptions = Object.assign({}, options);
-            newOptions.inverse = true;
-
-            return newOptions;
-          });
+          const inverseButtonOptions = buttonOptions.map((options) => (
+            Object.assign({}, options, { inverse: true }))
+          );
 
         +buttons([buttonOptions, inverseButtonOptions, buttonOptions])
 
@@ -47,9 +44,9 @@ block content
           { percentage: 0 }, { percentage: 38 }, { percentage: 62 }, { percentage: 89 },
           {
             percentage: [100, 75, 40, 10],
-            color: ["#e5e5e5", "#4eb7a8", "#e75735", "#747474"],
-            thickness: 10
-          }
+            color: ['#e5e5e5', '#4eb7a8', '#e75735', '#747474'],
+            thickness: 10,
+          },
         ])
 
       section.ui-kit-demo__sliders
@@ -58,11 +55,11 @@ block content
           { 
             value: 75, 
             step: 25, 
-            type: "labels",
-            sliderColor: "gray", 
-            rangeColor: "green", 
-            handleColor: "green" 
-          }
+            type: 'labels',
+            sliderColor: 'gray', 
+            rangeColor: 'green', 
+            handleColor: 'green',
+          },
         ])
 
       section.ui-kit-demo__stages-box
@@ -71,10 +68,10 @@ block content
             min: 1, 
             max: 5, 
             value: 3, 
-            type: "stages",
-            sliderColor: "gray", 
-            rangeColor: "orange-red"
-          }
+            type: 'stages',
+            sliderColor: 'gray', 
+            rangeColor: 'orange-red',
+          },
         ])
 
       section.ui-kit-demo__form-elements
@@ -84,42 +81,42 @@ block content
         +search-dropdown-profiles({
           profileOptions: [
             {
-              name: "John Smith",
-              job: "ux designer",
-              theme: "orange-red"
+              name: 'John Smith',
+              job: 'ux designer',
+              theme: 'orange-red',
             },
             {
-              name: "Sarah Brown",
-              job: "developer",
-              theme: "cyan"
-            }
-          ]
+              name: 'Sarah Brown',
+              job: 'developer',
+              theme: 'cyan',
+            },
+          ],
         })
 
       section.ui-kit-demo__news-events
         +news-events([
           {
-            type: "news",
-            title: "It’s all going\ndownhill",
-            imageName: "demo-news",
-            content: "Lorem ipsum dolor sit amet, " +
-              "consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n" +
-              " Etiam a nisi nunc, a tincidunt eros.",
-            backgroundColor: "orange-red",
-            day: "24",
-            month: "august",
-            year: "2013"
+            type: 'news',
+            title: 'It’s all going\ndownhill',
+            imageName: 'demo-news',
+            content: 'Lorem ipsum dolor sit amet, ' +
+              'consectetur adipiscing elit. Sed condimentum aliquet venenatis.\n' +
+              ' Etiam a nisi nunc, a tincidunt eros.',
+            backgroundColor: 'orange-red',
+            day: 24,
+            month: 'august',
+            year: 2013,
           },
           {
-            type: "events",
-            title: "this is the title",
-            imageName: "demo-event",
-            content: "Lorem ipsum dolor sit amet, " +
-              "consectetur adipiscing elit.",
-            backgroundColor: "cyan",
-            day: "24",
-            month: "Aug"
-          }
+            type: 'events',
+            title: 'this is the title',
+            imageName: 'demo-event',
+            content: 'Lorem ipsum dolor sit amet, ' +
+              'consectetur adipiscing elit.',
+            backgroundColor: 'cyan',
+            day: 24,
+            month: 'Aug',
+          },
         ])
 
       section.ui-kit-demo__location
@@ -129,4 +126,4 @@ block content
         +calendar-messaging
 
       section.ui-kit-demo__video-box
-        +video-box("https://www.youtube.com/embed/pzbqEG_chrs")
+        +video-box('https://www.youtube.com/embed/pzbqEG_chrs')

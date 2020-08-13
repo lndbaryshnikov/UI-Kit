@@ -1,8 +1,8 @@
 include ../../ui-kit-components/message-box/message-box
 include ../block-sign/block-sign
 
-mixin messaging({ theme = "cyan", name = "Sarah Brown" } = {})
+mixin messaging({ theme = 'cyan', name = 'Sarah Brown' } = {})
   .messaging
-    +block-sign("messaging", "messaging")
+    +block-sign('messaging', 'messaging')
     .messaging__container
       +message-box({ theme, name })

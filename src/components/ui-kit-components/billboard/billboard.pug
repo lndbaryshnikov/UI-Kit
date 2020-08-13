@@ -8,12 +8,12 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
     )
 
     .billboard__content
-      if type === "news"
+      if type === 'news'
         .billboard__title.billboard__title_type_new= title
         .billboard__date.billboard__date_type_new #{day} #{month} #{year}
         .billboard__description= content
 
-      if type === "events"
+      if type === 'events'
         .billboard__date.billboard__date_type_event
           .billboard__event-day= day
           .billboard__event-month  #{month}
@@ -23,16 +23,16 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
         if goTo
           form.billboard__button(action=goTo)
             +button({
-              size: "small",
-              color: "cyan",
-              content: "add to calendar",
-              width: "hundred-percents",
+              size: 'small',
+              color: 'cyan',
+              content: 'add to calendar',
+              width: 'hundred-percents',
             })
         else
           .billboard__button
             +button({
-              size: "small",
-              color: "cyan",
-              content: "add to calendar",
-              width: "hundred-percents",
+              size: 'small',
+              color: 'cyan',
+              content: 'add to calendar',
+              width: 'hundred-percents',
             })

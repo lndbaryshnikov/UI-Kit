@@ -15,20 +15,18 @@ block page-content
         +contact-info
       .contact__billboard
         +billboard({
-          type: "events",
-          title: "first lesson",
-          imageName: "course-event",
-          content: "First lesson starts in February 14th. Hurry up to sign up!",
-          backgroundColor: "cyan",
-          day: "14",
-          month: "Feb",
-          goTo: "./enroll.html"
+          type: 'events',
+          title: 'first lesson',
+          imageName: 'course-event',
+          content: 'First lesson starts in February 14th. Hurry up to sign up!',
+          backgroundColor: 'cyan',
+          day: 14,
+          month: 'Feb',
+          goTo: './enroll.html',
         })
 
     .contact__map
-      +map([55.785124, 49.121856], 14,
-        {
-          sign: "Meet us!",
-          address: "Ostrovsky Street, 38. Kazan"
-        }
+      +map(
+        [55.785124, 49.121856], 14,
+        { sign: 'Meet us!', address: 'Ostrovsky Street, 38. Kazan' }
       )

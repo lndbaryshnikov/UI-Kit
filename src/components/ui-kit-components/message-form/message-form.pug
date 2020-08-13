@@ -6,11 +6,11 @@ mixin message-form(extraOptions)
   form.message-form.js-message-form(method="post")
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
-        tagName: "input",
-        type: "text",
-        name: "name",
-        placeholder: "Your Name",
-        blockName: "message-form"
+        tagName: 'input',
+        type: 'text',
+        name: 'name',
+        placeholder: 'Your Name',
+        blockName: 'message-form',
       })
 
       .message-form__tooltip.js-message-form__tooltip(
@@ -22,11 +22,11 @@ mixin message-form(extraOptions)
 
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
-        tagName: "input",
-        type: "email",
-        name: "email",
-        placeholder: "Your Email",
-        blockName: "message-form"
+        tagName: 'input',
+        type: 'email',
+        name: 'email',
+        placeholder: 'Your Email',
+        blockName: 'message-form',
       })
 
       .message-form__tooltip.js-message-form__tooltip(
@@ -38,16 +38,16 @@ mixin message-form(extraOptions)
 
     .message-form__data-field.message-form__data-field_type_textarea
       +text-field({
-        tagName: "textarea",
-        name: "message",
-        placeholder: "Your Message",
-        blockName: "message-form"
+        tagName: 'textarea',
+        name: 'message',
+        placeholder: 'Your Message',
+        blockName: 'message-form',
       })
 
     if extraOptions
       .message-form__tick-boxes
         each options in extraOptions
-          - var { isChecked, name, text } = options;
+          - const { isChecked, name, text } = options;
 
           .message-form__tick-item
             +tick-box(isChecked, { name, id: name })
@@ -55,7 +55,8 @@ mixin message-form(extraOptions)
 
     .message-form__button.js-message-form__button
       +button({
-        size: "standard",
-        color: "cyan",
-        content: "submit"
+        size: 'standard',
+        color: 'cyan',
+        content: 'submit',
       })
+      

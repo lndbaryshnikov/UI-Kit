@@ -4,24 +4,24 @@ mixin user-profile({ name, job, theme })
   .user-profile
     +user-photo(name)
 
-    if theme === "orange-red"
+    if theme === 'orange-red'
       -
-        var nameColor = "orange-red";
-        var jobColor = "black";
-        var tooltipColor = "grey";
+        const nameColor = 'orange-red';
+        const jobColor = 'black';
+        const tooltipColor = 'grey';
 
-    if theme === "cyan"
+    if theme === 'cyan'
       -
-        var nameColor = "white";
-        var jobColor = "white";
-        var tooltipColor = "cyan";
+        const nameColor = 'white';
+        const jobColor = 'white';
+        const tooltipColor = 'cyan';
 
     .user-profile__tooltip(class=`user-profile__tooltip_color_${tooltipColor}`)
       span.user-profile__name(class=`user-profile__name_color_${nameColor}`)= name
       span.user-profile__job(class=`user-profile__job_color_${jobColor}`)= job
 
       .user-profile__links-container
-        - for (var i = 1; i<=3; i += 1)
+        - for (var i = 1; i <= 3; i += 1)
           a.user-profile__link(
             href="/mock-address/change-me",
             class=`user-profile__link_theme_${theme}`,

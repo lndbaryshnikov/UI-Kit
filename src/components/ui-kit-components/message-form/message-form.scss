@@ -60,7 +60,7 @@
         background-color: $primary-orange-red-main;
 
         &::after {
-          border-color: transparent primary-orange-red-main transparent transparent;
+          border-color: transparent $primary-orange-red-main transparent transparent;
         }
       }
 

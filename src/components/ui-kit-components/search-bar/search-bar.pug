@@ -1,14 +1,14 @@
 include ../text-field/text-field
 
-mixin search-bar({ theme, placeholder = "Search" } = {})
+mixin search-bar({ theme, placeholder = 'Search' } = {})
   .search-bar
     form.search-bar__form
       .search-bar__input
         +text-field({
-          tagName: "input",
-          type: "search",
-          name: "search",
-          blockName: "search-bar",
+          tagName: 'input',
+          type: 'search',
+          name: 'search',
+          blockName: 'search-bar',
           placeholder,
           theme,
         })
