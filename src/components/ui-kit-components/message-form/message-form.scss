@@ -5,6 +5,7 @@
     &_type {
       &_input {
         margin-bottom: 0.75rem;
+        display: flex;
       }
     }
   }
@@ -36,14 +37,14 @@
     font-size: 0.625rem;
     letter-spacing: 0.03125rem;
     line-height: 1.625rem;
-    margin-top: 0.1rem;
-    margin-left: 0.4rem;
+    margin: 0.05rem 0.1rem 0 0.5rem;
     padding-top: 0.09375rem;
-    position: absolute;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     user-select: none;
     width: 25%;
+    flex-shrink: 0;
 
     &::after {
       border-style: solid;
