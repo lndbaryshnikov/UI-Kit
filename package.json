@@ -1,8 +1,5 @@
 {
-  "name": "ui-kit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production --env production",
     "server": "webpack-dev-server --mode development --open --env development",
@@ -10,19 +7,8 @@
     "lint": "npm run eslint && npm run pugLint && npm run stylelint",
     "eslint": "eslint src",
     "pugLint": "pug-lint --config .pug-lintrc src",
-    "stylelint": "stylelint --config .stylelintrc \"src/**/*.scss\"",
-    "stylelintFix": "stylelint --config .stylelintrc \"src/**/*.scss\" --fix"
+    "stylelint": "stylelint --config .stylelintrc \"src/**/*.scss\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lndbaryshnikov/UI-Kit.git"
-  },
-  "author": "Leonid Baryshnikov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lndbaryshnikov/UI-Kit/issues"
-  },
-  "homepage": "https://github.com/lndbaryshnikov/UI-Kit#readme",
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
