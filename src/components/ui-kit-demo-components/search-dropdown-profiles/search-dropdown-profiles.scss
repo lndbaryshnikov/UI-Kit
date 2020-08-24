@@ -25,6 +25,14 @@
     }
   }
 
+  &__search-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    height: 7.3125rem;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+
   &__profiles {
     margin-top: 2.75rem;
     width: 41%;
@@ -35,6 +43,16 @@
 
     @media screen and (max-width: 400px) {
       width: 90%;
+    }
+  }
+
+  &__profiles-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.8rem;
+
+    &:nth-child(3) {
+      margin-top: 1.4rem;
     }
   }
 }

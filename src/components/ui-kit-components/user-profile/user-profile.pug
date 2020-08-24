@@ -1,29 +1,35 @@
 include ../user-photo/user-photo
 
 mixin user-profile({ name, job, theme })
+  -
+    const themeModifiers = {
+      cyan: {
+        name: 'user-profile__name_color_white',
+        job: 'user-profile__job_color_white',
+        tooltip: 'user-profile__tooltip_color_cyan',
+        link: 'user-profile__link_theme_cyan',
+      },
+      orangeRed: {
+        name: 'user-profile__name_color_orange-red',
+        job: 'user-profile__job_color_black',
+        tooltip: 'user-profile__tooltip_color_grey',
+        link: 'user-profile__link_theme_orange-red',
+      },
+    };
+
   .user-profile
     +user-photo(name)
 
-    if theme === 'orange-red'
-      -
-        const nameColor = 'orange-red';
-        const jobColor = 'black';
-        const tooltipColor = 'grey';
+    - const modifiers = themeModifiers[theme];
 
-    if theme === 'cyan'
-      -
-        const nameColor = 'white';
-        const jobColor = 'white';
-        const tooltipColor = 'cyan';
-
-    .user-profile__tooltip(class=`user-profile__tooltip_color_${tooltipColor}`)
-      span.user-profile__name(class=`user-profile__name_color_${nameColor}`)= name
-      span.user-profile__job(class=`user-profile__job_color_${jobColor}`)= job
+    .user-profile__tooltip(class=modifiers.tooltip)
+      span.user-profile__name(class=modifiers.name)= name
+      span.user-profile__job(class=modifiers.job)= job
 
       .user-profile__links-container
         - for (var i = 1; i <= 3; i += 1)
           a.user-profile__link(
             href="/mock-address/change-me",
-            class=`user-profile__link_theme_${theme}`,
+            class=modifiers.link,
             target="_blank", rel="noopener noreferrer"
           )

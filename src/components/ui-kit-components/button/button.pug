@@ -1,12 +1,54 @@
-mixin button({ size, color, content, width, inverse = false })
+mixin button({ size, color, content = 'button', width, inverse })
   -
-    const backSize = width ? `button_size_${size} button_width_${width}` : `button_size_${size}`;
-    const buttonColor = inverse ? `${color}-inverse` : color;
-    const rippleColor = inverse ? color : 'white';
+    const widthModifiers = {
+      greatest: 'button_width_greatest',
+    };
 
-  .button(class=[backSize, `button_color_${color}`])
+    const sizeModifiers = {
+      small: {
+        button: 'button_size_small',
+        buttonElement: 'button__button-element_size_small',
+      },
+      standard: {
+        button: 'button_size_standard',
+        buttonElement: 'button__button-element_size_standard',
+      },
+    };
+
+    const colorModifiers = {
+      cyan: {
+        button: 'button_color_cyan',
+        buttonElement: 'button__button-element_color_cyan',
+      },
+      orangeRed: {
+        button: 'button_color_orange-red',
+        buttonElement: 'button__button-element_color_orange-red',
+      },
+    };
+ 
+    const buttonColorModifier = inverse 
+      ? `${colorModifiers[color].button}-inverse` 
+      : colorModifiers[color].button;
+
+    const buttonElementColorModifier = inverse 
+      ? `${colorModifiers[color].buttonElement}-inverse` 
+      : colorModifiers[color].buttonElement;
+
+    const buttonModifiers = [
+      widthModifiers[width],
+      sizeModifiers[size].button,
+      buttonColorModifier,
+    ];
+
+    const buttonElementModifiers = [
+      sizeModifiers[size].buttonElement,
+      buttonElementColorModifier,
+      'js-ripple',
+    ];
+
+  .button(class=buttonModifiers)
     button.button__button-element(
       type="submit",
-      class=[`button__button-element_size_${size}`, `button__button-element_color_${buttonColor}`, "js-ripple"],
-      data-ripple-color=rippleColor
+      class=buttonElementModifiers,
+      data-ripple-color=inverse ? color : "white"
     )= content

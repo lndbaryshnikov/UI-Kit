@@ -1,15 +1,25 @@
 include ../../ui-kit-components/message-form/message-form
+include ../../ui-kit-components/tick-box/tick-box
+include ../../ui-kit-components/toggle/toggle
 include ../block-sign/block-sign
-include ../toggles/toggles
-include ../tick-boxes/tick-boxes
 
 mixin form-elements({ togglesParameters = [false, true], tickBoxesParameters = [true, false] } = {})
   .form-elements
-    +block-sign('form elements', 'form-elements')
+    +block-sign('form elements')
     .form-elements__container
-      .form-elements__message-form-container
+
+      .form-elements__message-form
         +message-form
-      .form-elements__toggles-container
-        +toggles(togglesParameters)
+
+      .form-elements__toggles-tick-boxes
+        .form-elements__toggles
+          +block-sign('toggles')
+          .form-elements__toggles-container
+            each parameter in togglesParameters
+              +toggle(parameter)
+
         .form-elements__tick-boxes
-          +tick-boxes(tickBoxesParameters)
+          +block-sign('tick boxes')
+          .form-elements__tick-boxes-container
+            each parameter in tickBoxesParameters
+              +tick-box(parameter)

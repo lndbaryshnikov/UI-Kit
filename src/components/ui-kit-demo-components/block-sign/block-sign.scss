@@ -8,40 +8,5 @@
     font-weight: 900;
     letter-spacing: 0.09rem;
     text-transform: uppercase;
-  
-    &_type {
-      &_for-charts {
-        letter-spacing: 0.065rem;
-      }
-  
-      &_for-search-dropdown {
-        letter-spacing: 0.06rem;
-        margin-right: 0.8rem;
-      }
-  
-      &_for-profile {
-        letter-spacing: 0.08rem;
-        margin-right: 1.1rem;
-      }
-  
-      &_for-sliders {
-        left: 0.5625rem;
-        position: relative;
-      }
-  
-      &_for-calendar {
-        letter-spacing: 0.07rem;
-        margin-right: 0.35rem;
-      }
-  
-      &_for-messaging {
-        margin-right: 0.8rem;
-        letter-spacing: 0.07rem;
-      }
-  
-      &_for-video-box {
-        margin-right: 0.125rem;
-      }
-    }
   }
 }

@@ -1,9 +1,16 @@
-include ../calendar/calendar
-include ../messaging/messaging
+include ../../ui-kit-components/datepicker/datepicker
+include ../../ui-kit-components/message-box/message-box
+include ../block-sign/block-sign
 
 mixin calendar-messaging(messagingOptions)
   .calendar-messaging
+
     .calendar-messaging__calendar
-      +calendar
+      +block-sign('calendar')
+      .calendar-messaging__container
+        +datepicker
+
     .calendar-messaging__messaging
-      +messaging(messagingOptions)
+      +block-sign('messaging')
+      .calendar-messaging__container
+        +message-box(messagingOptions)

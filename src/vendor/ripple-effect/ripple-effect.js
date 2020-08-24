@@ -4,7 +4,12 @@
 
     if ($element.find('.ink').length === 0) {
       const inkColor = $element.data('ripple-color') || 'white';
-      const className = `ink ink-${inkColor}`;
+      const colorClasses = {
+        white: 'ink-white',
+        cyan: 'ink-cyan',
+        orangeRed: 'ink-orange-red',
+      };
+      const className = `ink ${colorClasses[inkColor]}`;
 
       $element.prepend(`<span class='${className}'></span>`);
     }

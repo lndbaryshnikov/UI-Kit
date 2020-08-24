@@ -12,7 +12,7 @@ class ArrowButtons {
     }
 
     const disabledClass = 'arrow-buttons__arrow-container_disabled';
-    const rippleClass = 'ripple';
+    const rippleClass = 'js-ripple';
 
     const toggle = (arrow) => {
       arrow.classList.toggle(disabledClass, mode !== 'on');
@@ -41,12 +41,9 @@ class ArrowButtons {
   }
 
   _defineElements() {
-    const arrows = this.arrowsContainer.children;
+    const [left, right] = this.arrowsContainer.children;
 
-    this.arrows = {
-      left: arrows[0],
-      right: arrows[1],
-    };
+    this.arrows = { left, right };
   }
 
   _checkSide(side) {

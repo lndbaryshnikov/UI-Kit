@@ -1,4 +1,22 @@
 .contact-info {
   font-size: 1.2rem;
   line-height: 2rem;
+
+  &__link {
+    text-decoration: none;
+  
+    &:hover {
+      color: $primary-orange-red-dark;
+    }
+  
+    &_color {
+      &_dark-gray {
+        color: $secondary-gray-dark;
+      }
+  
+      &_white {
+        color: $secondary-white-rose;
+      }
+    }
+  }
 }

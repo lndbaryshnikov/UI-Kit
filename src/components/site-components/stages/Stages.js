@@ -57,7 +57,7 @@ class Stages {
 
   _makeArrowClickHandler(side) {
     if (side !== 'left' && side !== 'right') {
-      throw new Error('Only "right" and "left" side is allowed');
+      throw new Error('Only right and left side is allowed');
     }
 
     const { stages } = this.options;
@@ -79,7 +79,7 @@ class Stages {
     return (event, ui) => {
       const { index } = this.options.currentStage;
 
-      if (ui.value === index + 1) return;
+      if (ui.value === (index + 1)) return;
 
       this._refreshStage(ui.value - 1);
     };
@@ -108,16 +108,20 @@ class Stages {
     const currentIndex = this.options.currentStage.index;
     const lastIndex = this.options.stages.length - 1;
 
+    const changeState = (side, state) => {
+      this.elements.arrows.switchArrows(side, state);
+    };
+
     if (currentIndex === 0) {
-      this.elements.arrows.switchArrows('left', 'off');
+      changeState('left', 'off');
     } else {
-      this.elements.arrows.switchArrows('left', 'on');
+      changeState('left', 'on');
     }
 
     if (currentIndex === lastIndex) {
-      this.elements.arrows.switchArrows('right', 'off');
+      changeState('right', 'off');
     } else {
-      this.elements.arrows.switchArrows('right', 'on');
+      changeState('right', 'on');
     }
   }
 }

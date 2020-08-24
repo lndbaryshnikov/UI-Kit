@@ -2,10 +2,17 @@ include ../../ui-kit-components/search-bar/search-bar
 include ../contact-info/contact-info
 include ../help-form/help-form
 
-mixin footer({ name = 'UI Masters', theme = 'dark-gray', contacts = { linkColor: 'white' }, link } = {})
-  - link = link || { name:'back to ui-kit', href: './index.html' };
+mixin footer({ name = 'UI Masters', theme = 'darkGray', contacts = { linkColor: 'white' }, link } = {})
+  - 
+    link = link || { name:'back to ui-kit', href: './index.html' };
+    
+    const modifiers = {
+      theme: {
+        darkGray: 'footer_theme_dark-gray',
+      },
+    };
 
-  .footer(class=`footer_theme_${theme}`)
+  .footer(class=modifiers.theme[theme])
     .footer__info
       .footer__name= name
       .footer__contacts

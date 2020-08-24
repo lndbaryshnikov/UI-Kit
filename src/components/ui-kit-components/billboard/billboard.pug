@@ -1,7 +1,19 @@
 include ../button/button
 
 mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year, goTo })
-  .billboard(class=`billboard_background-color_${backgroundColor}`)
+  - 
+    const modifiers = {
+      type: {
+        event: (elementName) => `billboard__${elementName}_type_event`,
+        new: (elementName) => `billboard__${elementName}_type_new`,
+      },
+      backgroundColor: {
+        cyan: 'billboard_background-color_cyan',
+        orangeRed: 'billboard_background-color_orange-red',
+      },
+    };
+
+  .billboard(class=modifiers.backgroundColor[backgroundColor])
     img.billboard__image(
       src=require(`../../assets/images/billboard-images/${imageName}.png`),
       alt=imageName
@@ -9,15 +21,19 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
 
     .billboard__content
       if type === 'news'
-        .billboard__title.billboard__title_type_new= title
-        .billboard__date.billboard__date_type_new #{day} #{month} #{year}
+        - const getNewModifier = modifiers.type.new;
+
+        .billboard__title(class=getNewModifier('title'))= title
+        .billboard__date(class=getNewModifier('date')) #{day} #{month} #{year}
         .billboard__description= content
 
       if type === 'events'
-        .billboard__date.billboard__date_type_event
+        - const getEventModifier = modifiers.type.event;
+
+        .billboard__date(class=getEventModifier('date'))
           .billboard__event-day= day
-          .billboard__event-month  #{month}
-        .billboard__title.billboard__title_type_event= title
+          .billboard__event-month #{month}
+        .billboard__title(class=getEventModifier('title'))= title
         .billboard__description= content
 
         if goTo
@@ -26,7 +42,7 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
               size: 'small',
               color: 'cyan',
               content: 'add to calendar',
-              width: 'hundred-percents',
+              width: 'greatest',
             })
         else
           .billboard__button
@@ -34,5 +50,5 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
               size: 'small',
               color: 'cyan',
               content: 'add to calendar',
-              width: 'hundred-percents',
+              width: 'greatest',
             })

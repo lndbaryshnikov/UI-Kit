@@ -1,21 +1,29 @@
-include ../contact-link/contact-link
+mixin contact-info({ phone = '+7 (905) 245-74-83', mail = 'kazandesign@gmail.com', linkColor = 'darkGray' } = {})
+  - 
+    const modifiers = {
+      linkColor: {
+        darkGray: 'contact-info__link_color_dark-gray',
+        white: 'contact-info__link_color_white',
+      },
+    };
 
-mixin contact-info({ phone = '+7 (905) 245-74-83', mail = 'kazandesign@gmail.com', linkColor = 'dark-gray' } = {})
   .contact-info
     .contact-info__item
       | tel:
       |
-      +contact-link({
-        color: linkColor,
-        attribute:'tel',
-        data: phone,
-      })
+      a.contact-info__link(
+        class=modifiers.linkColor[linkColor],
+        href=`tel: ${phone}`,
+        target="_blank",
+        rel="noopener noreferrer"
+      )= phone
       
     .contact-info__item
       | mail:
       |
-      +contact-link({
-        color: linkColor,
-        attribute: 'mailto',
-        data: mail,
-      })
+      a.contact-info__link(
+        class=modifiers.linkColor[linkColor],
+        href=`mailto: ${mail}`,
+        target="_blank",
+        rel="noopener noreferrer"
+      )= mail

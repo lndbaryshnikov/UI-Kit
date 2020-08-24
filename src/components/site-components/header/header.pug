@@ -1,27 +1,21 @@
 include ../navigation/navigation
 
-mixin header({ name = 'UI Masters', theme = 'orange-red', links } = {})
+mixin header({ name = 'UI Masters', theme = 'orangeRed', links } = {})
   -
     links = links || [
-      {
-        name: 'Info',
-        url: './info.html'
-      },
-      {
-        name: 'Details',
-        url: './details.html'
-      },
-      {
-        name: 'Enroll',
-        url: './enroll.html'
-      },
-      {
-        name: 'Contact',
-        url: './contact.html'
-      },
+      { name: 'Info', url: './info.html' },
+      { name: 'Details', url: './details.html' },
+      { name: 'Enroll', url: './enroll.html' },
+      { name: 'Contact', url: './contact.html' },
     ];
 
-  header(class=`header header_color_${theme}`)
+    const modifiers = {
+      theme: {
+        orangeRed: 'header_color_orange-red',
+      },
+    };
+
+  header.header(class=modifiers.theme[theme])
     header.header__name= name
     nav.header__navigation
       each item in links

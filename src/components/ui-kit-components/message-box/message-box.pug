@@ -2,7 +2,7 @@ include ../user-photo/user-photo
 include ../text-field/text-field
 include ../button/button
 
-mixin message-box({ theme = 'cyan', name = 'Sarah Brown', defaultMessage, chatLink, cameraLink })
+mixin message-box({ theme = 'cyan', name = 'Sarah Brown', defaultMessage, chatLink, cameraLink } = {})
   -
     const mockLinkAddress = '/mock-address/change-me';
 
@@ -10,8 +10,15 @@ mixin message-box({ theme = 'cyan', name = 'Sarah Brown', defaultMessage, chatLi
     cameraLink = cameraLink || mockLinkAddress;
     defaultMessage = defaultMessage || 'Hey! So are we cool to meet at the art gallery? Say 8pm';
 
+    const modifiers = {
+      theme: {
+        orangeRed: 'message-box__header_theme_orange-red',
+        cyan: 'message-box__header_theme_cyan',
+      },
+    };
+
   .message-box
-    .message-box__header(class=`message-box__header_theme_${theme}`)
+    .message-box__header(class=modifiers.theme[theme])
       .message-box__name= name
       .message-box__photo
         +user-photo(name)
@@ -35,5 +42,5 @@ mixin message-box({ theme = 'cyan', name = 'Sarah Brown', defaultMessage, chatLi
             size: 'standard',
             color: theme,
             content: 'reply',
-            width: 'hundred-percents',
+            width: 'greatest',
           })

@@ -1,10 +1,33 @@
+include ../../ui-kit-components/user-profile/user-profile
+include ../../ui-kit-components/search-bar/search-bar
+include ../../ui-kit-components/dropdown/dropdown
 include ../block-sign/block-sign
-include ../search-dropdown/search-dropdown
-include ../profiles/profiles
 
-mixin search-dropdown-profiles({ searchDropdownOptions, profileOptions } = {})
+mixin search-dropdown-profiles({ searchDropdownOptions = {}, profileOptions } = {})
+  - 
+    let { searchBarOptions, dropdownsOptions } = searchDropdownOptions;
+
+    dropdownsOptions = dropdownsOptions 
+      || [['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']];
+
+    searchBarOptions = searchBarOptions 
+      || [ {}, { theme: 'red', placeholder: 'I\'ve not found what I\'m looking for...' } ];
+
   .search-dropdown-profiles
+
     .search-dropdown-profiles__search-dropdown
-      +search-dropdown(searchDropdownOptions)
+        +block-sign('search / drop down')
+
+        .search-dropdown-profiles__search-dropdown-container
+          each options in searchBarOptions
+            +search-bar(options)
+
+          each options in dropdownsOptions
+            +dropdown(options)
+
     .search-dropdown-profiles__profiles
-      +profiles(profileOptions)
+      +block-sign('user profile')
+
+      each options in profileOptions
+        .search-dropdown-profiles__profiles-container
+          +user-profile(options)

@@ -4,12 +4,20 @@
   justify-content: space-around;
 
   &__calendar, &__messaging {
-    margin-top: 2.2rem;
+    margin-top: 1.9rem;
+  }
+
+  &__calendar {
+    height: 29.375rem;
   }
 
   &__messaging {
     @media screen and (max-width: 400px) {
       margin-top: 0;
     }
+  }
+
+  &__container {
+    margin-top: 1.625rem;
   }
 }
