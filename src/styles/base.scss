@@ -1,6 +1,6 @@
 @import './mixins/font-face';
 
-@each $type in 'regular', 'black' {
+@each $type in 'regular', 'black', 'light' {
   @include font-face('Lato', 'lato', $type);
 }
 

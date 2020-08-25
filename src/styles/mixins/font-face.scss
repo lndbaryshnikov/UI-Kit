@@ -6,6 +6,9 @@
     @if $type == 'black' {
       $weight: 900;
     }
+    @if $type == 'light' {
+      $weight: 300;
+    }
   }
 
   $font-name: '#{$font}-#{$type}';
