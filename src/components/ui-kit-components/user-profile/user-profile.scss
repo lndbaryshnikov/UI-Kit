@@ -9,7 +9,7 @@
     border-radius: 0.5rem;
     text-align: center;
     margin-left: 0.7rem;
-    padding: 0 0.35rem;
+    padding: 0 1.35rem;
     position: relative;
 
     &::after {
@@ -85,11 +85,6 @@
     display: flex;
     justify-content: space-around;
     margin: auto;
-    width: 76%;
-
-    @media screen and (max-width: 400px) {
-      width: 85%;
-    }
   }
 
   &__link {
@@ -100,7 +95,8 @@
     height: 2.1875rem;
     position: relative;
     width: 2.1875rem;
-    margin: 0.5rem;
+    margin: 0.4rem 0.15rem 0.58rem;
+    flex-shrink: 0;
 
     &::after {
       content: '';
