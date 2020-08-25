@@ -23,6 +23,10 @@
       font-size: 0.9rem;
       padding: 0 0 0.125rem 0.8rem;
       width: 100%;
+
+      &::-webkit-search-cancel-button {
+        cursor: pointer;
+      }
     }
 
     &_for-message-form {
