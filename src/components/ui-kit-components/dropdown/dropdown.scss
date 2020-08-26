@@ -67,15 +67,17 @@
 
   .ui-menu {
     list-style: none inside;
-    padding: 0;
+    padding: 0 0 0.5rem;
     margin: 0;
     font-size: 0.9rem;
 
     .ui-menu-item-wrapper {
-      padding: 0.4rem 0 0.18rem 1rem;
+      padding: 0.4rem 0 0.35rem 0.8rem;
+      letter-spacing: -0.015rem;
 
       &:hover {
         background-color: $secondary-gray-main;
+        border-radius: 0.2rem;
       }
     }
   }

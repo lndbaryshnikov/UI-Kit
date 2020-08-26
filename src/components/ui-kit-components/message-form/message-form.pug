@@ -10,7 +10,7 @@ mixin message-form(extraOptions)
         type: 'text',
         name: 'name',
         placeholder: 'Your Name',
-        blockName: 'message-form',
+        blockName: 'messageForm',
       })
 
       .message-form__tooltip.js-message-form__tooltip(
@@ -18,7 +18,7 @@ mixin message-form(extraOptions)
       ) Thanks!
       .message-form__tooltip.js-message-form__tooltip(
         class=["message-form__tooltip_color_orange-red", "message-form__tooltip_invisible"]
-      ) Error!
+      ) Error
 
     .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
       +text-field({
@@ -26,7 +26,7 @@ mixin message-form(extraOptions)
         type: 'email',
         name: 'email',
         placeholder: 'Your Email',
-        blockName: 'message-form',
+        blockName: 'messageForm',
       })
 
       .message-form__tooltip.js-message-form__tooltip(
@@ -34,14 +34,14 @@ mixin message-form(extraOptions)
       ) Thanks!
       .message-form__tooltip.js-message-form__tooltip(
         class=["message-form__tooltip_color_orange-red", "message-form__tooltip_invisible"]
-      ) Error!
+      ) Error
 
     .message-form__data-field.message-form__data-field_type_textarea
       +text-field({
         tagName: 'textarea',
         name: 'message',
         placeholder: 'Your Message',
-        blockName: 'message-form',
+        blockName: 'messageForm',
       })
 
     if extraOptions

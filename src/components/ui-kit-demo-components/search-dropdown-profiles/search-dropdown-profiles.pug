@@ -11,7 +11,7 @@ mixin search-dropdown-profiles({ searchDropdownOptions = {}, profileOptions } = 
       || [['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']];
 
     searchBarOptions = searchBarOptions 
-      || [ {}, { theme: 'red', placeholder: 'I\'ve not found what I\'m looking for...' } ];
+      || [ {}, { state: 'error' } ];
 
   .search-dropdown-profiles
 

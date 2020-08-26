@@ -1,13 +1,22 @@
-mixin text-field(options)
+mixin text-field({ type, tagName, name, placeholder, blockName })
   - 
-    const { tagName, name, placeholder, blockName, theme } = options;
-    const mainClass = `text-field text-field_type_for-${blockName}`;
-    const themeClass = `text-field_theme_${theme}`;
-    const className = theme ? `${mainClass} ${themeClass}` : mainClass;
+    const typeModifiers = {
+      for: {
+        searchBar: 'text-field_type_for-search-bar',
+        messageForm: 'text-field_type_for-message-form',
+        messageBox: 'text-field_type_for-message-box',
+      },
+    };
+
+    const classes = [
+      'text-field',
+      'js-text-field',
+      typeModifiers.for[blockName],
+    ];
 
   if tagName !== 'textarea'
-    #{tagName}(type=options.type, name=name, placeholder=placeholder, class=className)
+    #{tagName}(type=type, name=name, placeholder=placeholder, class=classes)
   else if tagName === 'textarea'
-    #{tagName}(name=name, placeholder=placeholder, class=className)
+    #{tagName}(name=name, placeholder=placeholder, class=classes)
   else
     input.text-field

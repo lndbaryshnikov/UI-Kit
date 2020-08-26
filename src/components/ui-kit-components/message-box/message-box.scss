@@ -48,9 +48,10 @@
   &__name {
     color: $secondary-white-main;
     font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 300;
     font-size: 2.125rem;
     letter-spacing: -0.06375rem;
-    line-height: 4.375rem;
+    line-height: 4.7rem;
     text-align: center;
 
     @media screen and (max-width: 400px) {
@@ -93,7 +94,7 @@
     background: url('images/chat-icon.svg') center no-repeat;
     display: inline-block;
     height: 1.5625rem;
-    left: 0;
+    left: 0.1rem;
     position: absolute;
     top: 0.125rem;
     width: 1.5625rem;
@@ -104,9 +105,11 @@
     border-radius: 0.3125rem;
     color: $secondary-gray-main;
     font-size: 0.8125rem;
+    font-weight: 700;
     min-height: 2rem;
     letter-spacing: 0.039375rem;
-    padding: 1.25rem;
+    padding: 1.05rem 1rem 1.5rem 1.25rem;
+    letter-spacing: 0.025rem;
     position: relative;
     text-align: left;
     margin-top: 0.7rem;

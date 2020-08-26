@@ -40,11 +40,12 @@
         }
 
         textarea#{&} {
-          height: 4.75rem;
+          height: 5.4rem;
           padding-left: 0.84375rem;
           padding-top: 0.50625rem;
           resize: none;
-          width: 91%;
+          width: 100%;
+          box-sizing: border-box;
         }
       }
     }
@@ -58,6 +59,8 @@
       resize: none;
       width: 100%;
       box-sizing: border-box;
+      font-size: 0.85rem;
+      font-weight: 700;
     }
   }
 

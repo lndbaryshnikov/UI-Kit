@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: space-around;
     margin-left: 6.375rem;
-    width: 8.125rem;
+    width: 8rem;
 
     @media screen and (max-width: 722px) {
       flex-flow: row wrap;
@@ -47,6 +47,8 @@
   }
 
   &__toggles {
+    width: 100%;
+
     @media screen and (max-width: 722px) {
       width: 8rem;
     }

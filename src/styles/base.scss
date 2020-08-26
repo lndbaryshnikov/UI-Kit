@@ -1,10 +1,12 @@
 @import './mixins/font-face';
 
-@each $type in 'regular', 'black', 'light' {
+@each $type in 'light', 'regular', 'bold', 'black' {
   @include font-face('Lato', 'lato', $type);
 }
 
-@include font-face('Source Sans Pro', 'source-sans-pro', 'regular');
+@each $type in 'light', 'regular' {
+  @include font-face('Source Sans Pro', 'source-sans-pro', $type);
+}
 
 html, body {
   height: 100%;
@@ -23,5 +25,11 @@ html {
     
   @media screen and (max-width: 400px) {
     font-size: 14px;
+  }
+
+  body {
+    min-width: 320px;
+    max-width: 1920px;
+    margin: auto;
   }
 }
