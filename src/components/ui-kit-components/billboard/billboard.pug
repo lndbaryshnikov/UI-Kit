@@ -14,11 +14,9 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
     };
 
   .billboard(class=modifiers.backgroundColor[backgroundColor])
-    img.billboard__image(
-      src=require(`../../assets/images/billboard-images/${imageName}.png`),
-      alt=imageName
+    .billboard__image(
+      style=`background-image: url("${require(`../../assets/images/billboard-images/${imageName}.png`)}")`
     )
-
     .billboard__content
       if type === 'news'
         - const getNewModifier = modifiers.type.new;

@@ -16,14 +16,14 @@ mixin search-dropdown-profiles({ searchDropdownOptions = {}, profileOptions } = 
   .search-dropdown-profiles
 
     .search-dropdown-profiles__search-dropdown
-        +block-sign('search / drop down')
+      +block-sign('search / drop down')
 
-        .search-dropdown-profiles__search-dropdown-container
-          each options in searchBarOptions
-            +search-bar(options)
+      .search-dropdown-profiles__search-dropdown-container
+        each options in searchBarOptions
+          +search-bar(options)
 
-          each options in dropdownsOptions
-            +dropdown(options)
+        each options in dropdownsOptions
+          +dropdown(options)
 
     .search-dropdown-profiles__profiles
       +block-sign('user profile')
