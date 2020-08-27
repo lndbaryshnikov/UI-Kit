@@ -19,18 +19,18 @@
 
   &_color {
     &_cyan {
-      background-color: $primary-cyan-dark;
+      background-color: $theme-primary-dark;
 
       &:hover {
-        background-color: $primary-cyan-dark;
+        background-color: $theme-primary-dark;
       }
     }
 
     &_orange-red {
-      background-color: $primary-orange-red-dark;
+      background-color: $theme-secondary-dark;
 
       &:hover {
-        background-color: $primary-orange-red-dark;
+        background-color: $theme-secondary-dark;
       }
     }
   }
@@ -68,46 +68,46 @@
 
     &_color {
       &_cyan {
-        background-color: $secondary-white-main;
-        border: 0.0625rem solid $primary-cyan-main;
-        color: $primary-cyan-main;
+        background-color: $base-secondary-main;
+        border: 0.0625rem solid $theme-primary-main;
+        color: $theme-primary-main;
 
         &:hover {
-          background-color: $primary-cyan-main;
-          color: $secondary-white-main;
+          background-color: $theme-primary-main;
+          color: $base-secondary-main;
         }
       }
 
       &_cyan-inverse {
-        background-color: $primary-cyan-main;
-        border: 0.0625rem solid $primary-cyan-main;
-        color: $secondary-white-main;
+        background-color: $theme-primary-main;
+        border: 0.0625rem solid $theme-primary-main;
+        color: $base-secondary-main;
 
         &:hover {
-          background-color: $secondary-white-main;
-          color: $primary-cyan-main;
+          background-color: $base-secondary-main;
+          color: $theme-primary-main;
         }
       }
 
       &_orange-red {
-        background-color: $secondary-white-main;
-        border: 0.0625rem solid $primary-orange-red-main;
-        color: $primary-orange-red-main;
+        background-color: $base-secondary-main;
+        border: 0.0625rem solid $theme-secondary-main;
+        color: $theme-secondary-main;
 
         &:hover {
-          background-color: $primary-orange-red-main;
-          color: $secondary-white-main;
+          background-color: $theme-secondary-main;
+          color: $base-secondary-main;
         }
       }
 
       &_orange-red-inverse {
-        background-color: $primary-orange-red-main;
-        border: 0.0625rem solid $primary-orange-red-main;
-        color: $secondary-white-main;
+        background-color: $theme-secondary-main;
+        border: 0.0625rem solid $theme-secondary-main;
+        color: $base-secondary-main;
 
         &:hover {
-          background-color: $secondary-white-main;
-          color: $primary-orange-red-main;
+          background-color: $base-secondary-main;
+          color: $theme-secondary-main;
         }
       }
     }

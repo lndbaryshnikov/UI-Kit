@@ -1,6 +1,6 @@
 .billboard {
   border-radius: 0.1875rem;
-  color: $secondary-white-main;
+  color: $base-secondary-main;
   display: flex;
   min-height: 13.25rem;
   min-width: 18rem;
@@ -11,11 +11,11 @@
 
   &_background-color {
     &_cyan {
-      background-color: $primary-cyan-main;
+      background-color: $theme-primary-main;
     }
 
     &_orange-red {
-      background-color: $primary-orange-red-main;
+      background-color: $theme-secondary-main;
     }
   }
 

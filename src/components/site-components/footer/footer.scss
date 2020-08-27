@@ -10,7 +10,7 @@
 
   &_theme {
     &_dark-gray {
-      background-color: $secondary-gray-dark;
+      background-color: $text-primary-main;
     }
   }
 
@@ -70,14 +70,14 @@
   }
 
   &__link {
-    color: $secondary-white-rose;
+    color: $base-secondary-dark;
     display: inline-block;
     margin-top: 0.7rem;
     text-decoration: none;
     text-transform: uppercase;
 
     &:hover {
-      color: $primary-orange-red-dark;
+      color: $theme-secondary-dark;
     }
   }
 

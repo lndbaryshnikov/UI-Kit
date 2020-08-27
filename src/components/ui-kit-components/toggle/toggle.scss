@@ -12,7 +12,7 @@
     width: 0;
 
     &:checked + .toggle__slider {
-      background-color: $primary-cyan-main;
+      background-color: $theme-primary-main;
 
       &::before {
         transform: translateX(2.125rem);
@@ -36,12 +36,12 @@
     }
 
     &:focus + .toggle__slider {
-      box-shadow: 0 0 0.0625rem $primary-cyan-main;
+      box-shadow: 0 0 0.0625rem $theme-primary-main;
     }
   }
 
   &__slider {
-    background-color: $secondary-gray-light;
+    background-color: $base-primary-light;
     border-radius: 2.125rem;
     bottom: 0;
     left: 0;
@@ -52,7 +52,7 @@
 
     &::before {
       content: '';
-      background-color: $secondary-white-main;
+      background-color: $base-secondary-main;
       border-radius: 50%;
       bottom: 0.1875rem;
       height: 1.125rem;
@@ -64,7 +64,7 @@
   }
 
   &__sign {
-    color: $secondary-white-main;
+    color: $base-secondary-main;
     font-size: 0.75rem;
     letter-spacing: 0.0375rem;
     line-height: 0;

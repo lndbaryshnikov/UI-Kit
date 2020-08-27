@@ -2,7 +2,7 @@
 @import '~jquery-ui/themes/base/datepicker.css';
 
 .datepicker {
-  background-color: $secondary-white-smoke;
+  background-color: $base-secondary-dark;
   height: 26.8rem;
   width: 17.375rem;
 
@@ -12,8 +12,8 @@
   }
 
   &__header {
-    background-color: $primary-orange-red-main;
-    color: $secondary-white-main;
+    background-color: $theme-secondary-main;
+    color: $base-secondary-main;
     font-size: 5rem;
     height: 11.2rem;
     line-height: 7rem;
@@ -31,7 +31,7 @@
   }
 
   &__month-line {
-    background-color: $primary-orange-red-dark;
+    background-color: $theme-secondary-dark;
     height: 2.75rem;
     position: absolute;
     top: 6.8rem;
@@ -57,7 +57,7 @@
 
       &-calendar {
         border-collapse: collapse;
-        color: $secondary-white-rose;
+        color: $base-secondary-dark;
         font-size: 0.55rem;
         height: 14.4rem;
         margin-left: -0.2rem;
@@ -71,15 +71,15 @@
 
         tbody {
           td {
-            border: 0.0625rem solid $secondary-white-main;
+            border: 0.0625rem solid $base-secondary-main;
             height: auto;
 
             &:hover {
-              background-color: $primary-orange-red-main;
+              background-color: $theme-secondary-main;
             }
 
             &:active {
-              background-color: $secondary-gray-main;
+              background-color: $base-primary-main;
             }
 
             a {
@@ -107,28 +107,28 @@
           color: #868686;
           
           &:active {
-            color: $secondary-white-rose;
+            color: $base-secondary-dark;
           }
         }
       }
 
       &-current-day {
-        background-color: $primary-orange-red-main;
+        background-color: $theme-secondary-main;
 
         a {
-          color: $secondary-white-main;
+          color: $base-secondary-main;
         }
       }
 
       &-month {
-        color: $secondary-white-main;
+        color: $base-secondary-main;
         font-size: 1.5rem;
         font-weight: 300;
         line-height: 2.4rem;
       }
 
       &-next {
-        border-color: $secondary-white-main $secondary-white-main transparent transparent;
+        border-color: $base-secondary-main $base-secondary-main transparent transparent;
         border-style: solid;
         border-width: 0.25rem;
         cursor: pointer;
@@ -150,7 +150,7 @@
       }
 
       &-prev {
-        border-color: $secondary-white-main $secondary-white-main transparent transparent;
+        border-color: $base-secondary-main $base-secondary-main transparent transparent;
         border-style: solid;
         border-width: 0.25rem;
         cursor: pointer;
@@ -162,7 +162,7 @@
       }
 
       &-title {
-        background-color: $primary-orange-red-dark;
+        background-color: $theme-secondary-dark;
         height: 2.75rem;
         position: relative;
         top: 0.5rem;
@@ -180,7 +180,7 @@
   }
 
   &__today-button {
-    background-color: $secondary-gray-light;
+    background-color: $base-primary-light;
     border: 0;
     bottom: 7.5rem;
     color: #868686;

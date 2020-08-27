@@ -9,11 +9,11 @@
 
     &_color {
       &_gray {
-        background-color: $secondary-gray-light;
+        background-color: $base-primary-light;
       }
 
       &_green {
-        background-color: $primary-cyan-main;
+        background-color: $theme-primary-main;
       }
     }
 
@@ -29,15 +29,15 @@
 
     &_color {
       &_gray {
-        background-color: $secondary-gray-light;
+        background-color: $base-primary-light;
       }
 
       &_green {
-        background-color: $primary-cyan-main;
+        background-color: $theme-primary-main;
       }
 
       &_orange-red {
-        background-color: $primary-orange-red-main;
+        background-color: $theme-secondary-main;
       }
     }
   }
@@ -52,11 +52,11 @@
 
     &_color {
       &_green {
-        background-color: $primary-cyan-main;
+        background-color: $theme-primary-main;
       }
 
       &_orange-red {
-        background-color: $primary-orange-red-main;
+        background-color: $theme-secondary-main;
       }
     }
 
@@ -92,11 +92,11 @@
 
     &_theme {
       &_orange-red {
-        background-color: $primary-orange-red-main;
-        color: $secondary-white-main;
+        background-color: $theme-secondary-main;
+        color: $base-secondary-main;
 
         &::after {
-          border-color: $primary-orange-red-main transparent transparent transparent;
+          border-color: $theme-secondary-main transparent transparent transparent;
         }
       }
     }
@@ -128,21 +128,21 @@
 
     &_background-color {
       &_gray {
-        background-color: $secondary-gray-light;
+        background-color: $base-primary-light;
       }
 
       &_orange-red {
-        background-color: $primary-orange-red-main;
+        background-color: $theme-secondary-main;
       }
 
       &_green {
-        background-color: $primary-cyan-main;
+        background-color: $theme-primary-main;
       }
     }
 
     &_color {
       &_white {
-        color: $secondary-white-main;
+        color: $base-secondary-main;
       }
 
       &_gray {
@@ -150,7 +150,7 @@
       }
 
       &_dark-gray {
-        color: $secondary-gray-main;
+        color: $base-primary-main;
       }
     }
   }

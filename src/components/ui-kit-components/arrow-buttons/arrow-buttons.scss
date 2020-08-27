@@ -24,7 +24,7 @@
   }
 
   &__arrow-container {
-    border: 0.1875rem solid $primary-cyan-main;
+    border: 0.1875rem solid $theme-primary-main;
     border-radius: 50%;
     height: 2.8125rem;
     cursor: pointer;
@@ -36,27 +36,27 @@
     width: 2.8125rem;
 
     &:hover {
-      background-color: $primary-cyan-main;
+      background-color: $theme-primary-main;
 
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
-        border-color: $secondary-white-main;
+        border-color: $base-secondary-main;
       }
     }
 
     &_disabled {
-      background-color: $secondary-gray-light;
-      border-color: $secondary-gray-light;
+      background-color: $base-primary-light;
+      border-color: $base-primary-light;
       cursor: default;
 
       .arrow-buttons__left-arrow, .arrow-buttons__right-arrow {
         animation: none;
-        border-color: $secondary-white-main;
+        border-color: $base-secondary-main;
         transform: rotate(45deg);
       }
 
       &:hover {
-        background-color: $secondary-gray-light;
-        border-color: $secondary-gray-light;
+        background-color: $base-primary-light;
+        border-color: $base-primary-light;
       }
     }
   }
@@ -69,14 +69,14 @@
   }
 
   &__right-arrow {
-    border-right: 0.21875rem solid $primary-cyan-main;
-    border-top: 0.21875rem solid $primary-cyan-main;
+    border-right: 0.21875rem solid $theme-primary-main;
+    border-top: 0.21875rem solid $theme-primary-main;
     margin-right: 1.125rem;
   }
 
   &__left-arrow {
-    border-bottom: 0.21875rem solid $primary-cyan-main;
-    border-left: 0.21875rem solid $primary-cyan-main;
+    border-bottom: 0.21875rem solid $theme-primary-main;
+    border-left: 0.21875rem solid $theme-primary-main;
     margin-left: 1.125rem;
   }
 }

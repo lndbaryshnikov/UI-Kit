@@ -6,16 +6,16 @@
     text-decoration: none;
   
     &:hover {
-      color: $primary-orange-red-dark;
+      color: $theme-primary-dark;
     }
   
     &_color {
       &_dark-gray {
-        color: $secondary-gray-dark;
+        color: $text-primary-main;
       }
   
       &_white {
-        color: $secondary-white-rose;
+        color: $base-secondary-dark;
       }
     }
   }

@@ -32,7 +32,7 @@
 
   &__tooltip {
     border-radius: 0.25rem;
-    color: $secondary-white-main;
+    color: $base-secondary-main;
     display: inline-block;
     font-family: Lato, Arial, sans-serif;
     font-size: 0.625rem;
@@ -59,18 +59,18 @@
 
     &_color {
       &_orange-red {
-        background-color: $primary-orange-red-main;
+        background-color: $theme-secondary-main;
 
         &::after {
-          border-color: transparent $primary-orange-red-main transparent transparent;
+          border-color: transparent $theme-secondary-main transparent transparent;
         }
       }
 
       &_cyan {
-        background-color: $primary-cyan-main;
+        background-color: $theme-primary-main;
 
         &::after {
-          border-color: transparent $primary-cyan-main transparent transparent;
+          border-color: transparent $theme-primary-main transparent transparent;
         }
       }
     }

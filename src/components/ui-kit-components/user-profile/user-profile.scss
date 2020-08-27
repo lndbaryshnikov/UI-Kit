@@ -27,18 +27,18 @@
 
     &_color {
       &_cyan {
-        background-color: $primary-cyan-main;
+        background-color: $theme-primary-main;
 
         &::after {
-          background-color: $primary-cyan-main;
+          background-color: $theme-primary-main;
         }
       }
 
-      &_grey {
-        background-color: $secondary-gray-light;
+      &_gray {
+        background-color: $base-primary-light;
 
         &::after {
-          background-color: $secondary-gray-light;
+          background-color: $base-primary-light;
         }
       }
     }
@@ -53,17 +53,17 @@
 
     &_color {
       &_orange-red {
-        color: $primary-orange-red-main;
+        color: $theme-secondary-main;
       }
 
       &_white {
-        color: $secondary-white-main;
+        color: $base-secondary-main;
       }
     }
   }
 
   &__job {
-    color: $secondary-gray-dark;
+    color: $text-primary-main;
     display: block;
     font-size: 0.6875rem;
     font-weight: 900;
@@ -73,11 +73,11 @@
 
     &_color {
       &_black {
-        color: $secondary-gray-dark;
+        color: $text-primary-main;
       }
 
       &_white {
-        color: $secondary-white-main;
+        color: $base-secondary-main;
       }
     }
   }
