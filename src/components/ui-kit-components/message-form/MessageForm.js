@@ -9,6 +9,8 @@ class MessageForm {
       email: false,
     };
 
+    autoBind(this);
+
     this._init();
   }
 
@@ -57,7 +59,7 @@ class MessageForm {
       inputInstance.onBlur(checkAndShowTooltipHandler);
     });
 
-    this.elements.form.addEventListener('submit', this._formSubmitHandler.bind(this));
+    this.elements.form.addEventListener('submit', this._formSubmitHandler);
   }
 
   _makeInputHandlers(inputType) {

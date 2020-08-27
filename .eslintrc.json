@@ -11,7 +11,8 @@
   "globals": {
     "$": "readonly",
     "jQuery": "readonly",
-    "L": "readonly"
+    "L": "readonly",
+    "autoBind": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2017,

@@ -7,7 +7,7 @@ const styles = require('./webpack/styles');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 const devServer = require('./webpack/dev-server');
-const jquery = require('./webpack/jquery');
+const providePlugin = require('./webpack/provide-plugin');
 const favicons = require('./webpack/favicons');
 const html = require('./webpack/html');
 const minimizer = require('./webpack/minimizer');
@@ -32,7 +32,7 @@ const common = merge([
   styles(),
   images(),
   fonts(),
-  jquery(),
+  providePlugin(),
   html({ source: PATHS.src, index: 'ui-kit-demo' }),
   favicons(),
 ]);

@@ -4,6 +4,8 @@ class Datepicker {
   constructor($element) {
     this.$datepickerContainer = $element;
 
+    autoBind(this);
+
     this._defineElements();
     this._init();
   }
@@ -15,10 +17,10 @@ class Datepicker {
       showButtonPanel: true,
       showOtherMonths: true,
       selectOtherMonths: true,
-      onSelect: this._displayCurrentDay.bind(this),
+      onSelect: this._displayCurrentDay,
     });
 
-    this.$todayButton.on('click', this._todayButtonClickHandler.bind(this));
+    this.$todayButton.on('click', this._todayButtonClickHandler);
 
     this._displayCurrentDay();
   }

@@ -9,9 +9,10 @@ class HelpForm {
     this.messageBox = this._getElement('message-box');
     this.arrow = this._getElement('arrow');
 
-    this._toggleElementModifier('message-box', 'invisible');
+    autoBind(this);
 
-    this.button.addEventListener('click', this._buttonClickHandler.bind(this));
+    this._toggleElementModifier('message-box', 'invisible');
+    this.button.addEventListener('click', this._buttonClickHandler);
   }
 
   _buttonClickHandler() {

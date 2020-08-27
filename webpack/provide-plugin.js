@@ -7,6 +7,7 @@ module.exports = function () {
         $: 'jquery',
         jQuery: 'jquery',
         'window.jQuery': 'jquery',
+        'autoBind': 'auto-bind',
       }),
     ],
   };
