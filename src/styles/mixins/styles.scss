@@ -1,0 +1,7 @@
+@mixin outline($color: #000) {
+  outline: none;
+  
+  &:focus {
+    box-shadow: 0 0 0.3125rem $color;
+  }
+}

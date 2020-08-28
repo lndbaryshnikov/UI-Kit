@@ -70,11 +70,14 @@
   }
 
   &__link {
+    @include outline($base-secondary-main);
+
     color: $base-secondary-dark;
     display: inline-block;
     margin-top: 0.7rem;
     text-decoration: none;
     text-transform: uppercase;
+    padding-top: 0.2rem;
 
     &:hover {
       color: $theme-secondary-dark;

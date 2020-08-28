@@ -2,13 +2,14 @@
 
 .dropdown {
   + .ui-selectmenu-button.ui-button {
+    @include outline;
+    
     background-color: $base-primary-light;
     border-radius: 0.25rem;
     height: 1.75rem;
     position: relative;
     transition: box-shadow 0.3s;
     width: 100%;
-    outline: none;
     cursor: pointer;
 
     &:hover {
@@ -25,12 +26,13 @@
     }
 
     .ui-selectmenu-icon {
+      @include outline;
+      
       background-color: $theme-primary-main;
       border: 0;
       border-radius: 0 0.25rem 0.25rem 0;
       float: right;
       height: 1.75rem;
-      outline: none;
       position: relative;
       width: 2.0625rem;
 

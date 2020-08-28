@@ -36,12 +36,13 @@
   }
 
   &__button-element {
+    @include outline;
+
     border-radius: 0.25rem;
     cursor: pointer;
     font-size: 0.718rem;
     font-weight: 900;
     letter-spacing: 0.01rem;
-    outline: 0;
     overflow: hidden;
     padding-top: 0.1rem;
     text-transform: uppercase;

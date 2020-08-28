@@ -2,8 +2,9 @@
   font-size: 1.2rem;
   line-height: 2rem;
 
-  &__link {
+  &__link {    
     text-decoration: none;
+    padding-top: 0.1rem;
   
     &:hover {
       color: $theme-primary-dark;
@@ -11,10 +12,14 @@
   
     &_color {
       &_dark-gray {
+        @include outline;
+        
         color: $text-primary-main;
       }
   
       &_white {
+        @include outline(white);
+
         color: $base-secondary-dark;
       }
     }

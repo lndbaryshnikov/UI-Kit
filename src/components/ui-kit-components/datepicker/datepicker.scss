@@ -104,6 +104,8 @@
         }
 
         a {
+          @include outline;
+
           color: #868686;
           
           &:active {
@@ -141,10 +143,10 @@
 
       &-other-month {
         a {
-          color: #f9f9f9;
+          color: $base-primary-light;
 
           &:active {
-            color: #f9f9f9;
+            color: $base-primary-light;
           }
         }
       }
@@ -180,6 +182,8 @@
   }
 
   &__today-button {
+    @include outline;
+    
     background-color: $base-primary-light;
     border: 0;
     bottom: 7.5rem;
@@ -190,7 +194,6 @@
     font-weight: 900;
     height: 3rem;
     letter-spacing: 0.04rem;
-    outline: none;
     padding-left: 1.15rem;
     position: relative;
     text-align: left;

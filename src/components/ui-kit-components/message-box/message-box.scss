@@ -82,22 +82,26 @@
   }
 
   &__camera-button {
+    @include outline;
+
     background: url('images/camera-icon.svg') center no-repeat;
     display: inline-block;
     height: 1.5625rem;
     position: absolute;
     right: 0.3125rem;
-    width: 1.5625rem;
+    width: 1.75rem;
   }
 
   &__chat-button {
-    background: url('images/chat-icon.svg') center no-repeat;
+    @include outline;
+
+    background: url('images/chat-icon.svg') 48% no-repeat;
     display: inline-block;
     height: 1.5625rem;
     left: 0.1rem;
     position: absolute;
     top: 0.125rem;
-    width: 1.5625rem;
+    width: 1.7rem;
   }
 
   &__message {

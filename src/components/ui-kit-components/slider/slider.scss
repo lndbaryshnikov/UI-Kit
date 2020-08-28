@@ -43,10 +43,11 @@
   }
 
   .ui-slider-handle#{&}__handle {
+    @include outline;
+    
     border-radius: 50%;
     cursor: pointer;
     height: 1.21875rem;
-    outline: none;
     top: -0.4375rem;
     width: 1.21875rem;
 

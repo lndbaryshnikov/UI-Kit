@@ -11,7 +11,7 @@ mixin arrow-buttons(disabled = false, { width = 'standard' } = {})
   .arrow-buttons.js-arrow-buttons(class=modifiers.width[width])
     - const containerClassName = disabled ? modifiers.disabled : 'js-ripple';
 
-    .arrow-buttons__arrow-container(class=containerClassName)
+    button.arrow-buttons__arrow-container(class=containerClassName)
       .arrow-buttons__left-arrow
-    .arrow-buttons__arrow-container(class=containerClassName)
+    button.arrow-buttons__arrow-container(class=containerClassName)
       .arrow-buttons__right-arrow

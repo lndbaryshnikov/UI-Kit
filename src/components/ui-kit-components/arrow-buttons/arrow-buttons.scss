@@ -24,16 +24,18 @@
   }
 
   &__arrow-container {
+    @include outline;
+
     border: 0.1875rem solid $theme-primary-main;
     border-radius: 50%;
-    height: 2.8125rem;
+    height: 3.2rem;
     cursor: pointer;
 
     //for ripple-effect:
     overflow: hidden;
     position: relative;
     transition: background-color 0.5s;
-    width: 2.8125rem;
+    width: 3.2rem;
 
     &:hover {
       background-color: $theme-primary-main;
@@ -71,12 +73,12 @@
   &__right-arrow {
     border-right: 0.21875rem solid $theme-primary-main;
     border-top: 0.21875rem solid $theme-primary-main;
-    margin-right: 1.125rem;
+    margin-right: 0.75rem;
   }
 
   &__left-arrow {
     border-bottom: 0.21875rem solid $theme-primary-main;
     border-left: 0.21875rem solid $theme-primary-main;
-    margin-left: 1.125rem;
+    margin-left: 0.75rem;
   }
 }

@@ -2,8 +2,11 @@
   position: relative;
 
   &__header {
+    @include outline;
+
+    border: 0;
     background-color: $text-primary-main;
-    border-radius: 0.125rem;
+    border-radius: 0.2rem;
     color: $base-secondary-main;
     cursor: pointer;
     font-size: 1.5rem;
@@ -15,7 +18,7 @@
     width: 12rem;
   }
 
-  &__arrow {
+  &__arrow {    
     width: 1rem;
     height: 1rem;
     display: inline-block;
@@ -29,7 +32,7 @@
 
     &_direction {
       &_down {
-        transform: rotate(135deg);
+        transform: rotate(135deg) translate(-0.3rem, 0.3rem);
       }
     }
   }

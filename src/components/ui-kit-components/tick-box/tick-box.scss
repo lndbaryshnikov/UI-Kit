@@ -21,6 +21,12 @@
       }
     }
 
+    &:focus {
+      + .tick-box__check-mark-container {
+        box-shadow: 0 0 0.3125rem #000;
+      }
+    }
+
     &:not(:checked) {
       + .tick-box__check-mark-container {
         background-color: $base-primary-light;
