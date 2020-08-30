@@ -65,6 +65,14 @@
         margin-top: 0.45rem;
         table-layout: fixed;
 
+        @media screen and (max-width: 1094px) {
+          margin-top: 0.5rem;
+        }
+
+        @media screen and (max-width: 722px) {
+          margin-top: 0.6rem;
+        }
+
         @media screen and (max-width: 400px) {
           height: 11.9rem;
         }
