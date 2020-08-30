@@ -1,14 +1,13 @@
 .buttons {
-  &__container-rows {
+  &__rows-container {
     margin-top: 4.5rem;
   }
 
   &__container {
-    align-items: flex-end;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
   }
 
   &__button {

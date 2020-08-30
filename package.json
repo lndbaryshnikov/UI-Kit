@@ -9,20 +9,6 @@
     "pugLint": "pug-lint --config .pug-lintrc src",
     "stylelint": "stylelint --config .stylelintrc \"src/**/*.scss\""
   },
-  "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-fsd": "^1.0.1",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.3",
-    "gh-pages": "^2.2.0",
-    "minimist": ">=1.2.2",
-    "pug-lint": "^2.6.0",
-    "stylelint": "^13.6.1",
-    "stylelint-config-sass-guidelines": "^7.0.0",
-    "webpack-dev-server": "^3.11.0"
-  },
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
@@ -52,5 +38,23 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-fsd": "^1.0.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "gh-pages": "^2.2.0",
+    "minimist": ">=1.2.2",
+    "pug-lint": "^2.6.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "localModules": {
+    "ripple-effect": "./src/vendor/ripple-effect",
+    "pips-float-plugin": "./src/vendor/pips-float-plugin"
   }
 }

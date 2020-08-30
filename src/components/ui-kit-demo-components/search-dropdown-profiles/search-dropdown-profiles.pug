@@ -7,11 +7,9 @@ mixin search-dropdown-profiles({ searchDropdownOptions = {}, profileOptions } = 
   - 
     let { searchBarOptions, dropdownsOptions } = searchDropdownOptions;
 
+    searchBarOptions = searchBarOptions || [ {}, { state: 'error' } ];
     dropdownsOptions = dropdownsOptions 
       || [['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4']];
-
-    searchBarOptions = searchBarOptions 
-      || [ {}, { state: 'error' } ];
 
   .search-dropdown-profiles
 

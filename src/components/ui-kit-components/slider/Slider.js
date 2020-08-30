@@ -23,25 +23,21 @@ class Slider {
   }
 
   _defineOptions() {
-    this.options = {
-      min: this.$slider.data('min'),
-      max: this.$slider.data('max'),
-      step: this.$slider.data('step'),
-      value: this.$slider.data('value'),
-      animate: 'slow',
-      sliderColor: this.$slider.data('slider-color'),
-      rangeColor: this.$slider.data('range-color'),
-      handleColor: this.$slider.data('handle-color'),
-    };
+    this.options = { ...this.$slider.data(), animate: 'slow' };
 
-    const isSimpleOrWithStages = this.$slider.hasClass('js-slider_with_stages')
-      ? 'with-stages' : 'simple';
+    const { $slider } = this;
 
-    const isSimpleOrWithStagesOrWithLabels = this.$slider.hasClass('js-slider_with_labels')
-      ? 'with-labels' : isSimpleOrWithStages;
+    const isSimpleOrWithStages = $slider.hasClass('js-slider_with_stages')
+      ? 'with-stages'
+      : 'simple';
 
-    this.mode = this.$slider.hasClass('js-slider_with_tooltip')
-      ? 'with-tooltip' : isSimpleOrWithStagesOrWithLabels;
+    const isSimpleOrWithStagesOrWithLabels = $slider.hasClass('js-slider_with_labels')
+      ? 'with-labels'
+      : isSimpleOrWithStages;
+
+    this.mode = $slider.hasClass('js-slider_with_tooltip')
+      ? 'with-tooltip'
+      : isSimpleOrWithStagesOrWithLabels;
   }
 
   _init() {
@@ -55,7 +51,6 @@ class Slider {
       step,
       value,
       animate,
-
       classes: {
         'ui-slider': `slider__scale slider__scale_color_${sliderColor}`,
         'ui-slider-range': `slider__range slider__range_color_${rangeColor}`,
@@ -67,19 +62,24 @@ class Slider {
   }
 
   _addModifier() {
-    if (this.mode === 'with-tooltip') {
+    const { mode } = this;
+
+    if (mode === 'with-tooltip') {
       this._addTooltip();
-    } else if (this.mode === 'with-labels') {
+    } else if (mode === 'with-labels') {
       this._addLabels();
-    } else if (this.mode === 'with-stages') {
+    } else if (mode === 'with-stages') {
       this._addStages();
     }
   }
 
   _addTooltip() {
     const $sliderTooltip = $('<div class="slider__tooltip"></div>');
+    const { handleColor, value } = this.options;
 
-    $sliderTooltip.text(String(this.options.value));
+    $sliderTooltip
+      .text(String(value))
+      .addClass(`slider__tooltip_theme_${handleColor}`);
 
     this.$slider.slider('option', {
       range: false,
@@ -89,8 +89,6 @@ class Slider {
     });
 
     this.$slider.find('.ui-slider-handle').append($sliderTooltip);
-
-    this._setTooltipThemeModifier(this.options.handleColor);
   }
 
   _addLabels() {
@@ -118,13 +116,8 @@ class Slider {
 
   _setPips() {
     const { $slider, options, mode } = this;
+
     new SliderPips({ $slider, options, mode });
-  }
-
-  _setTooltipThemeModifier(theme) {
-    const tooltipClass = 'slider__tooltip';
-
-    this.$slider.find(`.${tooltipClass}`).addClass(`${tooltipClass}_theme_${theme}`);
   }
 }
 

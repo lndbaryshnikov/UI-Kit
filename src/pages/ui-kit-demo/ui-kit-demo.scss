@@ -4,11 +4,11 @@
   }
 
   &__components-container {
-    align-items: center;
+    width: 35.5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 8.8rem auto 6rem;
-    width: 35.5%;
 
     @media screen and (max-width: 1600px) {
       width: 40%;
@@ -32,8 +32,8 @@
   }
 
   &__arrows {
-    margin-top: 2.1rem;
     width: 67%;
+    margin-top: 2.1rem;
 
     @media screen and (max-width: 1094px) {
       margin-top: 2.3rem;
@@ -45,28 +45,28 @@
   }
 
   &__sliders {
-    margin-top: 1.15rem;
     width: 88%;
+    margin-top: 1.15rem;
   }
 
   &__stages-box {
-    margin-top: 2.3rem;
     width: 84%;
+    margin-top: 2.3rem;
   }
 
   &__form-elements {
-    margin-top: 2.7rem;
     width: 87%;
+    margin-top: 2.7rem;
   }
 
   &__search-dropdown-profiles {
-    margin-top: 1.4rem;
     width: 97%;
+    margin-top: 1.4rem;
   }
 
   &__news-events {
-    margin-top: 5.85rem;
     width: 90%;
+    margin-top: 5.85rem;
 
     @media screen and (max-width: 1094px) {
       width: 105%;
@@ -78,18 +78,18 @@
   }
 
   &__location {
-    margin-top: 3rem;
     width: 87%;
+    margin-top: 3rem;
   }
 
   &__calendar-messaging {
-    margin-top: 0.75rem;
     width: 91%;
+    margin-top: 0.75rem;
   }
 
   &__video-box {
+    width: 87%;
     margin-top: 1.5rem;
     margin-right: 0.2rem;
-    width: 87%;
   }
 }

@@ -1,4 +1,4 @@
-mixin text-field({ type, tagName, name, placeholder, blockName })
+mixin text-field({ type = 'text', tagName  = 'input', name, placeholder, blockName })
   - 
     const typeModifiers = {
       for: {
@@ -14,9 +14,4 @@ mixin text-field({ type, tagName, name, placeholder, blockName })
       typeModifiers.for[blockName],
     ];
 
-  if tagName !== 'textarea'
-    #{tagName}(type=type, name=name, placeholder=placeholder, class=classes)
-  else if tagName === 'textarea'
-    #{tagName}(name=name, placeholder=placeholder, class=classes)
-  else
-    input.text-field
+  #{tagName}(type=type, name=name, placeholder=placeholder, class=classes)

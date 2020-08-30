@@ -1,15 +1,19 @@
 @import '~jquery-ui/themes/base/selectmenu';
 
 .dropdown {
+  &__options {
+    display: none;
+  }
+
   + .ui-selectmenu-button.ui-button {
     @include outline;
     
+    width: 100%;
+    height: 1.75rem;
     background-color: $base-primary-light;
     border-radius: 0.25rem;
-    height: 1.75rem;
     position: relative;
     transition: box-shadow 0.3s;
-    width: 100%;
     cursor: pointer;
 
     &:hover {
@@ -28,13 +32,13 @@
     .ui-selectmenu-icon {
       @include outline;
       
+      width: 2.0625rem;
+      height: 1.75rem;
       background-color: $theme-primary-main;
       border: 0;
       border-radius: 0 0.25rem 0.25rem 0;
       float: right;
-      height: 1.75rem;
       position: relative;
-      width: 2.0625rem;
 
       &:hover {
         box-shadow: 0 0 0.3125rem #000;
@@ -46,12 +50,12 @@
 
       &::after {
         content: '';
+        width: 0.5rem;
+        height: 0.5rem;
         border-bottom: 0.125rem solid $base-secondary-main;
         border-left: 0.125rem solid $base-secondary-main;
-        height: 0.5rem;
         margin-top: 20%;
         transform: rotate(-45deg);
-        width: 0.5rem;
         position: absolute;
         left: 35%;
       }

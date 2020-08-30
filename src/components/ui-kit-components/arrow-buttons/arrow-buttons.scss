@@ -1,13 +1,10 @@
 .arrow-buttons {
   display: flex;
-  height: 3.125rem;
   justify-content: space-between;
+  height: 3.125rem;
+  width: 7.8125rem;
 
   &_width {
-    &_standard {
-      width: 7.8125rem;
-    }
-
     &_greatest {
       width: 100%;
     }
@@ -23,19 +20,19 @@
     }
   }
 
-  &__arrow-container {
+  &__button {
     @include outline;
-
+    
+    width: 3.2rem;
     border: 0.1875rem solid $theme-primary-main;
     border-radius: 50%;
     height: 3.2rem;
     cursor: pointer;
 
-    //for ripple-effect:
+    // for ripple-effect:
     overflow: hidden;
     position: relative;
     transition: background-color 0.5s;
-    width: 3.2rem;
 
     &:hover {
       background-color: $theme-primary-main;
@@ -64,9 +61,9 @@
   }
 
   &__left-arrow, &__right-arrow {
+    width: 0.84375rem;
     height: 0.84375rem;
     margin: 0.84375rem auto;
-    width: 0.84375rem;
     transform: rotate(45deg);
   }
 

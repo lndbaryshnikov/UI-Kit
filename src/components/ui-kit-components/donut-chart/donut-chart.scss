@@ -3,18 +3,18 @@
   user-select: none;
 
   &__percentage {
+    width: 100%;
+    text-align: center;
     color: #9d9d9d;
     font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: -0.125rem;
     line-height: 2.625rem;
     position: absolute;
-    text-align: center;
-    top: 2.2rem;
-    width: 100%;
+    top: 2.4rem;
 
     @media screen and (max-width: 722px) {
-      top: 2.5rem;
+      top: 2.6rem;
     }
 
     @media screen and (max-width: 400px) {
@@ -24,7 +24,6 @@
     &_invisible {
       display: none;
     }
-    
   }
 
   &__animation {

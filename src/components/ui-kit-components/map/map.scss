@@ -4,8 +4,8 @@
   }
 
   &__footer {
-    background-color: $theme-secondary-main;
     height: 4.3125rem;
+    background-color: $theme-secondary-main;
 
     @media screen and (max-width: 400px) {
       height: 6rem;
@@ -13,6 +13,7 @@
   }
 
   &__footer-sign {
+    width: 7.5rem;
     color: $base-secondary-main;
     float: left;
     font-size: 1.875rem;
@@ -20,7 +21,6 @@
     line-height: 3.8rem;
     padding-left: 1.6875rem;
     padding-right: 1.125rem;
-    width: 7.5rem;
 
     @media screen and (max-width: 600px) {
       padding-left: 0.8rem;
@@ -34,15 +34,15 @@
   }
 
   &__footer-address {
+    width: 9.0625rem;
+    height: 1.7rem;
     color: $base-secondary-main;
     float: left;
     font-size: 0.75rem;
     font-weight: 900;
-    height: 1.7rem;
     letter-spacing: 0.06rem;
     padding-top: 1.25rem;
     text-transform: uppercase;
-    width: 9.0625rem;
 
     @media screen and (max-width: 400px) {
       float: none;
@@ -51,11 +51,11 @@
   }
 
   &__icon {
+    width: 1.5rem;
+    height: 2rem;
     background: no-repeat url('images/map-marker.svg');
     float: right;
-    height: 2rem;
     margin: 1.375rem 1.2rem 1.4375rem 0;
-    width: 1.5rem;
 
     @media screen and (max-width: 500px) {
       display: none;
@@ -69,55 +69,55 @@
   &__button {
     @include outline;
 
+    width: 2rem;
+    height: 2rem;
     border: 0;
-    background: no-repeat center url('images/map-target.svg');
+    background: center no-repeat url('images/map-target.svg');
     cursor: pointer;
     float: right;
-    height: 2rem;
     margin: 1.15rem 1.2rem 1.375rem 0;
-    width: 2rem;
   }
 
   &__icon, &__button {
     @media screen and (max-width: 400px) {
+      position: relative;
       bottom: 2.5rem;
       margin: 1rem;
-      position: relative;
     }
   }
 
   &__map-marker {
+    width: 2.5625rem;
+    height: 2.9375rem;
     background-color: $theme-secondary-main;
     border: 0.0625rem solid $theme-secondary-main;
     border-radius: 50%;
     display: block;
-    height: 2.9375rem;
-    left: -1.5rem;
     position: relative;
     top: -1.5rem;
-    width: 2.5625rem;
+    left: -1.5rem;
 
     &::after {
-      border: 1.3625rem solid transparent;
-      border-radius: 0 0 0.625rem 0.625rem;
-      border-top: 2.5rem solid $theme-secondary-main;
-      bottom: -2.78125rem;
       content: '';
-      height: 0;
-      left: -0.09375rem;
-      position: absolute;
       width: 0;
+      height: 0;
+      border: 1.3625rem solid transparent;
+      border-top: 2.5rem solid $theme-secondary-main;
+      border-radius: 0 0 0.625rem 0.625rem;
+      position: absolute;
+      bottom: -2.78125rem;
+      left: -0.09375rem;
     }
   }
 
   &__map-marker-circle {
+    width: 1.0625rem;
+    height: 1.0625rem;
     background-color: $base-secondary-main;
     border-radius: 50%;
-    height: 1.0625rem;
-    left: 0.75rem;
     position: absolute;
     top: 30%;
-    width: 1.0625rem;
+    left: 0.75rem;
     z-index: 1;
   }
 }

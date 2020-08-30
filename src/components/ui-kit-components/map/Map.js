@@ -7,7 +7,7 @@ class Map {
   }
 
   _defineOptions() {
-    const getData = (property) => window.Number(this.$mapContainer.data(property));
+    const getData = (property) => Number(this.$mapContainer.data(property));
 
     this.options = {
       longitude: getData('longitude'),
@@ -65,11 +65,11 @@ class Map {
   _addButtonHandler() {
     const { longitude, latitude, zoom } = this.options;
 
-    const buttonClickHandler = () => {
+    const handleButtonClick = () => {
       this.map.setView([longitude, latitude], zoom);
     };
 
-    this.$mapContainer.parent().find('.js-map__button').on('click', buttonClickHandler);
+    this.$mapContainer.parent().find('.js-map__button').on('click', handleButtonClick);
   }
 }
 

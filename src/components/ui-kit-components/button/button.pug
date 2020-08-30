@@ -1,4 +1,4 @@
-mixin button({ size, color, content = 'button', width, inverse })
+mixin button({ size, color = 'cyan', content = 'button', width, inverse })
   -
     const widthModifiers = {
       greatest: 'button_width_greatest',
@@ -8,10 +8,6 @@ mixin button({ size, color, content = 'button', width, inverse })
       small: {
         button: 'button_size_small',
         buttonElement: 'button__button-element_size_small',
-      },
-      standard: {
-        button: 'button_size_standard',
-        buttonElement: 'button__button-element_size_standard',
       },
     };
 
@@ -36,12 +32,12 @@ mixin button({ size, color, content = 'button', width, inverse })
 
     const buttonModifiers = [
       widthModifiers[width],
-      sizeModifiers[size].button,
+      sizeModifiers[size] && sizeModifiers[size].button,
       buttonColorModifier,
     ];
 
     const buttonElementModifiers = [
-      sizeModifiers[size].buttonElement,
+      sizeModifiers[size] && sizeModifiers[size].buttonElement,
       buttonElementColorModifier,
       'js-ripple',
     ];

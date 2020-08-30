@@ -4,11 +4,11 @@
   position: relative;
 
   &__input {
-    cursor: pointer;
+    width: 0;
     height: 0;
     opacity: 0;
+    cursor: pointer;
     position: absolute;
-    width: 0;
 
     &:checked {
       + .tick-box__check-mark-container {
@@ -40,21 +40,21 @@
   }
 
   &__check-mark-container {
+    width: 1.5rem;
+    height: 1.4375rem;
     background-color: $theme-primary-main;
     border-radius: 50%;
-    height: 1.4375rem;
     transition: 0.3s;
-    width: 1.5rem;
   }
 
   &__check-mark {
+    width: 0.625rem;
     border-bottom: 0.125rem solid #000;
     border-left: 0.125rem solid #000;
     height: 0.3125rem;
-    left: 25%;
     position: absolute;
     top: 25%;
+    left: 25%;
     transform: rotate(-45deg);
-    width: 0.625rem;
   }
 }

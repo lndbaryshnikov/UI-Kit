@@ -1,9 +1,9 @@
 .billboard {
+  min-width: 18rem;
+  min-height: 13.25rem;
+  display: flex;
   border-radius: 0.1875rem;
   color: $base-secondary-main;
-  display: flex;
-  min-height: 13.25rem;
-  min-width: 18rem;
 
   @media screen and (max-width: 400px) {
     min-width: 16.5rem;
@@ -20,8 +20,8 @@
   }
 
   &__content {
-    margin: 0.6875rem 1.25rem 0.3rem;
     width: 67%;
+    margin: 0.6875rem 1.25rem 0.3rem;
 
     @media screen and (max-width: 400px) {
       margin: 0.4rem 0.6rem 0;
@@ -35,9 +35,7 @@
   }
 
   &__description {
-    font-family: Lato, Arial, sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 400;
+    font: 400 0.6875rem Lato, Arial, sans-serif;
     letter-spacing: 0.034375rem;
     margin-left: 0.125rem;
     margin-bottom: 1.3rem;
@@ -82,7 +80,6 @@
         font-weight: 900;
         letter-spacing: 0.07rem;
         line-height: 1.2rem;
-        margin-left: 0.0625rem;
         text-transform: uppercase;
       }
 
@@ -91,12 +88,13 @@
         font-weight: 300;
         line-height: 1.625rem;
         margin-top: 0.7rem;
+        margin-left: 0.15rem;
       }
     }
   }
 
   &__button {
-    margin: 1.25rem auto;
     width: 87%;
+    margin: 1.25rem auto;
   }
 }

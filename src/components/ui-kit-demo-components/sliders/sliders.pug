@@ -1,11 +1,11 @@
 include ../../ui-kit-components/slider/slider
 include ../block-sign/block-sign
 
-mixin sliders(items)
+mixin sliders(itemOptions)
   .sliders
     +block-sign('sliders')
 
     .sliders__container
-      each optionItem in items
+      each options in itemOptions
         .sliders__slider
-          +slider(optionItem)
+          +slider(options)

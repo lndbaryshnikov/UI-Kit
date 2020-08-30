@@ -8,22 +8,10 @@ block content
       section.ui-kit-demo__buttons
         -
           const buttonOptions = [
-            {
-              size: 'small',
-              color: 'cyan',
-            },
-            {
-              size: 'standard',
-              color: 'cyan',
-            },
-            {
-              size: 'standard',
-              color: 'orangeRed',
-            },
-            {
-              size: 'small',
-              color: 'orangeRed',
-            },
+            { size: 'small' },
+            {},
+            { color: 'orangeRed' },
+            { size: 'small', color: 'orangeRed' },
           ];
 
           const inverseButtonOptions = buttonOptions.map((options) => (
@@ -60,7 +48,7 @@ block content
 
       section.ui-kit-demo__stages-box
         +stages-box([
-          { 
+          {
             min: 1, 
             max: 5, 
             value: 3, 

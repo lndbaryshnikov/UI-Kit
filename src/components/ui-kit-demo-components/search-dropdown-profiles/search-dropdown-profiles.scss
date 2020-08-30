@@ -1,8 +1,8 @@
 .search-dropdown-profiles {
-  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
   @media screen and (max-width: 722px) {
     align-items: center;
@@ -10,14 +10,14 @@
   }
 
   &__search-dropdown {
+    width: 43.5%;
     height: 10rem;
     margin-right: 2.2rem;
     margin-top: 2.75rem;
-    width: 43.5%;
 
     @media screen and (max-width: 722px) {
-      margin-right: 0;
       width: 60%;
+      margin-right: 0;
     }
 
     @media screen and (max-width: 400px) {
@@ -26,16 +26,16 @@
   }
 
   &__search-dropdown-container {
-    display: flex;
-    flex-direction: column;
     height: 7.3rem;
+    display: flex;
     justify-content: space-between;
+    flex-direction: column;
     margin-top: 1.25rem;
   }
 
   &__profiles {
-    margin-top: 2.75rem;
     width: 41%;
+    margin-top: 2.75rem;
 
     @media screen and (max-width: 722px) {
       width: 60%;

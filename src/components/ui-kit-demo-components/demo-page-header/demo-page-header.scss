@@ -1,24 +1,20 @@
 .demo-page-header {
-  align-items: center;
+  width: 100%;
+  height: 5rem;
   display: flex;
   flex-direction: column;
-  height: 5rem;
   justify-content: space-around;
-  width: 100%;
+  align-items: center;
 
   &__name {
+    width: 100%;
     background-color: $theme-secondary-main;
     font-size: 2rem;
-    padding: 0.3125rem 0;
+    padding: 0.3rem 0;
     text-align: center;
-    width: 100%;
   }
 
   &__link {
-    @at-root {
-      a#{&} {
-        color: #000;
-      }
-    }
+    color: #000;
   }
 }

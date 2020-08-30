@@ -1,15 +1,15 @@
 .toggle {
+  width: 3.75rem;
+  height: 1.5rem;
   cursor: pointer;
   display: inline-block;
-  height: 1.5rem;
   position: relative;
   user-select: none;
-  width: 3.75rem;
 
   &__input {
+    width: 0;
     height: 0;
     opacity: 0;
-    width: 0;
 
     &:checked + .toggle__slider {
       background-color: $theme-primary-main;
@@ -43,33 +43,33 @@
   &__slider {
     background-color: $base-primary-light;
     border-radius: 2.125rem;
-    bottom: 0;
-    left: 0;
     position: absolute;
     right: 0;
+    left: 0;
     top: 0;
+    bottom: 0;
     transition: 0.4s;
 
     &::before {
       content: '';
+      width: 1.125rem;
+      height: 1.125rem;
       background-color: $base-secondary-main;
       border-radius: 50%;
-      bottom: 0.1875rem;
-      height: 1.125rem;
-      left: 0.25rem;
       position: absolute;
+      bottom: 0.1875rem;
+      left: 0.25rem;
       transition: 0.4s;
-      width: 1.125rem;
     }
   }
 
   &__sign {
     color: $base-secondary-main;
     font-size: 0.75rem;
-    letter-spacing: 0.0375rem;
     line-height: 0;
-    position: absolute;
+    letter-spacing: 0.0375rem;
     text-transform: uppercase;
+    position: absolute;
     top: 50%;
 
     &_on {

@@ -1,6 +1,7 @@
 {
   "env": {
     "browser": true,
+    "es6": true,
     "es2017": true,
     "jquery": true
   },
@@ -15,7 +16,7 @@
     "autoBind": "readonly"
   },
   "parserOptions": {
-    "ecmaVersion": 2017,
+    "ecmaVersion": 10,
     "sourceType": "module"
   },
   "plugins": ["fsd"],

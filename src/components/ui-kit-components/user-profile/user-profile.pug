@@ -1,6 +1,6 @@
 include ../user-photo/user-photo
 
-mixin user-profile({ name, job, theme })
+mixin user-profile({ name, job, theme, links = {} })
   -
     const themeModifiers = {
       cyan: {
@@ -27,9 +27,13 @@ mixin user-profile({ name, job, theme })
       span.user-profile__job(class=modifiers.job)= job
 
       .user-profile__links-container
-        - for (var i = 1; i <= 3; i += 1)
+        - 
+          const { fb, twitter, dribbble } = links;
+          const urlsArray = [fb, twitter, dribble];
+
+        each url in urlsArray
           a.user-profile__link(
-            href="/mock-address/change-me",
             class=modifiers.link,
+            href=url || "/mock-address/change-me",
             target="_blank", rel="noopener noreferrer"
           )

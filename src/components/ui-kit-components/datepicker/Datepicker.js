@@ -20,7 +20,7 @@ class Datepicker {
       onSelect: this._displayCurrentDay,
     });
 
-    this.$todayButton.on('click', this._todayButtonClickHandler);
+    this.$todayButton.on('click', this._handleTodayButtonClick);
 
     this._displayCurrentDay();
   }
@@ -33,7 +33,7 @@ class Datepicker {
     this.$todayButton = container.find('.js-datepicker__today-button');
   }
 
-  _todayButtonClickHandler() {
+  _handleTodayButtonClick() {
     const todayDate = new Date();
 
     this.$datepicker.datepicker('setDate', todayDate);

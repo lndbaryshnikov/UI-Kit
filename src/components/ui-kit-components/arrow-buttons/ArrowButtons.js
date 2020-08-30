@@ -11,19 +11,23 @@ class ArrowButtons {
       throw new Error('Mode can only be \'on\' or \'off\'');
     }
 
-    const disabledClass = 'arrow-buttons__arrow-container_disabled';
+    const disabledClass = 'arrow-buttons__button_disabled';
     const rippleClass = 'js-ripple';
 
     const toggle = (arrow) => {
-      arrow.classList.toggle(disabledClass, mode !== 'on');
+      arrow.classList.toggle(disabledClass, mode === 'off');
       arrow.classList.toggle(rippleClass, mode === 'on');
     };
 
+    const { arrows } = this;
+
     if (side === 'all') {
-      Object.values(this.arrows).forEach((arrow) => {
+      Object.values(arrows).forEach((arrow) => {
         toggle(arrow);
       });
-    } else toggle(this.arrows[side]);
+    } else {
+      toggle(arrows[side]);
+    }
   }
 
   setListener(side, event, listener) {
@@ -33,11 +37,13 @@ class ArrowButtons {
       arrow.addEventListener(event, listener);
     };
 
+    const { arrows } = this;
+
     if (side === 'all') {
-      Object.values(this.arrows).forEach((arrow) => {
+      Object.values(arrows).forEach((arrow) => {
         addListener(arrow);
       });
-    } else addListener(this.arrows[side]);
+    } else addListener(arrows[side]);
   }
 
   _defineElements() {

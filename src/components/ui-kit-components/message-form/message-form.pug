@@ -2,12 +2,10 @@ include ../text-field/text-field
 include ../tick-box/tick-box
 include ../button/button
 
-mixin message-form(extraOptions)
+mixin message-form(tickBoxes)
   form.message-form.js-message-form(method="post")
-    .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
+    .message-form__input.js-message-form__input
       +text-field({
-        tagName: 'input',
-        type: 'text',
         name: 'name',
         placeholder: 'Your Name',
         blockName: 'messageForm',
@@ -20,9 +18,8 @@ mixin message-form(extraOptions)
         class=["message-form__tooltip_color_orange-red", "message-form__tooltip_invisible"]
       ) Error
 
-    .message-form__data-field.message-form__data-field_type_input.js-message-form__data-field_type_input
+    .message-form__input.js-message-form__input
       +text-field({
-        tagName: 'input',
         type: 'email',
         name: 'email',
         placeholder: 'Your Email',
@@ -36,7 +33,7 @@ mixin message-form(extraOptions)
         class=["message-form__tooltip_color_orange-red", "message-form__tooltip_invisible"]
       ) Error
 
-    .message-form__data-field.message-form__data-field_type_textarea
+    .message-form__textarea
       +text-field({
         tagName: 'textarea',
         name: 'message',
@@ -44,18 +41,15 @@ mixin message-form(extraOptions)
         blockName: 'messageForm',
       })
 
-    if extraOptions
+    if tickBoxes
       .message-form__tick-boxes
-        each options in extraOptions
+        each options in tickBoxes
           - const { isChecked, name, text } = options;
 
           .message-form__tick-item
             +tick-box(isChecked, { name, id: name })
+            
             label.message-form__tick-sign(for=`tick-box-${name}`)= text
 
     .message-form__button.js-message-form__button
-      +button({
-        size: 'standard',
-        color: 'cyan',
-        content: 'submit',
-      })
+      +button({ content: 'submit' })

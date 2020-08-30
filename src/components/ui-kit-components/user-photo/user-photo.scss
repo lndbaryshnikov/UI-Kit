@@ -1,12 +1,12 @@
 .user-photo {
+  width: 5.8125rem;
+  height: 5.8125rem;
   background-color: $base-primary-light;
   border-radius: 50%;
-  height: 5.8125rem;
-  width: 5.8125rem;
 
   &__image {
+    width: 5.2rem;
     height: 5.2rem;
     margin: 0.3125rem;
-    width: 5.2rem;
   }
 }

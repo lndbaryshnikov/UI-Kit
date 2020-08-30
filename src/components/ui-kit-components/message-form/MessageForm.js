@@ -23,8 +23,8 @@ class MessageForm {
     const getTooltips = (parent) => parent.querySelectorAll('.js-message-form__tooltip');
 
     const { form } = this.elements;
-    const [nameDataField, emailDataField] = form.querySelectorAll('.js-message-form__data-field_type_input');
-    const [nameInput, emailInput] = form.querySelectorAll('.js-message-form__data-field_type_input input');
+    const [nameDataField, emailDataField] = form.querySelectorAll('.js-message-form__input');
+    const [nameInput, emailInput] = form.querySelectorAll('.js-message-form__input input');
     const [nameThanksTooltip, nameErrorTooltip] = getTooltips(nameDataField);
     const [emailThanksTooltip, emailErrorTooltip] = getTooltips(emailDataField);
 
@@ -47,19 +47,21 @@ class MessageForm {
   }
 
   _addHandlers() {
-    Object.values(this.elements.inputs).forEach((inputObject) => {
+    const { inputs, form } = this.elements;
+
+    Object.values(inputs).forEach((inputObject) => {
+      const { inputType, inputInstance } = inputObject;
+
       const {
-        checkAndShowTooltipHandler,
-        hideTooltipsHandler,
-      } = this._makeInputHandlers(inputObject.inputType);
+        checkAndShowTooltip: handleTooltipBlur,
+        hideTooltip: handleTooltipFocus,
+      } = this._makeInputHandlers(inputType);
 
-      const { inputInstance } = inputObject;
-
-      inputInstance.onFocus(hideTooltipsHandler);
-      inputInstance.onBlur(checkAndShowTooltipHandler);
+      inputInstance.onFocus(handleTooltipFocus);
+      inputInstance.onBlur(handleTooltipBlur);
     });
 
-    this.elements.form.addEventListener('submit', this._formSubmitHandler);
+    form.addEventListener('submit', this._handleFormSubmit);
   }
 
   _makeInputHandlers(inputType) {
@@ -67,13 +69,13 @@ class MessageForm {
     const inputName = inputType === 'email' ? 'emailInput' : maybeNameInput;
 
     return {
-      hideTooltipsHandler: () => {
+      hideTooltip: () => {
         const { thanksTooltip, errorTooltip } = this.elements.inputs[inputName];
 
         this._toggleTooltipModifier(thanksTooltip, 'invisible', 'on');
         this._toggleTooltipModifier(errorTooltip, 'invisible', 'on');
       },
-      checkAndShowTooltipHandler: (event) => {
+      checkAndShowTooltip: (event) => {
         const { value } = event.currentTarget;
 
         if (this._isValid(value, inputType)) {
@@ -89,7 +91,7 @@ class MessageForm {
     };
   }
 
-  _formSubmitHandler(event) {
+  _handleFormSubmit(event) {
     const isEmailValid = this.state.email;
     const isNameValid = this.state.name;
 
@@ -140,9 +142,9 @@ class MessageForm {
       throw new Error('Mode can be only \'on\' or \'off\'');
     }
 
-    const modifierClass = `message-form__tooltip_${modifier}`;
-
     const processModifierClass = (method) => {
+      const modifierClass = `message-form__tooltip_${modifier}`;
+
       if (method === 'contains') {
         return tooltip.classList.contains(modifierClass);
       }

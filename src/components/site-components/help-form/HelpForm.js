@@ -12,10 +12,10 @@ class HelpForm {
     autoBind(this);
 
     this._toggleElementModifier('message-box', 'invisible');
-    this.button.addEventListener('click', this._buttonClickHandler);
+    this.button.addEventListener('click', this._handleButtonClick);
   }
 
-  _buttonClickHandler() {
+  _handleButtonClick() {
     this._toggleElementModifier('message-box', 'invisible');
     this._toggleElementModifier('arrow', 'direction', 'down');
   }

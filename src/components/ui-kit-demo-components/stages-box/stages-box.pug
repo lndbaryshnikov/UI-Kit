@@ -1,10 +1,10 @@
 include ../../ui-kit-components/slider/slider
 include ../block-sign/block-sign
 
-mixin stages-box(items)
+mixin stages-box(itemOptions)
   .stages-box
     +block-sign('stages')
 
     .stages-box__container
-      each optionsItem in items
-        +slider(optionsItem)
+      each options in itemOptions
+        +slider(options)

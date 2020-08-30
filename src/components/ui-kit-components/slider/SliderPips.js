@@ -45,11 +45,11 @@ class SliderPips {
 
       this._appendCustomClasses(value);
 
-      this.$slider.on('slidechange', this._makeValueChangedHandlerForStages());
+      this.$slider.on('slidechange', this._makeValueChangedHandler());
     }
   }
 
-  _makeValueChangedHandlerForStages() {
+  _makeValueChangedHandler() {
     const { sliderColor, rangeColor } = this.options;
 
     return (event, { value }) => {
@@ -68,37 +68,33 @@ class SliderPips {
 
     const $pips = this.$slider.find(`.${pip}`);
 
-    const appendModifiers = (dom, backgroundColor, color) => {
-      const properties = ['background-color', 'color'];
-      const values = [backgroundColor, color];
-
-      properties.forEach((currentProperty, index) => {
-        this._toggleModifier({ modifier: currentProperty, value: values[index], dom });
-      });
+    const appendModifiers = ({ $dom, backgroundColor, color }) => {
+      this._toggleModifier({ modifier: 'background-color', value: backgroundColor, $dom });
+      this._toggleModifier({ modifier: 'color', value: color, $dom });
     };
 
     $pips.each((index, currentPip) => {
       const $currentPip = $(currentPip);
 
       if (index < value) {
-        appendModifiers($currentPip, rangeColor, 'white');
+        appendModifiers({ $dom: $currentPip, backgroundColor: rangeColor, color: 'white' });
       } else {
-        appendModifiers($currentPip, sliderColor, 'dark-gray');
+        appendModifiers({ $dom: $currentPip, backgroundColor: sliderColor, color: 'dark-gray' });
       }
     });
   }
 
   _toggleModifier({
-    labelsElement = 'pip', modifier, value, dom, originalClass, mode = 'add',
+    labelsElement = 'pip', modifier, value, $dom, originalClass, mode = 'add',
   } = {}) {
     if (mode !== 'add' && mode !== 'remove') {
-      throw new Error('Mode should be \'add\', \'remove\'');
+      throw new Error('Mode should be \'add\' or \'remove\'');
     }
 
     const customClass = `slider__labels-${labelsElement}`;
     const initialClass = originalClass || customClass;
 
-    const domElement = dom || this.$slider.find(`.${initialClass}`);
+    const domElement = $dom || this.$slider.find(`.${initialClass}`);
 
     domElement[`${mode}Class`](`${customClass}_${modifier}_${value}`);
   }

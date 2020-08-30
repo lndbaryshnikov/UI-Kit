@@ -7,10 +7,10 @@
   }
 
   &__description {
+    width: 70%;
     font-size: 1.2rem;
     margin: auto;
     text-align: center;
-    width: 70%;
 
     @media screen and (max-width: 722px) {
       width: 85%;

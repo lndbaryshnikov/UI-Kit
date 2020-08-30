@@ -6,7 +6,7 @@ mixin stages({ title, stages, startFrom, styles: { sliderColor, rangeColor, hand
 
   .stages.js-stages(data-stages=stagesJSON, data-start-from=startFrom)
     .stages__title= title
-    .stages__stage= stages[startFrom - 1]
+    .stages__stage.js-stages__stage= stages[startFrom - 1]
     .stages__arrows
       +arrow-buttons(false, { width: 'greatest' })
     .stages__slider

@@ -4,13 +4,12 @@ class Stages {
   constructor(stages) {
     this.elements = { stages };
 
-    this._defineElements();
-    this._defineOptions();
-
     this._init();
   }
 
   _init() {
+    this._defineElements();
+    this._defineOptions();
     this._setHandlers();
   }
 
@@ -21,7 +20,7 @@ class Stages {
     const slider = getDaughter('js-slider');
 
     this.elements.arrows = arrows;
-    this.elements.stageTitle = getDaughter('stages__stage');
+    this.elements.stageTitle = getDaughter('js-stages__stage');
     this.elements.slider = {
       classInstance: $(slider).data('slider'),
     };
@@ -45,8 +44,11 @@ class Stages {
 
   _setHandlers() {
     const setArrowHandlers = (side) => {
-      this.elements.arrows
-        .setListener(side, 'click', this._makeArrowClickHandler(side));
+      this.elements.arrows.setListener(
+        side,
+        'click',
+        this._makeArrowClickHandler(side),
+      );
     };
 
     setArrowHandlers('left');
@@ -56,7 +58,9 @@ class Stages {
   }
 
   _makeArrowClickHandler(side) {
-    if (side !== 'left' && side !== 'right') {
+    const isSideIncorrect = side !== 'left' && side !== 'right';
+
+    if (isSideIncorrect) {
       throw new Error('Only right and left side is allowed');
     }
 

@@ -1,56 +1,31 @@
 .message-form {
   position: relative;
 
-  &__data-field {
-    &_type {
-      &_input {
-        margin-bottom: 0.75rem;
-        display: flex;
-      }
-    }
-  }
-
-  &__tick-boxes {
-    float: left;
-  }
-
-  &__tick-item {
-    align-items: center;
+  &__input {
+    margin-bottom: 0.75rem;
     display: flex;
-    margin-top: 0.3125rem;
-  }
-
-  &__tick-sign {
-    margin-left: 0.625rem;
-  }
-
-  &__button {
-    float: right;
-    letter-spacing: 0.03125rem;
-    margin-top: 0.6rem;
   }
 
   &__tooltip {
+    width: 25%;
     border-radius: 0.25rem;
-    color: $base-secondary-main;
     display: inline-block;
     font-family: Lato, Arial, sans-serif;
     font-size: 0.625rem;
     letter-spacing: 0.05rem;
     line-height: 1.625rem;
+    text-align: center;
+    color: $base-secondary-main;
     margin: 0.05rem 0.1rem 0 0.5rem;
     padding-top: 0.09375rem;
     position: relative;
-    text-align: center;
     text-transform: uppercase;
     user-select: none;
-    width: 25%;
     flex-shrink: 0;
 
     &::after {
-      border-style: solid;
-      border-width: 0.25rem;
       content: '';
+      border: 0.25rem solid;
       margin-top: -0.25rem;
       position: absolute;
       right: 100%;
@@ -78,5 +53,25 @@
     &_invisible {
       display: none;
     }
+  }
+
+  &__tick-boxes {
+    float: left;
+  }
+
+  &__tick-item {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3125rem;
+  }
+
+  &__tick-sign {
+    margin-left: 0.625rem;
+  }
+
+  &__button {
+    float: right;
+    letter-spacing: 0.03125rem;
+    margin-top: 0.6rem;
   }
 }
