@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year, goTo })
+mixin billboard({ type, title, imageName, content, backgroundColor, day, month, year, linkURL })
   - 
     const modifiers = {
       type: {
@@ -34,8 +34,8 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
         .billboard__title(class=getEventModifier('title'))= title
         .billboard__description= content
 
-        if goTo
-          form.billboard__button(action=goTo)
+        if linkURL
+          form.billboard__button(action=linkURL)
             +button({
               size: 'small',
               content: 'add to calendar',
