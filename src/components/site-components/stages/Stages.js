@@ -1,4 +1,4 @@
-import ArrowButtons from '../../ui-kit-components/arrow-buttons/ArrowButtons';
+import ArrowButton from '../../ui-kit-components/arrow-button/ArrowButton';
 
 class Stages {
   constructor(stages) {
@@ -14,23 +14,28 @@ class Stages {
   }
 
   _defineElements() {
-    const getDaughter = (daughterClassName) => this.elements.stages.querySelector(`.${daughterClassName}`);
+    const { stages } = this.elements;
 
-    const arrows = new ArrowButtons(getDaughter('js-arrow-buttons'));
-    const slider = getDaughter('js-slider');
+    const stageTitle = stages.querySelector('.js-stages__stage');
+    const [leftArrow, rightArrow] = stages.querySelectorAll('.js-arrow-button');
+    const slider = stages.querySelector('.js-slider');
 
-    this.elements.arrows = arrows;
-    this.elements.stageTitle = getDaughter('js-stages__stage');
-    this.elements.slider = {
-      classInstance: $(slider).data('slider'),
+    this.elements = {
+      ...this.elements,
+      stageTitle,
+      arrows: {
+        leftArrow: new ArrowButton(leftArrow),
+        rightArrow: new ArrowButton(rightArrow),
+      },
+      slider: { classInstance: $(slider).data('slider') },
     };
   }
 
   _defineOptions() {
-    const getData = (data) => $(this.elements.stages).data(data);
+    const { dataset } = this.elements.stages;
 
-    const stages = getData('stages');
-    const startFrom = Number(getData('start-from'));
+    const stages = JSON.parse(dataset.stages);
+    const startFrom = Number(dataset.startFrom);
 
     this.options = {
       stages,
@@ -43,29 +48,16 @@ class Stages {
   }
 
   _setHandlers() {
-    const setArrowHandlers = (side) => {
-      this.elements.arrows.setListener(
-        side,
-        'click',
-        this._makeArrowClickHandler(side),
-      );
-    };
+    const { leftArrow, rightArrow } = this.elements.arrows;
 
-    setArrowHandlers('left');
-    setArrowHandlers('right');
+    leftArrow.onClick(this._makeArrowClickHandler('left'));
+    rightArrow.onClick(this._makeArrowClickHandler('right'));
 
     this.elements.slider.classInstance.onChange(this._makeSliderChangeHandler());
   }
 
   _makeArrowClickHandler(side) {
-    const isSideIncorrect = side !== 'left' && side !== 'right';
-
-    if (isSideIncorrect) {
-      throw new Error('Only right and left side is allowed');
-    }
-
     const { stages } = this.options;
-
     const limitIndex = side === 'left' ? 0 : stages.length - 1;
 
     return () => {
@@ -97,7 +89,7 @@ class Stages {
 
     this._refreshStageTitle();
     this._refreshSliderValue();
-    this._refreshArrowsClasses();
+    this._refreshArrowsState();
   }
 
   _refreshStageTitle() {
@@ -108,24 +100,21 @@ class Stages {
     this.elements.slider.classInstance.moveTo(this.options.currentStage.index + 1);
   }
 
-  _refreshArrowsClasses() {
+  _refreshArrowsState() {
     const currentIndex = this.options.currentStage.index;
     const lastIndex = this.options.stages.length - 1;
-
-    const changeState = (side, state) => {
-      this.elements.arrows.switchArrows(side, state);
-    };
+    const { leftArrow, rightArrow } = this.elements.arrows;
 
     if (currentIndex === 0) {
-      changeState('left', 'off');
+      leftArrow.switch('off');
     } else {
-      changeState('left', 'on');
+      leftArrow.switch('on');
     }
 
     if (currentIndex === lastIndex) {
-      changeState('right', 'off');
+      rightArrow.switch('off');
     } else {
-      changeState('right', 'on');
+      rightArrow.switch('on');
     }
   }
 }

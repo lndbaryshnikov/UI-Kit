@@ -1,4 +1,4 @@
-include ../../ui-kit-components/arrow-buttons/arrow-buttons
+include ../../ui-kit-components/arrow-button/arrow-button
 include ../../ui-kit-components/slider/slider
 
 mixin stages({ title, stages, startFrom, styles: { sliderColor, rangeColor, handleColor } })
@@ -8,7 +8,8 @@ mixin stages({ title, stages, startFrom, styles: { sliderColor, rangeColor, hand
     .stages__title= title
     .stages__stage.js-stages__stage= stages[startFrom - 1]
     .stages__arrows
-      +arrow-buttons(false, { width: 'greatest' })
+      +arrow-button({ direction: 'left' })
+      +arrow-button({ direction: 'right' })
     .stages__slider
       +slider({
         min: 1,

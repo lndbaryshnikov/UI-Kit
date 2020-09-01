@@ -1,0 +1,12 @@
+mixin arrow-button({ direction = 'left', disabled = false }= {})
+  -
+    const modifiers = {
+      direction: {
+        left: 'arrow-button__arrow_direction_left',
+        right: 'arrow-button__arrow_direction_right',
+      },
+      disabled: 'arrow-button_disabled',
+    };
+
+  button.arrow-button.js-arrow-button(class=disabled ? modifiers.disabled : 'js-ripple')
+    .arrow-button__arrow(class=modifiers.direction[direction])

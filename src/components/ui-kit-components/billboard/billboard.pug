@@ -4,34 +4,31 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
   - 
     const modifiers = {
       type: {
-        event: (elementName) => `billboard__${elementName}_type_event`,
-        new: (elementName) => `billboard__${elementName}_type_new`,
+        events: 'billboard_type_events',
+        news: 'billboard_type_news',
       },
       backgroundColor: {
         cyan: 'billboard_background-color_cyan',
         orangeRed: 'billboard_background-color_orange-red',
       },
     };
-
-  .billboard(class=modifiers.backgroundColor[backgroundColor])
+  .billboard(class=[modifiers.type[type], modifiers.backgroundColor[backgroundColor]])
     .billboard__image(
       style=`background-image: url("${require(`../../assets/images/billboard-images/${imageName}.png`)}")`
     )
     .billboard__content
       if type === 'news'
-        - const getNewModifier = modifiers.type.new;
-
-        .billboard__title(class=getNewModifier('title'))= title
-        .billboard__date(class=getNewModifier('date')) #{day} #{month} #{year}
+        .billboard__title= title
+        .billboard__date #{day} #{month} #{year}
         .billboard__description= content
 
       if type === 'events'
         - const getEventModifier = modifiers.type.event;
 
-        .billboard__date(class=getEventModifier('date'))
+        .billboard__date
           .billboard__event-day= day
           .billboard__event-month #{month}
-        .billboard__title(class=getEventModifier('title'))= title
+        .billboard__title= title
         .billboard__description= content
 
         if linkURL

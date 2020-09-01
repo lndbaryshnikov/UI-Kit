@@ -1,4 +1,4 @@
-include ../../ui-kit-components/arrow-buttons/arrow-buttons
+include ../../ui-kit-components/arrow-button/arrow-button
 include ../block-sign/block-sign
 
 mixin arrows(items)
@@ -7,5 +7,8 @@ mixin arrows(items)
 
     .arrows__container
       each item in items
+        - const { disabled } = item;
+        
         .arrows__button-set
-          +arrow-buttons(item.disabled)
+          +arrow-button({ direction: 'left', disabled })
+          +arrow-button({ direction: 'right', disabled })

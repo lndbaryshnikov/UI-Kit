@@ -1,0 +1,73 @@
+.arrow-button {
+  @include outline;
+    
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: $base-secondary-main;
+  border: 0.1875rem solid $theme-primary-main;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s;
+
+  // for ripple-effect:
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    background-color: $theme-primary-main;
+
+    .arrow-button__arrow {
+      border-color: $base-secondary-main;
+
+      &_direction {
+        &_left {
+          animation: slide-left 1s ease-in-out infinite;
+        }
+
+        &_right {
+          animation: slide-right 1s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+  &_disabled {
+    background-color: $base-primary-light;
+    border-color: $base-primary-light;
+    cursor: default;
+
+    &:hover {
+      background-color: $base-primary-light;
+      border-color: $base-primary-light;
+
+      .arrow-button__arrow {
+        animation: none;
+      }
+    }
+
+    .arrow-button__arrow {
+      border-color: $base-secondary-main;
+    }
+  }
+
+  &__arrow {
+    width: 0.84375rem;
+    height: 0.84375rem;
+    margin: 0.84375rem auto;
+    transform: rotate(45deg);
+
+    &_direction {
+      &_right {
+        border-right: 0.21875rem solid $theme-primary-main;
+        border-top: 0.21875rem solid $theme-primary-main;
+        margin-right: 0.75rem;
+      }
+
+      &_left {
+        border-bottom: 0.21875rem solid $theme-primary-main;
+        border-left: 0.21875rem solid $theme-primary-main;
+        margin-left: 0.75rem;
+      }
+    }
+  }
+}

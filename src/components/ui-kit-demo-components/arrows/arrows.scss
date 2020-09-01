@@ -1,5 +1,6 @@
 .arrows {
   &__container {
+    width: 98%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -7,10 +8,13 @@
     position: relative;
     left: 0.25rem;
     margin-top: 0.6875rem;
-    width: 98%;
   }
 
   &__button-set {
+    height: 3.125rem;
+    width: 7.8125rem;
     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
   }
 }

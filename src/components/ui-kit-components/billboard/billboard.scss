@@ -9,6 +9,43 @@
     min-width: 16.5rem;
   }
 
+  &_type {
+    &_events {
+      .billboard__title {
+        font-size: 0.7rem;
+        font-weight: 900;
+        letter-spacing: 0.07rem;
+        line-height: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .billboard__date {
+        height: 4.375rem;
+        margin-bottom: 1.125rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+
+    &_news {
+      .billboard__title {
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.625rem;
+        margin-top: 0.7rem;
+      }
+
+      .billboard__date {
+        font-size: 0.65rem;
+        font-weight: 900;
+        letter-spacing: 0.08rem;
+        margin: 0.73rem 0 0.82rem;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+    }
+  }
+
   &_background-color {
     &_cyan {
       background-color: $theme-primary-main;
@@ -40,26 +77,6 @@
     margin-bottom: 1.3rem;
   }
 
-  &__date {
-    &_type {
-      &_event {
-        height: 4.375rem;
-        margin-bottom: 1.125rem;
-        font-weight: 300;
-        line-height: 1;
-      }
-
-      &_new {
-        font-size: 0.65rem;
-        font-weight: 900;
-        letter-spacing: 0.08rem;
-        margin: 0.73rem 0 0.82rem;
-        line-height: 1.3;
-        text-transform: uppercase;
-      }
-    }
-  }
-
   &__event-day {
     display: inline-block;
     font-size: 4.5625rem;
@@ -70,25 +87,6 @@
     display: inline-block;
     font-size: 1.875rem;
     margin-left: 0.6rem;
-  }
-
-  &__title {
-    &_type {
-      &_event {
-        font-size: 0.7rem;
-        font-weight: 900;
-        letter-spacing: 0.07rem;
-        line-height: 1.2rem;
-        text-transform: uppercase;
-      }
-
-      &_new {
-        font-size: 1.75rem;
-        font-weight: 300;
-        line-height: 1.625rem;
-        margin-top: 0.7rem;
-      }
-    }
   }
 
   &__button {

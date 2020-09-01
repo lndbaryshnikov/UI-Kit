@@ -20,8 +20,11 @@
   }
 
   &__arrows {
-    margin: 0.625rem auto 2.5rem;
     width: 80%;
+    height: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.625rem auto 2.5rem;
 
     @media screen and (max-width: 600px) {
       width: 95%;
