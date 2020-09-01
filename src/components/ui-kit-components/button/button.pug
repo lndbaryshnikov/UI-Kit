@@ -23,7 +23,7 @@ mixin button({ size, color = 'cyan', content = 'button', width, inverse })
     };
  
     const buttonColorModifier = inverse 
-      ? `${colorModifiers[color].button}-inverse` 
+      ? colorModifiers[color].button
       : colorModifiers[color].button;
 
     const buttonElementColorModifier = inverse 

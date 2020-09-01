@@ -4,11 +4,11 @@
 .datepicker {
   width: 17.375rem;
   height: 26.8rem;
-  background-color: $base-secondary-dark;
+  background-color: #f2f2f2;
 
   @media screen and (max-width: 400px) {
     width: 15rem;
-    height: 22rem;
+    height: 24rem;
   }
 
   &__header {
@@ -38,7 +38,7 @@
     top: 6.8rem;
 
     @media screen and (max-width: 400px) {
-      top: 4.6875rem;
+      top: 4.75rem;
     }
   }
 
@@ -47,9 +47,13 @@
     position: relative;
     top: -5.3125rem;
 
+    @media screen and (max-width: 400px) {
+      top: -5.25rem;
+    }
+
     .ui-datepicker {
       width: 98%;
-      height: 20rem;
+      height: 20.5rem;
 
       @media screen and (max-width: 400px) {
         height: 17.6rem;
@@ -57,12 +61,13 @@
 
       &-calendar {
         width: 102.5%;
-        height: 14.4rem;
+        height: 14.15rem;
         border-collapse: collapse;
-        color: $base-secondary-dark;
-        font-size: 0.55rem;
+        color: #868686;
+        font-size: 0.6rem;
+        font-weight: 900;
         margin-left: -0.2rem;
-        margin-top: 0.45rem;
+        margin-top: 0.47rem;
         table-layout: fixed;
 
         @media screen and (max-width: 1094px) {
@@ -70,11 +75,15 @@
         }
 
         @media screen and (max-width: 722px) {
-          margin-top: 0.6rem;
+          height: 14.1rem;
+          margin-top: 0.4rem;
         }
 
-        @media screen and (max-width: 400px) {
-          height: 11.9rem;
+        thead {
+          th {
+            font-weight: 900;
+            color: $base-secondary-main;
+          }
         }
 
         tbody {
@@ -91,33 +100,21 @@
             }
 
             a {
-              font-size: 1.1rem;
+              @include outline;
+
+              font: 400 1.2rem 'Source Sans Pro', Arial, sans-serif;
               text-align: center;
+              color: inherit;
+              padding: 0;
+
+              &:active {
+                color: $base-secondary-dark;
+              }
 
               @media screen and (max-width: 400px) {
-                font-size: 1rem;
-                line-height: 0.8rem;
-                padding-top: 0.45rem;
+                font-size: 1.1rem;
               }
             }
-          }
-        }
-
-        thead {
-          th span {
-            position: relative;
-            top: 0.1rem;
-            right: 0.1rem;
-          }
-        }
-
-        a {
-          @include outline;
-
-          color: #868686;
-          
-          &:active {
-            color: $base-secondary-dark;
           }
         }
       }
@@ -150,11 +147,13 @@
       }
 
       &-other-month {
+        color: $base-secondary-main;
+
         a {
-          color: $base-primary-light;
+          color: inherit;
 
           &:active {
-            color: $base-primary-light;
+            color: $base-secondary-main;
           }
         }
       }
@@ -197,7 +196,7 @@
     background-color: $base-primary-light;
     border: 0;
     position: relative;
-    bottom: 7.5rem;
+    bottom: 8.1rem;
     cursor: pointer;
     font: 900 0.9rem Lato, Arial, sans-serif;
     color: #868686;
@@ -208,6 +207,7 @@
 
     @media screen and (max-width: 400px) {
       height: 2.5rem;
+      bottom: 5.2rem;
     }
   }
 }

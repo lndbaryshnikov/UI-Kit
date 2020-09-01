@@ -24,7 +24,7 @@
       color: $base-primary-main;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-size: 0.9375rem;
-      letter-spacing: 0.00875rem;
+      letter-spacing: -0.02rem;
       padding-left: 0.75rem;
       padding-top: 0.25rem;
     }
@@ -78,8 +78,8 @@
     font-size: 0.9rem;
 
     .ui-menu-item-wrapper {
+      font-family: 'Source Sans Pro', Arial, sans-serif;
       padding: 0.4rem 0 0.35rem 0.8rem;
-      letter-spacing: -0.015rem;
 
       &:hover {
         background-color: $base-primary-main;
