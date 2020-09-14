@@ -1,11 +1,13 @@
 .map {
   &__map-container {
     height: 12.6875rem;
+    border-radius: 0.25rem 0.25rem 0 0;
   }
 
   &__footer {
     height: 4.3125rem;
     background-color: $theme-secondary-main;
+    border-radius: 0 0 0.25rem 0.25rem;
 
     @media screen and (max-width: 400px) {
       height: 6rem;
