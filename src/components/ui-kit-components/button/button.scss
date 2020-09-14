@@ -2,32 +2,98 @@
   width: 7.375rem;
   border-radius: 0.25rem;
 
-  &_size {
-    &_small {
-      width: 4.875rem;
-    }
-  }
-
   &_width {
     &_greatest {
       width: 100%;
     }
   }
+  
+  &_size {
+    &_small {
+      width: 4.875rem;
+
+      .button__button-element {
+        height: 1.375rem;
+        font-size: 0.6rem;
+        padding-top: 0.2rem;
+      }
+    }
+  }
 
   &_color {
-    &_cyan {
+    &_primary {
       background-color: $theme-primary-dark;
 
       &:hover {
         background-color: $theme-primary-dark;
       }
+
+      .button__button-element {
+        background-color: $base-secondary-main;
+        color: $theme-primary-main;
+        border: 0.0625rem solid $theme-primary-main;
+
+        &:hover {
+          background-color: $theme-primary-main;
+          color: $base-secondary-main;
+        }
+      }
     }
 
-    &_orange-red {
+    &_primary-inverse {
+      background-color: $theme-primary-dark;
+
+      &:hover {
+        background-color: $theme-primary-dark;
+      }
+
+      .button__button-element {
+        background-color: $theme-primary-main;
+        color: $base-secondary-main;
+        border: 0.0625rem solid $theme-primary-main;
+
+        &:hover {
+          background-color: $base-secondary-main;
+          color: $theme-primary-main;
+        }
+      }
+    }
+
+    &_secondary {
       background-color: $theme-secondary-dark;
 
       &:hover {
         background-color: $theme-secondary-dark;
+      }
+
+      .button__button-element {
+        background-color: $base-secondary-main;
+        color: $theme-secondary-main;
+        border: 0.0625rem solid $theme-secondary-main;
+
+        &:hover {
+          background-color: $theme-secondary-main;
+          color: $base-secondary-main;
+        }
+      }
+    }
+
+    &_secondary-inverse {
+      background-color: $theme-secondary-dark;
+
+      &:hover {
+        background-color: $theme-secondary-dark;
+      }
+      
+      .button__button-element {
+        background-color: $theme-secondary-main;
+        color: $base-secondary-main;
+        border: 0.0625rem solid $theme-secondary-main;
+
+        &:hover {
+          background-color: $base-secondary-main;
+          color: $theme-secondary-main;
+        }
       }
     }
   }
@@ -50,60 +116,6 @@
 
     &:active {
       transform: translate(0, 0);
-    }
-
-    &_size {
-      &_small {
-        height: 1.375rem;
-        font-size: 0.6rem;
-        padding-top: 0.2rem;
-      }
-    }
-
-    &_color {
-      &_cyan {
-        background-color: $base-secondary-main;
-        color: $theme-primary-main;
-        border: 0.0625rem solid $theme-primary-main;
-
-        &:hover {
-          background-color: $theme-primary-main;
-          color: $base-secondary-main;
-        }
-      }
-
-      &_cyan-inverse {
-        background-color: $theme-primary-main;
-        color: $base-secondary-main;
-        border: 0.0625rem solid $theme-primary-main;
-
-        &:hover {
-          background-color: $base-secondary-main;
-          color: $theme-primary-main;
-        }
-      }
-
-      &_orange-red {
-        background-color: $base-secondary-main;
-        color: $theme-secondary-main;
-        border: 0.0625rem solid $theme-secondary-main;
-
-        &:hover {
-          background-color: $theme-secondary-main;
-          color: $base-secondary-main;
-        }
-      }
-
-      &_orange-red-inverse {
-        background-color: $theme-secondary-main;
-        color: $base-secondary-main;
-        border: 0.0625rem solid $theme-secondary-main;
-
-        &:hover {
-          background-color: $base-secondary-main;
-          color: $theme-secondary-main;
-        }
-      }
     }
   }
 }

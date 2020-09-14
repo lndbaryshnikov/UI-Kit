@@ -8,10 +8,11 @@ mixin billboard({ type, title, imageName, content, backgroundColor, day, month, 
         news: 'billboard_type_news',
       },
       backgroundColor: {
-        cyan: 'billboard_background-color_cyan',
-        orangeRed: 'billboard_background-color_orange-red',
+        primary: 'billboard_background-color_primary',
+        secondary: 'billboard_background-color_secondary',
       },
     };
+    
   .billboard(class=[modifiers.type[type], modifiers.backgroundColor[backgroundColor]])
     .billboard__image(
       style=`background-image: url("${require(`../../assets/images/billboard-images/${imageName}.png`)}")`

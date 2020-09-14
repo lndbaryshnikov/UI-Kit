@@ -26,7 +26,7 @@
     }
 
     &_theme {
-      &_cyan {
+      &_primary {
         background-color: $theme-primary-main;
 
         &::after {
@@ -34,7 +34,7 @@
         }
       }
 
-      &_orange-red {
+      &_secondary {
         background-color: $theme-secondary-main;
 
         &::after {

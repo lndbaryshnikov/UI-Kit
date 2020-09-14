@@ -8,12 +8,12 @@
   }
 
   &_color {
-    &_orange-red {
-      background-color: $theme-secondary-main;
+    &_primary {
+      background-color: $theme-primary-main;
     }
 
-    &_cyan {
-      background-color: $theme-primary-main;
+    &_secondary {
+      background-color: $theme-secondary-main;
     }
   }
 

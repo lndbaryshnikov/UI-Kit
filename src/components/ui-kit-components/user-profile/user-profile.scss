@@ -26,7 +26,7 @@
     }
 
     &_color {
-      &_cyan {
+      &_primary {
         background-color: $theme-primary-main;
 
         &::after {
@@ -112,7 +112,7 @@
     }
 
     &_theme {
-      &_cyan {
+      &_primary {
         background-color: rgba(20, 202, 130, 0);
         transition: background-color 1s;
 
@@ -137,7 +137,7 @@
         }
       }
 
-      &_orange-red {
+      &_secondary {
         background-color: rgba(216, 187, 71, 0);
         transition: background-color 1s;
 

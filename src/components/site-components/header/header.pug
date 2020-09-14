@@ -1,6 +1,6 @@
 include ../navigation/navigation
 
-mixin header({ name = 'UI Masters', theme = 'orangeRed', links } = {})
+mixin header({ name = 'UI Masters', theme = 'secondary', links } = {})
   -
     links = links || [
       { name: 'Info', url: './info.html' },
@@ -11,7 +11,8 @@ mixin header({ name = 'UI Masters', theme = 'orangeRed', links } = {})
 
     const modifiers = {
       theme: {
-        orangeRed: 'header_color_orange-red',
+        primary: 'header_color_primary',
+        secondary: 'header_color_secondary',
       },
     };
 

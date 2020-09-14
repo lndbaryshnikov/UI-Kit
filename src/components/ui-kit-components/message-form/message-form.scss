@@ -32,19 +32,19 @@
     }
 
     &_color {
-      &_orange-red {
-        background-color: $theme-secondary-main;
-
-        &::after {
-          border-color: transparent $theme-secondary-main transparent transparent;
-        }
-      }
-
-      &_cyan {
+      &_primary {
         background-color: $theme-primary-main;
 
         &::after {
           border-color: transparent $theme-primary-main transparent transparent;
+        }
+      }
+
+      &_secondary {
+        background-color: $theme-secondary-main;
+
+        &::after {
+          border-color: transparent $theme-secondary-main transparent transparent;
         }
       }
     }

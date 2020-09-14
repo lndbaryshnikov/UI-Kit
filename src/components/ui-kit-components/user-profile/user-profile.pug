@@ -3,17 +3,17 @@ include ../user-photo/user-photo
 mixin user-profile({ name, job, theme, links = {} })
   -
     const themeModifiers = {
-      cyan: {
+      primary: {
         name: 'user-profile__name_color_white',
         job: 'user-profile__job_color_white',
-        tooltip: 'user-profile__tooltip_color_cyan',
-        link: 'user-profile__link_theme_cyan',
+        tooltip: 'user-profile__tooltip_color_primary',
+        link: 'user-profile__link_theme_primary',
       },
-      orangeRed: {
-        name: 'user-profile__name_color_orange-red',
+    secondary: {
+        name: 'user-profile__name_color_secondary',
         job: 'user-profile__job_color_black',
         tooltip: 'user-profile__tooltip_color_gray',
-        link: 'user-profile__link_theme_orange-red',
+        link: 'user-profile__link_theme_secondary',
       },
     };
 

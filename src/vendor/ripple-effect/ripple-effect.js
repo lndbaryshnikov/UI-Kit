@@ -6,8 +6,8 @@
       const inkColor = $element.data('ripple-color') || 'white';
       const colorClasses = {
         white: 'ink-white',
-        cyan: 'ink-cyan',
-        orangeRed: 'ink-orange-red',
+        primary: 'ink-primary',
+        secondary: 'ink-secondary',
       };
       const className = `ink ${colorClasses[inkColor]}`;
 
