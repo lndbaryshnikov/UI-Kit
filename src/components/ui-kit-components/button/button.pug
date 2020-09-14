@@ -1,11 +1,11 @@
 mixin button({ size, color = 'primary', content = 'button', width, inverse })
   -
-    const widthModifiers = {
-      greatest: 'button_width_greatest',
-    };
-
     const sizeModifiers = {
       small: 'button_size_small',
+    };
+
+    const widthModifiers = {
+      greatest: 'button_width_greatest',
     };
 
     const colorModifiers = {
@@ -14,9 +14,9 @@ mixin button({ size, color = 'primary', content = 'button', width, inverse })
     };
  
     const buttonModifiers = [
-      inverse ? `${colorModifiers[color]}-inverse` : colorModifiers[color],
-      widthModifiers[width],
       sizeModifiers[size],
+      widthModifiers[width],
+      inverse ? `${colorModifiers[color]}-inverse` : colorModifiers[color],
     ];
 
   .button(class=buttonModifiers)

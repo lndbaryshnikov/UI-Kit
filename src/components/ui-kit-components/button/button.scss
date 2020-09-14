@@ -2,21 +2,20 @@
   width: 7.375rem;
   border-radius: 0.25rem;
 
-  &_width {
-    &_greatest {
-      width: 100%;
-    }
-  }
-  
   &_size {
     &_small {
       width: 4.875rem;
 
       .button__button-element {
-        height: 1.375rem;
         font-size: 0.6rem;
-        padding-top: 0.2rem;
+        padding: 0.25rem 0.1rem;
       }
+    }
+  }
+  
+  &_width {
+    &_greatest {
+      width: 100%;
     }
   }
 
@@ -84,7 +83,7 @@
       &:hover {
         background-color: $theme-secondary-dark;
       }
-      
+
       .button__button-element {
         background-color: $theme-secondary-main;
         color: $base-secondary-main;
@@ -102,10 +101,9 @@
     @include outline;
 
     width: 100%;
-    height: 2rem;
     font: 900 0.718rem Lato, Arial, sans-serif;
     letter-spacing: 0.05rem;
-    padding-top: 0.3rem;
+    padding: 0.6rem 0 0.4rem;
     border-radius: inherit;
     cursor: pointer;
     overflow: hidden;
