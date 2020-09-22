@@ -107,13 +107,13 @@
             }
           }
         }
-      }
 
-      &-current-day {
-        background-color: $theme-secondary-main;
-
-        a {
-          color: $base-secondary-main;
+        .ui-datepicker-current-day {
+          background-color: $theme-secondary-main;
+  
+          a {
+            color: $base-secondary-main;
+          }
         }
       }
 

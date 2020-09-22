@@ -4,17 +4,13 @@
   border-radius: 0.25rem;
 
   @media screen and (max-width: 400px) {
-    width: 15.5rem;
+    width: 16rem;
   }
 
   &__header {
-    height: 7.1875rem;
+    height: 7.2rem;
     border-radius: inherit;
     position: relative;
-
-    @media screen and (max-width: 400px) {
-      height: 6rem;
-    }
 
     &::after {
       content: '';
@@ -45,15 +41,15 @@
   }
 
   &__name {
+    width: 18rem;
+    height: 4.7rem;
     font: 300 2.125rem 'Source Sans Pro', Arial, sans-serif;
     color: $base-secondary-main;
     letter-spacing: -0.06375rem;
-    line-height: 4.7rem;
+    line-height: 0.8;
     text-align: center;
-
-    @media screen and (max-width: 400px) {
-      line-height: 3.7rem;
-    }
+    display: table-cell;
+    vertical-align: middle;
   }
 
   &__photo {
