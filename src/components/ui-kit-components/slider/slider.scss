@@ -81,8 +81,7 @@
       border: 0.3125rem solid;
       position: absolute;
       top: 100%;
-      left: 50%;
-      margin-left: -0.34375rem;
+      left: calc(50% - 0.34375rem);
     }
 
     &_theme {

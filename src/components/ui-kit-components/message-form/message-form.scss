@@ -25,10 +25,9 @@
     &::after {
       content: '';
       border: 0.25rem solid;
-      margin-top: -0.25rem;
       position: absolute;
       right: 100%;
-      top: 50%;
+      top: calc(50% - 0.25rem);
     }
 
     &_color {
